@@ -106,6 +106,19 @@
 @mixin ui-link-main {
   @include ui-link;
   color: var(--color-red);
+
+  @include hover {
+    color: var(--color-red2);
+  }
+}
+
+@mixin ui-link-black {
+  color: var(--color-black);
+  @include tr;
+  @include hover {
+    color: var(--color-red);
+  }
+;
 }
 
 @mixin ui-menu-item {
@@ -155,14 +168,9 @@
 }
 
 @mixin ui-arrow {
-  width: 74px;
-  height: 74px;
   border-radius: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: var(--color-black);
-  background-color: var(--color-grey-bg);
   @include tr;
 
   svg {
@@ -172,18 +180,52 @@
   }
 
   @include hover {
-    background-color: var(--color-red);
     color: var(--color-white);
+    background-color: var(--color-red);
   }
 }
 
-@mixin btn {
+@mixin ui-arrow-left {
+  @include ui-arrow;
+  width: 74px;
+  height: 74px;
+  justify-content: center;
+  color: var(--color-black);
+  background-color: var(--color-grey-bg);
+}
+
+@mixin ui-arrow-right {
+  @include ui-arrow-left;
+  transform: rotate(-180deg);
+}
+
+@mixin ui-arrow2-left {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--color-red);
+  justify-content: flex-end;
+
+  svg {
+    path {
+      fill: currentColor;
+    }
+  }
+
+}
+
+@mixin ui-arrow2-right {
+  @include ui-arrow2-left;
+  transform: rotate(-180deg);
+}
+
+@mixin ui-btn {
   @include ui-button-txt-20;
   padding: 14px 40px;
   @include tr;
 }
 
-@mixin btn-fill {
+@mixin ui-btn-fill {
+  @include ui-btn;
   background-color: var(--color-red);
   color: var(--color-white);
   @include hover {
@@ -192,6 +234,7 @@
 }
 
 @mixin btn-border {
+  @include ui-btn;
   color: var(--color-red);
   border: 2px solid var(--color-red);
 
@@ -199,8 +242,9 @@
     background-color: var(--color-red);
     color: var(--color-white);
   }
-;
 }
+
+
 
 
 
