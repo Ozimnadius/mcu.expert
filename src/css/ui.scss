@@ -1,0 +1,221 @@
+@use "sass:math";
+
+@mixin ui-content {
+  ul {
+    padding-left: 40px;
+
+    li {
+      list-style: disc;
+    }
+  }
+
+  @include headers;
+
+  h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 1em 0;
+  }
+
+}
+
+@mixin ui-heading {
+  font-weight: 700;
+  line-height: 110%;
+}
+
+@mixin ui-heading-1 {
+  @include ui-heading;
+  font-size: 54px;
+}
+
+@mixin ui-heading-2 {
+  @include ui-heading;
+  font-size: 46px;
+}
+
+@mixin ui-heading-3 {
+  @include ui-heading;
+  font-size: 34px;
+}
+
+@mixin ui-heading-form {
+  @include ui-heading;
+  font-size: 38px;
+}
+
+@mixin ui-heading-cta {
+  @include ui-heading;
+  font-size: 32px;
+}
+
+@mixin ui-numbers {
+  font-weight: 700;
+  line-height: 120%;
+}
+
+@mixin ui-numbers-1 {
+  @include ui-numbers;
+  font-size: 34px;
+}
+
+@mixin ui-numbers-2 {
+  @include ui-numbers;
+  font-size: 70px;
+}
+
+@mixin ui-list-num {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@mixin ui-descriptor {
+  font-weight: 400;
+}
+
+@mixin ui-descriptor-24 {
+  @include ui-descriptor;
+  font-size: 24px;
+}
+
+@mixin ui-descriptor-20 {
+  @include ui-descriptor;
+  font-size: 20px;
+}
+
+@mixin ui-descriptor-18 {
+  @include ui-descriptor;
+  font-size: 18px;
+}
+
+@mixin ui-text {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+@mixin ui-text-bold {
+  @include ui-text;
+  font-weight: 700;
+}
+
+@mixin ui-link {
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: underline;
+  @include tr;
+}
+
+@mixin ui-link-main {
+  @include ui-link;
+  color: var(--color-red);
+}
+
+@mixin ui-menu-item {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@mixin ui-button-txt-20 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+@mixin ui-button-txt {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+@mixin ui-play {
+  width: var(--play-size, 94px);
+  height: var(--play-size, 94px);
+  border-radius: 50%;
+  color: var(--color-red);
+  border: calc(0px + var(--play-size, 94px) * 0.063) solid var(--color-red);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  @include tr;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: calc(0px + var(--play-size, 94px) * 0.17) 0 calc(0px + var(--play-size, 94px) * 0.17) calc(0px + var(--play-size, 94px) * 0.255);
+    border-color: transparent transparent transparent currentColor;
+  }
+
+  @include hover {
+    background-color: var(--color-red);
+    color: var(--color-white);
+  }
+}
+
+@mixin ui-arrow {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-black);
+  background-color: var(--color-grey-bg);
+  @include tr;
+
+  svg {
+    path {
+      fill: currentColor;
+    }
+  }
+
+  @include hover {
+    background-color: var(--color-red);
+    color: var(--color-white);
+  }
+}
+
+@mixin btn {
+  @include ui-button-txt-20;
+  padding: 14px 40px;
+  @include tr;
+}
+
+@mixin btn-fill {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  @include hover {
+    background-color: var(--color-red2);
+  }
+}
+
+@mixin btn-border {
+  color: var(--color-red);
+  border: 2px solid var(--color-red);
+
+  @include hover {
+    background-color: var(--color-red);
+    color: var(--color-white);
+  }
+;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

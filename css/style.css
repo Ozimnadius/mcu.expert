@@ -1,0 +1,97 @@
+:root {
+  --font: "Avenir Next Cyr", sans-serif;
+  --font-size: 16px;
+  --font-weight: 400;
+  --line-height: 1.42;
+  --container-width: 1760px;
+  --container-padding: 0 120px;
+  --color-black: #37383E;
+  --color-black2: #787A83;
+  --color-white: #ffffff;
+  --color-red: #FF033E;
+  --color-red2: #D6224C;
+  --color-red3: #BE1D42;
+  --color-grey: #C8C8C8;
+  --color-grey-bg-dark: #E9E9E9;
+  --color-grey-bg: #F5F5F5;
+  --transition: 0.4s;
+}
+
+@font-face {
+  font-family: "Avenir Next Cyr";
+  src: local("AvenirNextCyr-Regular"), url("../fonts/AvenirNextCyr-Regular.woff2") format("woff2"), url("../fonts/AvenirNextCyr-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir Next Cyr";
+  src: local("AvenirNextCyr-Italic"), url("../fonts/AvenirNextCyr-Italic.woff2") format("woff2"), url("../fonts/AvenirNextCyr-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir Next Cyr";
+  src: local("AvenirNextCyr-Bold"), url("../fonts/AvenirNextCyr-Bold.woff2") format("woff2"), url("../fonts/AvenirNextCyr-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir Next Cyr";
+  src: local("AvenirNextCyr-BoldItalic"), url("../fonts/AvenirNextCyr-BoldItalic.woff2") format("woff2"), url("../fonts/AvenirNextCyr-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+body {
+  background: var(--color-white);
+  font-family: var(--font);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  color: var(--color-black);
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.wrapper__content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.page {
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  padding: var(--container-padding);
+  margin: 0 auto;
+}
+
+.btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 15px 35px;
+  background: var(--color-link);
+  color: var(--color-bg);
+}
+.btn:hover {
+  color: var(--color-link-hover);
+}
+/*# sourceMappingURL=style.css.map */
