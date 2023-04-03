@@ -1,9 +1,12 @@
 .header {
+  position: relative;
+  z-index: 2;
+
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 0;
+    padding: 50px 0 90px 0;
   }
 
   &__left {
@@ -12,10 +15,6 @@
   }
 
   &__logo {
-    padding-right: 49px;
-    border-right: 2px solid var(--color-red);
-    margin-right: 49px;
-
     a {
       display: block;
     }
@@ -24,6 +23,11 @@
   &__slogan {
     font-weight: 800;
     line-height: 120%;
+    padding-left: 49px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-left: 2px solid var(--color-red);
+    margin-left: 49px;
   }
 
   &__right {
@@ -46,6 +50,15 @@
   }
 
   &__bottom{
-    margin: 0 -30px;
+    position: absolute;
+    top: calc(100% - 40px);
+    left: 0;
+    right: 0;
+  }
+
+  &__menu{
+    max-width: 1580px;
+    width: 100%;
+    margin: 0 auto;
   }
 }

@@ -75,6 +75,7 @@
 
   &__policy {
     grid-area: policy;
+    font-size: 18px;
     @include tr;
     @include hover{
       color: var(--color-red);

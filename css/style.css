@@ -97,6 +97,10 @@ body {
   margin: 0 auto;
 }
 
+.header {
+  position: relative;
+  z-index: 2;
+}
 .header__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,7 +111,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 50px 0;
+  padding: 50px 0 90px 0;
 }
 .header__left {
   display: -webkit-box;
@@ -117,17 +121,17 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.header__logo {
-  padding-right: 49px;
-  border-right: 2px solid var(--color-red);
-  margin-right: 49px;
-}
 .header__logo a {
   display: block;
 }
 .header__slogan {
   font-weight: 800;
   line-height: 120%;
+  padding-left: 49px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-left: 2px solid var(--color-red);
+  margin-left: 49px;
 }
 .header__right {
   display: -webkit-box;
@@ -148,6 +152,11 @@ body {
   display: block;
   letter-spacing: -0.045em;
 }
+@media screen and (max-width: 1439.98px) {
+  .header__tel a {
+    font-size: 24px;
+  }
+}
 @media (hover: hover) and (pointer: fine) {
   .header__tel a:hover {
     color: var(--color-red);
@@ -157,6 +166,9 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 120%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   padding: 14px 40px;
   border-radius: 100vmax;
   cursor: pointer;
@@ -171,7 +183,15 @@ body {
   }
 }
 .header__bottom {
-  margin: 0 -30px;
+  position: absolute;
+  top: calc(100% - 40px);
+  left: 0;
+  right: 0;
+}
+.header__menu {
+  max-width: 1580px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .socials {
@@ -331,6 +351,205 @@ body {
   }
 }
 
+.index-banner__slider {
+  position: relative;
+}
+.index-banner__slide {
+  position: relative;
+}
+.index-banner__slide.white {
+  color: var(--color-white);
+}
+.index-banner__img {
+  position: relative;
+}
+.index-banner__img:before {
+  content: "";
+  display: block;
+  padding-top: 33.8541666667%;
+}
+.index-banner__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.index-banner__container {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+}
+.index-banner__content {
+  height: 100%;
+  overflow-y: auto;
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  max-width: 70ch;
+}
+.index-banner__content h2 {
+  font-weight: 700;
+  line-height: 110%;
+  font-size: 54px;
+}
+@media screen and (max-width: 1439.98px) {
+  .index-banner__content h2 {
+    font-size: 44px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .index-banner__content h2 {
+    font-size: 32px;
+  }
+}
+.index-banner__content a {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 14px 40px;
+  border-radius: 100vmax;
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  color: var(--color-red);
+  border: 2px solid var(--color-red);
+}
+@media (hover: hover) and (pointer: fine) {
+  .index-banner__content a:hover {
+    background-color: var(--color-red);
+    color: var(--color-white);
+  }
+}
+.index-banner__controls {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 60px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 45px;
+  pointer-events: none;
+}
+.index-banner__pag {
+  width: auto !important;
+  pointer-events: all;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 18px;
+}
+.index-banner__pag .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-grey-bg);
+  opacity: 1;
+  margin: 0 !important;
+}
+.index-banner__pag .swiper-pagination-bullet-active {
+  background-color: var(--color-red);
+  width: 20px;
+  height: 20px;
+}
+.index-banner__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  pointer-events: all;
+}
+.index-banner__arr.swiper-button-disabled {
+  opacity: 0.7;
+  pointer-events: none;
+}
+.index-banner__prev {
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  width: 74px;
+  height: 74px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--color-black);
+  background-color: var(--color-grey-bg);
+}
+.index-banner__prev svg path {
+  fill: currentColor;
+}
+@media (hover: hover) and (pointer: fine) {
+  .index-banner__prev:hover {
+    color: var(--color-white);
+    background-color: var(--color-red);
+  }
+}
+.index-banner__next {
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  width: 74px;
+  height: 74px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--color-black);
+  background-color: var(--color-grey-bg);
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+.index-banner__next svg path {
+  fill: currentColor;
+}
+@media (hover: hover) and (pointer: fine) {
+  .index-banner__next:hover {
+    color: var(--color-white);
+    background-color: var(--color-red);
+  }
+}
+
 .footer {
   background-color: var(--color-black);
   color: var(--color-white);
@@ -437,6 +656,7 @@ body {
   -ms-grid-row: 5;
   -ms-grid-column: 5;
   grid-area: policy;
+  font-size: 18px;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
