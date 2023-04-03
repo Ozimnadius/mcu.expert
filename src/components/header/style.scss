@@ -1,0 +1,51 @@
+.header {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    padding-right: 49px;
+    border-right: 2px solid var(--color-red);
+    margin-right: 49px;
+
+    a {
+      display: block;
+    }
+  }
+
+  &__slogan {
+    font-weight: 800;
+    line-height: 120%;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 85px;
+  }
+
+  &__tel {
+    a {
+      @include ui-numbers-1;
+      @include ui-link-black;
+      display: block;
+      letter-spacing: -0.045em;
+    }
+  }
+
+  &__call {
+    @include ui-btn-fill;
+  }
+
+  &__bottom{
+    margin: 0 -30px;
+  }
+}

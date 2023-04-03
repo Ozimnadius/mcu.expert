@@ -1,0 +1,10 @@
+.menu
+    each i  in GLOBALS.menu
+        .menu__item
+            a(href=i.href class=(i.submenu) ? 'menu__link--arrow' : '').menu__link
+                span= i.name
+            if i.submenu
+                .menu__submenu
+                    each j in i.submenu
+                        .menu__subitem
+                            a(href=j.href).menu__sublink= j.name

@@ -1,0 +1,36 @@
+.footer-form {
+
+  &__title {
+    @include ui-heading-form;
+  }
+
+  &__main {
+    margin-top: 6px;
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 26px 0;
+    border-bottom: 1px solid #909090;
+  }
+
+  &__submit {
+    @include ui-arrow2-right;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  &__accept {
+    margin-top: 30px;
+    color: #909090;
+
+    .accept {
+      &__txt {
+        display: inline;
+      }
+    }
+  }
+}

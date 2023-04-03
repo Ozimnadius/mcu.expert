@@ -171,6 +171,7 @@
   border-radius: 50%;
   display: flex;
   align-items: center;
+  cursor: pointer;
   @include tr;
 
   svg {
@@ -200,10 +201,12 @@
 }
 
 @mixin ui-arrow2-left {
+  @include ui-arrow;
   width: 50px;
   height: 50px;
   border: 2px solid var(--color-red);
   justify-content: flex-end;
+  color: var(--color-red);
 
   svg {
     path {
@@ -221,6 +224,8 @@
 @mixin ui-btn {
   @include ui-button-txt-20;
   padding: 14px 40px;
+  border-radius: 100vmax;
+  cursor: pointer;
   @include tr;
 }
 

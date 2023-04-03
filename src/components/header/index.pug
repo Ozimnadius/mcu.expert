@@ -1,0 +1,20 @@
+header.header
+    .container
+        .header__top
+            .header__left
+                .header__logo
+                    a(href="/")
+                        img(src="/images/content/logo-text.svg" alt="logo")
+                .header__slogan.
+                    ГАРАНТИЯ <br>
+                    УВЕЛИЧЕНИЯ <br>
+                    ПРИБЫЛИ
+            .header__center
+                .header__socials
+                    include ../socials/index
+            .header__right
+                .header__tel
+                    a(href="tel:+7(495)198-11-01") +7 (495) 198-11-01
+                button(type='button').header__call Заказать звонок
+        .header__bottom
+            include ../menu/index

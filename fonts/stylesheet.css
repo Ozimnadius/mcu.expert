@@ -1,29 +1,19 @@
 @font-face {
     font-family: 'Avenir Next Cyr';
-    src: local('AvenirNextCyr-Italic'),
-        url('AvenirNextCyr-Italic.woff2') format('woff2'),
-        url('AvenirNextCyr-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Avenir Next Cyr';
-    src: local('AvenirNextCyr-Bold'),
-        url('AvenirNextCyr-Bold.woff2') format('woff2'),
-        url('AvenirNextCyr-Bold.woff') format('woff');
-    font-weight: bold;
+    src: local('AvenirNextCyr-Medium'),
+        url('fonts/AvenirNextCyr-Medium.woff2') format('woff2'),
+        url('fonts/AvenirNextCyr-Medium.woff') format('woff');
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Avenir Next Cyr';
-    src: local('AvenirNextCyr-Regular'),
-        url('AvenirNextCyr-Regular.woff2') format('woff2'),
-        url('AvenirNextCyr-Regular.woff') format('woff');
-    font-weight: normal;
+    src: local('AvenirNextCyr-Demi'),
+        url('fonts/AvenirNextCyr-Demi.woff2') format('woff2'),
+        url('fonts/AvenirNextCyr-Demi.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
@@ -31,9 +21,39 @@
 @font-face {
     font-family: 'Avenir Next Cyr';
     src: local('AvenirNextCyr-BoldItalic'),
-        url('AvenirNextCyr-BoldItalic.woff2') format('woff2'),
-        url('AvenirNextCyr-BoldItalic.woff') format('woff');
+        url('fonts/AvenirNextCyr-BoldItalic.woff2') format('woff2'),
+        url('fonts/AvenirNextCyr-BoldItalic.woff') format('woff');
     font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('AvenirNextCyr-DemiItalic'),
+        url('fonts/AvenirNextCyr-DemiItalic.woff2') format('woff2'),
+        url('fonts/AvenirNextCyr-DemiItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('AvenirNextCyr-Bold'),
+        url('fonts/AvenirNextCyr-Bold.woff2') format('woff2'),
+        url('fonts/AvenirNextCyr-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: local('AvenirNextCyr-MediumItalic'),
+        url('fonts/AvenirNextCyr-MediumItalic.woff2') format('woff2'),
+        url('fonts/AvenirNextCyr-MediumItalic.woff') format('woff');
+    font-weight: 500;
     font-style: italic;
     font-display: swap;
 }
