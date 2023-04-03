@@ -75,6 +75,10 @@
 
   &__policy {
     grid-area: policy;
+    @include tr;
+    @include hover{
+      color: var(--color-red);
+    }
   }
 
   &__bottom {

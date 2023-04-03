@@ -437,6 +437,13 @@ body {
   -ms-grid-row: 5;
   -ms-grid-column: 5;
   grid-area: policy;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+@media (hover: hover) and (pointer: fine) {
+  .footer__policy:hover {
+    color: var(--color-red);
+  }
 }
 .footer__bottom {
   background-color: var(--color-red2);
