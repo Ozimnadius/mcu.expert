@@ -28,8 +28,16 @@
     color: #909090;
 
     .accept {
-      &__txt {
+      &__text {
         display: inline;
+
+        a{
+          color: var(--color-white);
+          text-decoration: underline;
+          @include hover{
+            color: var(--color-red);
+          }
+        }
       }
     }
   }

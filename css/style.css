@@ -481,8 +481,8 @@ body {
   cursor: pointer;
   -webkit-transition: var(--transition);
   transition: var(--transition);
-  width: 50px;
-  height: 50px;
+  width: var(--arrow2-size, 50px);
+  height: var(--arrow2-size, 50px);
   border: 2px solid var(--color-red);
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -505,6 +505,10 @@ body {
     background-color: var(--color-red);
   }
 }
+.footer-form__submit svg {
+  width: calc(0px + var(--arrow2-size, 50px) * 0.72);
+  height: calc(0px + var(--arrow2-size, 50px) * 0.32);
+}
 .footer-form__submit svg path {
   fill: currentColor;
 }
@@ -512,7 +516,16 @@ body {
   margin-top: 30px;
   color: #909090;
 }
-.footer-form__accept .accept__txt {
+.footer-form__accept .accept__text {
   display: inline;
+}
+.footer-form__accept .accept__text a {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+@media (hover: hover) and (pointer: fine) {
+  .footer-form__accept .accept__text a:hover {
+    color: var(--color-red);
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -202,13 +202,16 @@
 
 @mixin ui-arrow2-left {
   @include ui-arrow;
-  width: 50px;
-  height: 50px;
+  width: var(--arrow2-size, 50px);
+  height: var(--arrow2-size, 50px);
   border: 2px solid var(--color-red);
   justify-content: flex-end;
   color: var(--color-red);
 
   svg {
+    width: calc(0px + var(--arrow2-size, 50px) * 0.72);
+    height: calc(0px + var(--arrow2-size, 50px) * 0.32);
+
     path {
       fill: currentColor;
     }
