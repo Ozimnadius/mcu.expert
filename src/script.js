@@ -50,7 +50,7 @@ function setOffset() {
 }
 
 function indexProfileItems() {
-    const content = document.querySelector('.index-profile__left');
+    const imgs = document.querySelectorAll('.index-profile__img');
     const items = document.querySelectorAll('.index-profile__item');
 
     $('.index-profile__item').hover(function () {
@@ -59,17 +59,15 @@ function indexProfileItems() {
             return ''
         }
 
-        content.classList.remove('active')
-        let html = this.querySelector('template').content.cloneNode(true);
-        content.innerHTML = '';
-        content.append(html);
+        let index = Array.from(items).indexOf(this);
+        imgs.forEach(i => {
+            i.classList.remove('active');
+        });
         items.forEach(i => {
             i.classList.remove('active');
         });
+        imgs[index].classList.add('active');
         this.classList.add('active');
-        setTimeout(function (){
-            content.classList.add('active');
-        },300);
 
     }, function () {
 

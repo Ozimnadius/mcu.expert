@@ -18,16 +18,16 @@
   }
 
   &__left{
-    opacity: 0;
-    @include tr;
 
-    &.active{
-      opacity: 1;
-    }
   }
 
   &__img{
     position: relative;
+    display: none;
+
+    &.active{
+      display: block;
+    }
 
     &:before{
       content: '';

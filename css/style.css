@@ -1173,16 +1173,12 @@ body {
   gap: 40px;
   margin-top: 40px;
 }
-.index-profile__left {
-  opacity: 0;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-}
-.index-profile__left.active {
-  opacity: 1;
-}
 .index-profile__img {
   position: relative;
+  display: none;
+}
+.index-profile__img.active {
+  display: block;
 }
 .index-profile__img:before {
   content: "";
