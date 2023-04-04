@@ -69,7 +69,7 @@ function indexProfileItems() {
         this.classList.add('active');
         setTimeout(function (){
             content.classList.add('active');
-        },400)
+        },300);
 
     }, function () {
 

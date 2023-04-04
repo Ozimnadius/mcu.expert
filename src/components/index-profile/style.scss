@@ -1,9 +1,21 @@
 @use "sass:math";
 
 .index-profile{
-  display:grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 40px;
+
+  &__top{
+    @include ui-top;
+  }
+
+  &__title{
+    @include ui-top-title;
+  }
+
+  &__grid{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    margin-top: 40px;
+  }
 
   &__left{
     opacity: 0;

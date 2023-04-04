@@ -1142,12 +1142,36 @@ body {
   gap: 15px;
 }
 
-.index-profile {
+.index-profile__top {
+  --arrow2-size: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.index-profile__title {
+  font-weight: 700;
+  line-height: 110%;
+  font-size: 46px;
+}
+@media screen and (max-width: 1439.98px) {
+  .index-profile__title {
+    font-size: 36px;
+  }
+}
+.index-profile__grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 40px 1fr;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
+  margin-top: 40px;
 }
 .index-profile__left {
   opacity: 0;
