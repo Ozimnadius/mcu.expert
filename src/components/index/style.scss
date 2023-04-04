@@ -1,3 +1,42 @@
-.index{
-  
+.index {
+
+  &__section {
+    overflow: hidden;
+  }
+
+  &__courses {
+    margin-top: 100px;
+  }
+
+  &__advantages {
+    margin-top: 100px;
+  }
+
+  &__about {
+    margin-top: 100px;
+  }
+
+  &__popular {
+    margin-top: 100px;
+  }
+
+  &__profile {
+    margin-top: 100px;
+  }
+
+  &__news {
+    margin-top: 100px;
+  }
+
+  &__video {
+    margin-top: 100px;
+  }
+
+  &__reviews {
+    margin-top: 100px;
+  }
+
+  &__partners {
+    margin-top: 100px;
+  }
 }

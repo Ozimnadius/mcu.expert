@@ -1,0 +1,23 @@
+.index-courses
+    -
+        var data = [
+            {
+                img: '/images/content/index-courses/1.webp',
+                name: 'Мотивационные курсы сотрудников клиники “Жить здорово”'
+            },
+            {
+                img: '/images/content/index-courses/2.webp',
+                name: 'Мотивационные курсы сотрудников клиники “Жить здорово”'
+            },
+            {
+                img: '/images/content/index-courses/3.webp',
+                name: 'Мотивационные курсы сотрудников клиники “Жить здорово”'
+            }
+        ]
+    each i in data
+        a(href="/courses/course/").index-courses__item
+            span.index-courses__img
+                img(src=i.img alt=i.name)
+            span.index-courses__wrap
+                span.index-courses__gift Подарок
+                span.index-courses__name= i.name

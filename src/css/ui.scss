@@ -201,6 +201,10 @@
   cursor: pointer;
   @include tr;
 
+  &.swiper-button-disabled{
+    @include ui-disabled;
+  }
+
   svg {
     path {
       fill: currentColor;
@@ -236,8 +240,9 @@
   color: var(--color-red);
 
   svg {
-    width: calc(0px + var(--arrow2-size, 50px) * 0.72);
-    height: calc(0px + var(--arrow2-size, 50px) * 0.32);
+    width: calc(0px + var(--arrow2-size, 50px) * 0.70);
+    height: calc(0px + var(--arrow2-size, 50px) * 0.30);
+    transform: translateX(2px);
 
     path {
       fill: currentColor;
@@ -282,9 +287,31 @@
 
 @mixin ui-disabled {
   opacity: 0.7;
-  pointer-events: none;
+  cursor: not-allowed;
 }
 
+@mixin ui-top {
+  --arrow2-size: 60px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+@mixin ui-top-title {
+  @include ui-heading-2;
+}
+
+@mixin ui-top-nav {
+  display: flex;
+  gap: 14px;
+}
+
+@mixin ui-card-title{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+}
 
 
 

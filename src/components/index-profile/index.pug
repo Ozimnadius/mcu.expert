@@ -1,0 +1,28 @@
+.index-profile
+    .index-profile__left.active
+        .index-profile__img
+            img(src="/images/content/index-profile/1.webp" alt='Собственникам')
+            .index-profile__img-wrap
+                .index-profile__img-count 01
+                .index-profile__img-name Собственникам
+    .index-profile__right
+        ul.index-profile__list
+            -
+                var data = ['Собственникам', 'Управленцам', 'Врачам', 'Администраторам', 'Медицинским сестрам'];
+            each i,x in data
+                li(class=(x == 0) ? 'active' : '').index-profile__item
+                    a(href="/courses/course/").index-profile__link
+                        span.index-profile__count= '0' + (x + 1)
+                        span.index-profile__name= i
+                        span.index-profile__arr
+                            <svg width="45" height="15" viewBox="0 0 45 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M44.7071 8.2071C45.0976 7.81658 45.0976 7.18341 44.7071 6.79289L38.3431 0.428928C37.9526 0.0384039 37.3195 0.038404 36.9289 0.428928C36.5384 0.819453 36.5384 1.45262 36.9289 1.84314L42.5858 7.5L36.9289 13.1569C36.5384 13.5474 36.5384 14.1805 36.9289 14.5711C37.3195 14.9616 37.9526 14.9616 38.3431 14.5711L44.7071 8.2071ZM1.02137e-07 8.5L44 8.5L44 6.5L-1.02137e-07 6.5L1.02137e-07 8.5Z" fill="#FF033E"/>
+                            </svg>
+                    template
+                        .index-profile__img
+                            img(src="/images/content/index-profile/1.webp" alt=i)
+                            .index-profile__img-wrap
+                                .index-profile__img-count= '0' + (x + 1)
+                                .index-profile__img-name= i
+
+
