@@ -307,6 +307,10 @@
   gap: 14px;
 }
 
+@mixin ui-top-link{
+  @include ui-link-main;
+}
+
 @mixin ui-card-title{
   font-weight: 700;
   font-size: 24px;

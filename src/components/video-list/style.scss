@@ -1,0 +1,75 @@
+@mixin video-list-grid {
+  display:grid;
+  grid-template-columns: 3fr 9fr;
+  gap: 40px;
+}
+
+@mixin video-list-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+@mixin video-list-title {
+  @include ui-heading-3;
+}
+
+@mixin video-list-link {
+  @include ui-btn-border;
+}
+
+@mixin video-list-items{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 40px;
+}
+
+.video-list {
+  background-color: var(--color-grey-bg);
+  margin: 0 -80px;
+
+  &--top {
+    .video-list__broadcasts {
+      padding-top: 40px;
+    }
+  }
+
+  &__top {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    margin: 0 80px;
+    border-bottom: 1px solid var(--color-grey);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 'title title title desc desc desc desc desc desc desc link link';
+    gap: 40px;
+    align-items: center;
+  }
+
+  &__title {
+    @include ui-heading-2;
+    grid-area: title;
+  }
+
+  &__desc {
+    @include ui-descriptor-18;
+    grid-area: desc;
+    color: var(--color-black2);
+  }
+
+  &__link {
+    @include ui-link-main;
+    grid-area: link;
+  }
+
+  &__broadcasts {
+    padding: 80px;
+  }
+
+  &__lectures {
+    background-color: var(--color-grey-bg-dark);
+    padding: 80px;
+  }
+
+}

@@ -1,0 +1,81 @@
+@use "sass:math";
+
+.video-lectures {
+  @include video-list-grid;
+
+  &__left {
+    @include video-list-left;
+  }
+
+  &__title {
+    @include video-list-title;
+  }
+
+  &__link {
+    @include video-list-link;
+  }
+
+  &__list {
+    @include video-list-items;
+  }
+}
+
+.video-lecture {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+
+  &:hover{
+    img{
+      transform: scale(1.05);
+    }
+
+    .video-lecture__desc{
+      color: var(--color-red);
+    }
+  }
+
+  &__img{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    &:before{
+      content: '';
+      display: block;
+      padding-top: math.percentage(200/350);
+    }
+
+    img{
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include tr;
+    }
+  }
+
+  &__play{
+    --play-size: 80px;
+    @include ui-play;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  &__desc{
+    @include tr;
+  }
+
+  &__name{
+    font-weight: bold;
+  }
+}

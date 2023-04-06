@@ -1,0 +1,16 @@
+- var settings = data.lectures;
+.video-lectures
+    .video-lectures__left
+        .video-lectures__title Открытые лекции
+        .video-lectures__desc Уникальные открытые лекции с ведущими специлиастами в разных направлениях
+        if settings.link
+            a(href="/video/").video-lectures__link= settings.link
+    .video-lectures__right
+        .video-lectures__list
+            each i in settings.list
+                a(href="https://www.youtube.com/watch?v=lyh2kAjcmSY" data-fancybox="video-lectures").video-lectures__item.video-lecture
+                    span.video-lecture__img
+                        span.video-lecture__play
+                        img(src=i.img alt="Как навести порядок в клинике и сформировать ее организационную структуру")
+                    span.video-lecture__desc Как навести порядок в клинике и сформировать ее организационную структуру
+                    span.video-lecture__name Ольга Берестова

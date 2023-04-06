@@ -34,8 +34,44 @@ block content
                 include src/components/index-news/index
         //-video
         section.index__section.index__video
+            .container
+                -
+                    var data = {
+                        top: true,
+                        broadcasts: {
+                            link: 'Смотреть все эфиры',
+                            list: [
+                                {
+                                    img: '/images/content/video-broadcasts/1.webp',
+                                },
+                                {
+                                    img: '/images/content/video-broadcasts/2.webp',
+                                },
+                                {
+                                    img: '/images/content/video-broadcasts/3.webp',
+                                }
+                            ]
+                        },
+                        lectures: {
+                            link: 'Смотреть все лекции',
+                            list: [
+                                {
+                                    img: '/images/content/video-lectures/1.webp'
+                                },
+                                {
+                                    img: '/images/content/video-lectures/2.webp'
+                                },
+                                {
+                                    img: '/images/content/video-lectures/3.webp'
+                                }
+                            ]
+                        },
+                    };
+                include src/components/video-list/index
         //-reviews
         section.index__section.index__reviews
+            .container
+                include src/components/reviews-slider/index
         //-partners
         section.index__section.index__partners
 

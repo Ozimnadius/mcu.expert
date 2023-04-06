@@ -1,1 +1,49 @@
 .index-news
+    .index-news__top
+        .index-news__title Ближайшие события
+        a(href="/news/").index-news__link Смотреть все события
+    .index-news__list
+        -
+            var data = [
+                {
+                    img: '/images/content/index-news/1.webp',
+                    month: 'Январь',
+                    date: '19 / 2023',
+                    time: '16:00',
+                    desc: 'Открытая лекция Ирины Клоповой"Новости медицинского права 2023 года"'
+                },
+                {
+                    img: '/images/content/index-news/2.webp',
+                    month: 'Февраль',
+                    date: '23 / 2023',
+                    time: '20:00',
+                    desc: 'Открытая лекция «Мужское здоровье»'
+                },
+                {
+                    img: '/images/content/index-news/3.webp',
+                    month: 'Март',
+                    date: '05 / 2023',
+                    time: '16:00',
+                    desc: 'Открытая лекция Ирины Клоповой"Новости медицинского права 2023 года"'
+                }
+            ];
+        each i in data
+            a(href="/news/article/").index-news__item.index-new
+                span.index-new__img
+                    img(src=i.img alt=i.desc)
+                span.index-new__format
+                    span.index-new__format-name Формат:
+                    span.index-new__format-val Онлайн
+                span.index-new__content
+                    span.index-new__top
+                        span.index-new__date
+                            span.index-new__date-month= i.month
+                            span.index-new__date-date= i.date
+                        span.index-new__time
+                            span.index-new__time-name Начало:
+                            span.index-new__time-val= i.time
+                            span.index-new__time-zone МСК
+                    span.index-new__bottom
+                        span.index-new__stick Событие
+                        span.index-new__desc= i.desc
+

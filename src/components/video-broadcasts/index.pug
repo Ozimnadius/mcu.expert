@@ -1,0 +1,22 @@
+- var settings = data.broadcasts;
+
+.video-broadcasts
+    .video-broadcasts__left
+        .video-broadcasts__title Прямые эфиры
+        .video-broadcasts__desc Мы приглашаем квалифицированных профессионалов на прямые эфиры чтобы они делились с Вами опытом
+        if settings.link
+            a(href="/video/").video-broadcasts__link= settings.link
+    .video-broadcasts__right
+        .video-broadcasts__list
+            each i in settings.list
+                a(href="https://www.youtube.com/watch?v=lyh2kAjcmSY" data-fancybox="video-broadcasts").video-broadcasts__item.video-broadcast
+                    span.video-broadcast__img
+                        img(src=i.img alt="Прямой эфир с Ириной Поповой")
+                    span.video-broadcast__icon
+                        <svg width="60" height="68" viewBox="0 0 60 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M51.9803 8H49.4056V37.8296C49.4056 38.4075 49.369 38.9762 49.3234 39.5449C48.4743 49.5431 40.1658 57.395 29.9947 57.395C19.8236 57.395 11.4421 49.4881 10.6478 39.4348C10.6021 38.9028 10.5747 38.3708 10.5747 37.8296V10.5867H28.6982V23.5936H41.6357V36.6188H28.6982V52.2032H31.2912V39.2055H44.2196V21.0069H31.2912V8H8V37.8296C8 38.3066 8 38.8111 8.02739 39.2789C8.74868 50.8457 18.308 60 30.0038 60C41.6996 60 51.2499 50.8457 51.9803 39.2789C52.0077 38.8019 51.9985 38.3158 51.9985 37.8296V8H51.9803Z" fill="#FF033E"/>
+                        </svg>
+                    span.video-broadcast__content
+                        span.video-broadcast__title Прямой эфир с Ириной Поповой
+                        span.video-broadcast__desc Авторитетом «Идеальный сервис» и ректор Global Dent
+                        span.video-broadcast__btn Смотреть

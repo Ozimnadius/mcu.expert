@@ -1,0 +1,114 @@
+@use "sass:math";
+
+.video-broadcasts {
+  @include video-list-grid;
+
+  &__left {
+    @include video-list-left;
+  }
+
+  &__title {
+    @include video-list-title;
+  }
+
+  &__link {
+    @include video-list-link;
+  }
+
+  &__list {
+    @include video-list-items;
+  }
+}
+
+.video-broadcast {
+  display: block;
+  position: relative;
+  color: var(--color-white);
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: math.percentage(400/350);
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.5) 2.54%, rgba(0, 0, 0, 0) 44.12%);
+    @include tr;
+  }
+
+  @include hover {
+    &:after {
+      background: linear-gradient(360deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    img {
+      transform: scale(1.05);
+    }
+
+    .video-broadcast {
+      &__desc, &__btn {
+        display: block;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    display: block;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include tr;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    left: 30px;
+    display: block;
+  }
+
+  &__content {
+    position: absolute;
+    z-index: 2;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  &__title {
+    @include ui-button-txt-20;
+    max-width: 17ch;
+  }
+
+  &__desc {
+    display: none;
+  }
+
+  &__btn {
+    @include ui-btn-fill;
+    @include ui-button-txt;
+    display: none;
+    padding: 6px 20px;
+    @include hover {
+      background-color: var(--color-red);
+    }
+
+  }
+}
