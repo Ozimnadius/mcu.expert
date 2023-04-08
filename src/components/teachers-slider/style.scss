@@ -1,0 +1,32 @@
+.teachers-slider {
+
+  &__top {
+    @include ui-top;
+  }
+
+  &__title{
+    @include ui-top-title;
+  }
+
+  &__nav {
+    @include ui-top-nav;
+  }
+
+  &__prev {
+    @include ui-arrow2-left;
+  }
+
+  &__next {
+    @include ui-arrow2-right;
+  }
+
+  &__swiper {
+    margin-top: 40px;
+    margin-right: calc(0px - var(--offset, 192px));
+    padding-right: 40px;
+  }
+
+  &__slide {
+    width: 350px;
+  }
+}

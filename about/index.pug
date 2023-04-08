@@ -4,4 +4,66 @@ block variables
     - var title = 'О нас'
 
 block content
-    main.page
+    main.page.about
+        //-banner
+        section.about__banner
+            -
+                var data = {
+                    type: 'white',
+                    img: '/images/content/banner/about.webp',
+                    bread: [
+                        {
+                            href: '/',
+                            name: 'Главная'
+                        },
+                        {
+                            name: 'О нас'
+                        }
+                    ],
+                    title: 'Мединский корпоративный университет',
+                    advantages: true
+                };
+            include ../src/components/banner/index
+        //-teachers
+        section.about__teachers
+            .container
+                -
+                    var data = [
+                        {
+                            img: '/images/content/teachers-item/1.webp'
+                        },
+                        {
+                            img: '/images/content/teachers-item/2.webp'
+                        },
+                        {
+                            img: '/images/content/teachers-item/3.webp'
+                        },
+                        {
+                            img: '/images/content/teachers-item/4.webp'
+                        },
+                        {
+                            img: '/images/content/teachers-item/1.webp'
+                        },
+                        {
+                            img: '/images/content/teachers-item/2.webp'
+                        },
+                        {
+                            img: '/images/content/teachers-item/3.webp'
+                        },
+                        {
+                            img: '/images/content/teachers-item/4.webp'
+                        }
+                    ];
+                include ../src/components/teachers-slider/index
+        //-chairs
+        section.about__chairs
+        //-licenses
+        section.about__licenses
+        //-portfolio
+        section.about__portfolio
+        //-reviews
+        section.about__reviews
+        //-clients
+        section.about__clients
+
+

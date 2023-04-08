@@ -1,0 +1,45 @@
+.banner{
+  &.white{
+    color: var(--color-white);
+  }
+
+  .container{
+    max-width: 1910px;
+  }
+
+  &__container{
+    height: 650px;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  &__wrap{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+  }
+
+
+  &__content{
+    max-width: 740px;
+
+    h2{
+      @include ui-heading-1;
+    }
+
+    p{
+      margin-top: 18px;
+    }
+
+    ul{
+      margin-top: 0;
+    }
+
+    a,button{
+      @include ui-btn-fill;
+      margin-top: 30px;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.bread{
+  &__item{
+    &:after{
+      content: ' / ';
+      display: inline;
+    }
+  }
+}

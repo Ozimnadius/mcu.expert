@@ -1,0 +1,6 @@
+.bread
+    each i in data.bread
+        if i.href
+            a(href="#").bread__item= i.name
+        else
+            span.bread__item= i.name

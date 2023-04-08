@@ -1,0 +1,45 @@
+@use "sass:math";
+
+.teachers-item{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include hover{
+    .teachers-item{
+      &__name{
+        color: var(--color-red);
+      }
+    }
+  }
+
+  &__img{
+    position: relative;
+    width: 100%;
+
+    &:before{
+      content: '';
+      display: block;
+      padding-top: math.percentage(math.div(400,350));
+    }
+
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name{
+    @include ui-card-title;
+    margin-top: 18px;
+    @include tr;
+  }
+
+  &__desc{
+    margin-top: 16px;
+  }
+}

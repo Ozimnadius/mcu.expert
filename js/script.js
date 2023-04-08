@@ -69,6 +69,19 @@ function initSliders() {
             },
         });
     }
+
+    const teachersSlider = document.querySelector('.teachers-slider');
+    if (teachersSlider) {
+        const indexBannerSwiper = new Swiper(teachersSlider.querySelector('.swiper'), {
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+            // Navigation arrows
+            navigation: {
+                nextEl: teachersSlider.querySelector('.teachers-slider__next'),
+                prevEl: teachersSlider.querySelector('.teachers-slider__prev'),
+            },
+        });
+    }
 }
 
 

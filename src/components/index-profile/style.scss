@@ -1,41 +1,41 @@
 @use "sass:math";
 
-.index-profile{
+.index-profile {
 
-  &__top{
+  &__top {
     @include ui-top;
   }
 
-  &__title{
+  &__title {
     @include ui-top-title;
   }
 
-  &__grid{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     margin-top: 40px;
   }
 
-  &__left{
+  &__left {
 
   }
 
-  &__img{
+  &__img {
     position: relative;
     display: none;
 
-    &.active{
+    &.active {
       display: block;
     }
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       padding-top: math.percentage(529/740);
     }
 
-    img{
+    img {
       position: absolute;
       z-index: 0;
       top: 0;
@@ -46,7 +46,7 @@
     }
   }
 
-  &__img-wrap{
+  &__img-wrap {
     min-width: math.percentage(307/740);
     position: absolute;
     z-index: 1;
@@ -60,36 +60,36 @@
     color: var(--color-white);
   }
 
-  &__img-name{
+  &__img-name {
     font-size: 20px;
     margin-top: 3px;
   }
 
-  &__item{
+  &__item {
     border-bottom: 1px solid var(--color-grey);
     position: relative;
 
-    &:first-child{
+    &:first-child {
       border-top: 1px solid var(--color-grey);
     }
 
-    &.active{
-      .index-profile{
-        &__link{
+    &.active {
+      .index-profile {
+        &__link {
           background-color: var(--color-red);
         }
 
-        &__count{
+        &__count {
           color: var(--color-white);
           transform: translateX(30px) translateY(-50%);
         }
 
-        &__name{
+        &__name {
           color: var(--color-white);
           transform: translateX(30px);
         }
 
-        &__arr{
+        &__arr {
           transform: translateX(-30px) translateY(-50%);
           color: var(--color-white);
         }
@@ -97,14 +97,14 @@
     }
   }
 
-  &__link{
+  &__link {
     position: relative;
     padding: 33px 50px 33px 110px;
     display: flex;
     @include tr;
   }
 
-  &__count{
+  &__count {
     @include ui-list-num;
     color: var(--color-red);
     position: absolute;
@@ -114,12 +114,12 @@
     @include tr;
   }
 
-  &__name{
+  &__name {
     @include ui-heading-3;
     @include tr;
   }
 
-  &__arr{
+  &__arr {
     position: absolute;
     top: 50%;
     right: 0;
@@ -127,8 +127,8 @@
     color: var(--color-red);
     @include tr;
 
-    svg{
-      path{
+    svg {
+      path {
         fill: currentColor;
       }
     }

@@ -1,0 +1,49 @@
+@use "sass:math";
+
+.courses-item{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @include hover{
+    img{
+      transform: scale(1.05);
+    }
+
+    .courses-item__name{
+      color: var(--color-red);
+    }
+  }
+
+  &__img{
+    position: relative;
+    overflow: hidden;
+
+    &:before{
+      content: '';
+      display: block;
+      padding-top: math.percentage(240/350);
+    }
+
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include tr;
+    }
+  }
+
+  &__name{
+    @include ui-card-title;
+    margin-top: 20px;
+    @include tr;
+  }
+
+  &__txt{
+    margin-top: 16px;
+    display:grid;
+    gap: 15px;
+  }
+}
