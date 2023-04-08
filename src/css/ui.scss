@@ -204,6 +204,9 @@
   &.swiper-button-disabled{
     @include ui-disabled;
   }
+  &.swiper-button-lock{
+    display: none;
+  }
 
   svg {
     path {

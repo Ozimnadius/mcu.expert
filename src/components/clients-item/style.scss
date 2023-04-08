@@ -1,0 +1,45 @@
+@use "sass:math";
+
+.clients-item {
+  display: block;
+  background-color: var(--color-grey-bg);
+  @include tr;
+
+  @include hover{
+    background-color: var(--color-grey-bg-dark);
+  }
+
+  &:before{
+    content: '';
+    display: block;
+    padding-top: math.percentage(351/479);
+  }
+
+  &__content {
+    position: absolute;
+    inset: 60px 35px 35px 50px;
+    max-height: 100%;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+  }
+
+  &__img{
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+    img{
+      max-height: 100%;
+    }
+  }
+
+  &__desc{
+    @include ui-descriptor-20;
+  }
+
+
+}

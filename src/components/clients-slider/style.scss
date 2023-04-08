@@ -1,5 +1,4 @@
-.reviews-slider {
-
+.clients-slider {
   &__top {
     @include ui-top;
   }
@@ -20,11 +19,7 @@
     @include ui-arrow2-right;
   }
 
-  &__swiper{
+  &__swiper {
     margin-top: 40px;
-    margin-right: -20px;
-    padding-right: 20px;
   }
-
-
 }

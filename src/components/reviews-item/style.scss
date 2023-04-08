@@ -1,20 +1,107 @@
 .reviews-item{
+  display:grid;
+  gap: 20px;
+
+  @include hover{
+
+    svg{
+      path{
+        fill: var(--color-red3);
+      }
+    }
+
+    .reviews-item{
+
+      &__content{
+        transform: translateX(0) translateY(0);
+      }
+      &__link{
+        color: var(--color-red3);
+      }
+    }
+  }
 
   &__top{
-    clip-path: path('M35.0512 0C16.1869 0 0.88916 15.2298 0.88916 34.0231V280.664C0.88916 299.457 16.1869 314.687 35.0512 314.687H54.7076V335L91.165 314.687H446.727C465.591 314.687 480.889 299.457 480.889 280.664V34.0231C480.889 15.2298 465.591 0 446.727 0H35.0512ZM2.81391 34.0231C2.81391 16.2975 17.2442 1.92281 35.0512 1.92281H446.727C464.534 1.92281 478.964 16.2975 478.964 34.0231V280.664C478.964 298.389 464.534 312.764 446.727 312.764H90.5941L56.6323 331.449V312.764H35.0512C17.2442 312.764 2.81391 298.389 2.81391 280.664V34.0231Z');
-    width: 480px;
-    height: 335px;
     position: relative;
-    background-color: transparent;
-    fill: transparent;
-    border-color: var(--color-red);
+    display:grid;
+  }
+
+  &__img{
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+
+    svg{
+      display: block;
+      path{
+        @include tr;
+      }
+      &:nth-child(2){
+        display: none;
+      }
+    }
   }
 
   &__content{
-    position: absolute;
-    z-index: 2;
-    top: 20px;
-    left: 20px;
+    background-color: var(--color-grey-bg);
     border-radius: 32px;
+    padding: 20px 40px 20px 40px;
+
+    position: absolute;
+    z-index: 1;
+    inset: 0 0 20px 0;
+    transform: translateX(20px) translateY(20px);
+    max-height: calc(100% - 20px);
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    @include tr;
   }
+
+  &__link{
+    color: var(--color-red);
+    text-decoration: underline;
+    @include tr;
+  }
+
+  &__bottom{
+    display:grid;
+    grid-template-columns: 116px 1fr;
+    gap: 20px;
+  }
+
+  &__face{
+    display: block;
+    border-radius: 50%;
+    border: 2px solid var(--color-red);
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+
+    img{
+      display: block;
+      position: absolute;
+      inset: 13px;
+      border-radius: 50%;
+    }
+  }
+
+  &__right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  &__name{
+    @include ui-descriptor-24;
+  }
+
 }

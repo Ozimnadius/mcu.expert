@@ -29,6 +29,7 @@ function initSliders() {
             },
         });
     }
+
     const indexPopularSlider = document.querySelector('.index-popular__slider');
     if (indexPopularSlider) {
         const indexBannerSwiper = new Swiper(indexPopularSlider.querySelector('.swiper'), {
@@ -42,7 +43,34 @@ function initSliders() {
             },
         });
     }
+
+    const reviewsSlider = document.querySelector('.reviews-slider');
+    if (reviewsSlider) {
+        const indexBannerSwiper = new Swiper(reviewsSlider.querySelector('.swiper'), {
+            slidesPerView: 3,
+            spaceBetween: 40,
+            // Navigation arrows
+            navigation: {
+                nextEl: reviewsSlider.querySelector('.reviews-slider__next'),
+                prevEl: reviewsSlider.querySelector('.reviews-slider__prev'),
+            },
+        });
+    }
+
+    const clientsSlider = document.querySelector('.clients-slider');
+    if (clientsSlider) {
+        const indexBannerSwiper = new Swiper(clientsSlider.querySelector('.swiper'), {
+            slidesPerView: 3,
+            spaceBetween: 40,
+            // Navigation arrows
+            navigation: {
+                nextEl: clientsSlider.querySelector('.clients-slider__next'),
+                prevEl: clientsSlider.querySelector('.clients-slider__prev'),
+            },
+        });
+    }
 }
+
 
 function setOffset() {
     let offset = document.querySelector('.offset__width').offsetLeft;
