@@ -3,6 +3,7 @@ div(class=data.type style=`background-image:url(${data.img})`).banner
         .banner__container
             .banner__wrap
                 .banner__bread
+                    - var bread = data.bread
                     include ../bread/index
                 .banner__content
                     h2= data.title

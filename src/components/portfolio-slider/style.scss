@@ -1,0 +1,21 @@
+.portfolio-slider {
+  &__top {
+    @include ui-top;
+  }
+
+  &__title {
+    @include ui-top-title;
+  }
+
+  &__link {
+    @include ui-top-link;
+  }
+
+  &__swiper {
+    margin-top: 50px;
+  }
+
+  &__slide{
+    
+  }
+}

@@ -1,0 +1,47 @@
+.licenses-items {
+  &__top {
+    @include ui-top;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    @include ui-top-title;
+  }
+
+  &__link {
+    @include ui-top-link;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  &__item {
+    --border-color: var(--color-grey-bg);
+    --border-color-2: #ECECEC;
+    border-color: var(--border-color);
+    border-style: solid;
+    border-top-width: 58px;
+    border-bottom-width: 58px;
+    border-left-width: 72px;
+    border-right-width: 72px;
+    border-top-color: var(--border-color-2);
+    border-bottom-color: var(--border-color-2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tr;
+
+    @include hover {
+      --border-color: var(--color-red);
+      --border-color-2: #D21441;
+    }
+
+    img {
+      max-height: 100%;
+    }
+  }
+}

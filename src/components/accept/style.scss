@@ -32,12 +32,11 @@
 
   &__text {
     @include ui-descriptor-18;
-    display: flex;
-    flex-direction: column;
-
+    display: inline;
 
     a {
       color: var(--color-red);
+      text-decoration: underline;
       @include tr;
       @include hover {
         color: var(--color-red2);

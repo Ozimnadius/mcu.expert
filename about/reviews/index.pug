@@ -4,5 +4,35 @@ block variables
     - var title = 'Отзывы'
 
 block content
-    main.page
+    main.page.reviews
+        section.page__section
+            .container
+                .page__bread
+                    -
+                        var bread = [
+                            {
+                                href: '/',
+                                name: 'Главная'
+                            },
+                            {
+                                href: '/about/',
+                                name: 'О нас'
+                            },
+                            {
+                                name: title
+                            },
+
+                        ];
+                    include ../../src/components/bread/index
+                h1.page__title= title
+            .page__content
+                .container
+                    .reviews__items
+                        each i in [1,2,3,4,5,6,7,8,9]
+                            .reviews__item
+                                include ../../src/components/reviews-item/index
+        section.reviews__form
+            .container
+                include ../../src/components/form-review/index
+
         

@@ -1,0 +1,9 @@
+.portfolio-slider
+    .portfolio-slider__top
+        .portfolio-slider__title Порфтолио и кейсы
+        a(href="/about/portfolio/").portfolio-slider__link Перейти в раздел
+    .portfolio-slider__swiper.swiper
+        .swiper-wrapper
+            each i in [1,2,3,1,2,3]
+                .swiper-slide.portfolio-slider__slide
+                    include ../portfolio-item/index

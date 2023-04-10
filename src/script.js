@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 window.addEventListener('resize', function () {
     setOffset();
-})
+});
 
 function init() {
     initSliders();
@@ -32,7 +32,7 @@ function initSliders() {
 
     const indexPopularSlider = document.querySelector('.index-popular__slider');
     if (indexPopularSlider) {
-        const indexBannerSwiper = new Swiper(indexPopularSlider.querySelector('.swiper'), {
+        const indexPopularSwiper = new Swiper(indexPopularSlider.querySelector('.swiper'), {
             slidesPerView: 'auto',
             spaceBetween: 40,
             grabCursor: true,
@@ -44,9 +44,18 @@ function initSliders() {
         });
     }
 
+    const coursesSlider = document.querySelector('.courses-slider');
+    if (coursesSlider) {
+        const coursesSwiper = new Swiper(coursesSlider.querySelector('.swiper'), {
+            slidesPerView: 4,
+            spaceBetween: 40,
+            grabCursor: true,
+        });
+    }
+
     const reviewsSlider = document.querySelector('.reviews-slider');
     if (reviewsSlider) {
-        const indexBannerSwiper = new Swiper(reviewsSlider.querySelector('.swiper'), {
+        const reviewsSwiper = new Swiper(reviewsSlider.querySelector('.swiper'), {
             slidesPerView: 3,
             spaceBetween: 40,
             // Navigation arrows
@@ -59,7 +68,7 @@ function initSliders() {
 
     const clientsSlider = document.querySelector('.clients-slider');
     if (clientsSlider) {
-        const indexBannerSwiper = new Swiper(clientsSlider.querySelector('.swiper'), {
+        const clientsSwiper = new Swiper(clientsSlider.querySelector('.swiper'), {
             slidesPerView: 3,
             spaceBetween: 40,
             // Navigation arrows
@@ -72,7 +81,7 @@ function initSliders() {
 
     const teachersSlider = document.querySelector('.teachers-slider');
     if (teachersSlider) {
-        const indexBannerSwiper = new Swiper(teachersSlider.querySelector('.swiper'), {
+        const teachersSwiper = new Swiper(teachersSlider.querySelector('.swiper'), {
             slidesPerView: 'auto',
             spaceBetween: 40,
             // Navigation arrows
@@ -82,8 +91,36 @@ function initSliders() {
             },
         });
     }
-}
 
+    const chairsSlider = document.querySelector('.chairs-slider');
+    if (chairsSlider) {
+        const chairsSwiper = new Swiper(chairsSlider.querySelector('.swiper'), {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        });
+    }
+
+    const portfolioSlider = document.querySelector('.portfolio-slider');
+    if (portfolioSlider) {
+        const portfolioSwiper = new Swiper(portfolioSlider.querySelector('.swiper'), {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        });
+    }
+
+    const licensesSlider = document.querySelector('.licenses-slider');
+    if (licensesSlider) {
+        const licensesSwiper = new Swiper(licensesSlider.querySelector('.swiper'), {
+            slidesPerView: 4,
+            spaceBetween: 40,
+            // Navigation arrows
+            navigation: {
+                nextEl: licensesSlider.querySelector('.licenses-slider__next'),
+                prevEl: licensesSlider.querySelector('.licenses-slider__prev'),
+            },
+        });
+    }
+}
 
 function setOffset() {
     let offset = document.querySelector('.offset__width').offsetLeft;
@@ -181,13 +218,20 @@ class Events {
         // console.log(elem);
     }
 
-    inputChange(e, elem) {
-        e.preventDefault();
-        console.log('Change input');
-        // console.log(this);
-        console.log(e);
-        // console.log(elem);
+    fileChange(e, elem) {
+
+        let parent = elem.closest('.form-file');
+        let placeholder = parent.querySelector('.form-file__placeholder');
+
+        if  (elem.files.length>0){
+            placeholder.innerHTML = elem.files[0].name;
+           parent.classList.add('active');
+        } else {
+            placeholder.innerHTML = 'Добавить фото';
+            parent.classList.remove('active');
+        }
     }
+
 }
 
 new Events();

@@ -6,6 +6,11 @@
 
   &__title{
     @include ui-top-title;
+    margin-right: auto;
+  }
+
+  &__link{
+    @include ui-top-link;
   }
 
   &__nav {
@@ -22,6 +27,8 @@
 
   &__swiper {
     margin-top: 40px;
+    margin-left: calc(0px - var(--offset, 192px));
+    padding-left: var(--offset, 192px);
     margin-right: calc(0px - var(--offset, 192px));
     padding-right: 40px;
   }

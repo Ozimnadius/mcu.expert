@@ -1,6 +1,8 @@
 .teachers-slider
     .teachers-slider__top
-        .teachers-slider__title Преподаватели
+        .teachers-slider__title= data.title
+        if data.link
+            a(href="/about/teachers/").teachers-slider__link Перейти в раздел
         .teachers-slider__nav
             button(type='button').teachers-slider__arr.teachers-slider__prev
                 <svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -12,7 +14,7 @@
                 </svg>
     .teachers-slider__swiper.swiper
         .swiper-wrapper
-            each i in data
+            each i in data.list
                 .swiper-slide.teachers-slider__slide
                     include ../teachers-item/index
 

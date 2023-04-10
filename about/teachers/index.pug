@@ -5,4 +5,79 @@ block variables
 
 block content
     main.page
+        section.page__section
+            .container
+                .page__bread
+                    -
+                        var bread = [
+                            {
+                                href: '/',
+                                name: 'Главная'
+                            },
+                            {
+                                href: '/about/',
+                                name: 'О нас'
+                            },
+                            {
+                                name: title
+                            },
+
+                        ];
+                    include ../../src/components/bread/index
+                h1.page__title= title
+            .page__content
+                .container
+                    -
+                        var data = [
+                            {
+                                img: '/images/content/teachers-item/1.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/2.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/3.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/4.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/1.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/2.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/3.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/4.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/1.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/2.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/3.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/4.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/1.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/2.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/3.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/4.webp'
+                            },
+
+                        ];
+                    include ../../src/components/teachers-items/index
         

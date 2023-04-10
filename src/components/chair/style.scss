@@ -1,0 +1,37 @@
+.chair{
+  padding-bottom: 0;
+
+  &__grid{
+    display:grid;
+    grid-template-columns: 1fr 740px;
+    gap: 170px;
+  }
+
+  &__top{
+    font-size: 24px;
+    display:grid;
+    gap: 20px;
+  }
+
+  &__bottom{
+    @include ui-descriptor-18;
+    display:grid;
+    gap: 10px;
+  }
+
+  &__img{
+    border: 90px solid var(--color-grey-bg);
+    border-top-width: 76px;
+    border-bottom-width: 76px;
+  }
+
+  &__teachers{
+    margin-top: 150px;
+  }
+
+  &__courses{
+    padding: 120px 0;
+    margin-top: 120px;
+    background-color: var(--color-grey-bg);
+  }
+}

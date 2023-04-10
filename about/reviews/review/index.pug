@@ -4,5 +4,45 @@ block variables
     - var title = 'Эллада Гасанова'
 
 block content
-    main.page
+    main.page.reviews
+        section.page__section
+            .container
+                .page__bread
+                    -
+                        var bread = [
+                            {
+                                href: '/',
+                                name: 'Главная'
+                            },
+                            {
+                                href: '/about/',
+                                name: 'О нас'
+                            },
+                            {
+                                href: '/about/reviews/',
+                                name: 'Отзывы'
+                            },
+
+                            {
+                                name: title
+                            },
+
+                        ];
+                    include ../../../src/components/bread/index
+                h1.page__title= title
+            .page__content
+                .container
+                    .review
+                        .review__content
+                            .review__left
+                                .review__img
+                                    img(src="/images/content/reviews-item/face.webp" alt="lorem")
+                            .review__right
+                                .review__desc
+                                    p Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.
+                                .review__date 14.12.2022
+
+        section.reviews__form
+            .container
+                include ../../../src/components/form-review/index
         

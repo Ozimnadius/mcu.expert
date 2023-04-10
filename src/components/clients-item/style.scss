@@ -3,6 +3,7 @@
 .clients-item {
   display: block;
   background-color: var(--color-grey-bg);
+  position: relative;
   @include tr;
 
   @include hover{

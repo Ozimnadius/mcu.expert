@@ -1,0 +1,7 @@
+.courses-items
+    .courses-items__top
+        .courses-items__title= data.title
+    .courses-items__list
+        each i in data.list
+            .courses-items__item
+                include ../courses-item/index

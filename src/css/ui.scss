@@ -289,20 +289,21 @@
 }
 
 @mixin ui-disabled {
-  opacity: 0.7;
+  opacity: 0.5;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 @mixin ui-top {
   --arrow2-size: 60px;
   display: flex;
   align-items: center;
-  gap: 20px;
-  justify-content: space-between;
+  gap: 60px;
 }
 
 @mixin ui-top-title {
   @include ui-heading-2;
+  margin-right: auto;
 }
 
 @mixin ui-top-nav {
@@ -314,11 +315,19 @@
   @include ui-link-main;
 }
 
+@mixin ui-card-title32{
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+}
+
 @mixin ui-card-title{
   font-weight: 700;
   font-size: 24px;
   line-height: 120%;
 }
+
+
 
 
 

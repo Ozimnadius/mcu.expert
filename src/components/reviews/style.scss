@@ -1,0 +1,12 @@
+.reviews {
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px 40px;
+  }
+
+  &__form {
+    margin-top: 165px;
+  }
+}

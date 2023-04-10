@@ -12,6 +12,9 @@
 @import "components/socials/style";
 @import "components/menu/style";
 @import "components/accept/style";
+@import "components/form/style";
+
+@import "components/page/style";  ;
 
 @import "components/index/style";
 @import "components/index-banner/style";
@@ -22,17 +25,21 @@
 @import "components/index-profile/style";
 @import "components/index-news/style";
 
-
 @import "components/video-list/style";
 @import "components/video-broadcasts/style";
 @import "components/video-lectures/style";
 
+@import "components/reviews/style";
 @import "components/reviews-slider/style";
 @import "components/reviews-item/style";
+@import "components/review/style";
 
+@import "components/clients/style";
 @import "components/clients-slider/style";
 @import "components/clients-item/style";
 
+@import "components/courses-slider/style";
+@import "components/courses-items/style";
 @import "components/courses-item/style";
 
 @import "components/banner/style";
@@ -43,7 +50,23 @@
 @import "components/about/style";
 
 @import "components/teachers-slider/style";
+@import "components/teachers-items/style";
 @import "components/teachers-item/style";
+@import "components/teacher/style";
+
+@import "components/chairs-slider/style";
+@import "components/chairs-item/style";
+@import "components/chair/style";
+
+@import "components/licenses-items/style";
+@import "components/licenses-slider/style";
+
+@import "components/portfolio/style";
+@import "components/portfolio-detail/style";
+@import "components/portfolio-slider/style";
+@import "components/portfolio-item/style";
+
+@import "components/form-review/style";
 
 
 @import "components/footer/style";

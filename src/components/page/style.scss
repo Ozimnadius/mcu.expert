@@ -1,0 +1,14 @@
+.page {
+  overflow: hidden;
+  padding-top: 90px;
+  padding-bottom: 100px;
+
+  &__title{
+    @include ui-heading-1;
+    margin-top: 25px;
+  }
+
+  &__content{
+    margin-top: 80px;
+  }
+}

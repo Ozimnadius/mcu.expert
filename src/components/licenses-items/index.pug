@@ -1,0 +1,9 @@
+.licenses-items
+    if data.top
+        .licenses-items__top
+            .licenses-items__title Лицензии
+            a(href="/about/licenses/").licenses-items__link Перейти в раздел
+    .licenses-items__items
+        each i in data.list
+            a(href="/images/content/licenses-items/img.webp" data-fancybox="licenses-items").licenses-items__item
+                img(src="/images/content/licenses-items/thumb.webp" alt="license")

@@ -1,0 +1,13 @@
+.courses-slider{
+  &__top{
+    @include ui-top;
+  }
+
+  &__title{
+    @include ui-top-title;
+  }
+
+  &__swiper{
+    margin-top: 80px;
+  }
+}

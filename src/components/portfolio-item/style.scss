@@ -1,0 +1,75 @@
+@use "sass:math";
+
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include hover {
+
+    .portfolio-item {
+      &__img {
+        & > img {
+          transform: scale(1.05);
+        }
+      }
+
+      &__title {
+        color: var(--color-red);
+      }
+
+      &__link {
+        color: var(--color-red2);
+      }
+    }
+  }
+
+
+  &__img {
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      display: block;
+      padding-top: math.percentage(math.div(380, 480));
+    }
+
+    & > img {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include tr;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    top: 25px;
+    left: 25px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    @include ui-card-title32;
+    @include tr;
+  }
+
+  &__link {
+    color: var(--color-red);
+    text-decoration: underline;
+    font-size: 20px;
+    @include tr;
+  }
+}

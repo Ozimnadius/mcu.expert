@@ -1,0 +1,23 @@
+.chairs-slider {
+  &__top {
+    @include ui-top;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    @include ui-top-title;
+  }
+
+  &__link {
+    @include ui-top-link;
+  }
+
+  &__slide {
+    box-sizing: border-box;
+    height: auto;
+
+    a {
+      height: 100%;
+    }
+  }
+}

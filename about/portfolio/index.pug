@@ -5,4 +5,31 @@ block variables
 
 block content
     main.page
+        section.page__section
+            .container
+                .page__bread
+                    -
+                        var bread = [
+                            {
+                                href: '/',
+                                name: 'Главная'
+                            },
+                            {
+                                href: '/about/',
+                                name: 'О нас'
+                            },
+                            {
+                                name: title
+                            },
+
+                        ];
+                    include ../../src/components/bread/index
+                h1.page__title= title
+            .page__content
+                .container
+                    .portfolio
+                        each i in [1,2,3]
+                            .portfolio__item
+                                include ../../src/components/portfolio-item/index
+
         
