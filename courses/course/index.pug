@@ -4,5 +4,134 @@ block variables
     - var title = 'Пример курса'
 
 block content
-    main.page
+    main.page.course
+        //-banner
+        section.course__banner
+            -
+                var data = {
+                    type: 'white',
+                    img: '/images/content/banner/course.webp',
+                    bread: [
+                        {
+                            href: '/',
+                            name: 'Главная'
+                        },
+                        {
+                            href: '/courses/',
+                            name: 'Курсы'
+                        },
+                        {
+                            name: title
+                        }
+                    ],
+                    content: `<h2>Системное управление клиникой</h2>
+                                <br>
+                               <p>На основе трёхконтурной бизнес-модели</p>
+                               <ul>
+                               <li>Онлайн обучение + внедрение</li>
+                               <li>Старт 3 потока 30 января 2023</li>
+                                </ul>
+                                <p>*Лучший курс по управлению 2022 года</p>
+                                <button type="button">Записаться на курс</button>
+                            `
+                };
+            include ../../src/components/banner/index
+        //-schedule
+        section.course__schedule
+            .container
+                include ../../src/components/course-schedule/index
+        //-about
+        section.course__about
+            .container
+                include ../../src/components/course-about/index
+        //-advantages
+        section.course__advantages
+            .container
+                include ../../src/components/course-advantages/index
+        //-desc
+        section.course__desc
+            .container
+                include ../../src/components/course-desc/index
+        //-histories
+        section.course__histories
+            .container
+                include ../../src/components/course-histories/index
+        //-process
+        section.course__process
+            .container
+                include ../../src/components/course-process/index
+        //-program
+        section.course__program
+            .container
+                include ../../src/components/course-program/index
+        //-teachers
+        section.course__teachers
+            .container
+                -
+                    var data = {
+                        title: 'Преподаватели курса',
+                        link: true,
+                        list: [
+                            {
+                                img: '/images/content/teachers-item/1.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/2.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/3.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/4.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/1.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/2.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/3.webp'
+                            },
+                            {
+                                img: '/images/content/teachers-item/4.webp'
+                            }
+                        ]
+                    };
+                include ../../src/components/teachers-slider/index
+        //-tariffs
+        section.course__tariffs
+            .container
+                include ../../src/components/course-tariffs/index
+        //-guarantees
+        section.course__guarantees
+            .container
+                include ../../src/components/course-guarantees/index
+        //-faq
+        section.course__faq
+            .container
+                -
+                    var data = {
+                        title: true
+                    };
+                include ../../src/components/course-faq/index
+        //-form
+        section.course__form
+            .container
+                include ../../src/components/form-call/index
+        //-info
+        section.course__info
+            .container
+                include ../../src/components/course-info/index
+
+
+
+
+
+
+
+
+
+
+
         

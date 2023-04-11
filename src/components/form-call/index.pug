@@ -1,0 +1,17 @@
+form(action='/php/ajax.php' method='post').form-call.form
+    .form-call__left
+        .form-call__img
+            img(src="/images/content/form-call/img.webp" alt="Получить программу курса")
+    .form-call__right
+        .form__title Получить<br>программу курса
+        .form__fields
+            .form__field
+                input(type='text' name='name' placeholder='Ваше имя').form__input
+            .form__field
+                input(type='tel' name='tel' placeholder='Телефон' required).form__input
+            .form__field
+                input(type='email' name='email' placeholder='Эл. почта').form__input
+
+        .form__accept
+            include ../accept/index
+        button(type='submit').form__submit Оставить отзыв

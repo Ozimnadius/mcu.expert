@@ -1,0 +1,29 @@
+.course-info{
+  background-color: var(--color-red2);
+  padding: 110px 130px;
+  position: relative;
+  border-radius: 30px;
+
+  &__img{
+    position: absolute;
+    top: 58px;
+    right: 220px;
+  }
+
+  &__content{
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title{
+    @include ui-heading-2;
+    color: var(--color-white);
+    max-width: 25ch;
+  }
+
+  &__link{
+    @include ui-btn-fill-white;
+    margin-top: 65px;
+  }
+
+}

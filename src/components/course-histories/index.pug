@@ -1,0 +1,33 @@
+.course-histories
+    .course-histories__left
+        .course-histories__title Истории наших <br> студентов
+        .course-histories__desc Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев.
+        button(type='button').course-histories__btn Оставить отзыв
+    .course-histories__right
+        .course-histories__list
+            -
+                var data = [
+                    {
+                        img: '/images/content/course-histories/1.webp'
+                    },
+                    {
+                        img: '/images/content/course-histories/2.webp'
+                    },
+                    {
+                        img: '/images/content/course-histories/3.webp'
+                    },
+                    {
+                        img: '/images/content/course-histories/4.webp'
+                    },
+                    {
+                        img: '/images/content/course-histories/5.webp'
+                    }
+                ];
+            each i in data
+                a(href="/about/reviews/review/").course-histories__item.course-historie
+                    span.course-historie__left
+                        span.course-historie__img
+                            img(src=i.img alt="Эллада Гасанова")
+                    span.course-historie__right
+                        span.course-historie__desc Мне очень понравился грамотный и ответственный подход Ольги Вячеславовны - врача и руководителя нескольких медицинских центров.
+                        span.course-historie__name Эллада Гасанова

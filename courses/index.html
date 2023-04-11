@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Курсы</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/css/libs.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Для изменений после верстки-->
+    <link rel="stylesheet" href="/css/custom.css">
+    <script defer src="/js/libs.js"></script>
+    <script defer src="/js/script.js"></script>
+    <!-- Для изменений после верстки-->
+    <script defer src="/js/custom.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="wrapper__header">
+        <header class="header">
+            <div class="container">
+                <div class="header__top">
+                    <div class="header__left">
+                        <div class="header__logo"><a href="/"><img src="/images/content/logo-text.svg" alt="logo"></a>
+                        </div>
+                        <div class="header__slogan">
+                            ГАРАНТИЯ <br>
+                            УВЕЛИЧЕНИЯ <br>
+                            ПРИБЫЛИ
+                        </div>
+                    </div>
+                    <div class="header__center">
+                        <div class="header__socials">
+                            <div class="socials"><a href="/">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M28.7622 10.077C26.2788 7.60218 22.9676 6.22729 19.4724 6.22729C12.2061 6.22729 6.31952 12.0935 6.31952 19.3345C6.31952 21.626 6.96336 23.9174 8.0671 25.8423L6.22754 32.625L13.2179 30.7918C15.1494 31.8001 17.2649 32.35 19.4724 32.35C26.7387 32.35 32.6253 26.4839 32.6253 19.2428C32.5333 15.8515 31.2456 12.5517 28.7622 10.077ZM25.8189 24.0091C25.5429 24.7424 24.2553 25.4756 23.6114 25.5673C23.0595 25.659 22.3237 25.659 21.5879 25.4756C21.128 25.2923 20.4842 25.109 19.7483 24.7424C16.4371 23.3675 14.3216 20.0678 14.1377 19.7928C13.9537 19.6095 12.758 18.0513 12.758 16.4014C12.758 14.7516 13.5858 14.0183 13.8617 13.6517C14.1377 13.285 14.5056 13.285 14.7815 13.285C14.9655 13.285 15.2414 13.285 15.4253 13.285C15.6093 13.285 15.8852 13.1934 16.1612 13.835C16.4371 14.4766 17.081 16.1264 17.1729 16.2181C17.2649 16.4014 17.2649 16.5847 17.1729 16.7681C17.081 16.9514 16.989 17.1347 16.805 17.318C16.6211 17.5013 16.4371 17.7763 16.3451 17.868C16.1612 18.0513 15.9772 18.2346 16.1612 18.5096C16.3451 18.8762 16.989 19.8844 18.0007 20.801C19.2884 21.9009 20.3002 22.2676 20.6681 22.4509C21.036 22.6342 21.22 22.5426 21.4039 22.3592C21.5879 22.1759 22.2317 21.4427 22.4157 21.076C22.5996 20.7094 22.8756 20.801 23.1515 20.8927C23.4274 20.9844 25.0831 21.8093 25.359 21.9926C25.7269 22.1759 25.9109 22.2676 26.0028 22.3592C26.0948 22.6342 26.0948 23.2758 25.8189 24.0091Z"
+                                          fill="#C8C8C8"/>
+                                </svg>
+                            </a><a href="/">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.0519 23.3632L14.5917 30.2679C15.2679 30.2679 15.5666 29.9582 15.9441 29.5907L19.1927 26.4271L25.9514 31.4279C27.1952 32.1153 28.0929 31.7594 28.4027 30.2714L32.8395 9.33219C33.2938 7.50826 32.1453 6.68101 30.9554 7.22203L4.90256 17.283C3.12421 17.9973 3.13458 18.991 4.57841 19.4337L11.2642 21.5236L26.7424 11.7439C27.4731 11.3001 28.1437 11.5387 27.5933 12.0279L15.0515 23.3629L15.0519 23.3632Z"
+                                          fill="#C8C8C8"/>
+                                </svg>
+                            </a><a href="/">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32.9414 18.2649C32.9414 17.6588 32.847 16.9518 32.847 16.1437C32.7525 15.3356 32.6581 14.5275 32.5636 13.8205C32.3747 13.0124 32.0913 12.4063 31.5245 11.9013C31.0522 11.3962 30.391 11.0932 29.7298 10.9922C27.5572 10.6891 24.3455 10.5881 20.0003 10.5881C15.6551 10.5881 12.3489 10.6891 10.2708 10.9922C9.60953 11.0932 8.94831 11.3962 8.476 11.9013C8.00369 12.4063 7.62584 13.0124 7.43692 13.8205C7.248 14.5275 7.15355 15.2346 7.15355 16.1437C7.05909 16.9518 7.05908 17.6588 7.05908 18.2649C7.05908 18.871 7.05908 19.578 7.05908 20.5881C7.05908 21.5982 7.05908 22.4063 7.05908 22.9114C7.05908 23.5174 7.15355 24.2245 7.15355 25.0326C7.24801 25.8407 7.34246 26.6487 7.43692 27.3558C7.62584 28.1639 7.90923 28.77 8.476 29.275C8.94831 29.7801 9.60953 30.0831 10.2708 30.1841C12.4434 30.4871 15.6551 30.5881 20.0003 30.5881C24.3455 30.5881 27.6516 30.4871 29.7298 30.1841C30.391 30.0831 31.0522 29.7801 31.5245 29.275C31.9968 28.77 32.3747 28.1639 32.5636 27.3558C32.7525 26.6487 32.847 25.9417 32.847 25.0326C32.9415 24.2245 32.9414 23.5174 32.9414 22.9114C32.9414 22.3053 32.9414 21.5982 32.9414 20.5881C32.9414 19.578 32.9414 18.7699 32.9414 18.2649ZM24.0574 21.5982L17.5443 23.9215C17.4498 24.0225 17.2609 24.1235 17.072 24.1235C16.883 24.1235 16.7886 24.1235 16.5997 24.0225C16.3163 23.8205 16.1274 23.5174 16.1274 23.1134V18.2649C16.1274 17.8609 16.3163 17.5578 16.5997 17.3558C16.883 17.1538 17.2609 17.1538 17.5443 17.3558L24.0574 19.7801C24.3407 19.9821 24.5297 20.2851 24.5297 20.5881C24.5297 20.8912 24.3407 21.3962 24.0574 21.5982Z"
+                                          fill="#C8C8C8"/>
+                                </svg>
+                            </a><a href="/">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M8.87847 8.87798C7.05908 10.6974 7.05908 13.6256 7.05908 19.4821V20.5174C7.05908 26.3739 7.05908 29.3022 8.87847 31.1216C10.6978 32.9409 13.6261 32.9409 19.4826 32.9409H20.5179C26.3744 32.9409 29.3026 32.9409 31.1221 31.1216C32.9414 29.3022 32.9414 26.3739 32.9414 20.5174V19.4821C32.9414 13.6256 32.9414 10.6974 31.1221 8.87798C29.3026 7.05859 26.3744 7.05859 20.5179 7.05859H19.4826C13.6261 7.05859 10.6978 7.05859 8.87847 8.87798ZM11.0408 15.0226C11.1863 21.8624 14.6782 25.9729 20.8003 25.9729H21.1473V22.0597C23.397 22.2789 25.098 23.8902 25.7807 25.9729H28.9594C28.0864 22.8599 25.7919 21.139 24.3593 20.4813C25.7919 19.6702 27.8065 17.6972 28.2877 15.0226H25.4001C24.7734 17.1929 22.9157 19.166 21.1473 19.3523V15.0226H18.2597V22.6078C16.4689 22.1693 14.2082 20.0429 14.1075 15.0226H11.0408Z"
+                                          fill="#C8C8C8"/>
+                                </svg>
+                            </a><a href="/">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M22.4956 22.4956C20.462 24.5939 20.3233 27.2099 20.1384 32.9409C25.4813 32.9409 29.1695 32.9225 31.0737 31.0737C32.9225 29.1695 32.9409 25.3057 32.9409 20.1384C27.2099 20.3233 24.5939 20.462 22.4956 22.4956ZM19.8611 32.9409C14.5183 32.9409 10.83 32.9225 8.92582 31.0737C7.07708 29.1695 7.05859 25.3057 7.05859 20.1384C12.7897 20.3233 15.4057 20.462 17.504 22.4956C19.5376 24.5939 19.6762 27.2099 19.8611 32.9409ZM17.504 17.504C15.4057 19.5376 12.7897 19.6762 7.05859 19.8611C7.05859 14.6939 7.07708 10.83 8.92582 8.92582C10.83 7.07708 14.5275 7.05859 19.8611 7.05859C19.6762 12.7897 19.5376 15.4057 17.504 17.504ZM20.1384 7.05859C20.3141 12.7897 20.462 15.4057 22.4956 17.504C24.5939 19.5376 27.2099 19.6762 32.9409 19.8611C32.9409 14.6939 32.9225 10.83 31.0737 8.92582C29.1695 7.07708 25.4813 7.05859 20.1384 7.05859Z"
+                                          fill="#C8C8C8"/>
+                                </svg>
+                            </a></div>
+                        </div>
+                    </div>
+                    <div class="header__right">
+                        <div class="header__tel"><a href="tel:+7(495)198-11-01">+7 (495) 198-11-01</a></div>
+                        <button class="header__call" type="button">Заказать звонок</button>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="header__menu">
+                    <div class="menu">
+                        <div class="menu__item"><a class="menu__link--arrow menu__link"
+                                                   href="/about/"><span>О нас</span></a>
+                            <div class="menu__submenu">
+                                <div class="menu__subitem"><a class="menu__sublink" href="/about/history/">История
+                                    компании</a></div>
+                                <div class="menu__subitem"><a class="menu__sublink" href="/about/teachers/">Преподаватели</a>
+                                </div>
+                                <div class="menu__subitem"><a class="menu__sublink" href="/about/chairs/">Кафедры</a>
+                                </div>
+                                <div class="menu__subitem"><a class="menu__sublink" href="/about/licenses/">Лицензии</a>
+                                </div>
+                                <div class="menu__subitem"><a class="menu__sublink" href="/about/reviews/">Отзывы</a>
+                                </div>
+                                <div class="menu__subitem"><a class="menu__sublink" href="/about/clients/">Наши
+                                    клиенты</a></div>
+                                <div class="menu__subitem"><a class="menu__sublink" href="/about/portfolio/">Портфолио /
+                                    Кейсы</a></div>
+                            </div>
+                        </div>
+                        <div class="menu__item"><a class="menu__link" href="/guarantees/"><span>Гарантии</span></a>
+                        </div>
+                        <div class="menu__item"><a class="menu__link--arrow menu__link"
+                                                   href="/courses/"><span>Курсы</span></a>
+                            <div class="menu__submenu">
+                                <div class="menu__subitem"><a class="menu__sublink" href="/courses/course/">Системное
+                                    управление клиникой</a></div>
+                                <div class="menu__subitem"><a class="menu__sublink" href="/courses/course/">Открой
+                                    клинику мечты</a></div>
+                                <div class="menu__subitem"><a class="menu__sublink" href="/courses/course/">Обучение
+                                    врачей</a></div>
+                                <div class="menu__subitem"><a class="menu__sublink" href="/courses/course/">Обучение
+                                    Администраторов</a></div>
+                                <div class="menu__subitem"><a class="menu__sublink" href="/courses/course/">Обучение
+                                    медицинских сестер</a></div>
+                                <div class="menu__subitem"><a class="menu__sublink" href="/courses/course/">Обучение
+                                    врачей</a></div>
+                                <div class="menu__subitem"><a class="menu__sublink" href="/courses/course/">Системное
+                                    управление клиникой</a></div>
+                            </div>
+                        </div>
+                        <div class="menu__item"><a class="menu__link" href="/outsourcing/"><span>Аутсорсинг</span></a>
+                        </div>
+                        <div class="menu__item"><a class="menu__link" href="/consulting/"><span>Консалтинг</span></a>
+                        </div>
+                        <div class="menu__item"><a class="menu__link" href="/video/"><span>Видеотека</span></a>
+                        </div>
+                        <div class="menu__item"><a class="menu__link" href="/shop/"><span>Магазин</span></a>
+                        </div>
+                        <div class="menu__item"><a class="menu__link" href="/gifts/"><span>Подарки</span></a>
+                        </div>
+                        <div class="menu__item"><a class="menu__link" href="/news/"><span>Новости</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="wrapper__content">
+        <main class="page">
+            <section class="page__section">
+                <div class="container">
+                    <div class="page__bread">
+                        <div class="bread"><a class="bread__item" href="#">Главная</a><a class="bread__item" href="#">О
+                            нас</a><span class="bread__item">Курсы</span>
+                        </div>
+                    </div>
+                    <h1 class="page__title">Курсы</h1>
+                </div>
+                <div class="page__content">
+                    <div class="container">
+                        <div class="courses">
+                            <div class="courses__btns"><a class="courses__arr courses__prev" href="#">
+                                <svg width="29" height="16" viewBox="0 0 29 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.718999 8.70711C0.328474 8.31658 0.328474 7.68342 0.718999 7.29289L7.08296 0.928932C7.47348 0.538408 8.10665 0.538408 8.49717 0.928932C8.8877 1.31946 8.8877 1.95262 8.49717 2.34315L2.84032 8L8.49717 13.6569C8.8877 14.0474 8.8877 14.6805 8.49717 15.0711C8.10665 15.4616 7.47348 15.4616 7.08296 15.0711L0.718999 8.70711ZM28.5713 9H1.42611V7H28.5713V9Z"
+                                          fill="#E9E9E9"/>
+                                </svg>
+                            </a>
+                                <div class="courses__swiper swiper">
+                                    <div class="swiper-wrapper">
+                                        <button class="swiper-slide courses__btn active" type="button">Все курсы
+                                        </button>
+                                        <button class="swiper-slide courses__btn" type="button">Собственникам</button>
+                                        <button class="swiper-slide courses__btn" type="button">Управленцам</button>
+                                        <button class="swiper-slide courses__btn" type="button">Врачам</button>
+                                        <button class="swiper-slide courses__btn" type="button">Администраторам</button>
+                                        <button class="swiper-slide courses__btn" type="button">Медицинским сестрам
+                                        </button>
+                                    </div>
+                                </div>
+                                <a class="courses__arr courses__next" href="#">
+                                    <svg width="29" height="16" viewBox="0 0 29 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.718998 8.70711C0.328474 8.31658 0.328474 7.68342 0.718998 7.29289L7.08296 0.928932C7.47348 0.538408 8.10665 0.538408 8.49717 0.928932C8.8877 1.31946 8.8877 1.95262 8.49717 2.34315L2.84032 8L8.49717 13.6569C8.8877 14.0474 8.8877 14.6805 8.49717 15.0711C8.10665 15.4616 7.47348 15.4616 7.08296 15.0711L0.718998 8.70711ZM28.5713 9H1.42611V7H28.5713V9Z"
+                                              fill="#E9E9E9"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="courses__tabs">
+                                <div class="courses__tab active">
+                                    <div class="courses__list">
+                                        <div class="courses-items">
+                                            <div class="courses-items__list">
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/1.webp"
+                                                        alt="img"></span><span class="courses-item__name">Системное управление клиникой</span><span
+                                                        class="courses-item__txt"><p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/2.webp"
+                                                        alt="img"></span><span class="courses-item__name">Корпоративное обучение</span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/3.webp"
+                                                        alt="img"></span><span class="courses-item__name">Мотивационная консультация <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/4.webp"
+                                                        alt="img"></span><span class="courses-item__name">Открой клинику <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/5.webp"
+                                                        alt="img"></span><span class="courses-item__name">Системное управление маркетингом</span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/1.webp"
+                                                        alt="img"></span><span class="courses-item__name">Системное управление клиникой</span><span
+                                                        class="courses-item__txt"><p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/2.webp"
+                                                        alt="img"></span><span class="courses-item__name">Корпоративное обучение</span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/3.webp"
+                                                        alt="img"></span><span class="courses-item__name">Мотивационная консультация <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/1.webp"
+                                                        alt="img"></span><span class="courses-item__name">Системное управление клиникой</span><span
+                                                        class="courses-item__txt"><p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/2.webp"
+                                                        alt="img"></span><span class="courses-item__name">Корпоративное обучение</span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/3.webp"
+                                                        alt="img"></span><span class="courses-item__name">Мотивационная консультация <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/4.webp"
+                                                        alt="img"></span><span class="courses-item__name">Открой клинику <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/5.webp"
+                                                        alt="img"></span><span class="courses-item__name">Системное управление маркетингом</span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/1.webp"
+                                                        alt="img"></span><span class="courses-item__name">Системное управление клиникой</span><span
+                                                        class="courses-item__txt"><p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/2.webp"
+                                                        alt="img"></span><span class="courses-item__name">Корпоративное обучение</span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/3.webp"
+                                                        alt="img"></span><span class="courses-item__name">Мотивационная консультация <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <form class="courses__more" action="/php/coursesMore.php" method="post"
+                                          data-event="submit.coursesMore">
+                                        <input type="hidden" name="id" value="1">
+                                        <button type="submit">Загрузить еще</button>
+                                    </form>
+                                </div>
+                                <div class="courses__tab">
+                                    <div class="courses__list">
+                                        <div class="courses-items">
+                                            <div class="courses-items__list">
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/1.webp"
+                                                        alt="img"></span><span class="courses-item__name">Системное управление клиникой</span><span
+                                                        class="courses-item__txt"><p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/2.webp"
+                                                        alt="img"></span><span class="courses-item__name">Корпоративное обучение</span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/3.webp"
+                                                        alt="img"></span><span class="courses-item__name">Мотивационная консультация <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/4.webp"
+                                                        alt="img"></span><span class="courses-item__name">Открой клинику <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/5.webp"
+                                                        alt="img"></span><span class="courses-item__name">Системное управление маркетингом</span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/1.webp"
+                                                        alt="img"></span><span class="courses-item__name">Системное управление клиникой</span><span
+                                                        class="courses-item__txt"><p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/2.webp"
+                                                        alt="img"></span><span class="courses-item__name">Корпоративное обучение</span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/3.webp"
+                                                        alt="img"></span><span class="courses-item__name">Мотивационная консультация <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/1.webp"
+                                                        alt="img"></span><span class="courses-item__name">Системное управление клиникой</span><span
+                                                        class="courses-item__txt"><p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/2.webp"
+                                                        alt="img"></span><span class="courses-item__name">Корпоративное обучение</span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/3.webp"
+                                                        alt="img"></span><span class="courses-item__name">Мотивационная консультация <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/4.webp"
+                                                        alt="img"></span><span class="courses-item__name">Открой клинику <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="courses__tab">
+                                    <div class="courses__list">
+                                        <div class="courses-items">
+                                            <div class="courses-items__list">
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/1.webp"
+                                                        alt="img"></span><span class="courses-item__name">Системное управление клиникой</span><span
+                                                        class="courses-item__txt"><p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/2.webp"
+                                                        alt="img"></span><span class="courses-item__name">Корпоративное обучение</span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/3.webp"
+                                                        alt="img"></span><span class="courses-item__name">Мотивационная консультация <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/4.webp"
+                                                        alt="img"></span><span class="courses-item__name">Открой клинику <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="courses__tab">
+                                    <div class="courses__list">
+                                        <div class="courses-items">
+                                            <div class="courses-items__list">
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/1.webp"
+                                                        alt="img"></span><span class="courses-item__name">Системное управление клиникой</span><span
+                                                        class="courses-item__txt"><p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/2.webp"
+                                                        alt="img"></span><span class="courses-item__name">Корпоративное обучение</span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/3.webp"
+                                                        alt="img"></span><span class="courses-item__name">Мотивационная консультация <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/4.webp"
+                                                        alt="img"></span><span class="courses-item__name">Открой клинику <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="courses__tab">
+                                    <div class="courses__list">
+                                        <div class="courses-items">
+                                            <div class="courses-items__list">
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/1.webp"
+                                                        alt="img"></span><span class="courses-item__name">Системное управление клиникой</span><span
+                                                        class="courses-item__txt"><p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/2.webp"
+                                                        alt="img"></span><span class="courses-item__name">Корпоративное обучение</span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/3.webp"
+                                                        alt="img"></span><span class="courses-item__name">Мотивационная консультация <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/4.webp"
+                                                        alt="img"></span><span class="courses-item__name">Открой клинику <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="courses__tab">
+                                    <div class="courses__list">
+                                        <div class="courses-items">
+                                            <div class="courses-items__list">
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/1.webp"
+                                                        alt="img"></span><span class="courses-item__name">Системное управление клиникой</span><span
+                                                        class="courses-item__txt"><p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/2.webp"
+                                                        alt="img"></span><span class="courses-item__name">Корпоративное обучение</span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/3.webp"
+                                                        alt="img"></span><span class="courses-item__name">Мотивационная консультация <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                                <div class="courses-items__item"><a class="courses-item"
+                                                                                    href="/courses/course/"><span
+                                                        class="courses-item__img"><img
+                                                        src="/images/content/index-popular/4.webp"
+                                                        alt="img"></span><span class="courses-item__name">Открой клинику <span
+                                                        style="color:var(--color-red);">ТОП-5</span></span><span
+                                                        class="courses-item__txt"><p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="wrapper__footer">
+        <footer class="footer">
+            <div class="footer__top">
+                <div class="container">
+                    <div class="footer__grid">
+                        <div class="footer__logo"><a href="/"><img src="/images/content/logo-text-white.svg" alt="logo"></a>
+                        </div>
+                        <div class="footer__menus">
+                            <div class="footer__menu"><a href="/about/">О нас</a><a href="/guarantees/">Гарантии</a><a
+                                    href="">Курсы</a><a href="/outsourcing/">Аутсорсинг</a><a href="/consulting/">Консалтинг</a>
+                            </div>
+                            <div class="footer__menu"><a href="/video/">Видеотека</a><a href="/shop/">Магазин</a><a
+                                    href="/gifts/">Подарки</a><a href="/news/">Новости</a></div>
+                        </div>
+                        <div class="footer__form">
+                            <form class="footer-form" action="/php/ajax.php" method="post">
+                                <div class="footer-form__title">Запишитесь <br> на консультацию</div>
+                                <div class="footer-form__main">
+                                    <input class="footer-form__input" type="tel" name="tel" placeholder="Номер телефона"
+                                           required>
+                                    <button class="footer-form__submit" type="submit">
+                                        <svg width="36" height="16" viewBox="0 0 36 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.979092 7.06633C0.58857 7.45685 0.58857 8.09002 0.979092 8.48054L7.34305 14.8445C7.73358 15.235 8.36674 15.235 8.75727 14.8445C9.14779 14.454 9.14779 13.8208 8.75727 13.4303L3.10041 7.77344L8.75727 2.11658C9.14779 1.72606 9.14779 1.09289 8.75727 0.70237C8.36674 0.311845 7.73358 0.311845 7.34305 0.70237L0.979092 7.06633ZM35.0195 6.77344L1.6862 6.77344V8.77344L35.0195 8.77344V6.77344Z"
+                                                  fill="#FF033E"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="footer-form__accept">
+                                    <label class="accept">
+                                        <input class="accept__input" type="checkbox" name="accept" required
+                                               checked><span class="accept__check"><svg width="15" height="11"
+                                                                                        viewBox="0 0 15 11" fill="none"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd"
+      d="M14.6924 1.3171L5.42859 10.6143L0.621582 5.78997L1.32191 5.08713L5.42859 9.20857L13.9921 0.614258L14.6924 1.3171Z"
+      fill="#FF033E"/>
+</svg></span><span class="accept__text"><span>Даю согласие на обработку&nbsp;</span><a href="/agreement/">Персональных данных</a></span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="footer__contacts">
+                            <div class="footer__sub">Контакты</div>
+                            <div class="footer__items"><a class="footer__item" href="/contacts/">Москва, Садовническая
+                                ул., д. 76/71 стр. 3</a><a class="footer__item" href="mailto:mcu@mcu.expert">mcu@mcu.expert</a><a
+                                    class="footer__item" href="tel:+7(495)198-11-01">+7 (495) 198-11-01</a></div>
+                        </div>
+                        <div class="footer__policy"><a href="/agreement/">Политика конфиденциальности</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="container">
+                    <div class="footer__copy">© 2023 Обучение и консалтинг медицинского менеджмента</div>
+                    <div class="footer__company">ООО "Медицинский корпоративный университет"</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<div class="offset">
+    <div class="container">
+        <div class="offset__width"></div>
+    </div>
+</div>
+</body>
+</html>

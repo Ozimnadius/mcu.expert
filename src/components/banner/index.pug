@@ -5,8 +5,7 @@ div(class=data.type style=`background-image:url(${data.img})`).banner
                 .banner__bread
                     - var bread = data.bread
                     include ../bread/index
-                .banner__content
-                    h2= data.title
+                .banner__content!= data.content
             if data.advantages
                 .banner__advantages
                     include ../banner-advantages/index

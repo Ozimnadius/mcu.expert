@@ -1,0 +1,52 @@
+.course-advantages {
+  &__title {
+    @include ui-heading-2;
+  }
+
+  &__list {
+    margin-top: 100px;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px;
+  }
+
+  &__top{
+    display:grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    gap: 45px;
+  }
+
+  &__right{
+    height: 1px;
+    background-color: var(--color-grey);
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: var(--color-red);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+
+  &__bottom{
+    margin-top: 35px;
+    padding-right: 90px;
+  }
+
+  &__name{
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  &__desc{
+    margin-top: 20px;
+  }
+}

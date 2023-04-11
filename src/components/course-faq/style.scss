@@ -1,0 +1,63 @@
+.course-faq{
+  counter-reset: item;
+
+  &__title{
+    @include ui-heading-2;
+    margin-bottom: 90px;
+  }
+
+  &__item{
+    padding: 25px 0;
+    border-bottom: 1px solid var(--color-grey);
+    &.active{
+      .course-faq__bottom{
+        height: var(--height);
+      }
+    }
+  }
+
+  &__grid{
+    display:grid;
+    grid-template-columns: 4fr 8fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  &__count{
+    &:before {
+      counter-increment: item;
+      content: "0"counter(item);
+      display: block;
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--color-red);
+    }
+  }
+
+  &__right{
+    position: relative;
+  }
+
+  &__name{
+    font-size: 24px;
+  }
+
+  &__btn{
+    @include ui-plus;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  &__bottom{
+    height: 0;
+    overflow: hidden;
+    @include tr;
+  }
+
+  &__desc{
+    padding-top: 20px;
+  }
+
+}

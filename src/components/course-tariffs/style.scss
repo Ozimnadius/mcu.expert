@@ -1,0 +1,77 @@
+.course-tariffs {
+
+  &__title {
+    @include ui-heading-2;
+  }
+
+  &__list {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  &__item {
+
+  }
+}
+
+.course-tariff {
+  background-color: var(--color-grey-bg);
+  border-radius: 20px;
+  padding: 55px 30px;
+  display: grid;
+  grid-auto-rows: 1fr auto;
+
+  &__top{
+    padding-bottom: 40px;
+  }
+
+  &__sub {
+    font-size: 20px;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+    color: var(--color-red);
+  }
+
+  &__list {
+    margin-top: 30px;
+    list-style: disc;
+    display:grid;
+    line-height: 195%;
+    padding-left: 30px;
+    font-size: 18px;
+
+    a{
+      text-decoration: underline;
+      @include hover{
+        color: var(--color-red);
+      }
+    }
+  }
+
+  &__desc {
+    margin-top: 25px;
+    font-size: 18px;
+    line-height: 160%;
+  }
+
+  &__bottom {
+
+  }
+
+  &__price {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-red);
+  }
+
+  &__btn {
+    @include ui-btn-border;
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,65 @@
+.course {
+  padding-top: 0;
+
+  &__schedule {
+    background-color: var(--color-grey-bg);
+    padding: 65px 0;
+  }
+
+  &__about {
+    margin-top: 130px;
+
+  }
+
+  &__advantages {
+    margin-top: 160px;
+  }
+
+  &__desc {
+    margin-top: 130px;
+  }
+
+  &__histories {
+    margin-top: 100px;
+    background-color: var(--color-grey-bg);
+    padding: 140px 0;
+  }
+
+  &__process {
+    margin-top: 135px;
+  }
+
+  &__program {
+    margin-top: 170px;
+    background-color: var(--color-grey-bg);
+    padding-top: 110px;
+    padding-bottom: 160px;
+  }
+
+  &__teachers {
+    margin-top: 130px;
+  }
+
+  &__tariffs {
+    margin-top: 145px;
+  }
+
+  &__guarantees {
+    margin-top: 145px;
+    background-color: var(--color-grey-bg);
+    padding: 100px 0;
+  }
+
+  &__faq {
+    margin-top: 75px;
+  }
+
+  &__form {
+    margin-top: 100px;
+  }
+
+  &__info {
+    margin-top: 100px;
+  }
+
+}

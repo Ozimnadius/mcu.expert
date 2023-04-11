@@ -1,0 +1,21 @@
+.course-program{
+
+  &__top{
+    display:grid;
+    grid-template-columns: 4fr 8fr;
+    gap: 40px;
+    align-items: flex-end;
+  }
+
+  &__title{
+    @include ui-heading-2;
+  }
+
+  &__desc{
+    font-size: 24px;
+  }
+
+  &__content{
+    margin-top: 75px;
+  }
+}

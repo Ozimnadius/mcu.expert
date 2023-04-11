@@ -1,0 +1,328 @@
+extends ../src/core/main
+
+block variables
+    - var title = 'Курсы'
+
+block content
+    main.page
+        section.page__section
+            .container
+                .page__bread
+                    -
+                        var bread = [
+                            {
+                                href: '/',
+                                name: 'Главная'
+                            },
+                            {
+                                href: '/about/',
+                                name: 'О нас'
+                            },
+                            {
+                                name: title
+                            },
+
+                        ];
+                    include ../src/components/bread/index
+                h1.page__title= title
+            .page__content
+                .container
+                    .courses
+                        .courses__btns
+                            a(href="#").courses__arr.courses__prev
+                                <svg width="29" height="16" viewBox="0 0 29 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.718999 8.70711C0.328474 8.31658 0.328474 7.68342 0.718999 7.29289L7.08296 0.928932C7.47348 0.538408 8.10665 0.538408 8.49717 0.928932C8.8877 1.31946 8.8877 1.95262 8.49717 2.34315L2.84032 8L8.49717 13.6569C8.8877 14.0474 8.8877 14.6805 8.49717 15.0711C8.10665 15.4616 7.47348 15.4616 7.08296 15.0711L0.718999 8.70711ZM28.5713 9H1.42611V7H28.5713V9Z" fill="#E9E9E9"/>
+                                </svg>
+                            .courses__swiper.swiper
+                                .swiper-wrapper
+                                    button(type='button').swiper-slide.courses__btn.active Все курсы
+                                    button(type='button').swiper-slide.courses__btn Собственникам
+                                    button(type='button').swiper-slide.courses__btn Управленцам
+                                    button(type='button').swiper-slide.courses__btn Врачам
+                                    button(type='button').swiper-slide.courses__btn Администраторам
+                                    button(type='button').swiper-slide.courses__btn Медицинским сестрам
+                            a(href="#").courses__arr.courses__next
+                                <svg width="29" height="16" viewBox="0 0 29 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.718998 8.70711C0.328474 8.31658 0.328474 7.68342 0.718998 7.29289L7.08296 0.928932C7.47348 0.538408 8.10665 0.538408 8.49717 0.928932C8.8877 1.31946 8.8877 1.95262 8.49717 2.34315L2.84032 8L8.49717 13.6569C8.8877 14.0474 8.8877 14.6805 8.49717 15.0711C8.10665 15.4616 7.47348 15.4616 7.08296 15.0711L0.718998 8.70711ZM28.5713 9H1.42611V7H28.5713V9Z" fill="#E9E9E9"/>
+                                </svg>
+                        .courses__tabs
+                            .courses__tab.active
+                                .courses__list
+                                    -
+                                        var data = {
+                                            top: false,
+                                            list: [
+                                                {
+                                                    img: '/images/content/index-popular/1.webp',
+                                                    name: 'Системное управление клиникой',
+                                                    txt: '<p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/2.webp',
+                                                    name: 'Корпоративное обучение',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/3.webp',
+                                                    name: 'Мотивационная консультация <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/4.webp',
+                                                    name: 'Открой клинику <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/5.webp',
+                                                    name: 'Системное управление маркетингом',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/1.webp',
+                                                    name: 'Системное управление клиникой',
+                                                    txt: '<p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/2.webp',
+                                                    name: 'Корпоративное обучение',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/3.webp',
+                                                    name: 'Мотивационная консультация <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/1.webp',
+                                                    name: 'Системное управление клиникой',
+                                                    txt: '<p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/2.webp',
+                                                    name: 'Корпоративное обучение',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/3.webp',
+                                                    name: 'Мотивационная консультация <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/4.webp',
+                                                    name: 'Открой клинику <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/5.webp',
+                                                    name: 'Системное управление маркетингом',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/1.webp',
+                                                    name: 'Системное управление клиникой',
+                                                    txt: '<p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/2.webp',
+                                                    name: 'Корпоративное обучение',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/3.webp',
+                                                    name: 'Мотивационная консультация <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                }
+                                            ]
+                                        };
+                                    include ../src/components/courses-items/index
+                                form(action='/php/coursesMore.php' method='post' data-event='submit.coursesMore').courses__more
+                                    input(type='hidden' name='id' value='1')
+                                    button(type='submit') Загрузить еще
+                            .courses__tab
+                                .courses__list
+                                    -
+                                        var data = {
+                                            top: false,
+                                            list: [
+                                                {
+                                                    img: '/images/content/index-popular/1.webp',
+                                                    name: 'Системное управление клиникой',
+                                                    txt: '<p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/2.webp',
+                                                    name: 'Корпоративное обучение',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/3.webp',
+                                                    name: 'Мотивационная консультация <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/4.webp',
+                                                    name: 'Открой клинику <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/5.webp',
+                                                    name: 'Системное управление маркетингом',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/1.webp',
+                                                    name: 'Системное управление клиникой',
+                                                    txt: '<p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/2.webp',
+                                                    name: 'Корпоративное обучение',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/3.webp',
+                                                    name: 'Мотивационная консультация <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/1.webp',
+                                                    name: 'Системное управление клиникой',
+                                                    txt: '<p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/2.webp',
+                                                    name: 'Корпоративное обучение',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/3.webp',
+                                                    name: 'Мотивационная консультация <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/4.webp',
+                                                    name: 'Открой клинику <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                }
+                                            ]
+                                        };
+                                    include ../src/components/courses-items/index
+                            .courses__tab
+                                .courses__list
+                                    -
+                                        var data = {
+                                            top: false,
+                                            list: [
+                                                {
+                                                    img: '/images/content/index-popular/1.webp',
+                                                    name: 'Системное управление клиникой',
+                                                    txt: '<p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/2.webp',
+                                                    name: 'Корпоративное обучение',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/3.webp',
+                                                    name: 'Мотивационная консультация <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/4.webp',
+                                                    name: 'Открой клинику <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                }
+                                            ]
+                                        };
+                                    include ../src/components/courses-items/index
+                            .courses__tab
+                                .courses__list
+                                    -
+                                        var data = {
+                                            top: false,
+                                            list: [
+                                                {
+                                                    img: '/images/content/index-popular/1.webp',
+                                                    name: 'Системное управление клиникой',
+                                                    txt: '<p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/2.webp',
+                                                    name: 'Корпоративное обучение',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/3.webp',
+                                                    name: 'Мотивационная консультация <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/4.webp',
+                                                    name: 'Открой клинику <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                }
+                                            ]
+                                        };
+                                    include ../src/components/courses-items/index
+                            .courses__tab
+                                .courses__list
+                                    -
+                                        var data = {
+                                            top: false,
+                                            list: [
+                                                {
+                                                    img: '/images/content/index-popular/1.webp',
+                                                    name: 'Системное управление клиникой',
+                                                    txt: '<p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/2.webp',
+                                                    name: 'Корпоративное обучение',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/3.webp',
+                                                    name: 'Мотивационная консультация <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/4.webp',
+                                                    name: 'Открой клинику <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                }
+                                            ]
+                                        };
+                                    include ../src/components/courses-items/index
+                            .courses__tab
+                                .courses__list
+                                    -
+                                        var data = {
+                                            top: false,
+                                            list: [
+                                                {
+                                                    img: '/images/content/index-popular/1.webp',
+                                                    name: 'Системное управление клиникой',
+                                                    txt: '<p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/2.webp',
+                                                    name: 'Корпоративное обучение',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/3.webp',
+                                                    name: 'Мотивационная консультация <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                },
+                                                {
+                                                    img: '/images/content/index-popular/4.webp',
+                                                    name: 'Открой клинику <span style="color:var(--color-red);">ТОП-5</span>',
+                                                    txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                                }
+                                            ]
+                                        };
+                                    include ../src/components/courses-items/index
+
+
+

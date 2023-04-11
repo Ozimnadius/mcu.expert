@@ -13,6 +13,8 @@
 @import "components/menu/style";
 @import "components/accept/style";
 @import "components/form/style";
+@import "components/form-review/style";
+@import "components/form-call/style";
 
 @import "components/page/style";  ;
 
@@ -38,9 +40,23 @@
 @import "components/clients-slider/style";
 @import "components/clients-item/style";
 
+@import "components/courses/style";
 @import "components/courses-slider/style";
 @import "components/courses-items/style";
 @import "components/courses-item/style";
+
+@import "components/course/style";
+@import "components/course-schedule/style";
+@import "components/course-about/style";
+@import "components/course-advantages/style";
+@import "components/course-desc/style";
+@import "components/course-histories/style";
+@import "components/course-process/style";
+@import "components/course-program/style";
+@import "components/course-faq/style";
+@import "components/course-tariffs/style";
+@import "components/course-guarantees/style";
+@import "components/course-info/style";
 
 @import "components/banner/style";
 @import "components/banner-advantages/style";
@@ -65,8 +81,6 @@
 @import "components/portfolio-detail/style";
 @import "components/portfolio-slider/style";
 @import "components/portfolio-item/style";
-
-@import "components/form-review/style";
 
 
 @import "components/footer/style";

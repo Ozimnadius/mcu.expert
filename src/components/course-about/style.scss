@@ -1,0 +1,22 @@
+.course-about{
+  display:grid;
+  grid-template-columns: 740px 1fr;
+  gap: 170px;
+  align-items: center;
+
+  &__desc{
+    @include ui-descriptor-24;
+  }
+
+  &__label{
+    margin-top: 65px;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__ul{
+    @include ui-ul-checkbox;
+    margin-top: 35px;
+  }
+}

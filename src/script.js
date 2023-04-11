@@ -120,6 +120,42 @@ function initSliders() {
             },
         });
     }
+
+    const coursesBtns = document.querySelector('.courses__btns');
+    if (coursesBtns) {
+        const btns = document.querySelectorAll('.courses__btn');
+        const tabs = document.querySelectorAll('.courses__tab');
+        const clientsSwiper = new Swiper(coursesBtns.querySelector('.swiper'), {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            // Navigation arrows
+            navigation: {
+                nextEl: coursesBtns.querySelector('.courses__next'),
+                prevEl: coursesBtns.querySelector('.courses__prev'),
+            },
+            on: {
+                click: function (swiper, event) {
+                    let target = event.target;
+                    if (target.classList.contains('courses__btn')) {
+                        let index = Array.from(btns).indexOf(target);
+                        let activeTab = tabs[index];
+
+                        btns.forEach(i => {
+                            i.classList.remove('active');
+                        });
+                        tabs.forEach(i => {
+                            i.classList.remove('active');
+                        });
+
+                        target.classList.add('active');
+                        activeTab.classList.add('active');
+                    }
+                    ;
+                },
+            },
+        });
+    }
+
 }
 
 function setOffset() {
@@ -165,7 +201,6 @@ class Events {
                 this.events.add(eventType);
             });
         });
-
 
         document.addEventListener("DOMContentLoaded", () => {
             this.init();
@@ -223,13 +258,37 @@ class Events {
         let parent = elem.closest('.form-file');
         let placeholder = parent.querySelector('.form-file__placeholder');
 
-        if  (elem.files.length>0){
+        if (elem.files.length > 0) {
             placeholder.innerHTML = elem.files[0].name;
-           parent.classList.add('active');
+            parent.classList.add('active');
         } else {
             placeholder.innerHTML = 'Добавить фото';
             parent.classList.remove('active');
         }
+    }
+
+    coursesMore(e, elem) {
+        e.preventDefault();
+
+        let container = elem.closest('.courses__tab').querySelector('.courses-items__list');
+
+        fetch(elem.action, {
+            method: 'POST',
+            body: new FormData(elem)
+        }).then(response => response.json()).then(function (data) {
+            container.insertAdjacentHTML('beforeend',data.html);
+        }).catch((err) => {
+            console.log('Fetch Error :-S', err);
+        });
+    }
+
+    courseAccordionToggle(e, elem){
+        e.preventDefault();
+        let parent = elem.closest('.course-faq__item');
+        let desc = parent.querySelector('.course-faq__desc');
+        parent.style.setProperty('--height', `${parent.offsetHeight}px`);
+        parent.classList.toggle('active');
+        elem.classList.toggle('active');
     }
 
 }

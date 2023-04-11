@@ -1,0 +1,39 @@
+.course-desc {
+  &__rows {
+    display: grid;
+    gap: 50px;
+  }
+
+  &__row{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    align-items: center;
+  }
+
+  &__col{
+    &--padding-left{
+      padding-left: 130px;
+    }
+  }
+
+  &__title{
+    @include ui-heading-2;
+  }
+
+  &__ul{
+    @include ui-ul-checkbox;
+    margin-top: 45px;
+    font-size: 24px;
+    gap: 25px;
+
+    li{
+      &:before{
+        top: 7px;
+      }
+    }
+
+
+  }
+
+}

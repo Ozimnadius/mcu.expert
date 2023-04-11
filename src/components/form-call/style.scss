@@ -1,0 +1,11 @@
+.form-call{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 40px;
+  align-items: center;
+
+  &__right{
+    padding-left: 40px;
+    padding-right: 90px;
+  }
+}

@@ -1,0 +1,16 @@
+.course-faq
+    if data.title
+        .course-faq__title Часто задаваемые вопросы
+    .course-faq__items
+        each i in [1,2,3,4,5,6]
+            .course-faq__item
+                .course-faq__top.course-faq__grid
+                    .course-faq__left.course-faq__count
+                    .course-faq__right
+                        .course-faq__name Текст-заполнитель
+                        button(type='button' data-event='click.courseAccordionToggle').course-faq__btn
+                .course-faq__bottom
+                    .course-faq__desc.course-faq__grid
+                        .course-faq__left
+                        .course-faq__right Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.
+

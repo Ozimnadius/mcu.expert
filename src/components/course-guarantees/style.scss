@@ -1,0 +1,35 @@
+.course-guarantees{
+
+  &__title{
+    @include ui-heading-2;
+  }
+
+  &__grid{
+    margin-top: 90px;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+  }
+
+  &__img{
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  &__desc{
+    font-size: 24px;
+  }
+
+  &__ul{
+    @include ui-ul-checkbox;
+    margin-top: 65px;
+    font-size: 24px;
+    gap: 20px;
+
+    li{
+      &:before{
+        top: 7px;
+      }
+    }
+  }
+}

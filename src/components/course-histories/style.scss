@@ -1,0 +1,51 @@
+.course-histories{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 40px;
+
+  &__title{
+    @include ui-heading-2;
+  }
+
+  &__desc{
+    margin-top: 80px;
+    font-size: 24px;
+    max-width: 37ch;
+  }
+
+  &__btn{
+    @include ui-btn-border;
+    margin-top: 50px;
+  }
+
+}
+
+.course-historie{
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-grey);
+  display:grid;
+  grid-template-columns: 104px 1fr;
+  gap: 54px;
+  align-items: center;
+  @include tr;
+
+  @include hover{
+    color: var(--color-red3);
+  }
+
+  &__img{
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+  }
+
+  &__right{
+    display:grid;
+    gap: 15px;
+  }
+
+  &__name{
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
