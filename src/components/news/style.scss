@@ -71,28 +71,12 @@
   }
 
   &__tags {
+    @include ui-tag-list;
     margin-top: 40px;
-
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-
   }
 
   &__tag{
-    white-space: nowrap;
-    padding: 10px 20px;
-
-    border: 1px solid var(--color-red);
-    border-radius: 4px;
-
-    font-size: 12px;
-    @include tr;
-
-    @include hover{
-      background-color: var(--color-red);
-      color: var(--color-white);
-    }
+    @include ui-tag;
   }
 
 }

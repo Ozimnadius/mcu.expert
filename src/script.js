@@ -52,6 +52,11 @@ function initSliders() {
             slidesPerView: 4,
             spaceBetween: 40,
             grabCursor: true,
+            // Navigation arrows
+            navigation: {
+                nextEl: coursesSlider.querySelector('.courses-slider__next'),
+                prevEl: coursesSlider.querySelector('.courses-slider__prev'),
+            },
         });
     }
 
@@ -190,7 +195,6 @@ function setProductTabsHeight() {
         tabs.style.setProperty('--tabsHeight', `${height}px`);
     }
 }
-
 
 function indexProfileItems() {
     const imgs = document.querySelectorAll('.index-profile__img');

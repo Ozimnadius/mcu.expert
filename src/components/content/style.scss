@@ -9,22 +9,28 @@
   }
 
 
-  h1, h2, h3,img {
+  h1, h2, h3, img {
     margin: 40px 0;
+  }
+
+  h1 {
+    @include ui-heading-1;
+  }
+
+  h2 {
+    @include ui-heading-2;
   }
 
   h3 {
     @include ui-heading-3;
   }
 
-  p,ul{
-    @include ui-descriptor-20;
-    margin: 30px 0;
-    font-size: 20px;
+  p, ul {
+    margin: 20px 0;
   }
 
-  ul{
-   list-style: disc;
+  ul {
+    list-style: disc;
     padding-left: 30px;
   }
 

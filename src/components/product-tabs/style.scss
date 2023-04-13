@@ -77,6 +77,13 @@
 
   &__content {
     grid-area: content;
+
+    &.content{
+      p,ul{
+        @include ui-descriptor-20;
+        margin: 30px 0;
+      }
+    }
   }
 
 }

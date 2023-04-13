@@ -2760,6 +2760,104 @@ body {
     font-size: 36px;
   }
 }
+.courses-slider__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 14px;
+}
+.courses-slider__prev {
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  width: var(--arrow2-size, 50px);
+  height: var(--arrow2-size, 50px);
+  border: 2px solid var(--color-red);
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: var(--color-red);
+}
+.courses-slider__prev.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.courses-slider__prev.swiper-button-lock {
+  display: none;
+}
+.courses-slider__prev svg path {
+  fill: currentColor;
+}
+@media (hover: hover) and (pointer: fine) {
+  .courses-slider__prev:hover {
+    color: var(--color-white);
+    background-color: var(--color-red);
+  }
+}
+.courses-slider__prev svg {
+  width: calc(0px + var(--arrow2-size, 50px) * 0.7);
+  height: calc(0px + var(--arrow2-size, 50px) * 0.3);
+  -webkit-transform: translateX(2px);
+          transform: translateX(2px);
+}
+.courses-slider__prev svg path {
+  fill: currentColor;
+}
+.courses-slider__next {
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  width: var(--arrow2-size, 50px);
+  height: var(--arrow2-size, 50px);
+  border: 2px solid var(--color-red);
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: var(--color-red);
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+.courses-slider__next.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.courses-slider__next.swiper-button-lock {
+  display: none;
+}
+.courses-slider__next svg path {
+  fill: currentColor;
+}
+@media (hover: hover) and (pointer: fine) {
+  .courses-slider__next:hover {
+    color: var(--color-white);
+    background-color: var(--color-red);
+  }
+}
+.courses-slider__next svg {
+  width: calc(0px + var(--arrow2-size, 50px) * 0.7);
+  height: calc(0px + var(--arrow2-size, 50px) * 0.3);
+  -webkit-transform: translateX(2px);
+          transform: translateX(2px);
+}
+.courses-slider__next svg path {
+  fill: currentColor;
+}
 .courses-slider__swiper {
   margin-top: 80px;
 }
@@ -5332,6 +5430,11 @@ body {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
 }
+.product-tabs__content.content p, .product-tabs__content.content ul {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 30px 0;
+}
 
 .product-slider__top {
   --arrow2-size: 60px;
@@ -5531,13 +5634,13 @@ body {
   border-color: transparent;
 }
 .news__tags {
-  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 10px;
+  margin-top: 40px;
 }
 .news__tag {
   white-space: nowrap;
@@ -5605,6 +5708,123 @@ body {
   margin-top: 16px;
   -webkit-transition: var(--transition);
   transition: var(--transition);
+}
+
+.article__top {
+  position: relative;
+  padding-left: 260px;
+}
+.article__back {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+.article__title {
+  font-weight: 700;
+  line-height: 110%;
+  font-size: 54px;
+  margin-top: 45px;
+  margin-left: 260px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 170px 350px;
+  grid-template-columns: 1fr 350px;
+  gap: 170px;
+}
+@media screen and (max-width: 1439.98px) {
+  .article__title {
+    font-size: 44px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .article__title {
+    font-size: 32px;
+  }
+}
+.article__grid {
+  margin-top: 25px;
+  margin-left: 260px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 170px 350px;
+  grid-template-columns: 1fr 350px;
+  gap: 170px;
+}
+.article__tags {
+  margin-top: 140px;
+}
+.article__tags-title {
+  color: var(--color-red);
+}
+.article__tags-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+.article__tag {
+  white-space: nowrap;
+  padding: 10px 20px;
+  border: 1px solid var(--color-red);
+  border-radius: 4px;
+  font-size: 12px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+@media (hover: hover) and (pointer: fine) {
+  .article__tag:hover {
+    background-color: var(--color-red);
+    color: var(--color-white);
+  }
+}
+.article__list-title {
+  color: var(--color-red);
+}
+.article__list-items {
+  margin-top: 25px;
+}
+.article__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid var(--color-grey);
+  padding: 25px 0;
+  font-size: 20px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+@media (hover: hover) and (pointer: fine) {
+  .article__item:hover {
+    color: var(--color-red);
+  }
+}
+.article__item-name {
+  text-transform: uppercase;
+}
+.article__item-date {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-red);
+}
+.article__courses {
+  margin-top: 100px;
+  padding: 80px 0;
+  background-color: var(--color-grey-bg);
 }
 
 .load-more {
@@ -5868,6 +6088,31 @@ body {
 .content h1, .content h2, .content h3, .content img {
   margin: 40px 0;
 }
+.content h1 {
+  font-weight: 700;
+  line-height: 110%;
+  font-size: 54px;
+}
+@media screen and (max-width: 1439.98px) {
+  .content h1 {
+    font-size: 44px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content h1 {
+    font-size: 32px;
+  }
+}
+.content h2 {
+  font-weight: 700;
+  line-height: 110%;
+  font-size: 46px;
+}
+@media screen and (max-width: 1439.98px) {
+  .content h2 {
+    font-size: 36px;
+  }
+}
 .content h3 {
   font-weight: 700;
   line-height: 110%;
@@ -5879,10 +6124,7 @@ body {
   }
 }
 .content p, .content ul {
-  font-weight: 400;
-  font-size: 20px;
-  margin: 30px 0;
-  font-size: 20px;
+  margin: 20px 0;
 }
 .content ul {
   list-style: disc;

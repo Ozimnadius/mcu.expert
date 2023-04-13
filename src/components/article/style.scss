@@ -1,0 +1,105 @@
+.article{
+
+  &__main{
+
+  }
+
+  &__top{
+    position: relative;
+    padding-left: 260px;
+  }
+
+  &__back{
+    position: absolute;
+    top: -5px;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__bread{
+
+  }
+
+  &__title{
+    @include ui-heading-1;
+    margin-top: 45px;
+    margin-left: 260px;
+    display:grid;
+    grid-template-columns: 1fr 350px;
+    gap: 170px;
+  }
+
+  &__grid{
+    margin-top: 25px;
+    margin-left: 260px;
+
+    display:grid;
+    grid-template-columns: 1fr 350px;
+    gap: 170px;
+  }
+
+  &__left{}
+
+  &__content{
+
+  }
+
+  &__tags{
+    margin-top: 140px;
+  }
+
+  &__tags-title{
+    color: var(--color-red);
+  }
+  &__tags-list{
+    @include ui-tag-list;
+    margin-top: 15px;
+  }
+
+  &__tag{
+    @include ui-tag;
+  }
+
+  &__right{
+
+  }
+
+  &__list{}
+  &__list-title{
+    color: var(--color-red);
+  }
+  &__list-items{
+    margin-top: 25px;
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-top: 1px solid var(--color-grey);
+    padding: 25px 0;
+    font-size: 20px;
+    @include tr;
+
+    @include hover{
+      color: var(--color-red);
+    }
+  }
+  &__item-name{
+    text-transform: uppercase;
+  }
+  &__item-date{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-red);
+  }
+
+  &__courses{
+    margin-top: 100px;
+    padding: 80px 0;
+    background-color: var(--color-grey-bg);
+  }
+
+}

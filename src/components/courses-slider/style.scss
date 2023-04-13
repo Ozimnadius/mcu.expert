@@ -7,6 +7,18 @@
     @include ui-top-title;
   }
 
+  &__nav{
+    @include ui-top-nav;
+  }
+
+  &__prev{
+    @include ui-arrow2-left;
+  }
+
+  &__next{
+    @include ui-arrow2-right;
+  }
+
   &__swiper{
     margin-top: 80px;
   }
