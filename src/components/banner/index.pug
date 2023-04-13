@@ -1,4 +1,11 @@
-div(class=data.type style=`background-image:url(${data.img})`).banner
+div(class=`banner--${data.type}`).banner
+    .banner__img
+        picture
+            source(srcset=`/images/content/banner/${data.img}-767.webp` media='(max-width: 767.98px)')
+            source(srcset=`/images/content/banner/${data.img}-1023.webp` media='(max-width: 1023.98px)')
+            source(srcset=`/images/content/banner/${data.img}-1439.webp` media='(max-width: 1439.98px)')
+            source(srcset=`/images/content/banner/${data.img}-1919.webp` media='(max-width: 1919.98px)')
+            img(src=`/images/content/banner/${data.img}.webp` alt='img')
     .container
         .banner__container
             .banner__wrap

@@ -4,12 +4,14 @@ window.addEventListener('DOMContentLoaded', function () {
 
 window.addEventListener('resize', function () {
     setOffset();
+    setProductTabsHeight();
 });
 
 function init() {
     initSliders();
     setOffset();
     indexProfileItems();
+    setProductTabsHeight();
 }
 
 function initSliders() {
@@ -156,12 +158,39 @@ function initSliders() {
         });
     }
 
+    const productSlider = document.querySelector('.product-slider');
+    if (productSlider) {
+        const reviewsSwiper = new Swiper(productSlider.querySelector('.swiper'), {
+            slidesPerView: 4,
+            spaceBetween: 40,
+            // Navigation arrows
+            navigation: {
+                nextEl: productSlider.querySelector('.product-slider__next'),
+                prevEl: productSlider.querySelector('.product-slider__prev'),
+            },
+        });
+    }
+
 }
 
 function setOffset() {
     let offset = document.querySelector('.offset__width').offsetLeft;
     document.body.style.setProperty('--offset', `${offset}px`);
 }
+
+function setProductTabsHeight() {
+    let tabs = document.querySelector('.product-tabs');
+    if (tabs) {
+        let height = 0;
+
+        tabs.querySelectorAll('.product-tabs__tab').forEach(i => {
+            height = (i.offsetHeight > height) ? i.offsetHeight : height;
+        });
+
+        tabs.style.setProperty('--tabsHeight', `${height}px`);
+    }
+}
+
 
 function indexProfileItems() {
     const imgs = document.querySelectorAll('.index-profile__img');
@@ -267,26 +296,35 @@ class Events {
         }
     }
 
-    coursesMore(e, elem) {
+    loadMore(e, elem) {
         e.preventDefault();
 
-        let container = elem.closest('.courses__tab').querySelector('.courses-items__list');
+        let container = document.querySelector(elem.dataset.target);
 
         fetch(elem.action, {
             method: 'POST',
             body: new FormData(elem)
         }).then(response => response.json()).then(function (data) {
-            container.insertAdjacentHTML('beforeend',data.html);
+            container.insertAdjacentHTML('beforeend', data.html);
         }).catch((err) => {
             console.log('Fetch Error :-S', err);
         });
     }
 
-    courseAccordionToggle(e, elem){
+    courseAccordionToggle(e, elem) {
         e.preventDefault();
         let parent = elem.closest('.course-faq__item');
         let desc = parent.querySelector('.course-faq__desc');
-        parent.style.setProperty('--height', `${parent.offsetHeight}px`);
+        parent.style.setProperty('--height', `${desc.offsetHeight}px`);
+        parent.classList.toggle('active');
+        elem.classList.toggle('active');
+    }
+
+    servicesAccordionToggle(e, elem) {
+        e.preventDefault();
+        let parent = elem.closest('.services-list__item');
+        let desc = parent.querySelector('.services-list__desc');
+        parent.style.setProperty('--height', `${desc.offsetHeight}px`);
         parent.classList.toggle('active');
         elem.classList.toggle('active');
     }

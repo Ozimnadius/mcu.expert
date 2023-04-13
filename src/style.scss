@@ -16,7 +16,7 @@
 @import "components/form-review/style";
 @import "components/form-call/style";
 
-@import "components/page/style";  ;
+@import "components/page/style";
 
 @import "components/index/style";
 @import "components/index-banner/style";
@@ -26,6 +26,8 @@
 @import "components/index-popular/style";
 @import "components/index-profile/style";
 @import "components/index-news/style";
+
+@import "components/about/style";
 
 @import "components/video-list/style";
 @import "components/video-broadcasts/style";
@@ -63,17 +65,18 @@
 
 @import "components/bread/style";
 
-@import "components/about/style";
-
+@import "components/teachers/style";
 @import "components/teachers-slider/style";
 @import "components/teachers-items/style";
 @import "components/teachers-item/style";
 @import "components/teacher/style";
 
+@import "components/chairs/style";
 @import "components/chairs-slider/style";
 @import "components/chairs-item/style";
 @import "components/chair/style";
 
+@import "components/licenses/style";
 @import "components/licenses-items/style";
 @import "components/licenses-slider/style";
 
@@ -82,6 +85,25 @@
 @import "components/portfolio-slider/style";
 @import "components/portfolio-item/style";
 
+@import "components/outsourcing/style";
+
+@import "components/services-list/style";
+
+@import "components/catalog/style";
+@import "components/catalog-shop/style";
+@import "components/catalog-banner/style";
+@import "components/catalog-item/style";
+
+@import "components/product/style";
+@import "components/product-tabs/style";
+@import "components/product-slider/style";
+
+@import "components/news/style";
+@import "components/news-item/style";
+
+@import "components/load-more/style";
+
 
 @import "components/footer/style";
 @import "components/footer-form/style";
+@import "components/content/style";

@@ -5,7 +5,7 @@ block variables
 
 block content
     main.page
-        section.page__section
+        section.page__top
             .container
                 .page__bread
                     -
@@ -25,11 +25,11 @@ block content
                         ];
                     include ../../src/components/bread/index
                 h1.page__title= title
-            .page__content
-                .container
-                    .portfolio
-                        each i in [1,2,3]
-                            .portfolio__item
-                                include ../../src/components/portfolio-item/index
+        .page__content
+            .container
+                .portfolio
+                    each i in [1,2,3]
+                        .portfolio__item
+                            include ../../src/components/portfolio-item/index
 
         

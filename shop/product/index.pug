@@ -5,4 +5,74 @@ block variables
 
 block content
     main.page
+        section.page__top
+            .container
+                .page__bread
+                    -
+                        var bread = [
+                            {
+                                href: '/',
+                                name: 'Главная'
+                            },
+                            {
+                                href: '/shop/',
+                                name: 'Магазин регламентов и книг'
+                            },
+                            {
+                                name: title
+                            },
+
+                        ];
+                    include ../../src/components/bread/index
+                h1.page__title= title
+        .page__content
+            .product
+                section.product__main
+                    .container
+                        .product__grid
+                            .product__left
+                                .product__img
+                                    img(src="/images/content/product/img.webp" alt=title)
+                                .product__stick
+                                    <svg width="221" height="59" viewBox="0 0 221 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 0H220.75V58.6667H0.75L25.5 29.3333L0.75 0Z" fill="#FF033E"/>
+                                    </svg>
+                                    span АКЦИЯ
+                            .product__right
+                                .product__chars
+                                    .product__char
+                                        .product__char-name Автор:
+                                        .product__char-val Ольга Берестова
+                                    .product__char
+                                        .product__char-name Версия:
+                                        .product__char-val Печатная
+                                    .product__char
+                                        .product__char-name Объем:
+                                        .product__char-val 1030 стр. 56 иллюстраций
+                                    .product__char.product__char--2
+                                        .product__char-name Краткое описание:
+                                        .product__char-val
+                                            .product__content
+                                                p Перед Вами авторская методика мотивационной консультации и монетизации врачебных знаний как одного из ключевых факторов личного успеха. Методика проверена на опыте нескольких сотен врачей и показала отличные результаты! Реализация программ лечения и операций в клиниках показывает рост в два раза, возвратность пациентов — в три раза, а доходы врачей — в три с половиной раза!
+                                                a(href="/") Читать полное описание
+
+
+                                .product__prices
+                                    .product__prices-tile Цена:
+                                    .product__prices-list
+                                        .product__price 2 400 руб.
+                                        .product__oldprice 4 498 руб.
+
+                                button(type='button').product__buy Сделать заказ
+                //-tabs
+                section.product__tabs
+                    include ../../src/components/product-tabs/index
+                //-reviews
+                section.product__reviews
+                    .container
+                        include ../../src/components/reviews-slider/index
+                //-slider
+                section.product__slider
+                    .container
+                        include ../../src/components/product-slider/index
         

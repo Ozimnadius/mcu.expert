@@ -5,7 +5,7 @@ block variables
 
 block content
     main.page
-        section.page__section
+        section.page__top
             .container
                 .page__bread
                     -
@@ -13,10 +13,6 @@ block content
                             {
                                 href: '/',
                                 name: 'Главная'
-                            },
-                            {
-                                href: '/about/',
-                                name: 'О нас'
                             },
                             {
                                 name: title
@@ -135,9 +131,13 @@ block content
                                             ]
                                         };
                                     include ../src/components/courses-items/index
-                                form(action='/php/coursesMore.php' method='post' data-event='submit.coursesMore').courses__more
-                                    input(type='hidden' name='id' value='1')
-                                    button(type='submit') Загрузить еще
+                                .courses__more
+                                    -
+                                        var data = {
+                                            target: '.courses-items__list',
+                                            action: '/php/getCoursesItems.php'
+                                        };
+                                    include ../src/components/load-more/index
                             .courses__tab
                                 .courses__list
                                     -

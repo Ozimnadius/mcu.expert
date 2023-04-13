@@ -88,8 +88,12 @@
     img{
       display: block;
       position: absolute;
-      inset: 13px;
+      top: 12px;
+      left: 12px;
+      width: calc(100% - 24px);
+      height: calc(100% - 24px);
       border-radius: 50%;
+      object-fit: cover;
     }
   }
 

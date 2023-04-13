@@ -1,6 +1,13 @@
 .course-schedule{
-  margin: 0 -100px;
-  display: flex;
+  background-color: var(--color-grey-bg);
+  padding: 65px 0;
+
+
+
+  &__rows{
+    display: flex;
+    margin: 0 -100px;
+  }
 
   &__row{
     flex-grow: 1;

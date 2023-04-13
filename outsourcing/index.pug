@@ -5,3 +5,69 @@ block variables
 
 block content
     main.page
+        //-banner
+        section.page__banner
+            -
+                var data = {
+                    type: 'black',
+                    img: 'outsourcing',
+                    bread: [
+                        {
+                            href: '/',
+                            name: 'Главная'
+                        },
+                        {
+                            name: title
+                        }
+                    ],
+                    content: `<h2>Аутсорсинг</h2>
+                               <button type="button">Записаться на курс</button>
+                               `
+                };
+            include ../src/components/banner/index
+        .page__content
+            .outsourcing
+                //-top
+                section.outsourcing__top
+                    .container
+                        .outsourcing__content
+                            p Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.
+                            br
+                            img(src="/images/content/outsourcing/1.webp" alt="lorem")
+                //-desc
+                section.outsourcing__desc
+                    .container
+                        .outsourcing__rows
+                            .outsourcing__row
+                                .outsourcing__left
+                                    img(src="/images/content/outsourcing/2.webp" alt="lorem")
+                                .outsourcing__right
+                                    .outsourcing__content
+                                        h4 Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.
+                            .outsourcing__row
+                                .outsourcing__left
+                                    .outsourcing__content
+                                        p Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.
+                                        br
+                                        p Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.
+                                .outsourcing__right
+                                    img(src="/images/content/outsourcing/3.webp" alt="lorem")
+                //-services-list
+                section.outsourcing__services-list
+                    .container
+                        -
+                            var data = [
+                                'Бизнес план по запуску клиники',
+                                'Подписка на обучение сотрудников',
+                                'Корпоративное выездное обучение',
+                                'Управление клиникой',
+                                'Франшизы клиники',
+                            ];
+                        include ../src/components/services-list/index
+                //-from
+                section.outsourcing__form
+                    .container
+                        include ../src/components/form-call/index
+
+
+

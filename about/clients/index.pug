@@ -5,7 +5,7 @@ block variables
 
 block content
     main.page
-        section.page__section
+        section.page__top
             .container
                 .page__bread
                     -
@@ -25,53 +25,53 @@ block content
                         ];
                     include ../../src/components/bread/index
                 h1.page__title= title
-            .page__content
-                .container
-                    .clients
-                        -
-                            var data = [
-                                {
-                                    img: '/images/content/clients-item/1.webp',
-                                    desc: 'Ведущее деловое издание о здравоохранении.'
-                                },
-                                {
-                                    img: '/images/content/clients-item/2.webp',
-                                    desc: 'Система автоматизации заботы о пациентах, профилактики и медицинского маркетинга'
-                                },
-                                {
-                                    img: '/images/content/clients-item/3.webp',
-                                    desc: 'Самый читаемый врачебный журнал, ведущий комплексный поставщик современных знаний практикующим врачам России'
-                                },
-                                {
-                                    img: '/images/content/clients-item/1.webp',
-                                    desc: 'Ведущее деловое издание о здравоохранении.'
-                                },
-                                {
-                                    img: '/images/content/clients-item/2.webp',
-                                    desc: 'Система автоматизации заботы о пациентах, профилактики и медицинского маркетинга'
-                                },
-                                {
-                                    img: '/images/content/clients-item/3.webp',
-                                    desc: 'Самый читаемый врачебный журнал, ведущий комплексный поставщик современных знаний практикующим врачам России'
-                                },
-                                {
-                                    img: '/images/content/clients-item/1.webp',
-                                    desc: 'Ведущее деловое издание о здравоохранении.'
-                                },
-                                {
-                                    img: '/images/content/clients-item/2.webp',
-                                    desc: 'Система автоматизации заботы о пациентах, профилактики и медицинского маркетинга'
-                                },
-                                {
-                                    img: '/images/content/clients-item/3.webp',
-                                    desc: 'Самый читаемый врачебный журнал, ведущий комплексный поставщик современных знаний практикующим врачам России'
-                                },
+        .page__content
+            .container
+                .clients
+                    -
+                        var data = [
+                            {
+                                img: '/images/content/clients-item/1.webp',
+                                desc: 'Ведущее деловое издание о здравоохранении.'
+                            },
+                            {
+                                img: '/images/content/clients-item/2.webp',
+                                desc: 'Система автоматизации заботы о пациентах, профилактики и медицинского маркетинга'
+                            },
+                            {
+                                img: '/images/content/clients-item/3.webp',
+                                desc: 'Самый читаемый врачебный журнал, ведущий комплексный поставщик современных знаний практикующим врачам России'
+                            },
+                            {
+                                img: '/images/content/clients-item/1.webp',
+                                desc: 'Ведущее деловое издание о здравоохранении.'
+                            },
+                            {
+                                img: '/images/content/clients-item/2.webp',
+                                desc: 'Система автоматизации заботы о пациентах, профилактики и медицинского маркетинга'
+                            },
+                            {
+                                img: '/images/content/clients-item/3.webp',
+                                desc: 'Самый читаемый врачебный журнал, ведущий комплексный поставщик современных знаний практикующим врачам России'
+                            },
+                            {
+                                img: '/images/content/clients-item/1.webp',
+                                desc: 'Ведущее деловое издание о здравоохранении.'
+                            },
+                            {
+                                img: '/images/content/clients-item/2.webp',
+                                desc: 'Система автоматизации заботы о пациентах, профилактики и медицинского маркетинга'
+                            },
+                            {
+                                img: '/images/content/clients-item/3.webp',
+                                desc: 'Самый читаемый врачебный журнал, ведущий комплексный поставщик современных знаний практикующим врачам России'
+                            },
 
 
-                            ];
-                        each i in data
-                            .clients__item
-                                include ../../src/components/clients-item/index
+                        ];
+                    each i in data
+                        .clients__item
+                            include ../../src/components/clients-item/index
 
 
 

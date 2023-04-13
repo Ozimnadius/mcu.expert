@@ -99,14 +99,22 @@
         </header>
       </div>
       <div class="wrapper__content">
-        <main class="page course">
-          <section class="course__banner">
-            <div class="white banner" style="background-image:url(/images/content/banner/course.webp)">
+        <main class="page">
+          <section class="page__banner">
+            <div class="banner--white banner">
+              <div class="banner__img">
+                <picture>
+                  <source srcset="/images/content/banner/course-767.webp" media="(max-width: 767.98px)">
+                  <source srcset="/images/content/banner/course-1023.webp" media="(max-width: 1023.98px)">
+                  <source srcset="/images/content/banner/course-1439.webp" media="(max-width: 1439.98px)">
+                  <source srcset="/images/content/banner/course-1919.webp" media="(max-width: 1919.98px)"><img src="/images/content/banner/course.webp" alt="img">
+                </picture>
+              </div>
               <div class="container">
                 <div class="banner__container">
                   <div class="banner__wrap">
                     <div class="banner__bread">
-                      <div class="bread"><a class="bread__item" href="#">Главная</a><a class="bread__item" href="#">Курсы</a><span class="bread__item">Пример курса</span>
+                      <div class="bread"><a class="bread__item" href="/">Главная</a><a class="bread__item" href="/courses/">Курсы</a><span class="bread__item">Пример курса</span>
                       </div>
                     </div>
                     <div class="banner__content"><h2>Системное управление клиникой</h2>
@@ -123,202 +131,426 @@
                 </div>
               </div>
             </div>
-          </section>
-          <section class="course__schedule">
-            <div class="container">
-              <div class="course-schedule">
-                <div class="course-schedule__row">
-                  <div class="course-schedule__wrap">
-                    <div class="course-schedule__name">Время обучения по МСК</div>
-                    <div class="course-schedule__list">
-                      <div class="course-schedule__item">09:00 - 11:00 <small>группа 1</small></div>
-                      <div class="course-schedule__item">19:00 - 21:00 <small>группа 2</small></div>
+            <div class="course-schedule">
+              <div class="container">
+                <div class="course-schedule__rows">
+                  <div class="course-schedule__row">
+                    <div class="course-schedule__wrap">
+                      <div class="course-schedule__name">Время обучения по МСК</div>
+                      <div class="course-schedule__list">
+                        <div class="course-schedule__item">09:00 - 11:00 <small>группа 1</small></div>
+                        <div class="course-schedule__item">19:00 - 21:00 <small>группа 2</small></div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="course-schedule__row">
-                  <div class="course-schedule__wrap">
-                    <div class="course-schedule__name">Дата начала курса:</div>
-                    <div class="course-schedule__list">
-                      <div class="course-schedule__item">Февраль<br>23 / 2023</div>
+                  <div class="course-schedule__row">
+                    <div class="course-schedule__wrap">
+                      <div class="course-schedule__name">Дата начала курса:</div>
+                      <div class="course-schedule__list">
+                        <div class="course-schedule__item">Февраль<br>23 / 2023</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="course-schedule__row">
-                  <div class="course-schedule__wrap">
-                    <div class="course-schedule__name">Количество мест:</div>
-                    <div class="course-schedule__list">
-                      <div class="course-schedule__item">Осталось<br>10 мест</div>
+                  <div class="course-schedule__row">
+                    <div class="course-schedule__wrap">
+                      <div class="course-schedule__name">Количество мест:</div>
+                      <div class="course-schedule__list">
+                        <div class="course-schedule__item">Осталось<br>10 мест</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="course-schedule__row">
-                  <div class="course-schedule__wrap">
-                    <div class="course-schedule__name">Формат курса:</div>
-                    <div class="course-schedule__list">
-                      <div class="course-schedule__item">Онлайн обучение<br>+ внедрение</div>
+                  <div class="course-schedule__row">
+                    <div class="course-schedule__wrap">
+                      <div class="course-schedule__name">Формат курса:</div>
+                      <div class="course-schedule__list">
+                        <div class="course-schedule__item">Онлайн обучение<br>+ внедрение</div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-          <section class="course__about">
-            <div class="container">
-              <div class="course-about">
-                <div class="course-about__left">
-                  <div class="course-about__img"><img src="/images/content/course-about/img.webp" alt="Уникальный практический курс по построению системы в клинике"></div>
-                </div>
-                <div class="course-about__right">
-                  <div class="course-about__desc">Уникальный практический курс по построению системы в клинике от эксперта-практика с 25-летним опытом в медицинском бизнесе, от частного кабинета до ТОП-117 клиник России.</div>
-                  <div class="course-about__label">Вас ждут:</div>
-                  <ul class="course-about__ul">
-                    <li class="course-about__li">Интенсивная обучающая программа</li>
-                    <li class="course-about__li">Персональные консультации по разбору вашего запроса от ТОП-эксперта</li>
-                    <li class="course-about__li">Нетворкинг и профессиональное сообщество</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="course__advantages">
-            <div class="container">
-              <div class="course-advantages">
-                <div class="course-advantages__title">Преимущества перед другими</div>
-                <div class="course-advantages__list">
-                  <div class="course-advantages__item">
-                    <div class="course-advantages__top">
-                      <div class="course-advantages__left">
-                        <div class="course-advantages__img"><img src="/images/content/course-advantages/1.svg" alt="Преимущество"></div>
-                      </div>
-                      <div class="course-advantages__right"></div>
+          <div class="page__content">
+            <div class="course">
+              <section class="course__about">
+                <div class="container">
+                  <div class="course-about">
+                    <div class="course-about__left">
+                      <div class="course-about__img"><img src="/images/content/course-about/img.webp" alt="Уникальный практический курс по построению системы в клинике"></div>
                     </div>
-                    <div class="course-advantages__bottom">
-                      <div class="course-advantages__name">Преимущество 1</div>
-                      <div class="course-advantages__desc">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста</div>
-                    </div>
-                  </div>
-                  <div class="course-advantages__item">
-                    <div class="course-advantages__top">
-                      <div class="course-advantages__left">
-                        <div class="course-advantages__img"><img src="/images/content/course-advantages/2.svg" alt="Преимущество"></div>
-                      </div>
-                      <div class="course-advantages__right"></div>
-                    </div>
-                    <div class="course-advantages__bottom">
-                      <div class="course-advantages__name">Преимущество 2</div>
-                      <div class="course-advantages__desc">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста</div>
-                    </div>
-                  </div>
-                  <div class="course-advantages__item">
-                    <div class="course-advantages__top">
-                      <div class="course-advantages__left">
-                        <div class="course-advantages__img"><img src="/images/content/course-advantages/3.svg" alt="Преимущество"></div>
-                      </div>
-                      <div class="course-advantages__right"></div>
-                    </div>
-                    <div class="course-advantages__bottom">
-                      <div class="course-advantages__name">Преимущество 3</div>
-                      <div class="course-advantages__desc">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста</div>
-                    </div>
-                  </div>
-                  <div class="course-advantages__item">
-                    <div class="course-advantages__top">
-                      <div class="course-advantages__left">
-                        <div class="course-advantages__img"><img src="/images/content/course-advantages/4.svg" alt="Преимущество"></div>
-                      </div>
-                      <div class="course-advantages__right"></div>
-                    </div>
-                    <div class="course-advantages__bottom">
-                      <div class="course-advantages__name">Преимущество 4</div>
-                      <div class="course-advantages__desc">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="course__desc">
-            <div class="container">
-              <div class="course-desc">
-                <div class="course-desc__rows">
-                  <div class="course-desc__row">
-                    <div class="course-desc__col">
-                      <div class="course-desc__title">Кому подойдет</div>
-                      <ul class="course-desc__ul">
-                        <li>Для главных врачей</li>
-                        <li>Для собственников и генеральных <br> директоров клиник</li>
-                        <li>Для исполнительных директоров</li>
-                        <li>Для управленцев</li>
+                    <div class="course-about__right">
+                      <div class="course-about__desc">Уникальный практический курс по построению системы в клинике от эксперта-практика с 25-летним опытом в медицинском бизнесе, от частного кабинета до ТОП-117 клиник России.</div>
+                      <div class="course-about__label">Вас ждут:</div>
+                      <ul class="course-about__ul">
+                        <li class="course-about__li">Интенсивная обучающая программа</li>
+                        <li class="course-about__li">Персональные консультации по разбору вашего запроса от ТОП-эксперта</li>
+                        <li class="course-about__li">Нетворкинг и профессиональное сообщество</li>
                       </ul>
                     </div>
-                    <div class="course-desc__col">
-                      <div class="course-desc__img"><img src="/images/content/course-desc/1.webp" alt="Кому подойдет"></div>
+                  </div>
+                </div>
+              </section>
+              <section class="course__advantages">
+                <div class="container">
+                  <div class="course-advantages">
+                    <div class="course-advantages__title">Преимущества перед другими</div>
+                    <div class="course-advantages__list">
+                      <div class="course-advantages__item">
+                        <div class="course-advantages__top">
+                          <div class="course-advantages__left">
+                            <div class="course-advantages__img"><img src="/images/content/course-advantages/1.svg" alt="Преимущество"></div>
+                          </div>
+                          <div class="course-advantages__right"></div>
+                        </div>
+                        <div class="course-advantages__bottom">
+                          <div class="course-advantages__name">Преимущество 1</div>
+                          <div class="course-advantages__desc">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста</div>
+                        </div>
+                      </div>
+                      <div class="course-advantages__item">
+                        <div class="course-advantages__top">
+                          <div class="course-advantages__left">
+                            <div class="course-advantages__img"><img src="/images/content/course-advantages/2.svg" alt="Преимущество"></div>
+                          </div>
+                          <div class="course-advantages__right"></div>
+                        </div>
+                        <div class="course-advantages__bottom">
+                          <div class="course-advantages__name">Преимущество 2</div>
+                          <div class="course-advantages__desc">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста</div>
+                        </div>
+                      </div>
+                      <div class="course-advantages__item">
+                        <div class="course-advantages__top">
+                          <div class="course-advantages__left">
+                            <div class="course-advantages__img"><img src="/images/content/course-advantages/3.svg" alt="Преимущество"></div>
+                          </div>
+                          <div class="course-advantages__right"></div>
+                        </div>
+                        <div class="course-advantages__bottom">
+                          <div class="course-advantages__name">Преимущество 3</div>
+                          <div class="course-advantages__desc">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста</div>
+                        </div>
+                      </div>
+                      <div class="course-advantages__item">
+                        <div class="course-advantages__top">
+                          <div class="course-advantages__left">
+                            <div class="course-advantages__img"><img src="/images/content/course-advantages/4.svg" alt="Преимущество"></div>
+                          </div>
+                          <div class="course-advantages__right"></div>
+                        </div>
+                        <div class="course-advantages__bottom">
+                          <div class="course-advantages__name">Преимущество 4</div>
+                          <div class="course-advantages__desc">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="course-desc__row">
-                    <div class="course-desc__col">
-                      <div class="course-desc__img"><img src="/images/content/course-desc/2.webp" alt="После прохождения курса Вы:"></div>
+                </div>
+              </section>
+              <section class="course__desc">
+                <div class="container">
+                  <div class="course-desc">
+                    <div class="course-desc__rows">
+                      <div class="course-desc__row">
+                        <div class="course-desc__col">
+                          <div class="course-desc__title">Кому подойдет</div>
+                          <ul class="course-desc__ul">
+                            <li>Для главных врачей</li>
+                            <li>Для собственников и генеральных <br> директоров клиник</li>
+                            <li>Для исполнительных директоров</li>
+                            <li>Для управленцев</li>
+                          </ul>
+                        </div>
+                        <div class="course-desc__col">
+                          <div class="course-desc__img"><img src="/images/content/course-desc/1.webp" alt="Кому подойдет"></div>
+                        </div>
+                      </div>
+                      <div class="course-desc__row">
+                        <div class="course-desc__col">
+                          <div class="course-desc__img"><img src="/images/content/course-desc/2.webp" alt="После прохождения курса Вы:"></div>
+                        </div>
+                        <div class="course-desc__col course-desc__col--padding-left">
+                          <div class="course-desc__title">После прохождения курса Вы:
+                            <ul class="course-desc__ul">
+                              <li>Наведете порядок в клинике</li>
+                              <li>Построите эффективную систему продаж <br> и сервиса</li>
+                              <li>Регламентируете работу всех сотрудников</li>
+                              <li>Получите работающие инструменты для <br> повышения прибыли</li>
+                              <li>Оптимизируете работу всех бизнес-процессов <br> в своей клинике</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="course-desc__col course-desc__col--padding-left">
-                      <div class="course-desc__title">После прохождения курса Вы:
-                        <ul class="course-desc__ul">
-                          <li>Наведете порядок в клинике</li>
-                          <li>Построите эффективную систему продаж <br> и сервиса</li>
-                          <li>Регламентируете работу всех сотрудников</li>
-                          <li>Получите работающие инструменты для <br> повышения прибыли</li>
-                          <li>Оптимизируете работу всех бизнес-процессов <br> в своей клинике</li>
+                  </div>
+                </div>
+              </section>
+              <section class="course__histories">
+                <div class="container">
+                  <div class="course-histories">
+                    <div class="course-histories__left">
+                      <div class="course-histories__title">Истории наших <br> студентов</div>
+                      <div class="course-histories__desc">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев.</div>
+                      <button class="course-histories__btn" type="button">Оставить отзыв</button>
+                    </div>
+                    <div class="course-histories__right">
+                      <div class="course-histories__list"><a class="course-histories__item course-historie" href="/about/reviews/review/"><span class="course-historie__left"><span class="course-historie__img"><img src="/images/content/course-histories/1.webp" alt="Эллада Гасанова"></span></span><span class="course-historie__right"><span class="course-historie__desc">Мне очень понравился грамотный и ответственный подход Ольги Вячеславовны - врача и руководителя нескольких медицинских центров.</span><span class="course-historie__name">Эллада Гасанова</span></span></a><a class="course-histories__item course-historie" href="/about/reviews/review/"><span class="course-historie__left"><span class="course-historie__img"><img src="/images/content/course-histories/2.webp" alt="Эллада Гасанова"></span></span><span class="course-historie__right"><span class="course-historie__desc">Мне очень понравился грамотный и ответственный подход Ольги Вячеславовны - врача и руководителя нескольких медицинских центров.</span><span class="course-historie__name">Эллада Гасанова</span></span></a><a class="course-histories__item course-historie" href="/about/reviews/review/"><span class="course-historie__left"><span class="course-historie__img"><img src="/images/content/course-histories/3.webp" alt="Эллада Гасанова"></span></span><span class="course-historie__right"><span class="course-historie__desc">Мне очень понравился грамотный и ответственный подход Ольги Вячеславовны - врача и руководителя нескольких медицинских центров.</span><span class="course-historie__name">Эллада Гасанова</span></span></a><a class="course-histories__item course-historie" href="/about/reviews/review/"><span class="course-historie__left"><span class="course-historie__img"><img src="/images/content/course-histories/4.webp" alt="Эллада Гасанова"></span></span><span class="course-historie__right"><span class="course-historie__desc">Мне очень понравился грамотный и ответственный подход Ольги Вячеславовны - врача и руководителя нескольких медицинских центров.</span><span class="course-historie__name">Эллада Гасанова</span></span></a><a class="course-histories__item course-historie" href="/about/reviews/review/"><span class="course-historie__left"><span class="course-historie__img"><img src="/images/content/course-histories/5.webp" alt="Эллада Гасанова"></span></span><span class="course-historie__right"><span class="course-historie__desc">Мне очень понравился грамотный и ответственный подход Ольги Вячеславовны - врача и руководителя нескольких медицинских центров.</span><span class="course-historie__name">Эллада Гасанова</span></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="course__process">
+                <div class="container">
+                  <div class="course-process">
+                    <div class="course-process__title">Как проходит обучение</div>
+                    <div class="course-process__rows">
+                      <div class="course-process__row">
+                        <div class="course-process__item">Курсы проводятся в двух форматах: очное обучение с бизнес-тренером / онлайн обучение с куратором</div>
+                        <div class="course-process__item">Курсы состоят из уроков, сгруппированных в смысловые модули</div>
+                        <div class="course-process__item">Уроки выстроены по принципу: «от простого к сложному» и предполагают отработку и закрепление практических навыков</div>
+                      </div>
+                      <div class="course-process__row">
+                        <div class="course-process__item">Для каждого урока предусмотрено выполнение домашних заданий, которые помогу сформировать навык и освоить тонкости выполнения алгоритма работы</div>
+                        <div class="course-process__item">Домашние задания проверяются куратором, который предоставляет обратную связь</div>
+                        <div class="course-process__item">При возникновении вопросов – обучающийся может оперативно обратиться к куратору для их прояснения</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="course__program">
+                <div class="container">
+                  <div class="course-program">
+                    <div class="course-program__top">
+                      <div class="course-program__title">Программа <br> курса</div>
+                      <div class="course-program__desc">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев.</div>
+                    </div>
+                    <div class="course-program__content">
+                      <div class="course-faq">
+                        <div class="course-faq__items">
+                          <div class="course-faq__item">
+                            <div class="course-faq__top course-faq__grid">
+                              <div class="course-faq__left course-faq__count"></div>
+                              <div class="course-faq__right">
+                                <div class="course-faq__name">Текст-заполнитель</div>
+                                <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
+                              </div>
+                            </div>
+                            <div class="course-faq__bottom">
+                              <div class="course-faq__desc course-faq__grid">
+                                <div class="course-faq__left"></div>
+                                <div class="course-faq__right">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="course-faq__item">
+                            <div class="course-faq__top course-faq__grid">
+                              <div class="course-faq__left course-faq__count"></div>
+                              <div class="course-faq__right">
+                                <div class="course-faq__name">Текст-заполнитель</div>
+                                <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
+                              </div>
+                            </div>
+                            <div class="course-faq__bottom">
+                              <div class="course-faq__desc course-faq__grid">
+                                <div class="course-faq__left"></div>
+                                <div class="course-faq__right">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="course-faq__item">
+                            <div class="course-faq__top course-faq__grid">
+                              <div class="course-faq__left course-faq__count"></div>
+                              <div class="course-faq__right">
+                                <div class="course-faq__name">Текст-заполнитель</div>
+                                <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
+                              </div>
+                            </div>
+                            <div class="course-faq__bottom">
+                              <div class="course-faq__desc course-faq__grid">
+                                <div class="course-faq__left"></div>
+                                <div class="course-faq__right">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="course-faq__item">
+                            <div class="course-faq__top course-faq__grid">
+                              <div class="course-faq__left course-faq__count"></div>
+                              <div class="course-faq__right">
+                                <div class="course-faq__name">Текст-заполнитель</div>
+                                <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
+                              </div>
+                            </div>
+                            <div class="course-faq__bottom">
+                              <div class="course-faq__desc course-faq__grid">
+                                <div class="course-faq__left"></div>
+                                <div class="course-faq__right">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="course-faq__item">
+                            <div class="course-faq__top course-faq__grid">
+                              <div class="course-faq__left course-faq__count"></div>
+                              <div class="course-faq__right">
+                                <div class="course-faq__name">Текст-заполнитель</div>
+                                <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
+                              </div>
+                            </div>
+                            <div class="course-faq__bottom">
+                              <div class="course-faq__desc course-faq__grid">
+                                <div class="course-faq__left"></div>
+                                <div class="course-faq__right">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="course-faq__item">
+                            <div class="course-faq__top course-faq__grid">
+                              <div class="course-faq__left course-faq__count"></div>
+                              <div class="course-faq__right">
+                                <div class="course-faq__name">Текст-заполнитель</div>
+                                <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
+                              </div>
+                            </div>
+                            <div class="course-faq__bottom">
+                              <div class="course-faq__desc course-faq__grid">
+                                <div class="course-faq__left"></div>
+                                <div class="course-faq__right">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="course__teachers">
+                <div class="container">
+                  <div class="teachers-slider">
+                    <div class="teachers-slider__top">
+                      <div class="teachers-slider__title">Преподаватели курса</div><a class="teachers-slider__link" href="/about/teachers/">Перейти в раздел</a>
+                      <div class="teachers-slider__nav">
+                        <button class="teachers-slider__arr teachers-slider__prev" type="button"><svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.979092 7.06633C0.58857 7.45685 0.58857 8.09002 0.979092 8.48054L7.34305 14.8445C7.73358 15.235 8.36674 15.235 8.75727 14.8445C9.14779 14.454 9.14779 13.8208 8.75727 13.4303L3.10041 7.77344L8.75727 2.11658C9.14779 1.72606 9.14779 1.09289 8.75727 0.70237C8.36674 0.311845 7.73358 0.311845 7.34305 0.70237L0.979092 7.06633ZM35.0195 6.77344L1.6862 6.77344V8.77344L35.0195 8.77344V6.77344Z" fill="#FF033E"/>
+</svg>
+                        </button>
+                        <button class="teachers-slider__arr teachers-slider__next" type="button"><svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.979092 7.06633C0.58857 7.45685 0.58857 8.09002 0.979092 8.48054L7.34305 14.8445C7.73358 15.235 8.36674 15.235 8.75727 14.8445C9.14779 14.454 9.14779 13.8208 8.75727 13.4303L3.10041 7.77344L8.75727 2.11658C9.14779 1.72606 9.14779 1.09289 8.75727 0.70237C8.36674 0.311845 7.73358 0.311845 7.34305 0.70237L0.979092 7.06633ZM35.0195 6.77344L1.6862 6.77344V8.77344L35.0195 8.77344V6.77344Z" fill="#FF033E"/>
+</svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="teachers-slider__swiper swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide teachers-slider__slide"><a class="teachers-item" href="/about/teachers/teacher/"><span class="teachers-item__img"><img src="/images/content/teachers-item/1.webp" alt="Ирина Попова"></span><span class="teachers-item__name">Ирина Попова</span><span class="teachers-item__desc">Управление клиникой на основе трёхконтурной бизнес-модели</span></a></div>
+                        <div class="swiper-slide teachers-slider__slide"><a class="teachers-item" href="/about/teachers/teacher/"><span class="teachers-item__img"><img src="/images/content/teachers-item/2.webp" alt="Ирина Попова"></span><span class="teachers-item__name">Ирина Попова</span><span class="teachers-item__desc">Управление клиникой на основе трёхконтурной бизнес-модели</span></a></div>
+                        <div class="swiper-slide teachers-slider__slide"><a class="teachers-item" href="/about/teachers/teacher/"><span class="teachers-item__img"><img src="/images/content/teachers-item/3.webp" alt="Ирина Попова"></span><span class="teachers-item__name">Ирина Попова</span><span class="teachers-item__desc">Управление клиникой на основе трёхконтурной бизнес-модели</span></a></div>
+                        <div class="swiper-slide teachers-slider__slide"><a class="teachers-item" href="/about/teachers/teacher/"><span class="teachers-item__img"><img src="/images/content/teachers-item/4.webp" alt="Ирина Попова"></span><span class="teachers-item__name">Ирина Попова</span><span class="teachers-item__desc">Управление клиникой на основе трёхконтурной бизнес-модели</span></a></div>
+                        <div class="swiper-slide teachers-slider__slide"><a class="teachers-item" href="/about/teachers/teacher/"><span class="teachers-item__img"><img src="/images/content/teachers-item/1.webp" alt="Ирина Попова"></span><span class="teachers-item__name">Ирина Попова</span><span class="teachers-item__desc">Управление клиникой на основе трёхконтурной бизнес-модели</span></a></div>
+                        <div class="swiper-slide teachers-slider__slide"><a class="teachers-item" href="/about/teachers/teacher/"><span class="teachers-item__img"><img src="/images/content/teachers-item/2.webp" alt="Ирина Попова"></span><span class="teachers-item__name">Ирина Попова</span><span class="teachers-item__desc">Управление клиникой на основе трёхконтурной бизнес-модели</span></a></div>
+                        <div class="swiper-slide teachers-slider__slide"><a class="teachers-item" href="/about/teachers/teacher/"><span class="teachers-item__img"><img src="/images/content/teachers-item/3.webp" alt="Ирина Попова"></span><span class="teachers-item__name">Ирина Попова</span><span class="teachers-item__desc">Управление клиникой на основе трёхконтурной бизнес-модели</span></a></div>
+                        <div class="swiper-slide teachers-slider__slide"><a class="teachers-item" href="/about/teachers/teacher/"><span class="teachers-item__img"><img src="/images/content/teachers-item/4.webp" alt="Ирина Попова"></span><span class="teachers-item__name">Ирина Попова</span><span class="teachers-item__desc">Управление клиникой на основе трёхконтурной бизнес-модели</span></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="course__tariffs">
+                <div class="container">
+                  <div class="course-tariffs">
+                    <div class="course-tariffs__title">Тарифы</div>
+                    <div class="course-tariffs__list">
+                      <div class="course-tariffs__item course-tariff">
+                        <div class="course-tariff__top">ПАКЕТ
+                          <div class="course-tariff__sub"></div>
+                          <div class="course-tariff__title">САМОСТОЯТЕЛЬНЫЙ</div>
+                          <ul class="course-tariff__list">
+                            <li>Доступ к 150 видео урокам на 6 месяцев</li>
+                            <li>Домашние задания</li>
+                            <li>Стартовая и заключительная консультация по разбору бизнеса с ТОП - экспертом</li>
+                            <li>Участие в сообществе управленцев</li>
+                            <li>Диплом об обучении,</li>
+                          </ul>
+                          <div class="course-tariff__desc">Книга «Эффективная бизнес-модель современной клиники» в подарок!</div>
+                        </div>
+                        <div class="course-tariff__bottom">
+                          <div class="course-tariff__price">99 000 ₽</div>
+                          <button class="course-tariff__btn" type="button">Записаться на курс</button>
+                        </div>
+                      </div>
+                      <div class="course-tariffs__item course-tariff">
+                        <div class="course-tariff__top">ПАКЕТ
+                          <div class="course-tariff__sub"></div>
+                          <div class="course-tariff__title">С КУРАТОРОМ</div>
+                          <ul class="course-tariff__list">
+                            <li>Доступ к 150 видео урокам на 6 месяцев</li>
+                            <li>Домашние задания</li>
+                            <li>Стартовая и заключительная консультация по разбору бизнеса с ТОП - экспертом</li>
+                            <li>6 «живых» вебинаров по темам курса</li>
+                            <li>Участие в сообществе управленцев</li>
+                            <li>Сопровождение куратора бизнес - практика</li>
+                            <li>Пакет <a href="/">стандартов и регламентов</a></li>
+                            <li>Диплом об обучении</li>
+                          </ul>
+                          <div class="course-tariff__desc">Книга «Эффективная бизнес-модель современной клиники» в подарок!</div>
+                        </div>
+                        <div class="course-tariff__bottom">
+                          <div class="course-tariff__price">150 000 ₽</div>
+                          <button class="course-tariff__btn" type="button">Записаться на курс</button>
+                        </div>
+                      </div>
+                      <div class="course-tariffs__item course-tariff">
+                        <div class="course-tariff__top">ПАКЕТ
+                          <div class="course-tariff__sub"></div>
+                          <div class="course-tariff__title">С ВНЕДРЕНИЕМ</div>
+                          <ul class="course-tariff__list">
+                            <li>Доступ к 150 видео урокам на 6 месяцев</li>
+                            <li>Домашние задания</li>
+                            <li>Стартовая и заключительная консультация по разбору бизнеса с ТОП - экспертом</li>
+                            <li>6 «живых» вебинаров по темам курса</li>
+                            <li>Участие в сообществе управленцев</li>
+                            <li>Сопровождение куратора бизнес - практика, выезд в клинику – по запросу</li>
+                            <li>Пакет <a href="/">стандартов и регламентов</a>, адаптированный к вашей клинике</li>
+                            <li>Диплом об обучении</li>
+                          </ul>
+                          <div class="course-tariff__desc">Книга «Эффективная бизнес-модель современной клиники» в подарок!</div>
+                        </div>
+                        <div class="course-tariff__bottom">
+                          <div class="course-tariff__price">360 000 ₽</div>
+                          <button class="course-tariff__btn" type="button">Записаться на курс</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="course__guarantees">
+                <div class="container">
+                  <div class="course-guarantees">
+                    <div class="course-guarantees__title">Гарантии после<br>прохождения курса</div>
+                    <div class="course-guarantees__grid">
+                      <div class="course-guarantees__col">
+                        <div class="course-guarantees__img"><img src="/images/content/course-guarantees/img.webp" alt="Гарантии после прохождения курса"></div>
+                      </div>
+                      <div class="course-guarantees__col">
+                        <div class="course-guarantees__desc">По окончании обучения выдается диплом. Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев.</div>
+                        <ul class="course-guarantees__ul">
+                          <li>Гарантия 1</li>
+                          <li>Гарантия 2</li>
+                          <li>Гарантия 3</li>
+                          <li>Гарантия 4</li>
                         </ul>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
-          <section class="course__histories">
-            <div class="container">
-              <div class="course-histories">
-                <div class="course-histories__left">
-                  <div class="course-histories__title">Истории наших <br> студентов</div>
-                  <div class="course-histories__desc">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев.</div>
-                  <button class="course-histories__btn" type="button">Оставить отзыв</button>
-                </div>
-                <div class="course-histories__right">
-                  <div class="course-histories__list"><a class="course-histories__item course-historie" href="/about/reviews/review/"><span class="course-historie__left"><span class="course-historie__img"><img src="/images/content/course-histories/1.webp" alt="Эллада Гасанова"></span></span><span class="course-historie__right"><span class="course-historie__desc">Мне очень понравился грамотный и ответственный подход Ольги Вячеславовны - врача и руководителя нескольких медицинских центров.</span><span class="course-historie__name">Эллада Гасанова</span></span></a><a class="course-histories__item course-historie" href="/about/reviews/review/"><span class="course-historie__left"><span class="course-historie__img"><img src="/images/content/course-histories/2.webp" alt="Эллада Гасанова"></span></span><span class="course-historie__right"><span class="course-historie__desc">Мне очень понравился грамотный и ответственный подход Ольги Вячеславовны - врача и руководителя нескольких медицинских центров.</span><span class="course-historie__name">Эллада Гасанова</span></span></a><a class="course-histories__item course-historie" href="/about/reviews/review/"><span class="course-historie__left"><span class="course-historie__img"><img src="/images/content/course-histories/3.webp" alt="Эллада Гасанова"></span></span><span class="course-historie__right"><span class="course-historie__desc">Мне очень понравился грамотный и ответственный подход Ольги Вячеславовны - врача и руководителя нескольких медицинских центров.</span><span class="course-historie__name">Эллада Гасанова</span></span></a><a class="course-histories__item course-historie" href="/about/reviews/review/"><span class="course-historie__left"><span class="course-historie__img"><img src="/images/content/course-histories/4.webp" alt="Эллада Гасанова"></span></span><span class="course-historie__right"><span class="course-historie__desc">Мне очень понравился грамотный и ответственный подход Ольги Вячеславовны - врача и руководителя нескольких медицинских центров.</span><span class="course-historie__name">Эллада Гасанова</span></span></a><a class="course-histories__item course-historie" href="/about/reviews/review/"><span class="course-historie__left"><span class="course-historie__img"><img src="/images/content/course-histories/5.webp" alt="Эллада Гасанова"></span></span><span class="course-historie__right"><span class="course-historie__desc">Мне очень понравился грамотный и ответственный подход Ольги Вячеславовны - врача и руководителя нескольких медицинских центров.</span><span class="course-historie__name">Эллада Гасанова</span></span></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="course__process">
-            <div class="container">
-              <div class="course-process">
-                <div class="course-process__title">Как проходит обучение</div>
-                <div class="course-process__rows">
-                  <div class="course-process__row">
-                    <div class="course-process__item">Курсы проводятся в двух форматах: очное обучение с бизнес-тренером / онлайн обучение с куратором</div>
-                    <div class="course-process__item">Курсы состоят из уроков, сгруппированных в смысловые модули</div>
-                    <div class="course-process__item">Уроки выстроены по принципу: «от простого к сложному» и предполагают отработку и закрепление практических навыков</div>
-                  </div>
-                  <div class="course-process__row">
-                    <div class="course-process__item">Для каждого урока предусмотрено выполнение домашних заданий, которые помогу сформировать навык и освоить тонкости выполнения алгоритма работы</div>
-                    <div class="course-process__item">Домашние задания проверяются куратором, который предоставляет обратную связь</div>
-                    <div class="course-process__item">При возникновении вопросов – обучающийся может оперативно обратиться к куратору для их прояснения</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="course__program">
-            <div class="container">
-              <div class="course-program">
-                <div class="course-program__top">
-                  <div class="course-program__title">Программа <br> курса</div>
-                  <div class="course-program__desc">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев.</div>
-                </div>
-                <div class="course-program__content">
+              </section>
+              <section class="course__faq">
+                <div class="container">
                   <div class="course-faq">
+                    <div class="course-faq__title">Часто задаваемые вопросы</div>
                     <div class="course-faq__items">
                       <div class="course-faq__item">
                         <div class="course-faq__top course-faq__grid">
@@ -413,270 +645,50 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
-          <section class="course__teachers">
-            <div class="container">
-              <div class="teachers-slider">
-                <div class="teachers-slider__top">
-                  <div class="teachers-slider__title">Преподаватели курса</div><a class="teachers-slider__link" href="/about/teachers/">Перейти в раздел</a>
-                  <div class="teachers-slider__nav">
-                    <button class="teachers-slider__arr teachers-slider__prev" type="button"><svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.979092 7.06633C0.58857 7.45685 0.58857 8.09002 0.979092 8.48054L7.34305 14.8445C7.73358 15.235 8.36674 15.235 8.75727 14.8445C9.14779 14.454 9.14779 13.8208 8.75727 13.4303L3.10041 7.77344L8.75727 2.11658C9.14779 1.72606 9.14779 1.09289 8.75727 0.70237C8.36674 0.311845 7.73358 0.311845 7.34305 0.70237L0.979092 7.06633ZM35.0195 6.77344L1.6862 6.77344V8.77344L35.0195 8.77344V6.77344Z" fill="#FF033E"/>
-</svg>
-                    </button>
-                    <button class="teachers-slider__arr teachers-slider__next" type="button"><svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.979092 7.06633C0.58857 7.45685 0.58857 8.09002 0.979092 8.48054L7.34305 14.8445C7.73358 15.235 8.36674 15.235 8.75727 14.8445C9.14779 14.454 9.14779 13.8208 8.75727 13.4303L3.10041 7.77344L8.75727 2.11658C9.14779 1.72606 9.14779 1.09289 8.75727 0.70237C8.36674 0.311845 7.73358 0.311845 7.34305 0.70237L0.979092 7.06633ZM35.0195 6.77344L1.6862 6.77344V8.77344L35.0195 8.77344V6.77344Z" fill="#FF033E"/>
-</svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="teachers-slider__swiper swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide teachers-slider__slide"><a class="teachers-item" href="/about/teachers/teacher/"><span class="teachers-item__img"><img src="/images/content/teachers-item/1.webp" alt="Ирина Попова"></span><span class="teachers-item__name">Ирина Попова</span><span class="teachers-item__desc">Управление клиникой на основе трёхконтурной бизнес-модели</span></a></div>
-                    <div class="swiper-slide teachers-slider__slide"><a class="teachers-item" href="/about/teachers/teacher/"><span class="teachers-item__img"><img src="/images/content/teachers-item/2.webp" alt="Ирина Попова"></span><span class="teachers-item__name">Ирина Попова</span><span class="teachers-item__desc">Управление клиникой на основе трёхконтурной бизнес-модели</span></a></div>
-                    <div class="swiper-slide teachers-slider__slide"><a class="teachers-item" href="/about/teachers/teacher/"><span class="teachers-item__img"><img src="/images/content/teachers-item/3.webp" alt="Ирина Попова"></span><span class="teachers-item__name">Ирина Попова</span><span class="teachers-item__desc">Управление клиникой на основе трёхконтурной бизнес-модели</span></a></div>
-                    <div class="swiper-slide teachers-slider__slide"><a class="teachers-item" href="/about/teachers/teacher/"><span class="teachers-item__img"><img src="/images/content/teachers-item/4.webp" alt="Ирина Попова"></span><span class="teachers-item__name">Ирина Попова</span><span class="teachers-item__desc">Управление клиникой на основе трёхконтурной бизнес-модели</span></a></div>
-                    <div class="swiper-slide teachers-slider__slide"><a class="teachers-item" href="/about/teachers/teacher/"><span class="teachers-item__img"><img src="/images/content/teachers-item/1.webp" alt="Ирина Попова"></span><span class="teachers-item__name">Ирина Попова</span><span class="teachers-item__desc">Управление клиникой на основе трёхконтурной бизнес-модели</span></a></div>
-                    <div class="swiper-slide teachers-slider__slide"><a class="teachers-item" href="/about/teachers/teacher/"><span class="teachers-item__img"><img src="/images/content/teachers-item/2.webp" alt="Ирина Попова"></span><span class="teachers-item__name">Ирина Попова</span><span class="teachers-item__desc">Управление клиникой на основе трёхконтурной бизнес-модели</span></a></div>
-                    <div class="swiper-slide teachers-slider__slide"><a class="teachers-item" href="/about/teachers/teacher/"><span class="teachers-item__img"><img src="/images/content/teachers-item/3.webp" alt="Ирина Попова"></span><span class="teachers-item__name">Ирина Попова</span><span class="teachers-item__desc">Управление клиникой на основе трёхконтурной бизнес-модели</span></a></div>
-                    <div class="swiper-slide teachers-slider__slide"><a class="teachers-item" href="/about/teachers/teacher/"><span class="teachers-item__img"><img src="/images/content/teachers-item/4.webp" alt="Ирина Попова"></span><span class="teachers-item__name">Ирина Попова</span><span class="teachers-item__desc">Управление клиникой на основе трёхконтурной бизнес-модели</span></a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="course__tariffs">
-            <div class="container">
-              <div class="course-tariffs">
-                <div class="course-tariffs__title">Тарифы</div>
-                <div class="course-tariffs__list">
-                  <div class="course-tariffs__item course-tariff">
-                    <div class="course-tariff__top">ПАКЕТ
-                      <div class="course-tariff__sub"></div>
-                      <div class="course-tariff__title">САМОСТОЯТЕЛЬНЫЙ</div>
-                      <ul class="course-tariff__list">
-                        <li>Доступ к 150 видео урокам на 6 месяцев</li>
-                        <li>Домашние задания</li>
-                        <li>Стартовая и заключительная консультация по разбору бизнеса с ТОП - экспертом</li>
-                        <li>Участие в сообществе управленцев</li>
-                        <li>Диплом об обучении,</li>
-                      </ul>
-                      <div class="course-tariff__desc">Книга «Эффективная бизнес-модель современной клиники» в подарок!</div>
+              </section>
+              <section class="course__form">
+                <div class="container">
+                  <form class="form-call form" action="/php/ajax.php" method="post">
+                    <div class="form-call__left">
+                      <div class="form-call__img"><img src="/images/content/form-call/img.webp" alt="Получить программу курса"></div>
                     </div>
-                    <div class="course-tariff__bottom">
-                      <div class="course-tariff__price">99 000 ₽</div>
-                      <button class="course-tariff__btn" type="button">Записаться на курс</button>
-                    </div>
-                  </div>
-                  <div class="course-tariffs__item course-tariff">
-                    <div class="course-tariff__top">ПАКЕТ
-                      <div class="course-tariff__sub"></div>
-                      <div class="course-tariff__title">С КУРАТОРОМ</div>
-                      <ul class="course-tariff__list">
-                        <li>Доступ к 150 видео урокам на 6 месяцев</li>
-                        <li>Домашние задания</li>
-                        <li>Стартовая и заключительная консультация по разбору бизнеса с ТОП - экспертом</li>
-                        <li>6 «живых» вебинаров по темам курса</li>
-                        <li>Участие в сообществе управленцев</li>
-                        <li>Сопровождение куратора бизнес - практика</li>
-                        <li>Пакет <a href="/">стандартов и регламентов</a></li>
-                        <li>Диплом об обучении</li>
-                      </ul>
-                      <div class="course-tariff__desc">Книга «Эффективная бизнес-модель современной клиники» в подарок!</div>
-                    </div>
-                    <div class="course-tariff__bottom">
-                      <div class="course-tariff__price">150 000 ₽</div>
-                      <button class="course-tariff__btn" type="button">Записаться на курс</button>
-                    </div>
-                  </div>
-                  <div class="course-tariffs__item course-tariff">
-                    <div class="course-tariff__top">ПАКЕТ
-                      <div class="course-tariff__sub"></div>
-                      <div class="course-tariff__title">С ВНЕДРЕНИЕМ</div>
-                      <ul class="course-tariff__list">
-                        <li>Доступ к 150 видео урокам на 6 месяцев</li>
-                        <li>Домашние задания</li>
-                        <li>Стартовая и заключительная консультация по разбору бизнеса с ТОП - экспертом</li>
-                        <li>6 «живых» вебинаров по темам курса</li>
-                        <li>Участие в сообществе управленцев</li>
-                        <li>Сопровождение куратора бизнес - практика, выезд в клинику – по запросу</li>
-                        <li>Пакет <a href="/">стандартов и регламентов</a>, адаптированный к вашей клинике</li>
-                        <li>Диплом об обучении</li>
-                      </ul>
-                      <div class="course-tariff__desc">Книга «Эффективная бизнес-модель современной клиники» в подарок!</div>
-                    </div>
-                    <div class="course-tariff__bottom">
-                      <div class="course-tariff__price">360 000 ₽</div>
-                      <button class="course-tariff__btn" type="button">Записаться на курс</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="course__guarantees">
-            <div class="container">
-              <div class="course-guarantees">
-                <div class="course-guarantees__title">Гарантии после<br>прохождения курса</div>
-                <div class="course-guarantees__grid">
-                  <div class="course-guarantees__col">
-                    <div class="course-guarantees__img"><img src="/images/content/course-guarantees/img.webp" alt="Гарантии после прохождения курса"></div>
-                  </div>
-                  <div class="course-guarantees__col">
-                    <div class="course-guarantees__desc">По окончании обучения выдается диплом. Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев.</div>
-                    <ul class="course-guarantees__ul">
-                      <li>Гарантия 1</li>
-                      <li>Гарантия 2</li>
-                      <li>Гарантия 3</li>
-                      <li>Гарантия 4</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="course__faq">
-            <div class="container">
-              <div class="course-faq">
-                <div class="course-faq__title">Часто задаваемые вопросы</div>
-                <div class="course-faq__items">
-                  <div class="course-faq__item">
-                    <div class="course-faq__top course-faq__grid">
-                      <div class="course-faq__left course-faq__count"></div>
-                      <div class="course-faq__right">
-                        <div class="course-faq__name">Текст-заполнитель</div>
-                        <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
+                    <div class="form-call__right">
+                      <div class="form__title">Получить<br>программу курса</div>
+                      <div class="form__fields">
+                        <div class="form__field">
+                          <input class="form__input" type="text" name="name" placeholder="Ваше имя">
+                        </div>
+                        <div class="form__field">
+                          <input class="form__input" type="tel" name="tel" placeholder="Телефон" required>
+                        </div>
+                        <div class="form__field">
+                          <input class="form__input" type="email" name="email" placeholder="Эл. почта">
+                        </div>
                       </div>
-                    </div>
-                    <div class="course-faq__bottom">
-                      <div class="course-faq__desc course-faq__grid">
-                        <div class="course-faq__left"></div>
-                        <div class="course-faq__right">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="course-faq__item">
-                    <div class="course-faq__top course-faq__grid">
-                      <div class="course-faq__left course-faq__count"></div>
-                      <div class="course-faq__right">
-                        <div class="course-faq__name">Текст-заполнитель</div>
-                        <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
-                      </div>
-                    </div>
-                    <div class="course-faq__bottom">
-                      <div class="course-faq__desc course-faq__grid">
-                        <div class="course-faq__left"></div>
-                        <div class="course-faq__right">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="course-faq__item">
-                    <div class="course-faq__top course-faq__grid">
-                      <div class="course-faq__left course-faq__count"></div>
-                      <div class="course-faq__right">
-                        <div class="course-faq__name">Текст-заполнитель</div>
-                        <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
-                      </div>
-                    </div>
-                    <div class="course-faq__bottom">
-                      <div class="course-faq__desc course-faq__grid">
-                        <div class="course-faq__left"></div>
-                        <div class="course-faq__right">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="course-faq__item">
-                    <div class="course-faq__top course-faq__grid">
-                      <div class="course-faq__left course-faq__count"></div>
-                      <div class="course-faq__right">
-                        <div class="course-faq__name">Текст-заполнитель</div>
-                        <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
-                      </div>
-                    </div>
-                    <div class="course-faq__bottom">
-                      <div class="course-faq__desc course-faq__grid">
-                        <div class="course-faq__left"></div>
-                        <div class="course-faq__right">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="course-faq__item">
-                    <div class="course-faq__top course-faq__grid">
-                      <div class="course-faq__left course-faq__count"></div>
-                      <div class="course-faq__right">
-                        <div class="course-faq__name">Текст-заполнитель</div>
-                        <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
-                      </div>
-                    </div>
-                    <div class="course-faq__bottom">
-                      <div class="course-faq__desc course-faq__grid">
-                        <div class="course-faq__left"></div>
-                        <div class="course-faq__right">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="course-faq__item">
-                    <div class="course-faq__top course-faq__grid">
-                      <div class="course-faq__left course-faq__count"></div>
-                      <div class="course-faq__right">
-                        <div class="course-faq__name">Текст-заполнитель</div>
-                        <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
-                      </div>
-                    </div>
-                    <div class="course-faq__bottom">
-                      <div class="course-faq__desc course-faq__grid">
-                        <div class="course-faq__left"></div>
-                        <div class="course-faq__right">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="course__form">
-            <div class="container">
-              <form class="form-call form" action="/php/ajax.php" method="post">
-                <div class="form-call__left">
-                  <div class="form-call__img"><img src="/images/content/form-call/img.webp" alt="Получить программу курса"></div>
-                </div>
-                <div class="form-call__right">
-                  <div class="form__title">Получить<br>программу курса</div>
-                  <div class="form__fields">
-                    <div class="form__field">
-                      <input class="form__input" type="text" name="name" placeholder="Ваше имя">
-                    </div>
-                    <div class="form__field">
-                      <input class="form__input" type="tel" name="tel" placeholder="Телефон" required>
-                    </div>
-                    <div class="form__field">
-                      <input class="form__input" type="email" name="email" placeholder="Эл. почта">
-                    </div>
-                  </div>
-                  <div class="form__accept">
-                    <label class="accept">
-                      <input class="accept__input" type="checkbox" name="accept" required checked><span class="accept__check"><svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <div class="form__accept">
+                        <label class="accept">
+                          <input class="accept__input" type="checkbox" name="accept" required checked><span class="accept__check"><svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6924 1.3171L5.42859 10.6143L0.621582 5.78997L1.32191 5.08713L5.42859 9.20857L13.9921 0.614258L14.6924 1.3171Z" fill="#FF033E"/>
 </svg></span><span class="accept__text"><span>Даю согласие на обработку&nbsp;</span><a href="/agreement/">Персональных данных</a></span>
-                    </label>
+                        </label>
+                      </div>
+                      <button class="form__submit" type="submit">Оставить отзыв</button>
+                    </div>
+                  </form>
+                </div>
+              </section>
+              <section class="course__info">
+                <div class="container">
+                  <div class="course-info">
+                    <div class="course-info__img"><img src="/images/content/course-info/img.svg" alt="Полезная информация для вашего бизнеса в телеграмм"></div>
+                    <div class="course-info__content">
+                      <div class="course-info__title">Полезная информация для вашего бизнеса в телеграмм</div><a class="course-info__link" href="https://t.me/telegram">Перейти в телеграм</a>
+                    </div>
                   </div>
-                  <button class="form__submit" type="submit">Оставить отзыв</button>
                 </div>
-              </form>
+              </section>
             </div>
-          </section>
-          <section class="course__info">
-            <div class="container">
-              <div class="course-info">
-                <div class="course-info__img"><img src="/images/content/course-info/img.svg" alt="Полезная информация для вашего бизнеса в телеграмм"></div>
-                <div class="course-info__content">
-                  <div class="course-info__title">Полезная информация для вашего бизнеса в телеграмм</div><a class="course-info__link" href="https://t.me/telegram">Перейти в телеграм</a>
-                </div>
-              </div>
-            </div>
-          </section>
+          </div>
         </main>
       </div>
       <div class="wrapper__footer">

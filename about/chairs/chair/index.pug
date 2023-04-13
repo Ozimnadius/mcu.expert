@@ -4,8 +4,8 @@ block variables
     - var title = 'Кафедра корпоративного обучения'
 
 block content
-    main.page.chair
-        section.page__section
+    main.page
+        section.page__top
             .container
                 .page__bread
                     -
@@ -29,104 +29,106 @@ block content
                         ];
                     include ../../../src/components/bread/index
                 h1.page__title= title
-            .page__content
-                .container
-                    .chair__grid
-                        .chair__left
-                            .chair__top
-                                p Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели
-                                p Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.
-                            .chair__bottom
-                                p Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели
-                                p Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.
-                        .chair__right
-                            .chair__img
-                                img(src="/images/content/chair/img.webp" alt=title)
-        section.page__section.chair__teachers
-            .container
-                -
-                    var data = {
-                        title: 'Преподаватели кафедры',
-                        link: true,
-                        list: [
-                            {
-                                img: '/images/content/teachers-item/1.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/2.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/3.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/4.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/1.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/2.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/3.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/4.webp'
-                            }
-                        ]
-                    };
-                include ../../../src/components/teachers-slider/index
+        .page__content
+            .chair
+                section.chair__main
+                    .container
+                        .chair__grid
+                            .chair__left
+                                .chair__top
+                                    p Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели
+                                    p Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.
+                                .chair__bottom
+                                    p Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели
+                                    p Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.
+                            .chair__right
+                                .chair__img
+                                    img(src="/images/content/chair/img.webp" alt=title)
+                section.chair__teachers
+                    .container
+                        -
+                            var data = {
+                                title: 'Преподаватели кафедры',
+                                link: true,
+                                list: [
+                                    {
+                                        img: '/images/content/teachers-item/1.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/2.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/3.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/4.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/1.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/2.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/3.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/4.webp'
+                                    }
+                                ]
+                            };
+                        include ../../../src/components/teachers-slider/index
 
-        section.page__section.chair__courses
-            .container
-                -
-                    var data = {
-                        top: true,
-                        title: 'Курсы кафедры',
-                        list: [
-                            {
-                                img: '/images/content/index-popular/1.webp',
-                                name: 'Системное управление клиникой',
-                                txt: '<p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p>'
-                            },
-                            {
-                                img: '/images/content/index-popular/2.webp',
-                                name: 'Корпоративное обучение',
-                                txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
-                            },
-                            {
-                                img: '/images/content/index-popular/3.webp',
-                                name: 'Мотивационная консультация <span style="color:var(--color-red);">ТОП-5</span>',
-                                txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
-                            },
-                            {
-                                img: '/images/content/index-popular/4.webp',
-                                name: 'Открой клинику <span style="color:var(--color-red);">ТОП-5</span>',
-                                txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
-                            },
-                            {
-                                img: '/images/content/index-popular/5.webp',
-                                name: 'Системное управление маркетингом',
-                                txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
-                            },
-                            {
-                                img: '/images/content/index-popular/1.webp',
-                                name: 'Системное управление клиникой',
-                                txt: '<p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p>'
-                            },
-                            {
-                                img: '/images/content/index-popular/2.webp',
-                                name: 'Корпоративное обучение',
-                                txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
-                            },
-                            {
-                                img: '/images/content/index-popular/3.webp',
-                                name: 'Мотивационная консультация <span style="color:var(--color-red);">ТОП-5</span>',
-                                txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
-                            },
-                        ]
-                    };
-                include ../../../src/components/courses-items/index
+                section.chair__courses
+                    .container
+                        -
+                            var data = {
+                                top: true,
+                                title: 'Курсы кафедры',
+                                list: [
+                                    {
+                                        img: '/images/content/index-popular/1.webp',
+                                        name: 'Системное управление клиникой',
+                                        txt: '<p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p>'
+                                    },
+                                    {
+                                        img: '/images/content/index-popular/2.webp',
+                                        name: 'Корпоративное обучение',
+                                        txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                    },
+                                    {
+                                        img: '/images/content/index-popular/3.webp',
+                                        name: 'Мотивационная консультация <span style="color:var(--color-red);">ТОП-5</span>',
+                                        txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                    },
+                                    {
+                                        img: '/images/content/index-popular/4.webp',
+                                        name: 'Открой клинику <span style="color:var(--color-red);">ТОП-5</span>',
+                                        txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                    },
+                                    {
+                                        img: '/images/content/index-popular/5.webp',
+                                        name: 'Системное управление маркетингом',
+                                        txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                    },
+                                    {
+                                        img: '/images/content/index-popular/1.webp',
+                                        name: 'Системное управление клиникой',
+                                        txt: '<p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p>'
+                                    },
+                                    {
+                                        img: '/images/content/index-popular/2.webp',
+                                        name: 'Корпоративное обучение',
+                                        txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                    },
+                                    {
+                                        img: '/images/content/index-popular/3.webp',
+                                        name: 'Мотивационная консультация <span style="color:var(--color-red);">ТОП-5</span>',
+                                        txt: '<p>Программа предназначена для врачей и помогает после обучения увеличить возвратность пациентов в 3 раза.</p>'
+                                    },
+                                ]
+                            };
+                        include ../../../src/components/courses-items/index
 
 
         

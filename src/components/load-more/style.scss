@@ -1,0 +1,16 @@
+.load-more{
+  display:grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 60px;
+  align-items: center;
+
+  &:before,&:after{
+    content: '';
+    height: 2px;
+    background-color: var(--color-grey);
+  }
+
+  button{
+    @include ui-btn-border;
+  }
+}

@@ -1,5 +1,5 @@
 .index {
-  padding-bottom: 100px;
+  padding-bottom: var(--offset-bottom);
 
   &__section {
     overflow: hidden;

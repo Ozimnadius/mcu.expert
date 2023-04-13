@@ -1,0 +1,11 @@
+.catalog-shop
+    .catalog-shop__top
+        .catalog-shop__title= data.title
+        .catalog-shop__desc
+            p Наведите порядок в клинике и формализуйте все бизнес-процессы с помощью «живых» регламентов и стандартов, которые эффективно внедрены в десятках клиник по всей России
+        .catalog-shop__link
+            a(href="/shop/books/") Смотреть весь каталог
+    .catalog-shop__items
+        each i,x in data.list
+            .catalog-shop__item
+                include ../catalog-item/index

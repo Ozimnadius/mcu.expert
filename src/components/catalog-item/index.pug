@@ -1,0 +1,18 @@
+.catalog-item
+    .catalog-item__top
+        if x==2
+            .catalog-item__stick
+                <svg width="155" height="40" viewBox="0 0 155 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.75 0H154.75V40H0.75L18.075 20L0.75 0Z" fill="#FF033E"/>
+                </svg>
+                span АКЦИЯ
+        a(href="/shop/product/").catalog-item__img
+            img(src=i alt='Практическое пособие по внедрению "Трехконтурная система управления клиникой".')
+    .catalog-item__bottom
+        a(href="/shop/product/").catalog-item__name Практическое пособие по внедрению "Трехконтурная система управления клиникой".
+        .catalog-item__price 2 300 РУБ.
+        .catalog-item__controls
+            .catalog-item__control
+                button(type='button') Купить
+            .catalog-item__control
+                a(href="/shop/product/") Подробнее

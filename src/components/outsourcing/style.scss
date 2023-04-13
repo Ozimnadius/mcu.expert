@@ -1,0 +1,41 @@
+.outsourcing {
+  padding-bottom: var(--offset-bottom);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h4 {
+      font-weight: 400;
+      font-size: 32px;
+    }
+    p{
+      @include ui-descriptor-20;
+    }
+  }
+
+  &__desc {
+    margin-top: 60px;
+  }
+
+  &__rows {
+    display: grid;
+    gap: 30px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: center;
+  }
+
+  &__services-list{
+    margin-top: 160px;
+  }
+
+  &__form{
+    margin-top: 100px;
+  }
+}

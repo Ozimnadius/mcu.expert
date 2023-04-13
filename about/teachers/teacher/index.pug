@@ -4,65 +4,66 @@ block variables
     - var title = 'Ирина Попова'
 
 block content
-    main.page.teacher
-        section.page__section.teacher__top
-            .container
-                .page__bread
-                    -
-                        var bread = [
-                            {
-                                href: '/',
-                                name: 'Главная'
-                            },
-                            {
-                                href: '/about/',
-                                name: 'О нас'
-                            },
-                            {
-                                href: '/about/teachers/',
-                                name: 'Преподователи'
-                            },
-                            {
-                                name: title
-                            },
-
-                        ];
-                    include ../../../src/components/bread/index
-                h1.page__title= title
-            .page__content
+    main.page
+        .teacher
+            section.teacher__top
                 .container
-                    .teacher__grid
-                        .teacher__left
-                            .teacher__img
-                                img(src="/images/content/teacher/img.webp" alt=title)
-                        .teacher__right
-                            .teacher__desc Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.
-                            .teacher__items
-                                .teacher__item
-                                    .teacher__name Опыт работы
-                                    .teacher__content
-                                        p 2021 г. – н. в., управляющий партнер сегмента «Бизнес-консалтинг»
-                                        p 2020–2021 гг., директор дивизиона бизнес-консалтинга
-                                        p 2003–2020 гг., директор департамента дивизиона бизнес-решений
-                                        p 2002–2003 гг., начальник отдела внутреннего аудита в фармацевтической компании «Микроген».
-                                        p 1998–2002 гг., преподавательская деятельность, работа главным бухгалтером и финансовым директором в индустриальных компаниях.
-                                .teacher__item
-                                    .teacher__name Образование
-                                    .teacher__content
-                                        p Обучался управлению персоналом и маркетингу в Management Center Europe (Франция), а также окончил ряд технологических и бизнес-курсов в России, Германии и США.
-                                        p Окончил Ереванский политехнический институт, факультет технической кибернетики.
+                    .teacher__bread
+                        -
+                            var bread = [
+                                {
+                                    href: '/',
+                                    name: 'Главная'
+                                },
+                                {
+                                    href: '/about/',
+                                    name: 'О нас'
+                                },
+                                {
+                                    href: '/about/teachers/',
+                                    name: 'Преподователи'
+                                },
+                                {
+                                    name: title
+                                },
+
+                            ];
+                        include ../../../src/components/bread/index
+                    h1.page__title.teacher__title= title
+                .page__content
+                    .container
+                        .teacher__grid
+                            .teacher__left
+                                .teacher__img
+                                    img(src="/images/content/teacher/img.webp" alt=title)
+                            .teacher__right
+                                .teacher__desc Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.
+                                .teacher__items
+                                    .teacher__item
+                                        .teacher__name Опыт работы
+                                        .teacher__content
+                                            p 2021 г. – н. в., управляющий партнер сегмента «Бизнес-консалтинг»
+                                            p 2020–2021 гг., директор дивизиона бизнес-консалтинга
+                                            p 2003–2020 гг., директор департамента дивизиона бизнес-решений
+                                            p 2002–2003 гг., начальник отдела внутреннего аудита в фармацевтической компании «Микроген».
+                                            p 1998–2002 гг., преподавательская деятельность, работа главным бухгалтером и финансовым директором в индустриальных компаниях.
+                                    .teacher__item
+                                        .teacher__name Образование
+                                        .teacher__content
+                                            p Обучался управлению персоналом и маркетингу в Management Center Europe (Франция), а также окончил ряд технологических и бизнес-курсов в России, Германии и США.
+                                            p Окончил Ереванский политехнический институт, факультет технической кибернетики.
 
 
 
 
-        section.page__section.teacher__licenses
-            .container
-                -
-                    var data = {
-                        title: 'Документы и дипломы',
-                        list: [1, 2, 3, 4, 1, 2, 3, 4]
-                    };
-                include ../../../src/components/licenses-slider/index
-        section.page__section.teacher__courses
-            .container
-                include ../../../src/components/courses-slider/index
+            section.teacher__licenses
+                .container
+                    -
+                        var data = {
+                            title: 'Документы и дипломы',
+                            list: [1, 2, 3, 4, 1, 2, 3, 4]
+                        };
+                    include ../../../src/components/licenses-slider/index
+            section.teacher__courses
+                .container
+                    include ../../../src/components/courses-slider/index

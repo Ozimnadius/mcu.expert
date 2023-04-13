@@ -1,10 +1,14 @@
 .teacher{
-  padding-top: 0;
+  padding-bottom: var(--offset-bottom);
 
   &__top{
     padding-top: 90px;
     background-color: var(--color-grey-bg);
     padding-bottom: 165px;
+  }
+
+  &__bread{
+    margin-top: 0;
   }
 
   &__grid{

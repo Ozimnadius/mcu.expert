@@ -4,13 +4,12 @@ block variables
     - var title = 'О нас'
 
 block content
-    main.page.about
-        //-banner
-        section.about__banner
+    main.page
+        section.page__banner
             -
                 var data = {
                     type: 'white',
-                    img: '/images/content/banner/about.webp',
+                    img: 'about',
                     bread: [
                         {
                             href: '/',
@@ -24,69 +23,71 @@ block content
                     advantages: true
                 };
             include ../src/components/banner/index
-        //-teachers
-        section.about__teachers
-            .container
-                -
-                    var data = {
-                        title: 'Преподователи',
-                        link: false,
-                        list: [
-                            {
-                                img: '/images/content/teachers-item/1.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/2.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/3.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/4.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/1.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/2.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/3.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/4.webp'
-                            }
-                        ]
-                    };
-                include ../src/components/teachers-slider/index
-        //-chairs
-        section.about__chairs
-            .container
-                -
-                    var data = {
-                        top: true
-                    };
-                include ../src/components/chairs-slider/index
-        //-licenses
-        section.about__licenses
-            .container
-                -
-                    var data = {
-                        top: true,
-                        list: [1, 2, 3, 4]
-                    };
-                include ../src/components/licenses-items/index
-        //-portfolio
-        section.about__portfolio
-            .container
-                include ../src/components/portfolio-slider/index
-        //-reviews
-        section.about__reviews
-            .container
-                include ../src/components/reviews-slider/index
-        //-clients
-        section.about__clients
-            .container
-                include ../src/components/clients-slider/index
+        .page__content
+            .about
+                //-teachers
+                section.about__teachers
+                    .container
+                        -
+                            var data = {
+                                title: 'Преподователи',
+                                link: false,
+                                list: [
+                                    {
+                                        img: '/images/content/teachers-item/1.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/2.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/3.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/4.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/1.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/2.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/3.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/4.webp'
+                                    }
+                                ]
+                            };
+                        include ../src/components/teachers-slider/index
+                //-chairs
+                section.about__chairs
+                    .container
+                        -
+                            var data = {
+                                top: true
+                            };
+                        include ../src/components/chairs-slider/index
+                //-licenses
+                section.about__licenses
+                    .container
+                        -
+                            var data = {
+                                top: true,
+                                list: [1, 2, 3, 4]
+                            };
+                        include ../src/components/licenses-items/index
+                //-portfolio
+                section.about__portfolio
+                    .container
+                        include ../src/components/portfolio-slider/index
+                //-reviews
+                section.about__reviews
+                    .container
+                        include ../src/components/reviews-slider/index
+                //-clients
+                section.about__clients
+                    .container
+                        include ../src/components/clients-slider/index
 
 

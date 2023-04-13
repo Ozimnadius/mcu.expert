@@ -1,0 +1,68 @@
+.catalog {
+  padding-bottom: var(--offset-bottom);
+
+  &__books {
+    background-color: var(--color-grey-bg);
+    padding-top: 60px;
+    padding-bottom: 130px;
+  }
+
+  &__regulations {
+    margin-top: 140px;
+  }
+
+  &__video {
+    margin-top: 100px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+  }
+
+  &__left {
+
+  }
+
+  &__menu {
+    a {
+      display: block;
+      padding: 12px 10px;
+      border-top: 1px solid var(--color-grey);
+      font-size: 18px;
+      text-transform: uppercase;
+      @include tr;
+
+      @include hover {
+        color: var(--color-red);
+      }
+
+      &:last-child {
+        border-bottom: 1px solid var(--color-grey);
+      }
+    }
+  }
+
+  &__right {
+
+  }
+
+  &__banner {
+    margin-bottom: 50px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 40px;
+  }
+
+  &__item {
+
+  }
+
+  &__more{
+    margin-top: 140px;
+  }
+}

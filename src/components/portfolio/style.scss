@@ -1,4 +1,5 @@
 .portfolio {
+  padding-bottom: var(--offset-bottom);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 70px 40px;

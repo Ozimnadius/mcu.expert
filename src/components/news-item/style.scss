@@ -1,0 +1,49 @@
+@use "sass:math";
+
+.news-item{
+  display: flex;
+  flex-direction: column;
+
+  @include hover{
+    img{
+      transform: scale(1.05);
+    }
+
+    .news-item__name{
+      color: var(--color-red);
+    }
+  }
+
+  &__img{
+    position: relative;
+    overflow: hidden;
+
+    &:before{
+      content: '';
+      display: block;
+      padding-top: math.percentage(math.div(240,350));
+    }
+
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include tr;
+    }
+  }
+
+  &__date{
+    margin-top: 20px;
+    font-weight: 700;
+    color: var(--color-red);
+  }
+
+  &__name{
+    @include ui-card-title;
+    margin-top: 16px;
+    @include tr;
+  }
+}

@@ -5,4 +5,63 @@ block variables
 
 block content
     main.page
+        section.page__top
+            .container
+                .page__bread
+                    -
+                        var bread = [
+                            {
+                                href: '/',
+                                name: 'Главная'
+                            },
+                            {
+                                href: '/shop/',
+                                name: 'Магазин регламентов и книг'
+                            },
+
+                            {
+                                name: title
+                            },
+
+                        ];
+                    include ../../src/components/bread/index
+                h1.page__title= title
+        .page__content
+            .catalog
+                .container
+                    section.catalog__grid
+                        .catalog__left
+                            .catalog__menu
+                                a(href="/shop/reglaments/") Раздел регламентов 1
+                                a(href="/shop/reglaments/") Раздел регламентов 2
+                                a(href="/shop/reglaments/") Раздел регламентов 3
+                                a(href="/shop/reglaments/") Раздел регламентов 4
+                                a(href="/shop/reglaments/") Раздел регламентов 5
+                                a(href="/shop/reglaments/") Раздел регламентов 6
+                        .catalog__right
+                            -
+                                var data = [
+                                    '/images/content/catalog/img.webp',
+                                    '/images/content/catalog/img.webp',
+                                    '/images/content/catalog/img.webp',
+                                    '/images/content/catalog/img.webp',
+                                    '/images/content/catalog/img.webp',
+                                    '/images/content/catalog/img.webp',
+                                    '/images/content/catalog/img.webp',
+                                    '/images/content/catalog/img.webp',
+                                    '/images/content/catalog/img.webp',
+                                ];
+                            .catalog__items
+                                each i,x in data
+                                    .catalog__item
+                                        include ../../src/components/catalog-item/index
+                            .catalog__more
+                                -
+                                    var data = {
+                                        target: '.catalog__items',
+                                        action: '/php/getCatalogItems.php'
+                                    };
+                                include ../../src/components/load-more/index
+
+
         

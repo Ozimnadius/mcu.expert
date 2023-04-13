@@ -1,0 +1,37 @@
+.catalog-shop {
+
+  &__top {
+    display: grid;
+    grid-template-columns: 3fr 6fr 3fr;
+    gap: 40px;
+  }
+
+  &__title {
+    @include ui-heading-2;
+    align-self: center;
+  }
+
+  &__desc {
+    @include ui-descriptor-18;
+  }
+
+  &__link {
+    align-self: flex-end;
+    text-align: right;
+
+    a {
+      @include ui-link-main;
+    }
+  }
+
+  &__items {
+    margin-top: 45px;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px 40px;
+
+    .catalog-item{
+      height: 100%;
+    }
+  }
+}

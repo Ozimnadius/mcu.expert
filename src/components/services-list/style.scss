@@ -1,0 +1,84 @@
+.services-list {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__title {
+    @include ui-heading-2;
+  }
+
+  &__txt {
+    @include ui-descriptor-20;
+    margin-top: 30px;
+  }
+
+  &__items {
+    margin-top: 40px;
+    display: grid;
+    gap: 30px;
+    counter-reset: item;
+  }
+
+  &__item {
+    padding: 50px 50px 50px 110px;
+    background-color: var(--color-grey-bg);
+    position: relative;
+
+    &:before {
+      counter-increment: item;
+      content: "0" counter(item);
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-red);
+      position: absolute;
+      left: 40px;
+      top: 53px;
+    }
+
+    &.active {
+      .services-list__bottom {
+        height: var(--height);
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__name {
+    @include ui-heading-3;
+  }
+
+  &__btn {
+    @include ui-plus-fill;
+  }
+
+  &__bottom {
+    height: 0;
+    overflow: hidden;
+    @include tr;
+  }
+
+  &__desc {
+    padding-top: 25px;
+    padding-right: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+
+    ul{
+      @include ui-ul-checkbox;
+    }
+
+    button,a{
+      @include ui-btn-fill;
+    }
+  }
+
+}

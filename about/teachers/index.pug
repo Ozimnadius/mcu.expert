@@ -5,7 +5,7 @@ block variables
 
 block content
     main.page
-        section.page__section
+        section.page__top
             .container
                 .page__bread
                     -
@@ -25,59 +25,61 @@ block content
                         ];
                     include ../../src/components/bread/index
                 h1.page__title= title
-            .page__content
-                .container
-                    -
-                        var data = [
-                            {
-                                img: '/images/content/teachers-item/1.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/2.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/3.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/4.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/1.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/2.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/3.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/4.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/1.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/2.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/3.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/4.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/1.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/2.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/3.webp'
-                            },
-                            {
-                                img: '/images/content/teachers-item/4.webp'
-                            },
+        .page__content
+            .teachers
+                section.teachers__items
+                    .container
+                        -
+                            var data = [
+                                {
+                                    img: '/images/content/teachers-item/1.webp'
+                                },
+                                {
+                                    img: '/images/content/teachers-item/2.webp'
+                                },
+                                {
+                                    img: '/images/content/teachers-item/3.webp'
+                                },
+                                {
+                                    img: '/images/content/teachers-item/4.webp'
+                                },
+                                {
+                                    img: '/images/content/teachers-item/1.webp'
+                                },
+                                {
+                                    img: '/images/content/teachers-item/2.webp'
+                                },
+                                {
+                                    img: '/images/content/teachers-item/3.webp'
+                                },
+                                {
+                                    img: '/images/content/teachers-item/4.webp'
+                                },
+                                {
+                                    img: '/images/content/teachers-item/1.webp'
+                                },
+                                {
+                                    img: '/images/content/teachers-item/2.webp'
+                                },
+                                {
+                                    img: '/images/content/teachers-item/3.webp'
+                                },
+                                {
+                                    img: '/images/content/teachers-item/4.webp'
+                                },
+                                {
+                                    img: '/images/content/teachers-item/1.webp'
+                                },
+                                {
+                                    img: '/images/content/teachers-item/2.webp'
+                                },
+                                {
+                                    img: '/images/content/teachers-item/3.webp'
+                                },
+                                {
+                                    img: '/images/content/teachers-item/4.webp'
+                                },
 
-                        ];
-                    include ../../src/components/teachers-items/index
+                            ];
+                        include ../../src/components/teachers-items/index
         

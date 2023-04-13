@@ -1,6 +1,7 @@
 @use "sass:math";
 
 .courses {
+  padding-bottom: var(--offset-bottom);
 
   &__btns {
     display: grid;

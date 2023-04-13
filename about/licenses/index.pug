@@ -5,7 +5,7 @@ block variables
 
 block content
     main.page
-        section.page__section
+        section.page__top
             .container
                 .page__bread
                     -
@@ -25,14 +25,16 @@ block content
                         ];
                     include ../../src/components/bread/index
                 h1.page__title= title
-            .page__content
-                .container
-                    -
-                        var data = {
-                            top: false,
-                            list: [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
-                        };
-                    include ../../src/components/licenses-items/index
+        .page__content
+            .licenses
+                section.licenses__items
+                    .container
+                        -
+                            var data = {
+                                top: false,
+                                list: [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
+                            };
+                        include ../../src/components/licenses-items/index
 
 
         

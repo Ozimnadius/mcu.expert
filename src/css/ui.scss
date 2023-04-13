@@ -141,11 +141,10 @@
 
 @mixin ui-link-black {
   color: var(--color-black);
-  @include tr;
   @include hover {
     color: var(--color-red);
   }
-;
+
 }
 
 @mixin ui-menu-item {
@@ -262,7 +261,7 @@
 @mixin ui-btn {
   @include ui-button-txt-20;
   display: inline-flex;
-  padding: 14px 40px;
+  padding: 12px 38px;
   border-radius: 100vmax;
   cursor: pointer;
   @include tr;
@@ -285,7 +284,6 @@
     color: var(--color-red2);
   }
 }
-
 
 @mixin ui-btn-border {
   @include ui-btn;
@@ -379,6 +377,11 @@
   }
 
   &.active{
+    background-color: var(--color-red);
+
+    &:before,&:after{
+      background-color: var(--color-white);
+    }
     &:after{
       transform: translate(-50%,-50%) rotate(0);
     }
@@ -400,6 +403,69 @@
     transform: translate(-50%,-50%) rotate(-90deg);
   }
 }
+
+@mixin ui-plus-fill{
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid var(--color-red);
+  background-color: var(--color-red);
+  cursor: pointer;
+  @include tr;
+
+  @include hover{
+    background-color: var(--color-white);
+
+    &:before,&:after{
+      background-color: var(--color-red);
+    }
+  }
+
+  &.active{
+    background-color: transparent;
+
+    &:before,&:after{
+      background-color: var(--color-red);
+    }
+    &:after{
+      transform: translate(-50%,-50%) rotate(0);
+    }
+  }
+
+  &:before,&:after{
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 2px;
+    background-color: var(--color-white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    @include tr;
+  }
+
+  &:after{
+    transform: translate(-50%,-50%) rotate(-90deg);
+  }
+}
+
+@mixin ui-stick{
+  position: relative;
+  span{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-white);
+  }
+}
+
+
 
 
 

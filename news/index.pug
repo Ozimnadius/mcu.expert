@@ -1,7 +1,78 @@
 extends ../src/core/main
 
 block variables
-    - var title = 'Новости'
+    - var title = 'Новости / Статьи'
 
 block content
     main.page
+        section.page__top
+            .container
+                .page__bread
+                    -
+                        var bread = [
+                            {
+                                href: '/',
+                                name: 'Главная'
+                            },
+                            {
+                                name: 'Новости'
+                            },
+
+                        ];
+                    include ../src/components/bread/index
+                h1.page__title= title
+        .page__content
+            .container
+                .news
+                    .news__years
+                        a(href="/news/").news__year.active За все время
+                        a(href="/news/").news__year 2022
+                        a(href="/news/").news__year 2021
+                    .news__grid
+                        .news__left
+                            .news__items
+                                -
+                                    var data = [
+                                        '/images/content/news/1.webp',
+                                        '/images/content/news/2.webp',
+                                        '/images/content/news/3.webp',
+                                        '/images/content/news/4.webp',
+                                        '/images/content/news/5.webp',
+                                        '/images/content/news/6.webp',
+                                        '/images/content/news/7.webp',
+                                        '/images/content/news/8.webp',
+                                        '/images/content/news/9.webp',
+                                    ];
+                                each i in data
+                                    .news__item
+                                        include ../src/components/news-item/index
+                        .news__right
+                            .news__menu
+                                -
+                                    var data = [
+                                        'Мотивация  2',
+                                        'Управление персоналом  2',
+                                        'Врачебный прием  3',
+                                        'Мотивация  6',
+                                        'Консультация пациента  3',
+                                        'Управление персоналом  7',
+                                        'Врачебный прием  3',
+                                        'Консультация пациента  8'
+                                    ];
+                                each i in data
+                                    a(href="/news/").news__link= i
+                            .news__tags
+                                -
+                                    var data = [
+                                        'Мотивация',
+                                        'Врачи',
+                                        'Короновирус',
+                                        'ВОЗ',
+                                        'Система здравохранения',
+                                        'Лекарства',
+                                        'Оборудование',
+                                        'Внедрение',
+                                        'Консультация',
+                                    ];
+                                each i in data
+                                    a(href="/news/").news__tag= i

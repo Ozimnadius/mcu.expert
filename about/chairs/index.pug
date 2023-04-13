@@ -5,32 +5,35 @@ block variables
 
 block content
     main.page
-        section.page__section
+        section.page__top
             .container
                 .page__bread
-                    -
-                        var bread = [
-                            {
-                                href: '/',
-                                name: 'Главная'
-                            },
-                            {
-                                href: '/about/',
-                                name: 'О нас'
-                            },
-                            {
-                                name: title
-                            },
 
-                        ];
-                    include ../../src/components/bread/index
+                        -
+                            var bread = [
+                                {
+                                    href: '/',
+                                    name: 'Главная'
+                                },
+                                {
+                                    href: '/about/',
+                                    name: 'О нас'
+                                },
+                                {
+                                    name: title
+                                },
+
+                            ];
+                        include ../../src/components/bread/index
                 h1.page__title= title
-            .page__content
-                .container
-                    -
-                        var data = {
-                            top: false
-                        };
-                    include ../../src/components/chairs-slider/index
+        .page__content
+            .chairs
+                section.chairs__slider
+                    .container
+                        -
+                            var data = {
+                                top: false
+                            };
+                        include ../../src/components/chairs-slider/index
 
         
