@@ -5,3 +5,94 @@ block variables
 
 block content
     main.page
+        section.page__top
+            .container
+                .page__bread
+                    -
+                        var bread = [
+                            {
+                                href: '/',
+                                name: 'Главная'
+                            },
+                            {
+                                name: title
+                            },
+
+                        ];
+                    include ../src/components/bread/index
+                h1.page__title= title
+                .page__desc Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста.
+        .page__content
+            .video
+                .container
+                    -
+                        var data = {
+                            top: false,
+                            broadcasts: {
+                                link: 'Прямые эфиры',
+                                list: [
+                                    {
+                                        img: '/images/content/video-broadcasts/1.webp',
+                                    },
+                                    {
+                                        img: '/images/content/video-broadcasts/2.webp',
+                                    },
+                                    {
+                                        img: '/images/content/video-broadcasts/3.webp',
+                                    },
+                                    {
+                                        img: '/images/content/video-broadcasts/1.webp',
+                                    },
+                                    {
+                                        img: '/images/content/video-broadcasts/2.webp',
+                                    },
+                                    {
+                                        img: '/images/content/video-broadcasts/3.webp',
+                                    },
+                                    {
+                                        img: '/images/content/video-broadcasts/1.webp',
+                                    },
+                                    {
+                                        img: '/images/content/video-broadcasts/2.webp',
+                                    },
+                                    {
+                                        img: '/images/content/video-broadcasts/3.webp',
+                                    },
+
+                                ]
+                            },
+                            lectures: {
+                                link: 'Открытые лекции',
+                                list: [
+                                    {
+                                        img: '/images/content/video-lectures/1.webp'
+                                    },
+                                    {
+                                        img: '/images/content/video-lectures/2.webp'
+                                    },
+                                    {
+                                        img: '/images/content/video-lectures/3.webp'
+                                    },
+                                    {
+                                        img: '/images/content/video-lectures/1.webp'
+                                    },
+                                    {
+                                        img: '/images/content/video-lectures/2.webp'
+                                    },
+                                    {
+                                        img: '/images/content/video-lectures/3.webp'
+                                    },
+                                    {
+                                        img: '/images/content/video-lectures/1.webp'
+                                    },
+                                    {
+                                        img: '/images/content/video-lectures/2.webp'
+                                    },
+                                    {
+                                        img: '/images/content/video-lectures/3.webp'
+                                    },
+                                    
+                                ]
+                            },
+                        };
+                    include ../src/components/video-list/index

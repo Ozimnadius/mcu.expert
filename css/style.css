@@ -512,6 +512,10 @@ body {
     font-size: 32px;
   }
 }
+.page__desc {
+  font-size: 24px;
+  margin-top: 30px;
+}
 .page__content {
   margin-top: 60px;
 }
@@ -1680,6 +1684,10 @@ body {
 }
 .about__clients {
   margin-top: 100px;
+}
+
+.video {
+  padding-bottom: var(--offset-bottom);
 }
 
 .video-list {
