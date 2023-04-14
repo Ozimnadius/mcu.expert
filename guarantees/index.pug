@@ -5,3 +5,65 @@ block variables
 
 block content
     main.page
+        .guarantees.page__top
+            .container
+                //-main
+                section.guarantees__main
+                    .guarantees__bread
+                        -
+                            var bread = [
+                                {
+                                    href: '/',
+                                    name: 'Главная'
+                                },
+                                {
+                                    name: title
+                                },
+                            ];
+                        include ../src/components/bread/index
+                    .guarantees__top
+                        .guarantees__title Гарантии
+                        .guarantees__desc Банки и другие финансовые организации являются объектами критической информационной инфраструктуры, поэтому они должны быть максимально защищены с точки зрения технологий.
+                //-advantages
+                section.guarantees__advantages
+                    -
+                        var data = [
+                            {
+                                img: '/images/content/course-advantages/1.svg',
+                                desc: 'Мы гарантируем, что все курсы MCU.EXPORT содержат корректную полную информацию, соответствующую заявленной теме, хорошо структурированы и грамотно изложены, а используемые переводы корректны и не искажают первоисточники.'
+                            },
+                            {
+                                img: '/images/content/course-advantages/2.svg',
+                                desc: 'Мы гарантируем, что все курсы Cleverics проводятся высококвалифицированными тренерами, обладающими достаточной теоретической подготовкой и практическим опытом.'
+                            },
+                            {
+                                img: '/images/content/course-advantages/3.svg',
+                                desc: 'Мы гарантируем, что условия проведения курсов в тех случаях, когда организация курса выполняется нашей компанией, обеспечивают комфорт и безопасность для каждого участника.'
+                            }
+                        ];
+                    each i in data
+                        .guarantees__advantage
+                            .guarantees__advantage-top
+                                .guarantees__advantage-left
+                                    .guarantees__advantage-img
+                                        img(src=i.img alt="img")
+                                .guarantees__advantage-right
+                            .guarantees__advantage-desc= i.desc
+                //-licenses
+                section.guarantees__licenses
+                    -
+                        var data = {
+                            top: true,
+                            list: [1, 2, 3, 4]
+                        };
+                    include ../src/components/licenses-items/index
+                //-reviews
+                section.guarantees__reviews
+                    include ../src/components/reviews-slider/index
+                //-faq
+                section.guarantees__faq
+                    -
+                        var data = {
+                            title: true
+                        };
+                    include ../src/components/course-faq/index

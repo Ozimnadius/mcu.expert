@@ -5,3 +5,87 @@ block variables
 
 block content
     main.page
+        //-banner
+        section.page__banner
+            -
+                var data = {
+                    type: 'white',
+                    img: 'consulting',
+                    bread: [
+                        {
+                            href: '/',
+                            name: 'Главная'
+                        },
+                        {
+                            name: title
+                        }
+                    ],
+                    content: `<h2>Подготовим всё для запуска вашей клиники</h2>
+                                <form action="/php/getForm.php" method="post" data-event="submit.openForm">
+                                    <input type="hidden" name="name" value="consultation">
+                                    <button type="submit">Получить консультацию</button>
+                                </form>
+                               `
+                };
+            include ../src/components/banner/index
+        .page__content
+            .consulting
+                //-services-list
+                section.consulting__sevices
+                    .container
+                        -
+                            var data = [
+                                'Комплекс услуг по открытию клиники',
+                                'Получение лицензии',
+                                'Найм и обучение управляющего',
+                                'Открытие клиники',
+                            ];
+                        include ../src/components/services-list/index
+                //-advantages
+                section.consulting__advantages
+                    .container
+                        include ../src/components/index-advantages/index
+                //-portfolio
+                section.consulting__portfolio
+                    .container
+                        include ../src/components/portfolio-slider/index
+                //-teachers
+                section.consulting__teachers
+                    .container
+                        -
+                            var data = {
+                                title: 'Наша команда',
+                                link: true,
+                                list: [
+                                    {
+                                        img: '/images/content/teachers-item/1.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/2.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/3.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/4.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/1.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/2.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/3.webp'
+                                    },
+                                    {
+                                        img: '/images/content/teachers-item/4.webp'
+                                    }
+                                ]
+                            };
+                        include ../src/components/teachers-slider/index
+                //-advantages
+                section.consulting__form
+                    .container
+                        include ../src/components/form-call/index
+

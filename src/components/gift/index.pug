@@ -1,0 +1,21 @@
+.gift
+    .gift__grid
+        .gift__left
+            .gift__stick Подарок
+            .gift__title Мотивационные курсы сотрудников клиники “Жить здорово”
+            .gift__desc Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели
+            .gift__links
+                form(action='/php/getForm.php' method='post' data-event='submit.openForm').gift__link.get__form
+                    input(type='hidden' name='name' value='courseGift')
+                    button(type='submit') Получить подарок
+                a(href="/courses/course/").gift__link.gift__link--black Подробнее о курсе
+        .gift__right
+            .gift__item
+                -
+                    var i = {
+                        img: '/images/content/index-popular/1.webp',
+                        name: 'Системное управление клиникой',
+                        txt: '<p style="color:var(--color-red);">Онлайн + внедрение Лучший курс по управлению 2022 года</p><p>Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели</p>'
+                    };
+                .gift__course
+                    include ../courses-item/index

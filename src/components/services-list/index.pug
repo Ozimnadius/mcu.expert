@@ -15,5 +15,7 @@
                             li Список 2
                             li Список 3
                             li Список 4
-                        button(type='button') Оставить заявку на услугу
+                        form(action='/php/getForm.php' method='post' data-event='submit.openForm')
+                            input(type='hidden' name='name' value='service')
+                            button(type='submit') Оставить заявку на услугу
 

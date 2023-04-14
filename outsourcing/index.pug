@@ -21,7 +21,10 @@ block content
                         }
                     ],
                     content: `<h2>Аутсорсинг</h2>
-                               <button type="button">Записаться на курс</button>
+                               <form action="/php/getForm.php" method="post" data-event="submit.openForm">
+                                                                  <input type="hidden" name="name" value="consultation">
+                                                                  <button type="submit">Получить консультацию</button>
+                                                              </form>
                                `
                 };
             include ../src/components/banner/index

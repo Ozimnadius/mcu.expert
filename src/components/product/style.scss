@@ -109,8 +109,11 @@
   }
 
   &__buy{
-    @include ui-btn-border;
     margin-top: 40px;
+
+    button{
+      @include ui-btn-border;
+    }
   }
 
 

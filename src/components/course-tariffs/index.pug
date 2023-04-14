@@ -54,4 +54,6 @@
                     .course-tariff__desc Книга «Эффективная бизнес-модель современной клиники» в подарок!
                 .course-tariff__bottom
                     .course-tariff__price= i.price
-                    button(type='button').course-tariff__btn Записаться на курс
+                    form(action='/php/getForm.php' method='post' data-event='submit.openForm').course-tariff__btn
+                        input(type='hidden' name='name' value='course')
+                        button(type='submit') Записаться на курс

@@ -1,4 +1,4 @@
-form(action='/php/ajax.php' method='post').footer-form
+form(action='/php/ajax.php' method='post' data-event='submit.sendForm').footer-form
     .footer-form__title.
         Запишитесь <br> на консультацию
     .footer-form__main
@@ -9,3 +9,8 @@ form(action='/php/ajax.php' method='post').footer-form
             </svg>
     .footer-form__accept
         include ../accept/index
+    template
+        .form-popup.form
+            .form__ok
+                h3 Спасибо
+                p Ваша заявка принята в обработку. Наши специалисты свяжутся с Вами в ближайшее время

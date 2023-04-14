@@ -31,7 +31,11 @@ block content
                                <li>Старт 3 потока 30 января 2023</li>
                                 </ul>
                                 <p>*Лучший курс по управлению 2022 года</p>
-                                <button type="button">Записаться на курс</button>
+                                <form action="/php/getForm.php" method="post" data-event="submit.openForm">
+                                    <input type="hidden" name="name" value="course">
+                                    <button type="submit">Записаться на курс</button>
+                                </form>
+
                             `
                 };
             include ../../src/components/banner/index

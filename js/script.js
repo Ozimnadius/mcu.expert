@@ -12,6 +12,7 @@ function init() {
     setOffset();
     indexProfileItems();
     setProductTabsHeight();
+    initTelMask();
 }
 
 function initSliders() {
@@ -221,6 +222,10 @@ function indexProfileItems() {
     });
 }
 
+function initTelMask() {
+    $('input[type="tel"]').inputmask("+7(999)-999-99-99");
+}
+
 class Events {
     constructor() {
 
@@ -234,6 +239,7 @@ class Events {
                 this.events.add(eventType);
             });
         });
+        this.events.add('change');
 
         document.addEventListener("DOMContentLoaded", () => {
             this.init();
@@ -270,20 +276,21 @@ class Events {
         // console.log(elem);
     }
 
-    openForm(e, elem) {
-        e.preventDefault();
-        console.log('Open Form');
-        // console.log(this);
-        // console.log(e);
-        // console.log(elem);
-    }
-
     sendForm(e, elem) {
         e.preventDefault();
-        console.log('Send form');
-        // console.log(this);
-        console.log(e);
-        // console.log(elem);
+
+        fetch(elem.action, {
+            method: 'POST',
+            body: new FormData(elem)
+        }).then(response => response.json()).then((data) => {
+            if (data.status) {
+                $.fancybox.close();
+                $.fancybox.open(elem.querySelector('template').content.cloneNode(true));
+                elem.reset();
+            }
+        }).catch((err) => {
+            console.log('Fetch Error :-S', err);
+        });
     }
 
     fileChange(e, elem) {
@@ -331,6 +338,23 @@ class Events {
         parent.style.setProperty('--height', `${desc.offsetHeight}px`);
         parent.classList.toggle('active');
         elem.classList.toggle('active');
+    }
+
+    openForm(e, elem) {
+        e.preventDefault();
+
+        fetch(elem.action, {
+            method: 'POST',
+            body: new FormData(elem)
+        }).then(response => response.json()).then(function (data) {
+            if (data.status) {
+                $.fancybox.open(data.html);
+                initTelMask();
+            }
+        }).catch((err) => {
+            console.log('Fetch Error :-S', err);
+        });
+
     }
 
 }

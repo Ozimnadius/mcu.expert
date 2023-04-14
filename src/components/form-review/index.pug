@@ -1,4 +1,4 @@
-form(action='/php/ajax.php' method='post' enctype='multipart/form-data').from.form-review
+form(action='/php/ajax.php' method='post' enctype='multipart/form-data' data-event='submit.sendForm').from.form-review
     .form-review__left
         .form__title Оставить отзыв
         .form__fields
@@ -24,6 +24,11 @@ form(action='/php/ajax.php' method='post' enctype='multipart/form-data').from.fo
         .form__fields
             .form__field
                 textarea(name='message' placeholder='Напишите свой отзыв').form__input.form__input--area
+    template
+        .form-popup.form
+            .form__ok
+                h3 Спасибо
+                p Ваша отзыв скоро появится
 
 
 

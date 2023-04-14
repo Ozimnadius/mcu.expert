@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 
   &__top {
     display: flex;
@@ -46,17 +46,19 @@
   }
 
   &__call {
-    @include ui-btn-fill;
+    button {
+      @include ui-btn-fill;
+    }
   }
 
-  &__bottom{
+  &__bottom {
     position: absolute;
     top: calc(100% - 40px);
     left: 0;
     right: 0;
   }
 
-  &__menu{
+  &__menu {
     max-width: 1580px;
     width: 100%;
     margin: 0 auto;

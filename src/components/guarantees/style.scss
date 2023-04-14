@@ -1,0 +1,92 @@
+.guarantees {
+  padding-bottom: var(--offset-bottom);
+
+  &__main {
+  }
+
+  &__bread {
+  }
+
+  &__top {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    gap: 40px;
+  }
+
+  &__title {
+    @include ui-heading-1;
+  }
+
+  &__desc {
+    font-size: 20px;
+  }
+
+  &__advantages {
+    margin-top: 85px;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+  }
+
+  &__advantage {
+    
+  }
+
+  &__advantage-top {
+    display:grid;
+    grid-template-columns: 210px 184px;
+    align-items: center;
+  }
+
+  &__advantage-left {
+    display: block;
+  }
+
+  &__advantage-img {
+    width: 120px;
+    height: 120px;
+
+    img{
+      max-height: 100%;
+      display: block;
+    }
+  }
+
+  &__advantage-right {
+    position: relative;
+    height: 1px;
+    background-color: var(--color-grey);
+
+    &:before{
+      content: '';
+      display: block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: var(--color-red);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+
+  &__advantage-desc {
+    margin-top: 50px;
+  }
+
+
+  &__licenses {
+    margin-top: 120px;
+  }
+
+  &__reviews {
+    margin-top: 155px;
+  }
+
+  &__faq {
+    margin-top: 165px;
+  }
+}
+

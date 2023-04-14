@@ -50,7 +50,10 @@
               </div>
               <div class="header__right">
                 <div class="header__tel"><a href="tel:+7(495)198-11-01">+7 (495) 198-11-01</a></div>
-                <button class="header__call" type="button">Заказать звонок</button>
+                <form class="header__call" action="/php/getForm.php" method="post" data-event="submit.openForm">
+                  <input type="hidden" name="name" value="feedback">
+                  <button type="submit">Заказать звонок</button>
+                </form>
               </div>
             </div>
           </div>
@@ -125,7 +128,11 @@
                <li>Старт 3 потока 30 января 2023</li>
                 </ul>
                 <p>*Лучший курс по управлению 2022 года</p>
-                <button type="button">Записаться на курс</button>
+                <form action="/php/getForm.php" method="post" data-event="submit.openForm">
+                    <input type="hidden" name="name" value="course">
+                    <button type="submit">Записаться на курс</button>
+                </form>
+
             </div>
                   </div>
                 </div>
@@ -292,7 +299,10 @@
                     <div class="course-histories__left">
                       <div class="course-histories__title">Истории наших <br> студентов</div>
                       <div class="course-histories__desc">Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев.</div>
-                      <button class="course-histories__btn" type="button">Оставить отзыв</button>
+                      <form class="course-histories__btn" action="/php/getForm.php" method="post" data-event="submit.openForm">
+                        <input type="hidden" name="name" value="review">
+                        <button type="submit">Оставить отзыв</button>
+                      </form>
                     </div>
                     <div class="course-histories__right">
                       <div class="course-histories__list"><a class="course-histories__item course-historie" href="/about/reviews/review/"><span class="course-historie__left"><span class="course-historie__img"><img src="/images/content/course-histories/1.webp" alt="Эллада Гасанова"></span></span><span class="course-historie__right"><span class="course-historie__desc">Мне очень понравился грамотный и ответственный подход Ольги Вячеславовны - врача и руководителя нескольких медицинских центров.</span><span class="course-historie__name">Эллада Гасанова</span></span></a><a class="course-histories__item course-historie" href="/about/reviews/review/"><span class="course-historie__left"><span class="course-historie__img"><img src="/images/content/course-histories/2.webp" alt="Эллада Гасанова"></span></span><span class="course-historie__right"><span class="course-historie__desc">Мне очень понравился грамотный и ответственный подход Ольги Вячеславовны - врача и руководителя нескольких медицинских центров.</span><span class="course-historie__name">Эллада Гасанова</span></span></a><a class="course-histories__item course-historie" href="/about/reviews/review/"><span class="course-historie__left"><span class="course-historie__img"><img src="/images/content/course-histories/3.webp" alt="Эллада Гасанова"></span></span><span class="course-historie__right"><span class="course-historie__desc">Мне очень понравился грамотный и ответственный подход Ольги Вячеславовны - врача и руководителя нескольких медицинских центров.</span><span class="course-historie__name">Эллада Гасанова</span></span></a><a class="course-histories__item course-historie" href="/about/reviews/review/"><span class="course-historie__left"><span class="course-historie__img"><img src="/images/content/course-histories/4.webp" alt="Эллада Гасанова"></span></span><span class="course-historie__right"><span class="course-historie__desc">Мне очень понравился грамотный и ответственный подход Ольги Вячеславовны - врача и руководителя нескольких медицинских центров.</span><span class="course-historie__name">Эллада Гасанова</span></span></a><a class="course-histories__item course-historie" href="/about/reviews/review/"><span class="course-historie__left"><span class="course-historie__img"><img src="/images/content/course-histories/5.webp" alt="Эллада Гасанова"></span></span><span class="course-historie__right"><span class="course-historie__desc">Мне очень понравился грамотный и ответственный подход Ольги Вячеславовны - врача и руководителя нескольких медицинских центров.</span><span class="course-historie__name">Эллада Гасанова</span></span></a>
@@ -477,7 +487,10 @@
                         </div>
                         <div class="course-tariff__bottom">
                           <div class="course-tariff__price">99 000 ₽</div>
-                          <button class="course-tariff__btn" type="button">Записаться на курс</button>
+                          <form class="course-tariff__btn" action="/php/getForm.php" method="post" data-event="submit.openForm">
+                            <input type="hidden" name="name" value="course">
+                            <button type="submit">Записаться на курс</button>
+                          </form>
                         </div>
                       </div>
                       <div class="course-tariffs__item course-tariff">
@@ -498,7 +511,10 @@
                         </div>
                         <div class="course-tariff__bottom">
                           <div class="course-tariff__price">150 000 ₽</div>
-                          <button class="course-tariff__btn" type="button">Записаться на курс</button>
+                          <form class="course-tariff__btn" action="/php/getForm.php" method="post" data-event="submit.openForm">
+                            <input type="hidden" name="name" value="course">
+                            <button type="submit">Записаться на курс</button>
+                          </form>
                         </div>
                       </div>
                       <div class="course-tariffs__item course-tariff">
@@ -519,7 +535,10 @@
                         </div>
                         <div class="course-tariff__bottom">
                           <div class="course-tariff__price">360 000 ₽</div>
-                          <button class="course-tariff__btn" type="button">Записаться на курс</button>
+                          <form class="course-tariff__btn" action="/php/getForm.php" method="post" data-event="submit.openForm">
+                            <input type="hidden" name="name" value="course">
+                            <button type="submit">Записаться на курс</button>
+                          </form>
                         </div>
                       </div>
                     </div>
@@ -648,7 +667,7 @@
               </section>
               <section class="course__form">
                 <div class="container">
-                  <form class="form-call form" action="/php/ajax.php" method="post">
+                  <form class="form-call form" action="/php/ajax.php" method="post" data-event="submit.sendForm">
                     <div class="form-call__left">
                       <div class="form-call__img"><img src="/images/content/form-call/img.webp" alt="Получить программу курса"></div>
                     </div>
@@ -672,7 +691,15 @@
 </svg></span><span class="accept__text"><span>Даю согласие на обработку&nbsp;</span><a href="/agreement/">Персональных данных</a></span>
                         </label>
                       </div>
-                      <button class="form__submit" type="submit">Оставить отзыв</button>
+                      <button class="form__submit" type="submit">Отправить</button>
+                      <template>
+                        <div class="form-popup form">
+                          <div class="form__ok">
+                            <h3>Спасибо</h3>
+                            <p>Ваша заявка принята в обработку. Наши специалисты свяжутся с Вами в ближайшее время</p>
+                          </div>
+                        </div>
+                      </template>
                     </div>
                   </form>
                 </div>
@@ -702,7 +729,7 @@
                   <div class="footer__menu"><a href="/video/">Видеотека</a><a href="/shop/">Магазин</a><a href="/gifts/">Подарки</a><a href="/news/">Новости</a></div>
                 </div>
                 <div class="footer__form">
-                  <form class="footer-form" action="/php/ajax.php" method="post">
+                  <form class="footer-form" action="/php/ajax.php" method="post" data-event="submit.sendForm">
                     <div class="footer-form__title">Запишитесь <br> на консультацию</div>
                     <div class="footer-form__main">
                       <input class="footer-form__input" type="tel" name="tel" placeholder="Номер телефона" required>
@@ -718,6 +745,14 @@
 </svg></span><span class="accept__text"><span>Даю согласие на обработку&nbsp;</span><a href="/agreement/">Персональных данных</a></span>
                       </label>
                     </div>
+                    <template>
+                      <div class="form-popup form">
+                        <div class="form__ok">
+                          <h3>Спасибо</h3>
+                          <p>Ваша заявка принята в обработку. Наши специалисты свяжутся с Вами в ближайшее время</p>
+                        </div>
+                      </div>
+                    </template>
                   </form>
                 </div>
                 <div class="footer__contacts">

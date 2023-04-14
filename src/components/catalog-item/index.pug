@@ -12,7 +12,8 @@
         a(href="/shop/product/").catalog-item__name Практическое пособие по внедрению "Трехконтурная система управления клиникой".
         .catalog-item__price 2 300 РУБ.
         .catalog-item__controls
-            .catalog-item__control
-                button(type='button') Купить
+            form(action='/php/getForm.php' method='post' data-event='submit.openForm').catalog-item__control
+                input(type='hidden' name='name' value='order')
+                button(type='submit') Купить
             .catalog-item__control
                 a(href="/shop/product/") Подробнее

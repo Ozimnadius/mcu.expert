@@ -63,7 +63,9 @@ block content
                                         .product__price 2 400 руб.
                                         .product__oldprice 4 498 руб.
 
-                                button(type='button').product__buy Сделать заказ
+                                form(action='/php/getForm.php' method='post' data-event='submit.openForm').product__buy
+                                    input(type='hidden' name='name' value='order')
+                                    button(type='submit') Сделать заказ
                 //-tabs
                 section.product__tabs
                     include ../../src/components/product-tabs/index

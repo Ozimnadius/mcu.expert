@@ -1,0 +1,26 @@
+.consulting{
+  padding-bottom: var(--offset-bottom);
+
+  &__sevices{
+    margin-top: 100px;
+  }
+
+  &__advantages{
+    margin-top: 130px;
+    padding: 120px 0;
+    background-color: var(--color-grey-bg);
+  }
+
+  &__portfolio{
+    margin-top: 160px;
+  }
+
+  &__teachers{
+    margin-top: 140px;
+  }
+
+  &__form{
+    margin-top: 100px;
+  }
+
+}

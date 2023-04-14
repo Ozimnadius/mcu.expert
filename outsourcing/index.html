@@ -50,7 +50,10 @@
               </div>
               <div class="header__right">
                 <div class="header__tel"><a href="tel:+7(495)198-11-01">+7 (495) 198-11-01</a></div>
-                <button class="header__call" type="button">Заказать звонок</button>
+                <form class="header__call" action="/php/getForm.php" method="post" data-event="submit.openForm">
+                  <input type="hidden" name="name" value="feedback">
+                  <button type="submit">Заказать звонок</button>
+                </form>
               </div>
             </div>
           </div>
@@ -118,7 +121,10 @@
                       </div>
                     </div>
                     <div class="banner__content"><h2>Аутсорсинг</h2>
-               <button type="button">Записаться на курс</button>
+               <form action="/php/getForm.php" method="post" data-event="submit.openForm">
+                                                  <input type="hidden" name="name" value="consultation">
+                                                  <button type="submit">Получить консультацию</button>
+                                              </form>
                </div>
                   </div>
                 </div>
@@ -177,7 +183,10 @@
                               <li>Список 3</li>
                               <li>Список 4</li>
                             </ul>
-                            <button type="button">Оставить заявку на услугу</button>
+                            <form action="/php/getForm.php" method="post" data-event="submit.openForm">
+                              <input type="hidden" name="name" value="service">
+                              <button type="submit">Оставить заявку на услугу</button>
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -195,7 +204,10 @@
                               <li>Список 3</li>
                               <li>Список 4</li>
                             </ul>
-                            <button type="button">Оставить заявку на услугу</button>
+                            <form action="/php/getForm.php" method="post" data-event="submit.openForm">
+                              <input type="hidden" name="name" value="service">
+                              <button type="submit">Оставить заявку на услугу</button>
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -213,7 +225,10 @@
                               <li>Список 3</li>
                               <li>Список 4</li>
                             </ul>
-                            <button type="button">Оставить заявку на услугу</button>
+                            <form action="/php/getForm.php" method="post" data-event="submit.openForm">
+                              <input type="hidden" name="name" value="service">
+                              <button type="submit">Оставить заявку на услугу</button>
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -231,7 +246,10 @@
                               <li>Список 3</li>
                               <li>Список 4</li>
                             </ul>
-                            <button type="button">Оставить заявку на услугу</button>
+                            <form action="/php/getForm.php" method="post" data-event="submit.openForm">
+                              <input type="hidden" name="name" value="service">
+                              <button type="submit">Оставить заявку на услугу</button>
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -249,7 +267,10 @@
                               <li>Список 3</li>
                               <li>Список 4</li>
                             </ul>
-                            <button type="button">Оставить заявку на услугу</button>
+                            <form action="/php/getForm.php" method="post" data-event="submit.openForm">
+                              <input type="hidden" name="name" value="service">
+                              <button type="submit">Оставить заявку на услугу</button>
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -259,7 +280,7 @@
               </section>
               <section class="outsourcing__form">
                 <div class="container">
-                  <form class="form-call form" action="/php/ajax.php" method="post">
+                  <form class="form-call form" action="/php/ajax.php" method="post" data-event="submit.sendForm">
                     <div class="form-call__left">
                       <div class="form-call__img"><img src="/images/content/form-call/img.webp" alt="Получить программу курса"></div>
                     </div>
@@ -283,7 +304,15 @@
 </svg></span><span class="accept__text"><span>Даю согласие на обработку&nbsp;</span><a href="/agreement/">Персональных данных</a></span>
                         </label>
                       </div>
-                      <button class="form__submit" type="submit">Оставить отзыв</button>
+                      <button class="form__submit" type="submit">Отправить</button>
+                      <template>
+                        <div class="form-popup form">
+                          <div class="form__ok">
+                            <h3>Спасибо</h3>
+                            <p>Ваша заявка принята в обработку. Наши специалисты свяжутся с Вами в ближайшее время</p>
+                          </div>
+                        </div>
+                      </template>
                     </div>
                   </form>
                 </div>
@@ -303,7 +332,7 @@
                   <div class="footer__menu"><a href="/video/">Видеотека</a><a href="/shop/">Магазин</a><a href="/gifts/">Подарки</a><a href="/news/">Новости</a></div>
                 </div>
                 <div class="footer__form">
-                  <form class="footer-form" action="/php/ajax.php" method="post">
+                  <form class="footer-form" action="/php/ajax.php" method="post" data-event="submit.sendForm">
                     <div class="footer-form__title">Запишитесь <br> на консультацию</div>
                     <div class="footer-form__main">
                       <input class="footer-form__input" type="tel" name="tel" placeholder="Номер телефона" required>
@@ -319,6 +348,14 @@
 </svg></span><span class="accept__text"><span>Даю согласие на обработку&nbsp;</span><a href="/agreement/">Персональных данных</a></span>
                       </label>
                     </div>
+                    <template>
+                      <div class="form-popup form">
+                        <div class="form__ok">
+                          <h3>Спасибо</h3>
+                          <p>Ваша заявка принята в обработку. Наши специалисты свяжутся с Вами в ближайшее время</p>
+                        </div>
+                      </div>
+                    </template>
                   </form>
                 </div>
                 <div class="footer__contacts">

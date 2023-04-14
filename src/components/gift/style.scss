@@ -1,0 +1,124 @@
+@use "sass:math";
+
+.gift {
+  background: var(--color-grey-bg) url("/images/content/gift/bg.svg") math.percentage(math.div(255,1080)) 42px no-repeat;
+  border-radius: 15px;
+  padding: 15px 20px;
+  overflow: hidden;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 8fr 6fr;
+    border: 1px solid var(--color-grey);
+    gap: 40px;
+    min-height: 320px;
+    border-radius: 15px;
+  }
+
+  &__left {
+    padding: 20px 60px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  &__stick {
+    @include ui-btn-fill;
+    font-size: 16px;
+    padding: 6px 20px;
+
+    @include hover{
+      background-color: var(--color-red);
+      color: var(--color-white);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__desc {
+    font-size: 14px;
+    max-width: 45ch;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  &__link {
+    @include ui-link-main;
+    cursor: pointer;
+    font-size: 14px;
+
+    button{
+      @include ui-link-main;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    &--black{
+      color: var(--color-black);
+    }
+  }
+
+  &__right {
+    position: relative;
+  }
+
+  &__item {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+
+    &:before,&:after{
+      content: '';
+      display: block;
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+    }
+
+    &:before{
+      background-color: #DEDEDE;
+      z-index: 0;
+      transform: translate(30px,40px);
+    }
+
+    &:after{
+      background-color: #ECECEC;
+      z-index: 1;
+      transform: translate(15px,17px);
+    }
+
+
+  }
+
+  &__course{
+    width: 273px;
+    background-color: var(--color-white);
+    border-radius: 12px;
+    padding: 15px;
+    position: relative;
+    z-index: 2;
+
+    .courses-item{
+      &__name{
+        margin-top: 15px;
+        font-size: 17px;
+      }
+
+      &__txt{
+        margin-top: 11px;
+        font-size: 11px;
+      }
+    }
+  }
+
+}

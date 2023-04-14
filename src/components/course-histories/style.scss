@@ -14,8 +14,12 @@
   }
 
   &__btn{
-    @include ui-btn-border;
     margin-top: 50px;
+
+    button{
+      @include ui-btn-border;
+    }
+
   }
 
 }
