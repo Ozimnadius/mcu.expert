@@ -1,52 +1,87 @@
-.index-advantages{
-  display:grid;
-  grid-template-columns: repeat(3,1fr);
+.index-advantages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas: 'title content content' 'list list list';
   gap: 40px;
+  @include xlg-block {
+    gap: 20px;
+  }
+  @include md-block {
+    grid-template-areas: 'title title title' 'content content content' 'list list list';
+    gap: 30px 20px;
+  }
+  @include md-block {
+    grid-template-columns: 100%;
+    grid-template-areas: 'title' 'content' 'list';
+    gap: 20px;
+  }
 
-  &__title{
+  &__title {
     @include ui-heading-2;
     grid-area: title;
   }
 
-  &__content{
+  &__content {
     grid-area: content;
-    display:grid;
+    display: grid;
     gap: 20px;
+    @include sm-block {
+      gap: 30px;
+    }
 
-    h3{
+    h3 {
       @include ui-heading-cta;
     }
-    p{
+
+    p {
       @include ui-descriptor-20;
       color: var(--color-black2);
     }
   }
 
-  &__list{
+  &__list {
     grid-area: list;
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    @include xlg-block {
+      gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      gap: 30px;
+    }
   }
 
-  &__item{
+  &__item {
     padding-top: 25px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
     border-top: 1px solid var(--color-grey);
+    @include md-block {
+      gap: 10px;
+    }
   }
 
-  &__num{
+  &__num {
     @include ui-numbers-2;
     color: var(--color-red);
+    @include lg-block {
+      font-size: 70px;
+    }
+    @include md-block {
+      font-size: 45px;
+    }
   }
 
-  &__txt{
+  &__txt {
     @include ui-descriptor-20;
     color: var(--color-black2);
     max-width: 25ch;
+    @include md-block {
+      font-size: 16px;
+    }
   }
 }

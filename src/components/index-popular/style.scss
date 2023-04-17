@@ -1,66 +1,84 @@
 @use "sass:math";
 
-.index-popular{
+.index-popular {
   padding: 50px 0;
   background-color: var(--color-grey-bg);
   box-shadow: 0 0 0 100vmax var(--color-grey-bg);
   clip-path: polygon(-80px 0, 100vmax 0, 100vmax 100%, -80px 100%);
+  @include xlg-block {
+    clip-path: polygon(-100vmax 0, 100vmax 0, 100vmax 100%, -100vmax 100%);
+  }
 
-  &__top{
+  &__top {
     @include ui-top;
   }
 
-  &__title{
+  &__title {
     @include ui-top-title;
   }
 
-  &__nav{
+  &__nav {
     @include ui-top-nav;
+    @include sm-block {
+      display: none;
+    }
   }
 
-  &__prev{
+  &__prev {
     @include ui-arrow2-left;
   }
 
-  &__next{
+  &__next {
     @include ui-arrow2-right;
   }
 
-  &__swiper{
-    margin-right: calc(0px - var(--offset,192px));
+  &__swiper {
+    margin-right: calc(0px - var(--offset, 192px));
     margin-left: -80px;
     margin-top: 40px;
     padding-left: 80px;
     padding-right: 80px;
+    @include xlg-block {
+      margin-left: calc(0px - var(--offset, 192px));
+      padding-left: var(--offset, 192px);
+      padding-right: var(--offset, 192px);
+    }
+    @include sm-block {
+      margin-top: 20px;
+    }
   }
 
-  &__slide{
+  &__slide {
     width: 350px;
     position: relative;
     display: flex;
     flex-direction: column;
-    @include hover{
-      img{
+    @include xlg-block {
+      width: 285px;
+    }
+
+    @include hover {
+      img {
         transform: scale(1.05);
       }
 
-      .index-popular__name{
+      .index-popular__name {
         color: var(--color-red);
       }
     }
   }
 
-  &__img{
+  &__img {
     position: relative;
     overflow: hidden;
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       padding-top: math.percentage(240/350);
     }
 
-    img{
+    img {
       position: absolute;
       top: 0;
       left: 0;
@@ -71,15 +89,15 @@
     }
   }
 
-  &__name{
+  &__name {
     @include ui-card-title;
     margin-top: 20px;
     @include tr;
   }
 
-  &__txt{
+  &__txt {
     margin-top: 16px;
-    display:grid;
+    display: grid;
     gap: 15px;
   }
 

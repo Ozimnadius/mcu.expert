@@ -1,4 +1,7 @@
 .footer-form {
+  @include lg-block{
+    max-width: 385px;
+  }
 
   &__title {
     @include ui-heading-form;

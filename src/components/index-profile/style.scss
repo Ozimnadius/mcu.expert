@@ -8,6 +8,10 @@
 
   &__title {
     @include ui-top-title;
+    @include lg-block {
+      margin: 0 auto;
+      text-align: center;
+    }
   }
 
   &__grid {
@@ -15,10 +19,19 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     margin-top: 40px;
+    @include xlg-block {
+      gap: 20px;
+    }
+    @include lg-block {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__left {
-
+    @include lg-block {
+      display: none;
+    }
   }
 
   &__img {
@@ -65,6 +78,13 @@
     margin-top: 3px;
   }
 
+  &__right {
+    @include lg-block {
+      max-width: 590px;
+      width: 100%;
+    }
+  }
+
   &__item {
     border-bottom: 1px solid var(--color-grey);
     position: relative;
@@ -75,23 +95,48 @@
 
     &.active {
       .index-profile {
+
         &__link {
           background-color: var(--color-red);
+          @include lg-block {
+            background-color: transparent;
+          }
         }
 
         &__count {
           color: var(--color-white);
           transform: translateX(30px) translateY(-50%);
+          @include xlg-block {
+            transform: translateX(20px) translateY(-50%);
+          }
+          @include lg-block {
+            transform: translateX(0) translateY(-50%);
+            color: var(--color-red);
+          }
         }
 
         &__name {
           color: var(--color-white);
           transform: translateX(30px);
+          @include xlg-block {
+            transform: translateX(20px);
+          }
+          @include lg-block {
+            transform: none;
+            color: var(--color-black);
+          }
         }
 
         &__arr {
           transform: translateX(-30px) translateY(-50%);
           color: var(--color-white);
+          @include xlg-block {
+            transform: translateX(-20px) translateY(-50%);
+          }
+          @include lg-block {
+            transform: translateX(0) translateY(-50%);
+            color: var(--color-red);
+          }
         }
       }
     }
@@ -102,6 +147,13 @@
     padding: 33px 50px 33px 110px;
     display: flex;
     @include tr;
+
+    @include xlg-block {
+      padding: 22px 50px 22px 80px;
+    }
+    @include sm-block{
+      padding: 12px 45px 12px 50px;
+    }
   }
 
   &__count {
@@ -117,6 +169,9 @@
   &__name {
     @include ui-heading-3;
     @include tr;
+    @include sm-block{
+      font-size: 18px;
+    }
   }
 
   &__arr {
@@ -128,6 +183,10 @@
     @include tr;
 
     svg {
+      @include sm-block{
+        width: 36px;
+        height: 12px;
+      }
       path {
         fill: currentColor;
       }

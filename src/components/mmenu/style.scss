@@ -1,0 +1,180 @@
+.mmenu {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  left: -150%;
+  top: 0;
+  bottom: 0;
+  @include tr;
+
+  &.active {
+    left: 0;
+
+    .mmenu__overlay {
+      pointer-events: all;
+      opacity: 1;
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    @include tr;
+  }
+
+  &__wrap {
+    width: 375px;
+    height: 100%;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95px;
+    border-bottom: 5px solid var(--color-red);
+  }
+
+  &__logo {
+    width: 167px;
+  }
+
+  &__back, &__close {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  &__back {
+    left: 10px;
+    padding: 10px 0;
+  }
+
+  &__close {
+    right: 10px;
+  }
+
+  &__middle {
+    flex-shrink: 0;
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__section {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  &__bottom {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 0 10px 50px;
+  }
+
+  &__list {
+    width: 100%;
+  }
+
+  &__item {
+    border-top: 1px solid var(--color-grey-bg);
+
+    &:last-child {
+      border-bottom: 1px solid var(--color-grey-bg);
+    }
+  }
+
+  &__link {
+    @include ui-menu-item;
+    position: relative;
+    display: block;
+    padding: 20px 0;
+
+
+    &--arrow {
+      padding-right: 15px;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 0 4px 8px;
+        border-color: transparent transparent transparent var(--color-red);
+
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+
+  &__submenu {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    right: -150%;
+    @include tr;
+
+    &.active {
+      right: 0;
+    }
+  }
+
+  &__contacts {
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__tel {
+    a {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+  }
+
+  &__feedback {
+    margin-top: 6px;
+    cursor: pointer;
+
+    button {
+      text-transform: uppercase;
+      text-decoration: underline;
+      color: var(--color-red);
+    }
+  }
+
+  &__addr {
+    @include ui-descriptor-18;
+    margin-top: 25px;
+  }
+
+  &__email {
+    @include ui-descriptor-18;
+    margin-top: 25px;
+  }
+}

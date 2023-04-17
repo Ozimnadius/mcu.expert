@@ -37,13 +37,25 @@ function initSliders() {
     if (indexPopularSlider) {
         const indexPopularSwiper = new Swiper(indexPopularSlider.querySelector('.swiper'), {
             slidesPerView: 'auto',
-            spaceBetween: 40,
+            spaceBetween: 10,
             grabCursor: true,
             // Navigation arrows
             navigation: {
                 nextEl: indexPopularSlider.querySelector('.index-popular__next'),
                 prevEl: indexPopularSlider.querySelector('.index-popular__prev'),
             },
+            breakpoints: {
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 20
+                },
+                // when window width is >= 1920px
+                1920: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 40
+                }
+            }
         });
     }
 
@@ -64,26 +76,60 @@ function initSliders() {
     const reviewsSlider = document.querySelector('.reviews-slider');
     if (reviewsSlider) {
         const reviewsSwiper = new Swiper(reviewsSlider.querySelector('.swiper'), {
-            slidesPerView: 3,
-            spaceBetween: 40,
+            slidesPerView: 'auto',
+            spaceBetween: 10,
             // Navigation arrows
             navigation: {
                 nextEl: reviewsSlider.querySelector('.reviews-slider__next'),
                 prevEl: reviewsSlider.querySelector('.reviews-slider__prev'),
             },
+            breakpoints: {
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 20
+                },
+                // when window width is >= 1440px
+                1440: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                // when window width is >= 1920px
+                1920: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                }
+            }
         });
     }
 
     const clientsSlider = document.querySelector('.clients-slider');
     if (clientsSlider) {
         const clientsSwiper = new Swiper(clientsSlider.querySelector('.swiper'), {
-            slidesPerView: 3,
-            spaceBetween: 40,
+            slidesPerView: 'auto',
+            spaceBetween: 10,
             // Navigation arrows
             navigation: {
                 nextEl: clientsSlider.querySelector('.clients-slider__next'),
                 prevEl: clientsSlider.querySelector('.clients-slider__prev'),
             },
+            breakpoints: {
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 20
+                },
+                // when window width is >= 1440px
+                1440: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                // when window width is >= 1920px
+                1920: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                }
+            }
         });
     }
 
@@ -268,12 +314,24 @@ class Events {
 
     }
 
-    openMenu(e, elem) {
+    openMmenu(e, elem) {
         e.preventDefault();
-        console.log('Open menu');
-        // console.log(this);
-        // console.log(e);
-        // console.log(elem);
+        document.querySelector('.mmenu').classList.add('active');
+    }
+
+    closeMmenu(e, elem) {
+        e.preventDefault();
+        document.querySelector('.mmenu').classList.remove('active');
+    }
+
+    nextMmenu(e, elem) {
+        e.preventDefault();
+        elem.nextElementSibling.classList.add('active');
+    }
+
+    backMmenu(e, elem) {
+        e.preventDefault();
+        elem.closest('.mmenu__submenu').classList.remove('active');
     }
 
     sendForm(e, elem) {

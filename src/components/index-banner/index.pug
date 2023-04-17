@@ -5,7 +5,12 @@
                 each i in [1,2,3]
                     .swiper-slide.index-banner__slide.white
                         .index-banner__img
-                            img(src="/images/content/index-banner/img.webp" alt="Годовая подписка на обучение всех категорий сотрудников")
+                            picture
+                                source(srcset=`/images/content/index-banner/img-767.webp` media='(max-width: 767.98px)')
+                                source(srcset=`/images/content/index-banner/img-1023.webp` media='(max-width: 1023.98px)')
+                                source(srcset=`/images/content/index-banner/img-1439.webp` media='(max-width: 1439.98px)')
+                                source(srcset=`/images/content/index-banner/img-1919.webp` media='(max-width: 1919.98px)')
+                                img(src=`/images/content/index-banner/img.webp` alt='Годовая подписка на обучение всех категорий сотрудников')
                         .index-banner__container.container
                             .index-banner__content
                                 h2 Годовая подписка на обучение всех категорий сотрудников

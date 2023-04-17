@@ -1,0 +1,57 @@
+.mmenu
+    div(data-event='click.closeMmenu').mmenu__overlay
+    .mmenu__wrap
+        .mmenu__top
+            button(type='button' data-event='click.closeMmenu').mmenu__back
+                <svg width="45" height="16" viewBox="0 0 45 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.292892 8.7071C-0.0976296 8.31658 -0.0976295 7.68341 0.292893 7.29289L6.65685 0.928928C7.04738 0.538404 7.68054 0.538404 8.07107 0.928928C8.46159 1.31945 8.46159 1.95262 8.07107 2.34314L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.7071ZM45 9L1 9L1 7L45 7L45 9Z" fill="#FF033E"/>
+                </svg>
+            a(href="/").mmenu__logo
+                img(src="/images/content/logo-text.svg" alt="logo")
+            button(type='button' data-event='click.closeMmenu').mmenu__close
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.9167 9.08075L24.9192 7.08325L17 15.0024L9.08084 7.08325L7.08334 9.08075L15.0025 16.9999L7.08334 24.9191L9.08084 26.9166L17 18.9974L24.9192 26.9166L26.9167 24.9191L18.9975 16.9999L26.9167 9.08075Z" fill="#C8C8C8"/>
+                </svg>
+        .mmenu__middle
+            .mmenu__socials
+                include ../socials/index
+        .mmenu__bottom
+            .mmenu__list
+                each i in GLOBALS.menu
+                    .mmenu__item
+                        if !i.submenu
+                            a(href=i.href).mmenu__link= i.name
+                        else
+                            a(href=i.href data-event='click.nextMmenu').mmenu__link.mmenu__link--arrow= i.name
+                            .mmenu__submenu
+                                .mmenu__wrap
+                                    .mmenu__top
+                                        button(type='button' data-event='click.backMmenu').mmenu__back
+                                            <svg width="45" height="16" viewBox="0 0 45 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.292892 8.7071C-0.0976296 8.31658 -0.0976295 7.68341 0.292893 7.29289L6.65685 0.928928C7.04738 0.538404 7.68054 0.538404 8.07107 0.928928C8.46159 1.31945 8.46159 1.95262 8.07107 2.34314L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.7071ZM45 9L1 9L1 7L45 7L45 9Z" fill="#FF033E"/>
+                                            </svg>
+                                        a(href="/").mmenu__logo
+                                            img(src="/images/content/logo-text.svg" alt="logo")
+                                        button(type='button' data-event='click.closeMmenu').mmenu__close
+                                            <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M26.9167 9.08075L24.9192 7.08325L17 15.0024L9.08084 7.08325L7.08334 9.08075L15.0025 16.9999L7.08334 24.9191L9.08084 26.9166L17 18.9974L24.9192 26.9166L26.9167 24.9191L18.9975 16.9999L26.9167 9.08075Z" fill="#C8C8C8"/>
+                                            </svg>
+                                    .mmenu__middle
+                                        a(href=i.href).mmenu__section= i.name
+                                    .mmenu__bottom
+                                        .mmenu__list
+                                            each j in i.submenu
+                                                .mmenu__item
+                                                    a(href=j.href).mmenu__link= j.name
+
+
+            .mmenu__contacts
+                .mmenu__tel
+                    a(href="tel:+7(495)198-11-01") +7 (495) 198-11-01
+                form(action='/php/getForm.php' method='post' data-event='submit.openForm').mmenu__feedback
+                    input(type='hidden' name='name' value='feedback')
+                    button(type='submit') заказать звонок
+                .mmenu__addr.
+                    Москва, Садовническая<br>ул., д. 76/71 стр. 3
+                .mmenu__email
+                    a(href="mailto:mcu@mcu.expert") mcu@mcu.expert

@@ -3,7 +3,17 @@
 .index-about {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 40px;
+  @include xlg-block {
+    gap: 20px;
+  }
+  @include md-block {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: 100%;
+    gap: 0;
+  }
 
   &__item {
     position: relative;
@@ -25,14 +35,15 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: right center;
       @include tr;
     }
   }
 
   &__video {
-    @include hover{
-      .index-about__video-img{
-        img{
+    @include hover {
+      .index-about__video-img {
+        img {
           transform: scale(1.05);
         }
       }
@@ -44,6 +55,19 @@
       z-index: 1;
       top: 55px;
       left: 60px;
+      @include xlg-block {
+        top: 35px;
+        left: 40px;
+      }
+      @include lg-block {
+        width: 145px;
+        top: 30px;
+        left: 30px;
+      }
+      @include sm-block{
+        top: 20px;
+        left: 20px;
+      }
     }
 
     &-play {
@@ -54,7 +78,14 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      @include hover{
+      @include lg-block {
+        --play-size: 75px;
+      }
+      @include sm-block {
+        --play-size: 50px;
+      }
+
+      @include hover {
         background-color: transparent;
         color: var(--color-red);
       }
@@ -63,14 +94,20 @@
 
   &__history {
     color: var(--color-white);
-    @include hover{
-      .index-about__history-stick{
+    @include hover {
+      .index-about__history-stick {
         background-color: var(--color-white);
         color: var(--color-red);
       }
     }
 
-    &-wrap{
+    &:before{
+      @include md-block{
+        display: none;
+      }
+    }
+
+    &-wrap {
       position: absolute;
       z-index: 1;
       inset: 60px;
@@ -78,9 +115,25 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: space-between;
+      @include xlg-block {
+        inset: 40px 50px;
+      }
+      @include lg-block {
+        inset: 20px 35px;
+      }
+      @include md-block{
+        position: relative;
+        z-index: 2;
+        inset: initial;
+        padding: 30px 40px;
+        gap: 15px;
+      }
+      @include sm-block{
+        padding: 30px 10px;
+      }
     }
 
-    &-stick{
+    &-stick {
       @include ui-button-txt;
       padding: 6px 20px;
       border: 1px solid var(--color-white);
@@ -88,28 +141,37 @@
       @include tr;
     }
 
-    &-content{
-      display:grid;
+    &-content {
+      display: grid;
       gap: 15px;
-      max-width: 45ch;
+      max-width: 50ch;
+      @include lg-block {
+        gap: 10px;
+      }
     }
 
-    &-title{
+    &-title {
       @include ui-heading-2;
     }
 
-    &-txt{
+    &-txt {
       @include ui-descriptor-20;
+      @include lg-block {
+        font-size: 16px;
+      }
     }
 
-    &-links{
+    &-links {
       width: 100%;
       display: flex;
       justify-content: space-between;
     }
 
-    &-link{
+    &-link {
       @include ui-link;
+      @include lg-block {
+        font-size: 16px;
+      }
     }
   }
 }

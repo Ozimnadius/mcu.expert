@@ -10,6 +10,9 @@
 
   &__nav {
     @include ui-top-nav;
+    @include sm-block{
+      display: none;
+    }
   }
 
   &__prev {
@@ -24,6 +27,22 @@
     margin-top: 40px;
     margin-right: -20px;
     padding-right: 20px;
+
+    @include lg-block{
+      margin-left: calc(0px - var(--offset));
+      margin-right: calc(0px - var(--offset));
+      padding-left: var(--offset);
+      padding-right: var(--offset);
+    }
+  }
+
+  &__slide{
+    @include lg-block{
+      width: 385px;
+    }
+    @include sm-block{
+      width: 307px;
+    }
   }
 
 

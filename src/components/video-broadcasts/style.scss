@@ -78,6 +78,10 @@
     top: 30px;
     left: 30px;
     display: block;
+    @include xlg-block{
+      top: 20px;
+      left: 20px;
+    }
   }
 
   &__content {
@@ -90,6 +94,11 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    @include xlg-block{
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+    }
   }
 
   &__title {
@@ -99,6 +108,9 @@
 
   &__desc {
     display: none;
+    @include lg-block{
+      display: block;
+    }
   }
 
   &__btn {
@@ -106,9 +118,15 @@
     @include ui-button-txt;
     display: none;
     padding: 6px 20px;
+    @include lg-block{
+      display: block;
+    }
+
+
     @include hover {
       background-color: var(--color-red);
     }
+
 
   }
 }

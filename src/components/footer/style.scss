@@ -4,6 +4,9 @@
 
   &__top {
     padding: 80px 0;
+    @include md-block {
+      padding: 40px 0;
+    }
   }
 
   &__grid {
@@ -13,6 +16,15 @@
                           'contacts menus form'
                           'contacts menus policy';
     gap: 60px 20px;
+    @include lg-block {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 'logo form'
+                          'contacts form'
+                          'contacts policy';
+    }
+    @include md-block {
+      grid-template-areas: 'logo logo' 'contacts form' 'policy policy';
+    }
   }
 
   &__logo {
@@ -24,6 +36,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    @include lg-block {
+      display: none;
+    }
   }
 
   &__menu {
@@ -77,7 +92,15 @@
     grid-area: policy;
     font-size: 18px;
     @include tr;
-    @include hover{
+
+    @include xlg-block {
+      font-size: 16px;
+    }
+    @include md-block {
+      text-align: center;
+    }
+
+    @include hover {
       color: var(--color-red);
     }
   }
@@ -87,11 +110,27 @@
     padding: 20px 0;
     font-weight: 700;
     font-size: 18px;
+    @include xlg-block {
+      font-size: 16px;
+    }
 
     .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include md-block {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
     }
   }
+
+
+  &__copy{
+    @include md-block{
+      order: 1;
+    }
+  }
+
 }

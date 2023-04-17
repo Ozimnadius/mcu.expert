@@ -1,31 +1,41 @@
 @use "sass:math";
 
-.index-banner{
+.index-banner {
 
-  &__slider{
+  &__slider {
     position: relative;
   }
 
-  &__slide{
+  &__slide {
     position: relative;
 
-    &.white{
+    &.white {
       color: var(--color-white);
+      @include md-block {
+        color: var(--color-black);
+      }
     }
   }
 
-  &__img{
+  &__img {
     position: relative;
-    &:before{
-      content: '';
-      display: block;
-      padding-top: math.percentage(650/1920);
+    height: 650px;
+    @include lg-block {
+      height: 500px;
+    }
+    @include md-block {
+      height: 384px;
+    }
+    @include sm-block {
+      height: 300px;
     }
 
-    img{
-      position: absolute;
-      top: 0;
-      left: 0;
+    picture {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -33,13 +43,16 @@
 
   }
 
-  &__container{
+  &__container {
     position: absolute;
     z-index: 2;
     inset: 0;
+    @include md-block {
+      position: static;
+    }
   }
 
-  &__content{
+  &__content {
     height: 100%;
     overflow-y: auto;
     padding: 40px 0;
@@ -52,17 +65,29 @@
 
     max-width: 70ch;
 
-    h2{
+    @include md-block {
+      padding-bottom: 10px;
+    }
+    @include sm-block{
+      padding-top: 20px;
+      gap: 15px;
+      padding-bottom: 0;
+    }
+
+    h2 {
       @include ui-heading-1;
     }
 
-    a{
+    a {
       @include ui-btn-border;
+      @include sm-block{
+        font-size: 16px;
+      }
     }
 
   }
 
-  &__controls{
+  &__controls {
     position: absolute;
     z-index: 2;
     left: 50%;
@@ -75,24 +100,33 @@
     gap: 45px;
 
     pointer-events: none;
+
+    @include md-block {
+      bottom: 0;
+    }
+    @include sm-block {
+      justify-content: center;
+      top: 250px;
+      bottom: initial;
+    }
   }
 
-  &__pag{
-    width: auto!important;
+  &__pag {
+    width: auto !important;
     pointer-events: all;
     display: flex;
     align-items: center;
     gap: 18px;
 
 
-    .swiper-pagination-bullet{
+    .swiper-pagination-bullet {
       width: 14px;
       height: 14px;
       background-color: var(--color-grey-bg);
       opacity: 1;
-      margin: 0!important;
+      margin: 0 !important;
 
-      &-active{
+      &-active {
         background-color: var(--color-red);
         width: 20px;
         height: 20px;
@@ -100,23 +134,26 @@
     }
   }
 
-  &__nav{
+  &__nav {
     display: flex;
     gap: 8px;
     pointer-events: all;
+    @include sm-block {
+      display: none;
+    }
   }
 
-  &__arr{
-    &.swiper-button-disabled{
+  &__arr {
+    &.swiper-button-disabled {
       @include ui-disabled;
     }
   }
 
-  &__prev{
+  &__prev {
     @include ui-arrow-left;
   }
 
-  &__next{
+  &__next {
     @include ui-arrow-right;
   }
 

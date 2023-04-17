@@ -6,11 +6,11 @@
   position: relative;
   @include tr;
 
-  @include hover{
+  @include hover {
     background-color: var(--color-grey-bg-dark);
   }
 
-  &:before{
+  &:before {
     content: '';
     display: block;
     padding-top: math.percentage(351/479);
@@ -26,20 +26,36 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 50px;
+
+    @include xlg-block {
+      inset: 40px 30px;
+      gap: 30px;
+    }
+    @include sm-block {
+      inset: 15px;
+      gap: 15px;
+    }
   }
 
-  &__img{
+  &__img {
     height: 60px;
     display: flex;
     align-items: center;
+    @include sm-block {
+      width: 129px;
+      height: 37px;
+    }
 
-    img{
+    img {
       max-height: 100%;
     }
   }
 
-  &__desc{
+  &__desc {
     @include ui-descriptor-20;
+    @include sm-block{
+      font-size: 16px;
+    }
   }
 
 

@@ -1,7 +1,18 @@
 @mixin video-list-grid {
-  display:grid;
+  display: grid;
   grid-template-columns: 3fr 9fr;
   gap: 40px;
+  @include xlg-block {
+    gap: 20px;
+  }
+  @include lg-block {
+    grid-template-columns: 100%;
+    position: relative;
+    padding-bottom: 100px;
+  }
+  @include sm-block {
+    padding-bottom: 80px;
+  }
 }
 
 @mixin video-list-left {
@@ -9,6 +20,14 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+
+  @include lg-block {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+  }
+  @include sm-block {
+    grid-template-columns: 100%;
+  }
 }
 
 @mixin video-list-title {
@@ -17,17 +36,46 @@
 
 @mixin video-list-link {
   @include ui-btn-border;
+  @include lg-block {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
-@mixin video-list-items{
-  display:grid;
-  grid-template-columns: repeat(3,1fr);
+@mixin video-list-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+  @include xlg-block {
+    gap: 20px;
+  }
+  @include md-block {
+    grid-template-columns: repeat(3, 293px);
+    overflow-y: auto;
+    margin-left: calc(0px - var(--offset));
+    margin-right: calc(0px - var(--offset));
+    padding-left: var(--offset);
+    padding-right: var(--offset);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+
+  }
 }
 
 .video-list {
   background-color: var(--color-grey-bg);
   margin: 0 -80px;
+  @include xlg-block {
+    margin: 0 -60px;
+  }
+  @include lg-block {
+    margin: 0 calc(0px - var(--offset));
+  }
 
   &--top {
     .video-list__broadcasts {
@@ -45,6 +93,27 @@
     grid-template-areas: 'title title title desc desc desc desc desc desc desc link link';
     gap: 40px;
     align-items: center;
+    @include xlg-block {
+      margin: 0 60px;
+      gap: 20px;
+    }
+    @include lg-block {
+      padding-top: 60px;
+      grid-template-areas: 'title title title title desc desc desc desc desc desc link link';
+      align-items: flex-start;
+      margin: 0 var(--offset);
+    }
+    @include md-block {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 'title link' 'desc desc';
+      align-items: center;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-template-areas: 'title' 'link' 'desc';
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
   }
 
   &__title {
@@ -56,20 +125,47 @@
     @include ui-descriptor-18;
     grid-area: desc;
     color: var(--color-black2);
+    @include lg-block {
+      font-size: 16px;
+    }
   }
 
   &__link {
     @include ui-link-main;
     grid-area: link;
+    text-align: right;
+    @include lg-block {
+      font-size: 14px;
+    }
+    @include md-block {
+      font-size: 16px;
+    }
+    @include sm-block {
+      text-align: left;
+    }
   }
 
   &__broadcasts {
     padding: 80px;
+    @include xlg-block {
+      padding: 60px;
+    }
+    @include lg-block {
+      padding-left: var(--offset);
+      padding-right: var(--offset);
+    }
   }
 
   &__lectures {
     background-color: var(--color-grey-bg-dark);
     padding: 80px;
+    @include xlg-block {
+      padding: 60px;
+    }
+    @include lg-block {
+      padding-left: var(--offset);
+      padding-right: var(--offset);
+    }
   }
 
 }

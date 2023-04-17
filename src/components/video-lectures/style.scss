@@ -69,6 +69,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @include xlg-block{
+      --play-size: 50px;
+    }
   }
 
   &__desc {
