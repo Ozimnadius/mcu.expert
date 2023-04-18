@@ -4,12 +4,12 @@
     @include ui-top;
   }
 
-  &__title{
+  &__title {
     @include ui-top-title;
     margin-right: auto;
   }
 
-  &__link{
+  &__link {
     @include ui-top-link;
   }
 
@@ -31,9 +31,15 @@
     padding-left: var(--offset, 192px);
     margin-right: calc(0px - var(--offset, 192px));
     padding-right: 40px;
+    @include sm-block {
+      margin-top: 20px;
+    }
   }
 
   &__slide {
     width: 350px;
+    @include xlg-block {
+      width: 285px;
+    }
   }
 }

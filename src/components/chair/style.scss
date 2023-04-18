@@ -1,38 +1,88 @@
-.chair{
+.chair {
   padding-bottom: 0;
 
-  &__grid{
-    display:grid;
+  &__grid {
+    display: grid;
     grid-template-columns: 1fr 740px;
     gap: 170px;
+    @include xlg-block {
+      grid-template-columns: 5fr 7fr;
+      gap: 20px;
+    }
+    @include lg-block {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include md-block {
+      width: min(100%, 480px);
+      margin: 0 auto;
+      grid-template-columns: 100%;
+      gap: 55px;
+      justify-content: center;
+    }
+    @include sm-block {
+      gap: 30px;
+    }
+
   }
 
-  &__top{
+  &__left {
+    @include md-block {
+      order: 1;
+    }
+  }
+
+  &__top {
     font-size: 24px;
-    display:grid;
+    display: grid;
     gap: 20px;
+    @include sm-block{
+      font-size: 20px;
+    }
   }
 
-  &__bottom{
+  &__bottom {
     @include ui-descriptor-18;
-    display:grid;
+    display: grid;
     gap: 10px;
     margin-top: 40px;
+    @include sm-block{
+      font-size: 16px;
+      margin-top: 30px;
+    }
   }
 
-  &__img{
+  &__img {
     border: 90px solid var(--color-grey-bg);
     border-top-width: 76px;
     border-bottom-width: 76px;
+    @include lg-block {
+      border-width: 55px;
+      border-top-width: 45px;
+      border-bottom-width: 45px;
+    }
+    @include sm-block {
+      border-width: 43px;
+      border-top-width: 36px;
+      border-bottom-width: 36px;
+    }
   }
 
-  &__teachers{
-    margin-top: 150px;
+  &__teachers {
+    @include margin-top(15);
   }
 
-  &__courses{
+  &__courses {
+    @include margin-top(12);
     padding: 120px 0;
-    margin-top: 120px;
     background-color: var(--color-grey-bg);
+    @include lg-block{
+      padding: 100px 0;
+    }
+    @include md-block{
+      padding: 70px 0;
+    }
+    @include sm-block{
+      padding: 60px 0;
+    }
   }
 }

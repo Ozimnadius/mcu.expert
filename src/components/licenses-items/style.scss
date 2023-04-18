@@ -2,6 +2,9 @@
   &__top {
     @include ui-top;
     margin-bottom: 60px;
+    @include md-block {
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
@@ -16,23 +19,52 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
+    @include xlg-block {
+      gap: 20px;
+    }
+    @include md-block {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm-block {
+      gap: 10px;
+    }
   }
 
   &__item {
+    --border-width-vertical: 58px;
+    --border-width-horizontal: 72px;
     --border-color: var(--color-grey-bg);
     --border-color-2: #ECECEC;
     border-color: var(--border-color);
     border-style: solid;
-    border-top-width: 58px;
-    border-bottom-width: 58px;
-    border-left-width: 72px;
-    border-right-width: 72px;
+    border-top-width: var(--border-width-vertical);
+    border-bottom-width: var(--border-width-vertical);
+    border-left-width: var(--border-width-horizontal);
+    border-right-width: var(--border-width-horizontal);
     border-top-color: var(--border-color-2);
     border-bottom-color: var(--border-color-2);
 
     display: flex;
     align-items: center;
     justify-content: center;
+    @include xlg-block {
+      --border-width-vertical: 45px;
+      --border-width-horizontal: 57px;
+    }
+    @include lg-block {
+      --border-width-vertical: 35px;
+      --border-width-horizontal: 45px;
+    }
+    @include md-block {
+      --border-width-vertical: 58px;
+      --border-width-horizontal: 73px;
+    }
+    @include sm-block {
+      --border-width-vertical: 28px;
+      --border-width-horizontal: 35px;
+    }
+
+
     @include tr;
 
     @include hover {

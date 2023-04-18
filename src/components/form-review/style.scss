@@ -1,5 +1,22 @@
-.form-review{
-  display:grid;
-  grid-template-columns: 1fr 739px;
-  gap: 170px;
+.form-review {
+
+
+  &__grid{
+    display: grid;
+    grid-template-columns: 1fr 739px;
+    gap: 170px;
+    @include xlg-block {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__left{
+    @include sm-block{
+      order: 1;
+    }
+  }
 }

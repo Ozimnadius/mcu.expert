@@ -36,6 +36,9 @@
     p {
       @include ui-descriptor-20;
       color: var(--color-black2);
+      @include sm-block{
+        font-size: 16px;
+      }
     }
   }
 

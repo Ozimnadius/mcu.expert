@@ -45,3 +45,12 @@ $break_xs: 575.98px;
     }
   }
 }
+
+@mixin margin-top($ratio) {
+  margin-top: calc(var(--spacing) * $ratio);
+}
+
+@mixin margin-bottom($ratio) {
+  margin-bottom: calc(var(--spacing) * $ratio);
+}
+

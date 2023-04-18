@@ -1,31 +1,40 @@
-.about{
+.about {
   padding-bottom: var(--offset-bottom);
 
-  &__teachers{
-    margin-top: 100px;
-  }
 
-  &__chairs{
-    margin-top: 100px;
+  &__chairs {
+    @include margin-top(10);
     background-color: var(--color-grey-bg);
     padding: 120px 0;
+    @include lg-block {
+      padding: 90px 0;
+    }
+    @include sm-block {
+      padding: 60px 0;
+    }
   }
 
-  &__licenses{
-    margin-top: 130px;
+  &__licenses {
+    @include margin-top(13);
   }
 
-  &__portfolio{
-    margin-top: 130px;
+  &__portfolio {
+    @include margin-top(13);
     padding: 120px 0;
     background-color: var(--color-grey-bg);
+    @include md-block{
+      padding: 100px 0;
+    }
+    @include sm-block{
+      padding: 60px 0;
+    }
   }
 
-  &__reviews{
-    margin-top: 130px;
+  &__reviews {
+    @include margin-top(13);
   }
 
-  &__clients{
-    margin-top: 100px;
+  &__clients {
+    @include margin-top(10);
   }
 }

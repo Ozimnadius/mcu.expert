@@ -1,4 +1,4 @@
-:root{
+:root {
   --font: 'Avenir Next Cyr', sans-serif;
   --font-size: 16px;
   --font-weight: 400;
@@ -16,21 +16,27 @@
   --color-grey: #C8C8C8;
   --color-grey-bg-dark: #E9E9E9;
   --color-grey-bg: #F5F5F5;
-  
+
   --transition: 0.4s;
 
   --offset-bottom: 100px;
+  --spacing: 10px;
 
 
-  @media (max-width: 1439.98px){
+  @media (max-width: 1919.98px) {
+    --spacing: 8px;
+  }
+  @media (max-width: 1439.98px) {
     --container-padding: 0 40px;
     --offset-bottom: 80px;
+    --spacing: 6px;
   }
-  @media (max-width: 1023.98px){
+  @media (max-width: 1023.98px) {
     --container-padding: 0 20px;
   }
-  @media (max-width: 767.98px){
+  @media (max-width: 767.98px) {
     --container-padding: 0 10px;
     --offset-bottom: 70px;
+    --spacing: 5px;
   }
 }

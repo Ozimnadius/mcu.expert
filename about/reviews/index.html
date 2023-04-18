@@ -181,39 +181,41 @@
               <section class="reviews__form">
                 <div class="container">
                   <form class="from form-review" action="/php/ajax.php" method="post" enctype="multipart/form-data" data-event="submit.sendForm">
-                    <div class="form-review__left">
-                      <div class="form__title">Оставить отзыв</div>
-                      <div class="form__fields">
-                        <div class="form__field">
-                          <input class="form__input" type="text" name="name" placeholder="Ваше имя" required>
-                        </div>
-                        <div class="form__field">
-                          <input class="form__input" type="email" name="email" placeholder="Эл. почта" required>
-                        </div>
-                        <div class="form__field">
-                          <div class="form__file">
-                            <label class="form-file">
-                              <input class="form-file__input" type="file" name="photo" data-event="change.fileChange"><span class="form-file__fake"><span class="form-file__placeholder">Добавить фото</span><span class="form-file__btn"><svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="form__title">Оставить отзыв</div>
+                    <div class="form-review__grid">
+                      <div class="form-review__left">
+                        <div class="form__fields">
+                          <div class="form__field">
+                            <input class="form__input" type="text" name="name" placeholder="Ваше имя" required>
+                          </div>
+                          <div class="form__field">
+                            <input class="form__input" type="email" name="email" placeholder="Эл. почта" required>
+                          </div>
+                          <div class="form__field">
+                            <div class="form__file">
+                              <label class="form-file">
+                                <input class="form-file__input" type="file" name="photo" data-event="change.fileChange"><span class="form-file__fake"><span class="form-file__placeholder">Добавить фото</span><span class="form-file__btn"><svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M21.8516 28.892V17.3693H24.1442V28.892H21.8516ZM17.2408 24.2727V21.9801H28.7635V24.2727H17.2408Z" fill="#FF033E"/>
 <circle cx="23" cy="23" r="22.5" stroke="#FF033E"/>
 </svg></span></span>
-                            </label>
+                              </label>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="form__accept">
-                        <label class="accept">
-                          <input class="accept__input" type="checkbox" name="accept" required checked><span class="accept__check"><svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div class="form__accept">
+                          <label class="accept">
+                            <input class="accept__input" type="checkbox" name="accept" required checked><span class="accept__check"><svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6924 1.3171L5.42859 10.6143L0.621582 5.78997L1.32191 5.08713L5.42859 9.20857L13.9921 0.614258L14.6924 1.3171Z" fill="#FF033E"/>
-</svg></span><span class="accept__text"><span>Даю согласие на обработку &nbsp;</span><a href="/agreement/">Персональных данных</a></span>
-                        </label>
+</svg></span><span class="accept__text">Даю согласие на обработку <a href="/agreement/">Персональных данных</a></span>
+                          </label>
+                        </div>
+                        <button class="form__submit" type="submit">Оставить отзыв</button>
                       </div>
-                      <button class="form__submit" type="submit">Оставить отзыв</button>
-                    </div>
-                    <div class="form-review__right">
-                      <div class="form__fields">
-                        <div class="form__field">
-                          <textarea class="form__input form__input--area" name="message" placeholder="Напишите свой отзыв"></textarea>
+                      <div class="form-review__right">
+                        <div class="form__fields">
+                          <div class="form__field">
+                            <textarea class="form__input form__input--area" name="message" placeholder="Напишите свой отзыв"></textarea>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -256,7 +258,7 @@
                       <label class="accept">
                         <input class="accept__input" type="checkbox" name="accept" required checked><span class="accept__check"><svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6924 1.3171L5.42859 10.6143L0.621582 5.78997L1.32191 5.08713L5.42859 9.20857L13.9921 0.614258L14.6924 1.3171Z" fill="#FF033E"/>
-</svg></span><span class="accept__text"><span>Даю согласие на обработку &nbsp;</span><a href="/agreement/">Персональных данных</a></span>
+</svg></span><span class="accept__text">Даю согласие на обработку <a href="/agreement/">Персональных данных</a></span>
                       </label>
                     </div>
                     <template>

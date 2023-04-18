@@ -3,6 +3,12 @@
   &__top {
     @include ui-top;
     margin-bottom: 50px;
+    @include lg-block{
+      margin-bottom: 40px;
+    }
+    @include sm-block{
+      margin-bottom: 20px;
+    }
   }
 
   &__title {
@@ -13,9 +19,22 @@
     @include ui-top-link;
   }
 
+  &__swiper{
+    @include md-block{
+      margin-left: calc(0px - var(--offset));
+      margin-right: calc(0px - var(--offset));
+      padding-left: var(--offset);
+      padding-right: var(--offset);
+    }
+  }
+
   &__slide {
     box-sizing: border-box;
     height: auto;
+
+    @include lg-block{
+      width: 293px;
+    }
 
     a {
       height: 100%;

@@ -9,6 +9,9 @@
   &__title {
     @include ui-heading-2;
     margin-bottom: 20px;
+    @include sm-block{
+      font-size: 28px;
+    }
   }
 
   &__fields {
@@ -26,6 +29,9 @@
     padding: 20px 0;
     width: 100%;
     font-size: 20px;
+    @include sm-block{
+      font-size: 18px;
+    }
 
     &--area {
       padding-top: 45px;
@@ -34,6 +40,11 @@
       border: 1px solid var(--color-grey);
       border-radius: 27px;
       resize: none;
+      @include sm-block{
+        height: 235px;
+        padding-top: 24px;
+        padding-left: 40px;
+      }
     }
   }
 
@@ -73,6 +84,9 @@
   display: block;
   color: #8C8C8C;
   cursor: pointer;
+  @include sm-block{
+    font-size: 18px;
+  }
   
   &.active{
     color: var(--color-black);

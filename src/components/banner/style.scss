@@ -1,15 +1,22 @@
-.banner{
+.banner {
   position: relative;
 
-  &__img{
+  &__img {
     position: absolute;
     z-index: 0;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    @include md-block {
+      position: static;
+      height: 384px;
+    }
+    @include sm-block {
+      height: 300px;
+    }
 
-    img,picture{
+    img, picture {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -18,28 +25,33 @@
 
   }
 
-
-  &--white{
+  &--white {
     color: var(--color-white);
+    @include md-block {
+      color: var(--color-black);
+    }
   }
 
-  &__container{
+  &__container {
     height: 650px;
     position: relative;
     z-index: 1;
     padding-bottom: 20px;
-    @include lg-block{
+    @include lg-block {
       height: 500px;
+      padding-bottom: 50px;
     }
-    @include md-block{
-      height: 380px;
+    @include md-block {
+      height: auto;
+      padding-bottom: 0;
+      padding-top: 40px;
     }
     @include sm-block{
-      height: 283px;
+      padding-top: 20px;
     }
   }
 
-  &__wrap{
+  &__wrap {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -47,38 +59,48 @@
     justify-content: center;
   }
 
-
-  &__content{
+  &__content {
     max-width: 740px;
     font-size: 22px;
 
-    br{
+    br {
       content: '';
       display: block;
       height: 20px;
       line-height: 20;
     }
 
-    h2{
+    h2 {
       @include ui-heading-1;
     }
 
-    a,button{
+    a, button {
       @include ui-btn-fill;
       margin-top: 30px;
     }
 
-    ul{
+    ul {
       list-style: disc;
       padding-left: 30px;
     }
   }
 
-  &__advantages{
+  &__advantages {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 62px;
     width: 1670px;
+    @include xlg-block {
+      width: 100%;
+      bottom: 25px;
+    }
+    @include lg-block {
+      bottom: 40px;
+    }
+    @include md-block {
+      position: static;
+      margin-top: 30px;
+    }
   }
 }

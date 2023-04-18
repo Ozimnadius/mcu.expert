@@ -93,7 +93,7 @@ function consultationForm()
 <path fill-rule="evenodd" clip-rule="evenodd"
       d="M14.6924 1.3171L5.42859 10.6143L0.621582 5.78997L1.32191 5.08713L5.42859 9.20857L13.9921 0.614258L14.6924 1.3171Z"
       fill="#FF033E"/>
-</svg></span><span class="accept__text"><span>Даю согласие на обработку&nbsp;</span><a href="/agreement/">Персональных данных</a></span>
+</svg></span><span class="accept__text">Даю согласие на обработку <a href="/agreement/">Персональных данных</a></span>
                 </label>
             </div>
             <button class="form__submit"
@@ -149,7 +149,7 @@ function feedbackForm()
 <path fill-rule="evenodd" clip-rule="evenodd"
       d="M14.6924 1.3171L5.42859 10.6143L0.621582 5.78997L1.32191 5.08713L5.42859 9.20857L13.9921 0.614258L14.6924 1.3171Z"
       fill="#FF033E"/>
-</svg></span><span class="accept__text"><span>Даю согласие на обработку&nbsp;</span><a href="/agreement/">Персональных данных</a></span>
+</svg></span><span class="accept__text">Даю согласие на обработку <a href="/agreement/">Персональных данных</a></span>
                 </label>
             </div>
             <button class="form__submit"
@@ -210,7 +210,7 @@ function serviceForm()
 <path fill-rule="evenodd" clip-rule="evenodd"
       d="M14.6924 1.3171L5.42859 10.6143L0.621582 5.78997L1.32191 5.08713L5.42859 9.20857L13.9921 0.614258L14.6924 1.3171Z"
       fill="#FF033E"/>
-</svg></span><span class="accept__text"><span>Даю согласие на обработку&nbsp;</span><a href="/agreement/">Персональных данных</a></span>
+</svg></span><span class="accept__text">Даю согласие на обработку <a href="/agreement/">Персональных данных</a></span>
                 </label>
             </div>
             <button class="form__submit"
@@ -270,7 +270,7 @@ function courseForm()
 <path fill-rule="evenodd" clip-rule="evenodd"
       d="M14.6924 1.3171L5.42859 10.6143L0.621582 5.78997L1.32191 5.08713L5.42859 9.20857L13.9921 0.614258L14.6924 1.3171Z"
       fill="#FF033E"/>
-</svg></span><span class="accept__text"><span>Даю согласие на обработку&nbsp;</span><a href="/agreement/">Персональных данных</a></span>
+</svg></span><span class="accept__text">Даю согласие на обработку <a href="/agreement/">Персональных данных</a></span>
                 </label>
             </div>
             <button class="form__submit"
@@ -330,7 +330,7 @@ function courseFormGift()
 <path fill-rule="evenodd" clip-rule="evenodd"
       d="M14.6924 1.3171L5.42859 10.6143L0.621582 5.78997L1.32191 5.08713L5.42859 9.20857L13.9921 0.614258L14.6924 1.3171Z"
       fill="#FF033E"/>
-</svg></span><span class="accept__text"><span>Даю согласие на обработку&nbsp;</span><a href="/agreement/">Персональных данных</a></span>
+</svg></span><span class="accept__text">Даю согласие на обработку <a href="/agreement/">Персональных данных</a></span>
                 </label>
             </div>
             <button class="form__submit"
@@ -405,7 +405,7 @@ function reviewForm()
 <path fill-rule="evenodd" clip-rule="evenodd"
       d="M14.6924 1.3171L5.42859 10.6143L0.621582 5.78997L1.32191 5.08713L5.42859 9.20857L13.9921 0.614258L14.6924 1.3171Z"
       fill="#FF033E"/>
-</svg></span><span class="accept__text"><span>Даю согласие на обработку&nbsp;</span><a href="/agreement/">Персональных данных</a></span>
+</svg></span><span class="accept__text">Даю согласие на обработку <a href="/agreement/">Персональных данных</a></span>
                 </label>
             </div>
             <button class="form__submit"
@@ -470,7 +470,7 @@ function orderForm()
 <path fill-rule="evenodd" clip-rule="evenodd"
       d="M14.6924 1.3171L5.42859 10.6143L0.621582 5.78997L1.32191 5.08713L5.42859 9.20857L13.9921 0.614258L14.6924 1.3171Z"
       fill="#FF033E"/>
-</svg></span><span class="accept__text"><span>Даю согласие на обработку&nbsp;</span><a href="/agreement/">Персональных данных</a></span>
+</svg></span><span class="accept__text">Даю согласие на обработку <a href="/agreement/">Персональных данных</a></span>
                 </label>
             </div>
             <button class="form__submit"

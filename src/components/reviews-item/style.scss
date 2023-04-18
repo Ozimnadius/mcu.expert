@@ -1,6 +1,11 @@
+@use "sass:math";
+
 .reviews-item {
   display: grid;
   gap: 20px;
+  @include md-block {
+    gap: 15px;
+  }
 
   @include hover {
 
@@ -33,11 +38,24 @@
     pointer-events: none;
     display: block;
 
+    &:before {
+      content: '';
+      display: none;
+      padding-top: math.percentage(math.div(349, 386));
+
+      @include xlg-block {
+        display: block;
+      }
+
+    }
+
     svg {
       display: block;
-      @include sm-block {
-        width: 307px;
-        height: 278px;
+      @include xlg-block {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
       }
 
       path {
@@ -71,6 +89,12 @@
     max-height: calc(100% - 20px);
     overflow: auto;
     display: block;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+
     @include tr;
 
     @include xlg-block {
@@ -158,13 +182,13 @@
 
   &__name {
     @include ui-descriptor-24;
-    @include sm-block{
+    @include sm-block {
       font-size: 20px;
     }
   }
 
-  &__prof{
-    @include sm-block{
+  &__prof {
+    @include sm-block {
       font-size: 13px;
     }
   }

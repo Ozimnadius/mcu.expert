@@ -25,6 +25,10 @@
     @include md-block {
       grid-template-areas: 'logo logo' 'contacts form' 'policy policy';
     }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-template-areas: 'logo' 'form' 'contacts' 'policy';
+    }
   }
 
   &__logo {
@@ -113,6 +117,10 @@
     @include xlg-block {
       font-size: 16px;
     }
+    @include sm-block{
+      text-align: center;
+      padding: 40px 0;
+    }
 
     .container {
       display: flex;
@@ -123,12 +131,14 @@
         align-items: flex-start;
         gap: 8px;
       }
+      @include sm-block{
+          gap: 20px;
+      }
     }
   }
 
-
-  &__copy{
-    @include md-block{
+  &__copy {
+    @include md-block {
       order: 1;
     }
   }

@@ -200,10 +200,10 @@
   cursor: pointer;
   @include tr;
 
-  &.swiper-button-disabled{
+  &.swiper-button-disabled {
     @include ui-disabled;
   }
-  &.swiper-button-lock{
+  &.swiper-button-lock {
     display: none;
   }
 
@@ -278,7 +278,7 @@
   }
 }
 
-@mixin ui-btn-fill-white{
+@mixin ui-btn-fill-white {
   @include ui-btn;
   background-color: var(--color-white);
   color: var(--color-red);
@@ -309,6 +309,11 @@
   display: flex;
   align-items: center;
   gap: 60px;
+  @include sm-block {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
 
 @mixin ui-top-title {
@@ -319,35 +324,41 @@
 @mixin ui-top-nav {
   display: flex;
   gap: 14px;
+  @include sm-block{
+    display: none;
+  }
 }
 
-@mixin ui-top-link{
+@mixin ui-top-link {
   @include ui-link-main;
+  @include lg-block {
+    font-size: 16px;
+  }
 }
 
-@mixin ui-card-title32{
+@mixin ui-card-title32 {
   font-weight: 700;
   font-size: 32px;
   line-height: 120%;
 }
 
-@mixin ui-card-title{
+@mixin ui-card-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 120%;
 }
 
-@mixin ui-ul-checkbox{
+@mixin ui-ul-checkbox {
   @include ui-descriptor-18;
-  display:grid;
+  display: grid;
   gap: 10px;
 
-  li{
+  li {
     position: relative;
     padding-left: 50px;
     line-height: 1.3;
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       width: 20px;
@@ -361,7 +372,7 @@
   }
 }
 
-@mixin ui-plus{
+@mixin ui-plus {
   width: 46px;
   height: 46px;
   border-radius: 50%;
@@ -370,26 +381,27 @@
   cursor: pointer;
   @include tr;
 
-  @include hover{
+  @include hover {
     background-color: var(--color-red);
 
-    &:before,&:after{
+    &:before, &:after {
       background-color: var(--color-white);
     }
   }
 
-  &.active{
+  &.active {
     background-color: var(--color-red);
 
-    &:before,&:after{
+    &:before, &:after {
       background-color: var(--color-white);
     }
-    &:after{
-      transform: translate(-50%,-50%) rotate(0);
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(0);
     }
   }
 
-  &:before,&:after{
+  &:before, &:after {
     content: '';
     position: absolute;
     width: 12px;
@@ -397,16 +409,16 @@
     background-color: var(--color-red);
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     @include tr;
   }
 
-  &:after{
-    transform: translate(-50%,-50%) rotate(-90deg);
+  &:after {
+    transform: translate(-50%, -50%) rotate(-90deg);
   }
 }
 
-@mixin ui-plus-fill{
+@mixin ui-plus-fill {
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -416,26 +428,27 @@
   cursor: pointer;
   @include tr;
 
-  @include hover{
+  @include hover {
     background-color: var(--color-white);
 
-    &:before,&:after{
+    &:before, &:after {
       background-color: var(--color-red);
     }
   }
 
-  &.active{
+  &.active {
     background-color: transparent;
 
-    &:before,&:after{
+    &:before, &:after {
       background-color: var(--color-red);
     }
-    &:after{
-      transform: translate(-50%,-50%) rotate(0);
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(0);
     }
   }
 
-  &:before,&:after{
+  &:before, &:after {
     content: '';
     position: absolute;
     width: 26px;
@@ -443,18 +456,18 @@
     background-color: var(--color-white);
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     @include tr;
   }
 
-  &:after{
-    transform: translate(-50%,-50%) rotate(-90deg);
+  &:after {
+    transform: translate(-50%, -50%) rotate(-90deg);
   }
 }
 
-@mixin ui-stick{
+@mixin ui-stick {
   position: relative;
-  span{
+  span {
     position: absolute;
     inset: 0;
     display: flex;
@@ -467,13 +480,13 @@
   }
 }
 
-@mixin ui-tag-list{
+@mixin ui-tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-@mixin ui-tag{
+@mixin ui-tag {
   white-space: nowrap;
   padding: 10px 20px;
 
@@ -483,7 +496,7 @@
   font-size: 12px;
   @include tr;
 
-  @include hover{
+  @include hover {
     background-color: var(--color-red);
     color: var(--color-white);
   }

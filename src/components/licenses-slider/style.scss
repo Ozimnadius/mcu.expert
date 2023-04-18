@@ -1,32 +1,54 @@
-.licenses-slider{
-  &__top{
+.licenses-slider {
+  &__top {
     @include ui-top;
   }
 
-  &__title{
-      @include ui-top-title;
+  &__title {
+    @include ui-top-title;
   }
 
-  &__nav{
-      @include ui-top-nav;
+  &__nav {
+    @include ui-top-nav;
   }
 
-  &__prev{
+  &__prev {
     @include ui-arrow2-left;
   }
 
-  &__next{
+  &__next {
     @include ui-arrow2-right;
   }
 
-  &__swiper{
+  &__swiper {
     margin-top: 60px;
+    @include lg-block {
+      margin-top: 40px;
+    }
+    @include md-block{
+      margin-left: calc(0px - var(--offset));
+      margin-right: calc(0px - var(--offset));
+      padding-left: var(--offset);
+      padding-right: var(--offset);
+    }
+    @include sm-block {
+      margin-top: 20px;
+    }
   }
 
-  &__item{
-    @extend .licenses-items__item;
+  &__slide {
+    @include md-block {
+      --border-width-vertical: 48px;
+      --border-width-horizontal: 60px;
+      width: 290px;
+    }
+    @include sm-block {
+      --border-width-vertical: 26px;
+      --border-width-horizontal: 32px;
+      width: 160px;
+    }
 
-    img{
+
+    img {
       max-height: 100%;
     }
   }

@@ -13,9 +13,21 @@
 
   &__swiper {
     margin-top: 50px;
+    @include md-block {
+      margin-left: calc(0px - var(--offset));
+      margin-right: calc(0px - var(--offset));
+      padding-left: var(--offset);
+      padding-right: var(--offset);
+    }
+    @include sm-block {
+      margin-top: 30px;
+    }
   }
 
-  &__slide{
-    
+  &__slide {
+    @include md-block {
+      width: 293px;
+    }
+
   }
 }

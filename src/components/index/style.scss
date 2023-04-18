@@ -1,57 +1,48 @@
 .index {
-  --marginTop: 100px;
   padding-bottom: var(--offset-bottom);
-  @include xlg-block{
-    --marginTop: 80px;
-  }
-  @include lg-block{
-    --marginTop: 60px;
-  }
-  @include sm-block{
-    --marginTop: 50px;
-  }
+
 
   &__section {
     overflow: hidden;
   }
 
   &__courses {
-    margin-top: var(--marginTop);
+    @include margin-top(10);
   }
 
   &__advantages {
-    margin-top: var(--marginTop);
+    @include margin-top(10);
   }
 
   &__about {
-    margin-top: var(--marginTop);
-    @include sm-block{
+    @include margin-top(10);
+    @include sm-block {
       margin-left: -10px;
       margin-right: -10px;
     }
   }
 
   &__popular {
-    margin-top: var(--marginTop);
+    @include margin-top(10);
   }
 
   &__profile {
-    margin-top: var(--marginTop);
+    @include margin-top(10);
   }
 
   &__news {
-    margin-top: var(--marginTop);
+    @include margin-top(10);
   }
 
   &__video {
-    margin-top: var(--marginTop);
+    @include margin-top(10);
   }
 
   &__reviews {
-    margin-top: var(--marginTop);
+    @include margin-top(10);
   }
 
   &__partners {
-    margin-top: var(--marginTop);
+    @include margin-top(10);
   }
 }

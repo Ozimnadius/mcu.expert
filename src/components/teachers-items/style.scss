@@ -1,5 +1,51 @@
-.teachers-items{
-  display:grid;
-  grid-template-columns: repeat(4,1fr);
+.teachers-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 70px 40px;
+  @include xlg-block {
+    gap: 40px 20px;
+  }
+  @include lg-block {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include md-block {
+    gap: 30px 20px;
+  }
+  @include sm-block {
+    grid-template-columns: 100%;
+    gap: 10px;
+  }
+
+  .teachers-item {
+    @include sm-block {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      grid-template-areas: 'img name' 'img desc';
+      gap: 10px 20px;
+    }
+
+    &__img {
+      @include sm-block {
+        grid-area: img;
+      }
+    }
+
+    &__name {
+      @include sm-block {
+        grid-area: name;
+        margin-top: 0;
+        font-size: 18px;
+        align-self: flex-end;
+      }
+    }
+
+    &__desc {
+      @include sm-block {
+        grid-area: desc;
+        margin-top: 0;
+        font-size: 12px;
+        align-self: flex-start;
+      }
+    }
+  }
 }

@@ -40,6 +40,7 @@
   }
 
   &__top {
+    flex-shrink: 0;
     position: relative;
     display: flex;
     justify-content: center;
@@ -104,7 +105,7 @@
     @include ui-menu-item;
     position: relative;
     display: block;
-    padding: 20px 0;
+    padding: 18px 0;
 
 
     &--arrow {
@@ -126,7 +127,6 @@
       }
     }
   }
-
 
   &__submenu {
     position: absolute;

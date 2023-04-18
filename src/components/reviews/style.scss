@@ -5,9 +5,25 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 70px 40px;
+    @include xlg-block {
+      gap: 50px 20px;
+    }
+    @include lg-block{
+      grid-template-columns: repeat(2,385px);
+      justify-content: space-between;
+      max-width: 850px;
+      width: 100%;
+    }
+    @include md-block{
+      grid-template-columns: repeat(2,1fr);
+      gap: 40px 20px;
+    }
+    @include sm-block{
+        grid-template-columns: 100%;
+    }
   }
 
   &__form {
-    margin-top: 165px;
+    @include margin-top(16);
   }
 }

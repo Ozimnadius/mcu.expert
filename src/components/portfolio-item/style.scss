@@ -24,7 +24,6 @@
     }
   }
 
-
   &__img {
     position: relative;
     overflow: hidden;
@@ -64,6 +63,9 @@
   &__title {
     @include ui-card-title32;
     @include tr;
+    @include lg-block {
+      font-size: 24px;
+    }
   }
 
   &__link {
@@ -71,5 +73,8 @@
     text-decoration: underline;
     font-size: 20px;
     @include tr;
+    @include lg-block {
+      font-size: 16px;
+    }
   }
 }

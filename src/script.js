@@ -62,14 +62,37 @@ function initSliders() {
     const coursesSlider = document.querySelector('.courses-slider');
     if (coursesSlider) {
         const coursesSwiper = new Swiper(coursesSlider.querySelector('.swiper'), {
-            slidesPerView: 4,
-            spaceBetween: 40,
+            slidesPerView: 'auto',
+            spaceBetween: 10,
             grabCursor: true,
             // Navigation arrows
             navigation: {
                 nextEl: coursesSlider.querySelector('.courses-slider__next'),
                 prevEl: coursesSlider.querySelector('.courses-slider__prev'),
             },
+            breakpoints: {
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 20
+                },
+                // when window width is >= 1024px
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                // when window width is >= 1440px
+                1440: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                },
+
+                // when window width is >= 1920px
+                1920: {
+                    slidesPerView: 4,
+                    spaceBetween: 40
+                }
+            }
         });
     }
 
@@ -137,41 +160,104 @@ function initSliders() {
     if (teachersSlider) {
         const teachersSwiper = new Swiper(teachersSlider.querySelector('.swiper'), {
             slidesPerView: 'auto',
-            spaceBetween: 40,
+            spaceBetween: 10,
             // Navigation arrows
             navigation: {
                 nextEl: teachersSlider.querySelector('.teachers-slider__next'),
                 prevEl: teachersSlider.querySelector('.teachers-slider__prev'),
             },
+            breakpoints: {
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 20
+                },
+                // when window width is >= 1920px
+                1920: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 40
+                }
+            }
         });
     }
 
     const chairsSlider = document.querySelector('.chairs-slider');
     if (chairsSlider) {
         const chairsSwiper = new Swiper(chairsSlider.querySelector('.swiper'), {
-            slidesPerView: 3,
-            spaceBetween: 40,
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            breakpoints: {
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 20
+                },
+                // when window width is >= 1024px
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                // when window width is >= 1920px
+                1920: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                }
+            }
         });
     }
 
     const portfolioSlider = document.querySelector('.portfolio-slider');
     if (portfolioSlider) {
         const portfolioSwiper = new Swiper(portfolioSlider.querySelector('.swiper'), {
-            slidesPerView: 3,
-            spaceBetween: 40,
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            breakpoints: {
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 20
+                },
+                // when window width is >= 1024px
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                // when window width is >= 1920px
+                1920: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                }
+            }
         });
     }
 
     const licensesSlider = document.querySelector('.licenses-slider');
     if (licensesSlider) {
         const licensesSwiper = new Swiper(licensesSlider.querySelector('.swiper'), {
-            slidesPerView: 4,
-            spaceBetween: 40,
+            slidesPerView: 'auto',
+            spaceBetween: 10,
             // Navigation arrows
             navigation: {
                 nextEl: licensesSlider.querySelector('.licenses-slider__next'),
                 prevEl: licensesSlider.querySelector('.licenses-slider__prev'),
             },
+            breakpoints: {
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 20
+                },
+                // when window width is >= 1024px
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                },
+                // when window width is >= 1920px
+                1920: {
+                    slidesPerView: 4,
+                    spaceBetween: 40
+                }
+            }
         });
     }
 
@@ -317,11 +403,13 @@ class Events {
     openMmenu(e, elem) {
         e.preventDefault();
         document.querySelector('.mmenu').classList.add('active');
+        document.querySelector('body').classList.add('fancybox-active');
     }
 
     closeMmenu(e, elem) {
         e.preventDefault();
         document.querySelector('.mmenu').classList.remove('active');
+        document.querySelector('body').classList.remove('fancybox-active');
     }
 
     nextMmenu(e, elem) {

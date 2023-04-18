@@ -1,29 +1,30 @@
 form(action='/php/ajax.php' method='post' enctype='multipart/form-data' data-event='submit.sendForm').from.form-review
-    .form-review__left
-        .form__title Оставить отзыв
-        .form__fields
-            .form__field
-                input(type='text' name='name' placeholder='Ваше имя' required).form__input
-            .form__field
-                input(type='email' name='email' placeholder='Эл. почта' required).form__input
-            .form__field
-                .form__file
-                    label.form-file
-                        input(type='file' name='photo' data-event='change.fileChange').form-file__input
-                        span.form-file__fake
-                            span.form-file__placeholder Добавить фото
-                            span.form-file__btn
-                                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.8516 28.892V17.3693H24.1442V28.892H21.8516ZM17.2408 24.2727V21.9801H28.7635V24.2727H17.2408Z" fill="#FF033E"/>
-                                <circle cx="23" cy="23" r="22.5" stroke="#FF033E"/>
-                                </svg>
-        .form__accept
-            include ../accept/index
-        button(type='submit').form__submit Оставить отзыв
-    .form-review__right
-        .form__fields
-            .form__field
-                textarea(name='message' placeholder='Напишите свой отзыв').form__input.form__input--area
+    .form__title Оставить отзыв
+    .form-review__grid
+        .form-review__left
+            .form__fields
+                .form__field
+                    input(type='text' name='name' placeholder='Ваше имя' required).form__input
+                .form__field
+                    input(type='email' name='email' placeholder='Эл. почта' required).form__input
+                .form__field
+                    .form__file
+                        label.form-file
+                            input(type='file' name='photo' data-event='change.fileChange').form-file__input
+                            span.form-file__fake
+                                span.form-file__placeholder Добавить фото
+                                span.form-file__btn
+                                    <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.8516 28.892V17.3693H24.1442V28.892H21.8516ZM17.2408 24.2727V21.9801H28.7635V24.2727H17.2408Z" fill="#FF033E"/>
+                                    <circle cx="23" cy="23" r="22.5" stroke="#FF033E"/>
+                                    </svg>
+            .form__accept
+                include ../accept/index
+            button(type='submit').form__submit Оставить отзыв
+        .form-review__right
+            .form__fields
+                .form__field
+                    textarea(name='message' placeholder='Напишите свой отзыв').form__input.form__input--area
     template
         .form-popup.form
             .form__ok

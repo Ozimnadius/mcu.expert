@@ -1,54 +1,94 @@
-.teacher{
+.teacher {
   padding-bottom: var(--offset-bottom);
 
-  &__top{
+  &__top {
     padding-top: 90px;
     background-color: var(--color-grey-bg);
     padding-bottom: 165px;
+    @include xlg-block {
+      padding-bottom: 110px;
+    }
+    @include lg-block {
+      padding-top: 35px;
+    }
+    @include md-block {
+      background-color: transparent;
+      padding-bottom: 0;
+    }
   }
 
-  &__bread{
+  &__bread {
     margin-top: 0;
   }
 
-  &__grid{
-    display:grid;
+  &__grid {
+    display: grid;
     grid-template-columns: 610px 1fr;
     gap: 170px;
+    @include xlg-block {
+      grid-template-columns: 490px 1fr;
+      gap: 120px;
+    }
+    @include lg-block {
+      grid-template-columns: 372px 1fr;
+      gap: 20px;
+    }
+    @include md-block {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
+      grid-template-columns: 100%;
+      gap: 40px;
+    }
+    @include sm-block {
+      gap: 25px;
+    }
   }
 
-  &__desc{
+  &__desc {
     font-size: 20px;
+    @include sm-block {
+      font-size: 16px;
+    }
   }
 
-  &__items{
+  &__items {
     margin-top: 40px;
 
-    display:grid;
+    display: grid;
     gap: 45px;
+    @include xlg-block {
+      margin-top: 30px;
+      gap: 30px;
+    }
   }
 
-  &__item{
-    display:grid;
+  &__item {
+    display: grid;
     gap: 20px;
   }
 
-  &__name{
+  &__name {
     font-weight: 800;
     font-size: 18px;
+
+
   }
 
-  &__content{
+  &__content {
     @include ui-descriptor-18;
-    display:grid;
+    display: grid;
     gap: 10px;
+    @include sm-block{
+      font-size: 16px;
+    }
   }
 
-  &__licenses{
-    margin-top: 100px;
+  &__licenses {
+    @include margin-top(10);
   }
 
-  &__courses{
-    margin-top: 100px;
+  &__courses {
+    @include margin-top(10);
   }
 }

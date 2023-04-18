@@ -21,5 +21,24 @@
 
   &__swiper{
     margin-top: 80px;
+    @include xlg-block{
+      margin-top: 50px;
+    }
+    @include md-block{
+      margin-left: calc(0px - var(--offset));
+      margin-right: calc(0px - var(--offset));
+      padding-left: var(--offset);
+      padding-right: var(--offset);
+      margin-top: 40px;
+    }
+    @include sm-block{
+      margin-top: 20px;
+    }
+  }
+
+  &__slide{
+    @include md-block{
+      width: 290px;
+    }
   }
 }
