@@ -3,4 +3,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 70px 40px;
+
+  @include xlg-block {
+    gap: 40px 20px;
+  }
+  @include sm-block {
+    grid-template-columns: 100%;
+    gap: 30px;
+  }
 }

@@ -1,32 +1,61 @@
-.course-faq{
+.course-faq {
   counter-reset: item;
 
-  &__title{
+  &__title {
     @include ui-heading-2;
     margin-bottom: 90px;
+    @include xlg-block {
+      margin-bottom: 55px;
+    }
+    @include lg-block {
+      margin-bottom: 40px;
+    }
   }
 
-  &__item{
+  &__items {
+    border-top: 1px solid var(--color-grey);
+  }
+
+  &__item {
     padding: 25px 0;
     border-bottom: 1px solid var(--color-grey);
-    &.active{
-      .course-faq__bottom{
+    position: relative;
+    @include sm-block {
+      padding: 20px 0;
+    }
+
+    &.active {
+      .course-faq__bottom {
         height: var(--height);
       }
     }
   }
 
-  &__grid{
-    display:grid;
+  &__grid {
+    display: grid;
     grid-template-columns: 4fr 8fr;
     gap: 40px;
     align-items: center;
+    @include xlg-block {
+      grid-template-columns: 340px 1fr;
+      gap: 20px;
+    }
+    @include lg-block {
+      grid-template-columns: 200px 1fr;
+    }
+    @include md-block {
+      grid-template-columns: 120px 1fr;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      gap: 15px;
+    }
   }
 
-  &__count{
+  &__count {
     &:before {
       counter-increment: item;
-      content: "0"counter(item);
+      content: "0" counter(item);
       display: block;
       font-size: 24px;
       font-weight: 800;
@@ -34,30 +63,39 @@
     }
   }
 
-  &__right{
+  &__right {
     position: relative;
+    @include sm-block {
+      position: static;
+    }
   }
 
-  &__name{
+  &__name {
     font-size: 24px;
   }
 
-  &__btn{
+  &__btn {
     @include ui-plus;
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
+    @include sm-block {
+      top: 16px;
+      transform: none;
+    }
   }
 
-  &__bottom{
+  &__bottom {
     height: 0;
     overflow: hidden;
     @include tr;
   }
 
-  &__desc{
+  &__desc {
     padding-top: 20px;
+    @include sm-block {
+      padding-top: 0;
+    }
   }
-
 }

@@ -1,11 +1,33 @@
-.form-call{
-  display:grid;
-  grid-template-columns: repeat(2,1fr);
+.form-call {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-  align-items: center;
+  //align-items: center;
+  @include xlg-block {
+    gap: 20px;
+  }
+  @include md-block {
+    grid-template-columns: 100%;
+    gap: 40px;
+    justify-content: center;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  @include sm-block {
+    gap: 20px;
+  }
 
-  &__right{
+  &__right {
     padding-left: 40px;
     padding-right: 90px;
+    @include xlg-block {
+      padding-right: 0;
+    }
+    @include lg-block {
+      padding-left: 0;
+    }
+    @include md-block {
+    }
   }
 }

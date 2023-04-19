@@ -33,6 +33,10 @@
   }
 
   &__slide{
+    height: auto;
+    .clients-item{
+      height: 100%;
+    }
     @include lg-block{
       width: 385px;
     }

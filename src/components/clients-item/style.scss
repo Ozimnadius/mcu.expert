@@ -5,6 +5,9 @@
   background-color: var(--color-grey-bg);
   position: relative;
   @include tr;
+  @include sm-block{
+    min-height: 220px;
+  }
 
   @include hover {
     background-color: var(--color-grey-bg-dark);
@@ -14,6 +17,9 @@
     content: '';
     display: block;
     padding-top: math.percentage(351/479);
+    @include lg-block{
+      display: none;
+    }
   }
 
   &__content {
@@ -30,6 +36,11 @@
     @include xlg-block {
       inset: 40px 30px;
       gap: 30px;
+    }
+    @include lg-block{
+      position: static;
+        gap: 25px;
+      padding: 35px 25px;
     }
     @include sm-block {
       inset: 15px;
@@ -52,7 +63,10 @@
   }
 
   &__desc {
-    @include ui-descriptor-20;
+    font-size: 24px;
+    @include xlg-block{
+      font-size: 20px;
+    }
     @include sm-block{
       font-size: 16px;
     }

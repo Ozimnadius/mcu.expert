@@ -1,6 +1,21 @@
-.clients{
+.clients {
   padding-bottom: var(--offset-bottom);
-  display:grid;
-  grid-template-columns: repeat(3,1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px 40px;
+
+  @include xlg-block {
+    gap: 20px;
+  }
+  @include md-block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include sm-block {
+    grid-template-columns: 100%;
+    gap: 10px;
+  }
+
+  .clients-item {
+    height: 100%;
+  }
 }

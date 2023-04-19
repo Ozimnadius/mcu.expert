@@ -1,4 +1,5 @@
 .courses-items {
+
   &__top {
     @include ui-top;
   }
@@ -49,6 +50,5 @@
       width: 285px;
     }
   }
-
 
 }

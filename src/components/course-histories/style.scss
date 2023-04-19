@@ -1,55 +1,108 @@
-.course-histories{
-  display:grid;
-  grid-template-columns: repeat(2,1fr);
+.course-histories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
+  @include lg-block {
+    grid-template-columns: 100%;
+  }
 
-  &__title{
+  &__title {
     @include ui-heading-2;
-  }
-
-  &__desc{
-    margin-top: 80px;
-    font-size: 24px;
-    max-width: 37ch;
-  }
-
-  &__btn{
-    margin-top: 50px;
-
-    button{
-      @include ui-btn-border;
+    max-width: 20ch;
+    @include lg-block {
+      max-width: 100%;
+      font-size: 46px;
+    }
+    @include sm-block {
+      font-size: 36px;
     }
 
   }
 
+  &__desc {
+    margin-top: 80px;
+    font-size: 24px;
+    max-width: 37ch;
+    @include lg-block {
+      margin-top: 30px;
+      max-width: 100%;
+    }
+    @include sm-block {
+      font-size: 16px;
+    }
+  }
+
+  &__btn {
+    margin-top: 50px;
+    @include lg-block {
+      margin-top: 30px;
+    }
+    @include sm-block {
+      margin-top: 25px;
+    }
+
+    button {
+      @include ui-btn-border;
+      @include sm-block {
+        font-size: 16px;
+        padding: 12px 40px;
+      }
+    }
+
+  }
+
+  &__list {
+    @include sm-block {
+      border-top: 1px solid var(--color-grey);
+    }
+  }
+
 }
 
-.course-historie{
+.course-historie {
   padding: 20px 0;
   border-bottom: 1px solid var(--color-grey);
-  display:grid;
+  display: grid;
   grid-template-columns: 104px 1fr;
   gap: 54px;
   align-items: center;
   @include tr;
+  @include sm-block {
+    grid-template-columns: 100%;
+    justify-items: center;
+    gap: 10px;
+  }
 
-  @include hover{
+  @include hover {
     color: var(--color-red3);
   }
 
-  &__img{
+  &__img {
     border-radius: 50%;
     overflow: hidden;
     display: block;
+    @include sm-block {
+      width: 160px;
+      height: 160px;
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
-  &__right{
-    display:grid;
+  &__right {
+    display: grid;
     gap: 15px;
   }
 
-  &__name{
+  &__name {
     font-size: 14px;
     font-weight: 700;
+    @include sm-block{
+      text-align: center;
+    }
   }
 }

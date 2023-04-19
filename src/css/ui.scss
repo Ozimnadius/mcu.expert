@@ -352,11 +352,17 @@
   @include ui-descriptor-18;
   display: grid;
   gap: 10px;
+  @include md-block{
+    font-size: 16px;
+  }
 
   li {
     position: relative;
     padding-left: 50px;
     line-height: 1.3;
+    @include lg-block{
+      padding-left: 40px;
+    }
 
     &:before {
       content: '';
@@ -368,6 +374,11 @@
       position: absolute;
       left: 0;
       top: 0;
+      @include md-block{
+        width: 15px;
+        height: 15px;
+        top: 4px;
+      }
     }
   }
 }
@@ -499,6 +510,52 @@
   @include hover {
     background-color: var(--color-red);
     color: var(--color-white);
+  }
+}
+
+@mixin ui-chair-grid{
+  display: grid;
+  grid-template-columns: 1fr 740px;
+  gap: 170px;
+  @include xlg-block {
+    grid-template-columns: 5fr 7fr;
+    gap: 20px;
+  }
+  @include lg-block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include md-block {
+    width: min(100%, 480px);
+    margin: 0 auto;
+    grid-template-columns: 100%;
+    gap: 55px;
+    justify-content: center;
+  }
+  @include sm-block {
+    gap: 30px;
+  }
+}
+
+@mixin ui-chair-left{
+  @include md-block {
+    order: 1;
+  }
+}
+
+@mixin ui-chair-img{
+  --border-horizontal: 90px;
+  --border-vertical: 76px;
+  border: var(--border-horizontal) solid var(--color-grey-bg);
+  border-top-width: var(--border-vertical);
+  border-bottom-width: var(--border-vertical);
+
+  @include lg-block {
+    --border-horizontal: 55px;
+    --border-vertical: 45px;
+  }
+  @include sm-block {
+    --border-horizontal: 43px;
+    --border-vertical: 36px;
   }
 }
 

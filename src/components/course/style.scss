@@ -2,58 +2,101 @@
   padding-bottom: var(--offset-bottom);
 
   &__about {
-    margin-top: 130px;
+    @include margin-top(13);
   }
 
   &__advantages {
-    margin-top: 160px;
+    @include margin-top(16);
   }
 
   &__desc {
-    margin-top: 130px;
+    @include margin-top(13);
   }
 
   &__histories {
-    margin-top: 100px;
+    @include margin-top(10);
     background-color: var(--color-grey-bg);
     padding: 140px 0;
+    @include xlg-block {
+      padding: 70px 0;
+    }
+    @include lg-block {
+      padding: 140px 0;
+    }
+    @include md-block {
+      padding: 90px 0;
+    }
+    @include sm-block {
+      padding: 50px 0;
+    }
+
+    .container {
+      @include lg-block {
+        max-width: 844px;
+      }
+    }
   }
 
   &__process {
-    margin-top: 135px;
+    @include margin-top(13);
+
+    .container {
+      @include lg-block {
+        max-width: 844px;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
   }
 
   &__program {
-    margin-top: 170px;
+    @include margin-top(17);
     background-color: var(--color-grey-bg);
     padding-top: 110px;
     padding-bottom: 160px;
+    @include xlg-block {
+      padding: 120px 0;
+    }
+    @include lg-block {
+      padding: 90px 0;
+    }
+    @include sm-block {
+      padding: 40px 0;
+    }
   }
 
   &__teachers {
-    margin-top: 130px;
+    @include margin-top(13);
   }
 
   &__tariffs {
-    margin-top: 145px;
+    @include margin-top(14);
   }
 
   &__guarantees {
-    margin-top: 145px;
+    @include margin-top(14);
     background-color: var(--color-grey-bg);
     padding: 100px 0;
+    @include xlg-block {
+      padding: 90px 0;
+    }
+    @include lg-block {
+      padding: 80px 0;
+    }
+    @include sm-block {
+      padding: 60px 0;
+    }
   }
 
   &__faq {
-    margin-top: 75px;
+    @include margin-top(8);
   }
 
   &__form {
-    margin-top: 100px;
+    @include margin-top(10);
   }
 
   &__info {
-    margin-top: 100px;
+    @include margin-top(10);
   }
-
 }

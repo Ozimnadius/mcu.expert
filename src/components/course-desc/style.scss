@@ -1,35 +1,86 @@
 .course-desc {
+
   &__rows {
     display: grid;
     gap: 50px;
-  }
-
-  &__row{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 40px;
-    align-items: center;
-  }
-
-  &__col{
-    &--padding-left{
-      padding-left: 130px;
+    @include lg-block {
+      gap: 40px;
     }
   }
 
-  &__title{
-    @include ui-heading-2;
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: center;
+    @include xlg-block {
+      gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      gap: 35px;
+    }
   }
 
-  &__ul{
+  &__col {
+    &--padding-left {
+      padding-left: 130px;
+      @include xlg-block {
+        padding-left: 0;
+      }
+    }
+
+    &--img {
+      @include sm-block {
+        order: -1;
+      }
+    }
+  }
+
+  &__title {
+    @include ui-heading-2;
+    @include xlg-block {
+      font-size: 34px;
+    }
+    @include lg-block {
+      font-size: 24px;
+    }
+    @include md-block {
+      font-size: 22px;
+    }
+  }
+
+  &__ul {
     @include ui-ul-checkbox;
     margin-top: 45px;
     font-size: 24px;
     gap: 25px;
+    @include xlg-block {
+      margin-top: 30px;
+      gap: 20px;
+    }
+    @include lg-block {
+      margin-top: 25px;
+      font-size: 16px;
+    }
 
-    li{
-      &:before{
+    li {
+      @include lg-block {
+        padding-left: 55px;
+      }
+      @include md-block {
+        padding-left: 30px;
+      }
+
+      &:before {
         top: 7px;
+        @include lg-block {
+          top: 0;
+        }
+        @include md-block {
+          width: 20px;
+          height: 20px;
+        }
       }
     }
 

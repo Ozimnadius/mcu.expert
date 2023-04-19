@@ -1,22 +1,61 @@
-.course-about{
-  display:grid;
-  grid-template-columns: 740px 1fr;
-  gap: 170px;
+.course-about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
   align-items: center;
-
-  &__desc{
-    @include ui-descriptor-24;
+  @include xlg-block {
+    gap: 20px;
+  }
+  @include md-block {
+    align-items: flex-start;
+  }
+  @include sm-block {
+    grid-template-columns: 100%;
+    gap: 25px;
   }
 
-  &__label{
+  &__right {
+    padding-left: 130px;
+    @include xlg-block {
+      padding-left: 80px;
+    }
+    @include lg-block {
+      padding-left: 0;
+    }
+  }
+
+  &__desc {
+    @include ui-descriptor-24;
+    @include lg-block {
+      font-size: 18px;
+    }
+    @include md-block {
+      font-size: 16px;
+    }
+  }
+
+  &__label {
     margin-top: 65px;
     font-size: 34px;
     font-weight: 700;
     line-height: 1.2;
+    @include xlg-block {
+      margin-top: 25px;
+    }
+    @include md-block {
+      font-size: 24px;
+      margin-top: 15px;
+    }
   }
 
-  &__ul{
+  &__ul {
     @include ui-ul-checkbox;
     margin-top: 35px;
+    @include lg-block {
+      margin-top: 25px;
+    }
+    @include md-block {
+      margin-top: 15px;
+    }
   }
 }

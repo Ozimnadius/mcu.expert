@@ -1,21 +1,49 @@
-.course-program{
-
-  &__top{
-    display:grid;
+.course-program {
+  &__top {
+    display: grid;
     grid-template-columns: 4fr 8fr;
     gap: 40px;
     align-items: flex-end;
+    @include xlg-block {
+      grid-template-columns: 340px 1fr;
+      gap: 20px;
+      align-items: initial;
+    }
+    @include lg-block {
+      grid-template-columns: 100%;
+      gap: 30px;
+    }
+    @include sm-block {
+      gap: 25px;
+    }
   }
 
-  &__title{
+  &__title {
     @include ui-heading-2;
+    max-width: 10ch;
+    @include lg-block {
+      font-size: 46px;
+      max-width: 100%;
+    }
+    @include sm-block {
+      font-size: 36px;
+    }
   }
 
-  &__desc{
+  &__desc {
     font-size: 24px;
+    @include lg-block {
+      font-size: 20px;
+    }
+    @include sm-block {
+      font-size: 18px;
+    }
   }
 
-  &__content{
+  &__content {
     margin-top: 75px;
+    @include lg-block {
+      margin-top: 40px;
+    }
   }
 }

@@ -1,29 +1,79 @@
-.course-info{
+.course-info {
   background-color: var(--color-red2);
   padding: 110px 130px;
   position: relative;
   border-radius: 30px;
+  @include xlg-block {
+    padding: 110px 80px;
+  }
+  @include lg-block {
+    padding: 100px 80px;
+  }
+  @include md-block {
+    padding: 70px 50px;
+  }
+  @include sm-block {
+    padding: 60px 20px;
+  }
 
-  &__img{
+  &__img {
     position: absolute;
     top: 58px;
     right: 220px;
+    @include xlg-block {
+      top: 48px;
+      right: 130px;
+    }
+    @include lg-block {
+      top: 30px;
+      right: 40px;
+    }
+    @include md-block {
+      width: 305px;
+      top: 20px;
+      right: 65px;
+    }
+    @include sm-block {
+      width: 287px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
-  &__content{
+  &__content {
     position: relative;
     z-index: 1;
+    @include sm-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
-  &__title{
+  &__title {
     @include ui-heading-2;
     color: var(--color-white);
     max-width: 25ch;
+    @include lg-block {
+      font-size: 46px;
+    }
+    @include md-block {
+      font-size: 34px;
+    }
+    @include sm-block {
+      font-size: 26px;
+    }
   }
 
-  &__link{
+  &__link {
     @include ui-btn-fill-white;
     margin-top: 65px;
+    @include xlg-block {
+      margin-top: 30px;
+    }
+    @include sm-block {
+      margin-top: 20px;
+    }
   }
-
 }

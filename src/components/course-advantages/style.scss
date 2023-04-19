@@ -1,28 +1,104 @@
 .course-advantages {
+
   &__title {
     @include ui-heading-2;
+    @include lg-block {
+      font-size: 46px;
+    }
+    @include sm-block {
+      font-size: 36px;
+    }
   }
 
   &__list {
     margin-top: 100px;
-    display:grid;
-    grid-template-columns: repeat(4,1fr);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
+    @include xlg-block {
+      margin-top: 85px;
+      gap: 70px 20px;
+    }
+    @include lg-block {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 600px;
+      width: 100%;
+    }
+    @include md-block {
+      max-width: 100%;
+    }
+    @include sm-block {
+      margin-top: 65px;
+      grid-template-columns: 100%;
+      gap: 25px;
+    }
   }
 
-  &__top{
-    display:grid;
+  &__item {
+    position: relative;
+    @include sm-block {
+      padding-top: 15px;
+      padding-left: 55px;
+    }
+
+    &:before {
+      content: '';
+      display: none;
+      width: 1px;
+      background-color: var(--color-grey);
+      position: absolute;
+      top: 0;
+      left: 15px;
+      bottom: -25px;
+      @include sm-block {
+        display: block;
+      }
+    }
+
+    &:last-child {
+      &:before {
+        bottom: -5px;
+      }
+    }
+  }
+
+  &__top {
+    display: grid;
     grid-template-columns: 120px 1fr;
     align-items: center;
     gap: 45px;
+    position: relative;
+    @include sm-block {
+      grid-template-columns: 94px 1fr;
+      gap: 0;
+    }
+
+    &:before {
+      content: '';
+      display: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: var(--color-red);
+      position: absolute;
+      top: 50%;
+      right: calc(100% + 33px);
+      transform: translate(0, -50%);
+      @include sm-block {
+        display: block;
+      }
+    }
   }
 
-  &__right{
+  &__right {
     height: 1px;
     background-color: var(--color-grey);
     position: relative;
+    @include sm-block {
+      display: none;
+    }
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       width: 14px;
@@ -32,21 +108,45 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
   }
 
-  &__bottom{
+  &__bottom {
     margin-top: 35px;
     padding-right: 90px;
+    @include xlg-block {
+      padding-right: 25px;
+    }
+    @include sm-block{
+      margin-top: 10px;
+    }
   }
 
-  &__name{
+  &__name {
     font-size: 22px;
     font-weight: 700;
   }
 
-  &__desc{
+  &__desc {
     margin-top: 20px;
+    @include sm-block{
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  }
+
+  &__txt {
+    @include ui-descriptor-24;
+    margin-top: 70px;
+    max-width: 1040px;
+    @include md-block {
+      margin-top: 60px;
+      font-size: 20px;
+    }
+    @include sm-block{
+      margin-top: 35px;
+      font-size: 16px;
+    }
   }
 }

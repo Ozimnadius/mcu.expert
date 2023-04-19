@@ -3,6 +3,15 @@
   display: grid;
   grid-template-columns: 1fr 740px;
   gap: 170px;
+  @include xlg-block {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  @include ui-chair-grid;
+
+  &__left{
+    @include ui-chair-left;
+  }
 
   &__content {
     display: flex;
@@ -11,12 +20,16 @@
     h6 {
       font-size: 24px;
       font-weight: 400;
+      @include sm-block{
+        font-size: 20px;
+      }
     }
-     p{
-       font-size: 18px;
-     }
 
-    br{
+    p {
+      font-size: 18px;
+    }
+
+    br {
       content: '';
       display: block;
       margin: 5px 0;
@@ -24,9 +37,7 @@
     }
   }
 
-  &__img{
-    border: 90px solid var(--color-grey-bg);
-    border-top-width: 76px;
-    border-bottom-width: 76px;
+  &__img {
+    @include ui-chair-img;
   }
 }

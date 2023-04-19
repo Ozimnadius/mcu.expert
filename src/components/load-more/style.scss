@@ -3,6 +3,10 @@
   grid-template-columns: 1fr auto 1fr;
   gap: 60px;
   align-items: center;
+  @include lg-block{
+      gap: 20px;
+  }
+
 
   &:before,&:after{
     content: '';
@@ -12,5 +16,10 @@
 
   button{
     @include ui-btn-border;
+
+    @include sm-block{
+      font-size: 16px;
+      padding: 12px 30px;
+    }
   }
 }

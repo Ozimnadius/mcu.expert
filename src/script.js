@@ -267,7 +267,7 @@ function initSliders() {
         const tabs = document.querySelectorAll('.courses__tab');
         const clientsSwiper = new Swiper(coursesBtns.querySelector('.swiper'), {
             slidesPerView: 'auto',
-            spaceBetween: 20,
+            spaceBetween: 10,
             // Navigation arrows
             navigation: {
                 nextEl: coursesBtns.querySelector('.courses__next'),
@@ -293,6 +293,13 @@ function initSliders() {
                     ;
                 },
             },
+            breakpoints: {
+                // when window width is >= 1024px
+                1024: {
+                    spaceBetween: 20
+                },
+
+            }
         });
     }
 
