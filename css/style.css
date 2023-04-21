@@ -10812,6 +10812,11 @@ body.fancybox-active {
   position: relative;
   z-index: 2;
 }
+@media screen and (max-width: 767.98px) {
+  .mmenu__wrap {
+    width: 100%;
+  }
+}
 .mmenu__top {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -10922,6 +10927,7 @@ body.fancybox-active {
   top: 0;
   bottom: 0;
   right: -150%;
+  width: 100%;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
