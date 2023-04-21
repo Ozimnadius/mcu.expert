@@ -5,23 +5,44 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include xlg-block {
+      gap: 10px;
+    }
 
     h4 {
       font-weight: 400;
       font-size: 32px;
+      @include xlg-block {
+        font-size: 24px;
+      }
+      @include lg-block {
+        font-size: 20px;
+      }
+      @include md-block {
+        font-size: 18px;
+      }
+      @include sm-block {
+        font-size: 16px;
+      }
     }
-    p{
+    p {
       @include ui-descriptor-20;
+      @include lg-block {
+        font-size: 16px;
+      }
     }
   }
 
   &__desc {
-    margin-top: 60px;
+    @include margin-top(6);
   }
 
   &__rows {
     display: grid;
     gap: 30px;
+    @include sm-block {
+      gap: 20px;
+    }
   }
 
   &__row {
@@ -29,13 +50,27 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     align-items: center;
+    @include xlg-block {
+      gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+    }
+
+    &:nth-child(1) {
+      .outsourcing__left {
+        @include sm-block {
+          order: 1;
+        }
+      }
+    }
   }
 
-  &__services-list{
-    margin-top: 160px;
+  &__services-list {
+    @include margin-top(16);
   }
 
-  &__form{
-    margin-top: 100px;
+  &__form {
+    @include margin-top(10);
   }
 }

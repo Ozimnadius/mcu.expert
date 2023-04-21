@@ -3,38 +3,61 @@
   border-top: 1px solid var(--color-grey);
   border-bottom: 1px solid var(--color-grey);
   margin-bottom: var(--tabsHeight);
+  @include sm-block {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .container {
+    @include sm-block {
+      padding: 0;
+    }
+  }
 
   &__list {
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    @include sm-block {
+      grid-template-columns: 100%;
+    }
   }
 
   &__item {
-
   }
 
-  &__input{
+  &__input {
     display: none;
 
-    &:checked+.product-tabs__btn{
+    &:checked + .product-tabs__btn {
+      @include sm-block {
+        background-color: var(--color-red);
+        color: var(--color-white);
+      }
+
       &:before {
         background-color: var(--color-red);
+        @include sm-block {
+          display: none;
+        }
       }
     }
 
-    &:checked ~ .product-tabs__tab{
+    &:checked ~ .product-tabs__tab {
       opacity: 1;
+      pointer-events: all;
+      z-index: 2;
+      @include sm-block {
+        height: var(--tabHeight, 0);
+      }
     }
-
   }
 
   &__btn {
     position: relative;
     z-index: 3;
     width: 100%;
-    height: 100px;
-    padding: 35px 0;
+    padding: 34px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,9 +65,17 @@
     font-size: 24px;
     font-weight: 700;
     cursor: pointer;
+    @include md-block {
+      font-size: 18px;
+      padding: 25px 0;
+    }
+    @include sm-block {
+      padding: 19px 0;
+      border-bottom: 1px solid var(--color-grey);
+    }
 
     &:before {
-      content: '';
+      content: "";
       display: block;
       width: 100%;
       height: 5px;
@@ -64,26 +95,53 @@
     width: 100%;
     height: var(--tabsHeight);
     opacity: 0;
+    pointer-events: none;
     padding: 80px 0;
     background-color: var(--color-grey-bg);
     box-shadow: 0 0 0 100vmax var(--color-grey-bg);
     clip-path: polygon(-100vmax 0, 100vmax 0, 100vmax 100%, -100vmax 100%);
 
-    display:grid;
-    grid-template-columns: 4fr 8fr;
-    grid-template-areas: '. content';
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: ". . . . content content content content content content content .";
     gap: 40px;
+    @include xlg-block {
+      grid-template-areas: ". content content content content content content content content content . .";
+      gap: 20px;
+    }
+    @include lg-block {
+      grid-template-areas: ". content content content content content content content content content content .";
+    }
+    @include sm-block {
+      position: static;
+      opacity: 1;
+      pointer-events: auto;
+      height: 0;
+      overflow: hidden;
+      grid-template-columns: 100%;
+      grid-template-areas: "content";
+      padding: 0;
+      @include tr;
+    }
   }
 
   &__content {
     grid-area: content;
+    @include sm-block {
+      padding: 30px 10px;
+      border-bottom: 1px solid var(--color-grey);
+    }
 
-    &.content{
-      p,ul{
+    &.content {
+      p,
+      ul {
         @include ui-descriptor-20;
         margin: 30px 0;
+        @include sm-block {
+          font-size: 16px;
+          margin: 20px 0;
+        }
       }
     }
   }
-
 }

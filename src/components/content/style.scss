@@ -8,30 +8,165 @@
     margin-bottom: 0;
   }
 
+  & > * {
+    margin: 20px 0;
+    @include md-block {
+      margin: 15px 0;
+    }
+  }
 
-  h1, h2, h3, img {
-    margin: 40px 0;
+  h1, h2, img, blockquote {
+    margin: 35px 0;
+    @include md-block {
+      margin: 25px 0;
+    }
+  }
+
+  h3, h4 {
+    margin: 30px 0;
+    @include md-block {
+      margin: 20px 0;
+    }
   }
 
   h1 {
     @include ui-heading-1;
+    @include lg-block {
+      font-size: 54px;
+    }
+    @include md-block{
+      font-size: 54px;
+    }
+    @include sm-block{
+      font-size: 44px;
+    }
   }
 
   h2 {
     @include ui-heading-2;
+    @include lg-block {
+      font-size: 46px;
+    }
+    @include sm-block{
+      font-size: 36px;
+    }
   }
 
   h3 {
     @include ui-heading-3;
+    @include lg-block {
+      font-size: 34px;
+    }
+    @include sm-block{
+      font-size: 24px;
+    }
   }
 
-  p, ul {
-    margin: 20px 0;
+  h4 {
+    @include ui-heading-4;
+  }
+
+  ul, ol {
+    padding-left: 30px;
+
+    ul, ol {
+      margin: 10px 0;
+    }
+
+    li {
+      &::marker {
+        color: var(--color-red);
+      }
+    }
+
+
   }
 
   ul {
     list-style: disc;
-    padding-left: 30px;
+
+    ul {
+      list-style: circle;
+    }
+  }
+
+  ol {
+    list-style: decimal;
+
+  }
+
+  a {
+    color: var(--color-red);
+    text-decoration: underline;
+    @include tr;
+
+    @include hover {
+      color: var(--color-red2);
+    }
+  }
+
+  a[data-fancybox="yt"] {
+    width: 100%;
+    display: block;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 98px;
+      height: 98px;
+      background: url("/images/icons/youtube.svg") 0 0 no-repeat;
+      background-size: cover;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--color-grey-bg-dark);
+    color: var(--color-black2);
+    overflow-y: auto;
+
+    td, th {
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--color-red);
+      color: var(--color-white);
+      font-weight: 700;
+    }
+
+    td {
+      border: 1px solid var(--color-grey-bg-dark);
+      font-size: 13px;
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: var(--color-grey-bg);
+        }
+      }
+    }
+  }
+
+  blockquote {
+    padding: 20px 25px 20px 40px;
+    border-left: 6px solid var(--color-red);
+    background-color: var(--color-grey-bg);
+    @include lg-block {
+      font-size: 14px;
+    }
+    @include sm-block{
+      padding-left: 30px;
+    }
   }
 
 }

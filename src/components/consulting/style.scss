@@ -1,26 +1,37 @@
-.consulting{
+.consulting {
   padding-bottom: var(--offset-bottom);
 
-  &__sevices{
-    margin-top: 100px;
+  &__sevices {
+    @include margin-top(10);
   }
 
-  &__advantages{
-    margin-top: 130px;
+  &__advantages {
+    @include margin-top(13);
     padding: 120px 0;
     background-color: var(--color-grey-bg);
+    @include xlg-block {
+      padding: 100px 0;
+    }
+    @include lg-block {
+      padding: 80px 0;
+    }
+    @include md-block {
+      padding: 60px 0;
+    }
+    @include sm-block {
+      padding: 50px 0;
+    }
   }
 
-  &__portfolio{
-    margin-top: 160px;
+  &__portfolio {
+    @include margin-top(16);
   }
 
-  &__teachers{
-    margin-top: 140px;
+  &__teachers {
+    @include margin-top(14);
   }
 
-  &__form{
-    margin-top: 100px;
+  &__form {
+    @include margin-top(10);
   }
-
 }

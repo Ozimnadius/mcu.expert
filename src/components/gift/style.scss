@@ -1,10 +1,17 @@
 @use "sass:math";
 
 .gift {
-  background: var(--color-grey-bg) url("/images/content/gift/bg.svg") math.percentage(math.div(255,1080)) 42px no-repeat;
+  background: var(--color-grey-bg) url("/images/content/gift/bg.svg") math.percentage(math.div(255, 1080)) 42px no-repeat;
   border-radius: 15px;
   padding: 15px 20px;
   overflow: hidden;
+  @include md-block {
+    padding: 15px;
+  }
+  @include sm-block {
+    padding: 0;
+    background-image: none;
+  }
 
   &__grid {
     display: grid;
@@ -13,16 +20,32 @@
     gap: 40px;
     min-height: 320px;
     border-radius: 15px;
+    @include md-block {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      padding: 40px 30px;
+      gap: 70px;
+      justify-items: flex-start;
+    }
   }
 
   &__left {
-    padding: 20px 60px;
-
+    padding: 20px 0 20px 60px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 15px;
+    @include md-block {
+      padding-left: 35px;
+    }
+    @include sm-block {
+      order: 1;
+      padding: 0;
+    }
   }
 
   &__stick {
@@ -30,7 +53,7 @@
     font-size: 16px;
     padding: 6px 20px;
 
-    @include hover{
+    @include hover {
       background-color: var(--color-red);
       color: var(--color-white);
     }
@@ -39,6 +62,9 @@
   &__title {
     font-weight: 700;
     font-size: 24px;
+    @include md-block {
+      font-size: 20px;
+    }
   }
 
   &__desc {
@@ -57,13 +83,13 @@
     cursor: pointer;
     font-size: 14px;
 
-    button{
+    button {
       @include ui-link-main;
       cursor: pointer;
       font-size: 14px;
     }
 
-    &--black{
+    &--black {
       color: var(--color-black);
     }
   }
@@ -76,8 +102,11 @@
     position: absolute;
     bottom: -60px;
     left: 0;
+    @include sm-block {
+      position: static;
+    }
 
-    &:before,&:after{
+    &:before, &:after {
       content: '';
       display: block;
       position: absolute;
@@ -85,22 +114,22 @@
       border-radius: 12px;
     }
 
-    &:before{
+    &:before {
       background-color: #DEDEDE;
       z-index: 0;
-      transform: translate(30px,40px);
+      transform: translate(30px, 40px);
     }
 
-    &:after{
+    &:after {
       background-color: #ECECEC;
       z-index: 1;
-      transform: translate(15px,17px);
+      transform: translate(15px, 17px);
     }
 
 
   }
 
-  &__course{
+  &__course {
     width: 273px;
     background-color: var(--color-white);
     border-radius: 12px;
@@ -108,13 +137,13 @@
     position: relative;
     z-index: 2;
 
-    .courses-item{
-      &__name{
+    .courses-item {
+      &__name {
         margin-top: 15px;
         font-size: 17px;
       }
 
-      &__txt{
+      &__txt {
         margin-top: 11px;
         font-size: 11px;
       }

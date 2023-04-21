@@ -8,23 +8,38 @@
     gap: 20px;
   }
   @include lg-block {
-    grid-template-columns: repeat(3, 371px);
+    display: flex;
     overflow-y: auto;
-    padding-bottom: 20px;
+
+    margin-left: calc(0px - var(--offset));
+    margin-right: calc(0px - var(--offset));
+    padding-left: var(--offset);
+    padding-right: var(--offset);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
-  @include md-block {
-    grid-template-columns: repeat(3, 354px);
-  }
+
   @include sm-block {
+    display:grid;
     grid-template-columns: 100%;
     gap: 10px;
     padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   &__item {
     position: relative;
     color: var(--color-white);
     overflow: hidden;
+    @include lg-block{
+      flex-shrink: 0;
+      width: 371px;
+    }
 
     &:before {
       content: '';

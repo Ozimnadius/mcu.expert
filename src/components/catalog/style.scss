@@ -5,24 +5,42 @@
     background-color: var(--color-grey-bg);
     padding-top: 60px;
     padding-bottom: 130px;
+    @include md-block {
+      padding: 70px 0;
+    }
+    @include sm-block {
+      padding: 50px 0;
+    }
   }
 
   &__regulations {
-    margin-top: 140px;
+    @include margin-top(14);
   }
 
   &__video {
-    margin-top: 100px;
+    @include margin-top(10);
   }
 
   &__grid {
     display: grid;
     grid-template-columns: 350px 1fr;
     gap: 40px;
+    @include xlg-block {
+      grid-template-columns: 285px 1fr;
+      gap: 20px;
+    }
+    @include lg-block {
+      grid-template-columns: 215px 1fr;
+    }
+    @include md-block {
+      grid-template-columns: 100%;
+    }
   }
 
   &__left {
-
+    @include md-block {
+      display: none;
+    }
   }
 
   &__menu {
@@ -33,6 +51,10 @@
       font-size: 18px;
       text-transform: uppercase;
       @include tr;
+      @include lg-block {
+        font-size: 16px;
+        padding-left: 0;
+      }
 
       @include hover {
         color: var(--color-red);
@@ -45,24 +67,47 @@
   }
 
   &__right {
-
   }
 
   &__banner {
     margin-bottom: 50px;
+    @include xlg-block {
+      margin-bottom: 30px;
+    }
+    @include md-block {
+      margin-bottom: 20px;
+    }
   }
 
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px 40px;
+    @include xlg-block {
+      gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 10px;
+    }
   }
 
   &__item {
-
   }
 
-  &__more{
+  &__more {
     margin-top: 140px;
+    @include xlg-block {
+      margin-top: 110px;
+    }
+    @include lg-block {
+      margin-top: 70px;
+    }
+    @include md-block {
+      margin-top: 60px;
+    }
+    @include sm-block {
+      margin-top: 50px;
+    }
   }
 }

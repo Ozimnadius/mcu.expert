@@ -52,18 +52,11 @@
     gap: 20px;
   }
   @include md-block {
-    grid-template-columns: repeat(3, 293px);
-    overflow-y: auto;
-    margin-left: calc(0px - var(--offset));
-    margin-right: calc(0px - var(--offset));
-    padding-left: var(--offset);
-    padding-right: var(--offset);
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include sm-block {
+    grid-template-columns: 100%;
+    gap: 20px;
   }
 }
 

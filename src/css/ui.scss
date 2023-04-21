@@ -49,6 +49,15 @@
   }
 }
 
+@mixin ui-heading-4 {
+  @include ui-heading;
+  font-size: 28px;
+  @include sm-block{
+    font-size: 20px;
+  }
+}
+
+
 @mixin ui-heading-form {
   @include ui-heading;
   font-size: 38px;

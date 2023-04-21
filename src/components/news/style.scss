@@ -5,6 +5,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    @include sm-block {
+      gap: 10px;
+    }
   }
 
   &__year {
@@ -15,8 +18,15 @@
     border-radius: 6px;
     text-transform: uppercase;
     @include tr;
+    @include md-block {
+      padding: 14px 23px;
+    }
+    @include sm-block {
+      font-size: 14px;
+      padding: 11px 19px;
+    }
 
-    @include hover{
+    @include hover {
       color: var(--color-red);
     }
 
@@ -31,6 +41,21 @@
     display: grid;
     grid-template-columns: 1fr 350px;
     gap: 40px;
+    @include xlg-block {
+      margin-top: 40px;
+      grid-template-columns: 1fr 285px;
+      gap: 20px;
+    }
+    @include lg-block {
+      margin-top: 20px;
+    }
+    @include md-block {
+      grid-template-columns: 100%;
+      gap: 80px;
+    }
+    @include sm-block {
+      gap: 40px;
+    }
   }
 
   &__left {
@@ -40,22 +65,48 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    @include xlg-block {
+      gap: 20px;
+    }
+    @include lg-block {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include md-block {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include sm-block {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 10px;
+    }
   }
 
   &__item {
   }
 
   &__right {
+    @include md-block {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      align-items: flex-start;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      gap: 30px;
+    }
   }
 
   &__menu {
     background-color: var(--color-grey-bg);
     border-radius: 6px;
     padding: 10px 35px;
+    @include xlg-block {
+      padding: 10px 20px;
+    }
   }
 
   &__link {
-    padding: 20px 0;
+    padding: 19px 0;
     display: block;
     font-size: 18px;
     border-bottom: 1px solid var(--color-grey);
@@ -73,9 +124,12 @@
   &__tags {
     @include ui-tag-list;
     margin-top: 40px;
+    @include md-block {
+      margin-top: 0;
+    }
   }
 
-  &__tag{
+  &__tag {
     @include ui-tag;
   }
 

@@ -1,77 +1,111 @@
-.product{
+.product {
   padding-bottom: var(--offset-bottom);
 
-  &__main{}
-
-  &__grid{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 40px;
+  &__main {
   }
 
-  &__left{
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: flex-start;
+    @include xlg-block {
+      gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      gap: 40px;
+    }
+  }
+
+  &__left {
     position: relative;
     background-color: var(--color-grey-bg);
 
-    &:before{
-      content: '';
+    &:before {
+      content: "";
       display: block;
       padding-top: 100%;
     }
   }
 
-  &__img{
+  &__img {
     position: absolute;
     inset: 0;
     display: flex;
 
-    img{
+    img {
       max-height: 100%;
       margin: auto;
     }
   }
 
-  &__stick{
+  &__stick {
     @include ui-stick;
     position: absolute;
     z-index: 1;
     right: 0;
     top: 40px;
+    @include sm-block {
+      top: 20px;
+      svg {
+        width: 94px;
+        height: 28px;
+      }
+      span {
+        font-size: 14px;
+      }
+    }
   }
 
-  &__right{
+  &__right {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
-  &__chars{
+  &__chars {
     margin-bottom: 40px;
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 40px;
-  }
-
-  &__char{
-    display:grid;
-    gap: 10px;
-
-    &--2{
-      grid-column: span 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 190px;
+    @include lg-block {
+      gap: 20px 40px;
+    }
+    @include md-block {
+      margin-bottom: 30px;
+    }
+    @include sm-block {
+      margin-bottom: 50px;
+      flex-direction: column;
     }
   }
 
-  &__char-name{
+  &__char {
+    display: grid;
+    gap: 10px;
+    @include md-block {
+      gap: 5px;
+    }
+  }
+
+  &__char-name {
     @include ui-descriptor-18;
     color: var(--color-red);
+    @include md-block {
+      font-size: 16px;
+    }
   }
 
-  &__char-val{
+  &__char-val {
     font-size: 24px;
     font-weight: 700;
+    @include md-block {
+      font-size: 18px;
+    }
   }
 
-  &__content{
+  &__content {
     font-weight: 400;
     font-size: 16px;
     display: flex;
@@ -79,54 +113,67 @@
     align-items: flex-start;
     gap: 20px;
 
-    a{
+    a {
       text-decoration: underline;
       @include ui-link-black;
     }
   }
 
-  &__prices{
+  &__prices {
     margin-top: auto;
   }
 
-  &__prices-tile{
+  &__prices-tile {
     font-size: 20px;
     margin-bottom: 10px;
   }
 
-  &__prices-list{
+  &__prices-list {
     display: flex;
     gap: 20px;
     font-size: 36px;
+    @include md-block {
+      gap: 5px;
+      font-size: 28px;
+    }
   }
 
-  &__price{
+  &__price {
     font-weight: 700;
   }
-  &__oldprice{
+
+  &__oldprice {
     color: var(--color-grey);
     text-decoration-line: line-through;
   }
 
-  &__buy{
+  &__buy {
     margin-top: 40px;
+    @include lg-block {
+      margin-top: 20px;
+    }
 
-    button{
+    button {
       @include ui-btn-border;
     }
   }
 
-
-  &__tabs{
+  &__tabs {
     margin-top: 100px;
     display: flex;
+    @include xlg-block {
+      margin-top: 70px;
+    }
+    @include lg-block {
+      margin-top: 50px;
+    }
   }
 
-  &__reviews{
-    margin-top: 100px;
+  &__reviews {
+    @include margin-top(10);
   }
 
-  &__slider{
-    margin-top: 100px;
+  &__slider {
+    @include margin-top(10);
   }
 }
