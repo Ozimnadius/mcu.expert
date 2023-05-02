@@ -110,7 +110,7 @@
       <div class="wrapper__content">
         <main class="page">
           <section class="page__banner">
-            <div class="banner--white banner">
+            <div class="banner" style="--banner-color: #FFFFFF">
               <div class="banner__img">
                 <picture>
                   <source srcset="/images/content/banner/course-767.webp" media="(max-width: 767.98px)">
@@ -193,13 +193,15 @@
                       <div class="course-about__img"><img src="/images/content/course-about/img.webp" alt="Уникальный практический курс по построению системы в клинике"></div>
                     </div>
                     <div class="course-about__right">
-                      <div class="course-about__desc">Уникальный практический курс по построению системы в клинике от эксперта-практика с 25-летним опытом в медицинском бизнесе, от частного кабинета до ТОП-117 клиник России.</div>
-                      <div class="course-about__label">Вас ждут:</div>
-                      <ul class="course-about__ul">
-                        <li class="course-about__li">Интенсивная обучающая программа</li>
-                        <li class="course-about__li">Персональные консультации по разбору вашего запроса от ТОП-эксперта</li>
-                        <li class="course-about__li">Нетворкинг и профессиональное сообщество</li>
-                      </ul>
+                      <div class="course-about__content">
+                        <p>Уникальный практический курс по построению системы в клинике от эксперта-практика с 25-летним опытом в медицинском бизнесе, от частного кабинета до ТОП-117 клиник России.</p>
+                        <h4>Вас ждут:</h4>
+                        <ul>
+                          <li>Интенсивная обучающая программа</li>
+                          <li>Персональные консультации по разбору вашего запроса от ТОП-эксперта</li>
+                          <li>Нетворкинг и профессиональное сообщество</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -323,12 +325,12 @@
                   <div class="course-process">
                     <div class="course-process__title">Как проходит обучение</div>
                     <div class="course-process__rows">
-                      <div class="course-process__item">Курсы проводятся в двух форматах: очное обучение с бизнес-тренером / онлайн обучение с куратором</div>
-                      <div class="course-process__item">Курсы состоят из уроков, сгруппированных в смысловые модули</div>
-                      <div class="course-process__item">Уроки выстроены по принципу: «от простого к сложному» и предполагают отработку и закрепление практических навыков</div>
-                      <div class="course-process__item">Для каждого урока предусмотрено выполнение домашних заданий, которые помогу сформировать навык и освоить тонкости выполнения алгоритма работы</div>
-                      <div class="course-process__item">Домашние задания проверяются куратором, который предоставляет обратную связь</div>
-                      <div class="course-process__item">При возникновении вопросов – обучающийся может оперативно обратиться к куратору для их прояснения</div>
+                      <div class="course-process__item" data-index="01"> Курсы проводятся в двух форматах: очное обучение с бизнес-тренером / онлайн обучение с куратором</div>
+                      <div class="course-process__item" data-index="04">Для каждого урока предусмотрено выполнение домашних заданий, которые помогу сформировать навык и освоить тонкости выполнения алгоритма работы</div>
+                      <div class="course-process__item" data-index="02">Курсы состоят из уроков, сгруппированных в смысловые модули</div>
+                      <div class="course-process__item" data-index="05">Домашние задания проверяются куратором, который предоставляет обратную связь</div>
+                      <div class="course-process__item" data-index="03">Уроки выстроены по принципу: «от простого к сложному» и предполагают отработку и закрепление практических навыков</div>
+                      <div class="course-process__item" data-index="06">При возникновении вопросов – обучающийся может оперативно обратиться к куратору для их прояснения</div>
                     </div>
                   </div>
                 </div>
@@ -345,7 +347,7 @@
                         <div class="course-faq__items">
                           <div class="course-faq__item">
                             <div class="course-faq__top course-faq__grid">
-                              <div class="course-faq__left course-faq__count"></div>
+                              <div class="course-faq__left course-faq__count" data-index="01"></div>
                               <div class="course-faq__right">
                                 <div class="course-faq__name">Текст-заполнитель</div>
                                 <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
@@ -360,7 +362,7 @@
                           </div>
                           <div class="course-faq__item">
                             <div class="course-faq__top course-faq__grid">
-                              <div class="course-faq__left course-faq__count"></div>
+                              <div class="course-faq__left course-faq__count" data-index="02"></div>
                               <div class="course-faq__right">
                                 <div class="course-faq__name">Текст-заполнитель</div>
                                 <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
@@ -375,7 +377,7 @@
                           </div>
                           <div class="course-faq__item">
                             <div class="course-faq__top course-faq__grid">
-                              <div class="course-faq__left course-faq__count"></div>
+                              <div class="course-faq__left course-faq__count" data-index="03"></div>
                               <div class="course-faq__right">
                                 <div class="course-faq__name">Текст-заполнитель</div>
                                 <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
@@ -390,7 +392,7 @@
                           </div>
                           <div class="course-faq__item">
                             <div class="course-faq__top course-faq__grid">
-                              <div class="course-faq__left course-faq__count"></div>
+                              <div class="course-faq__left course-faq__count" data-index="04"></div>
                               <div class="course-faq__right">
                                 <div class="course-faq__name">Текст-заполнитель</div>
                                 <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
@@ -405,7 +407,7 @@
                           </div>
                           <div class="course-faq__item">
                             <div class="course-faq__top course-faq__grid">
-                              <div class="course-faq__left course-faq__count"></div>
+                              <div class="course-faq__left course-faq__count" data-index="05"></div>
                               <div class="course-faq__right">
                                 <div class="course-faq__name">Текст-заполнитель</div>
                                 <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
@@ -420,7 +422,7 @@
                           </div>
                           <div class="course-faq__item">
                             <div class="course-faq__top course-faq__grid">
-                              <div class="course-faq__left course-faq__count"></div>
+                              <div class="course-faq__left course-faq__count" data-index="06"></div>
                               <div class="course-faq__right">
                                 <div class="course-faq__name">Текст-заполнитель</div>
                                 <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
@@ -576,7 +578,7 @@
                     <div class="course-faq__items">
                       <div class="course-faq__item">
                         <div class="course-faq__top course-faq__grid">
-                          <div class="course-faq__left course-faq__count"></div>
+                          <div class="course-faq__left course-faq__count" data-index="01"></div>
                           <div class="course-faq__right">
                             <div class="course-faq__name">Текст-заполнитель</div>
                             <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
@@ -591,7 +593,7 @@
                       </div>
                       <div class="course-faq__item">
                         <div class="course-faq__top course-faq__grid">
-                          <div class="course-faq__left course-faq__count"></div>
+                          <div class="course-faq__left course-faq__count" data-index="02"></div>
                           <div class="course-faq__right">
                             <div class="course-faq__name">Текст-заполнитель</div>
                             <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
@@ -606,7 +608,7 @@
                       </div>
                       <div class="course-faq__item">
                         <div class="course-faq__top course-faq__grid">
-                          <div class="course-faq__left course-faq__count"></div>
+                          <div class="course-faq__left course-faq__count" data-index="03"></div>
                           <div class="course-faq__right">
                             <div class="course-faq__name">Текст-заполнитель</div>
                             <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
@@ -621,7 +623,7 @@
                       </div>
                       <div class="course-faq__item">
                         <div class="course-faq__top course-faq__grid">
-                          <div class="course-faq__left course-faq__count"></div>
+                          <div class="course-faq__left course-faq__count" data-index="04"></div>
                           <div class="course-faq__right">
                             <div class="course-faq__name">Текст-заполнитель</div>
                             <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
@@ -636,7 +638,7 @@
                       </div>
                       <div class="course-faq__item">
                         <div class="course-faq__top course-faq__grid">
-                          <div class="course-faq__left course-faq__count"></div>
+                          <div class="course-faq__left course-faq__count" data-index="05"></div>
                           <div class="course-faq__right">
                             <div class="course-faq__name">Текст-заполнитель</div>
                             <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>
@@ -651,7 +653,7 @@
                       </div>
                       <div class="course-faq__item">
                         <div class="course-faq__top course-faq__grid">
-                          <div class="course-faq__left course-faq__count"></div>
+                          <div class="course-faq__left course-faq__count" data-index="06"></div>
                           <div class="course-faq__right">
                             <div class="course-faq__name">Текст-заполнитель</div>
                             <button class="course-faq__btn" type="button" data-event="click.courseAccordionToggle"></button>

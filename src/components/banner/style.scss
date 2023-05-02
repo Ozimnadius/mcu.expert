@@ -1,5 +1,10 @@
 .banner {
   position: relative;
+  color: var(--banner-color, var(--color-white));
+
+  @include md-block {
+    color: var(--color-black);
+  }
 
   &__img {
     position: absolute;
@@ -23,13 +28,6 @@
       object-position: center bottom;
     }
 
-  }
-
-  &--white {
-    color: var(--color-white);
-    @include md-block {
-      color: var(--color-black);
-    }
   }
 
   &__container {

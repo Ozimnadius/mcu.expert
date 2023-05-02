@@ -24,6 +24,43 @@
     }
   }
 
+  &__content{
+    p{
+      @include ui-descriptor-24;
+      @include lg-block {
+        font-size: 18px;
+      }
+      @include md-block {
+        font-size: 16px;
+      }
+    }
+
+    h4{
+      margin-top: 65px;
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 1.2;
+      @include xlg-block {
+        margin-top: 25px;
+      }
+      @include md-block {
+        font-size: 24px;
+        margin-top: 15px;
+      }
+    }
+
+    ul{
+      @include ui-ul-checkbox;
+      margin-top: 35px;
+      @include lg-block {
+        margin-top: 25px;
+      }
+      @include md-block {
+        margin-top: 15px;
+      }
+    }
+  }
+
   &__desc {
     @include ui-descriptor-24;
     @include lg-block {

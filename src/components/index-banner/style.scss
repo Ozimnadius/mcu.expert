@@ -2,18 +2,16 @@
 
 .index-banner {
 
+
   &__slider {
     position: relative;
   }
 
   &__slide {
     position: relative;
-
-    &.white {
-      color: var(--color-white);
-      @include md-block {
-        color: var(--color-black);
-      }
+    color: var(--slide-color,var(--color-white));
+    @include md-block {
+      color: var(--color-black);
     }
   }
 

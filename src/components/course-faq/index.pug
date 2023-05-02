@@ -5,7 +5,7 @@
         each i in [1,2,3,4,5,6]
             .course-faq__item
                 .course-faq__top.course-faq__grid
-                    .course-faq__left.course-faq__count
+                    div(data-index="0"+i).course-faq__left.course-faq__count
                     .course-faq__right
                         .course-faq__name Текст-заполнитель
                         button(type='button' data-event='click.courseAccordionToggle').course-faq__btn

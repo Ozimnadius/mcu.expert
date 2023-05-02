@@ -1,5 +1,4 @@
 .course-faq {
-  counter-reset: item;
 
   &__title {
     @include ui-heading-2;
@@ -54,8 +53,7 @@
 
   &__count {
     &:before {
-      counter-increment: item;
-      content: "0" counter(item);
+      content: attr(data-index);
       display: block;
       font-size: 24px;
       font-weight: 800;
