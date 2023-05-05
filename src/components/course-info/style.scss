@@ -67,13 +67,17 @@
   }
 
   &__link {
-    @include ui-btn-fill-white;
+
     margin-top: 65px;
     @include xlg-block {
       margin-top: 30px;
     }
     @include sm-block {
       margin-top: 20px;
+    }
+
+    a{
+      @include ui-btn-fill-white;
     }
   }
 }

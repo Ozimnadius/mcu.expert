@@ -1,30 +1,27 @@
 @use "sass:math";
 
-.courses-item{
+.courses-item {
   position: relative;
   display: flex;
   flex-direction: column;
-  @include hover{
-    img{
-      transform: scale(1.05);
-    }
 
-    .courses-item__name{
-      color: var(--color-red);
-    }
-  }
-
-  &__img{
+  &__img {
     position: relative;
     overflow: hidden;
 
-    &:before{
+    @include hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
+
+    &:before {
       content: '';
       display: block;
       padding-top: math.percentage(240/350);
     }
 
-    img{
+    img {
       position: absolute;
       top: 0;
       left: 0;
@@ -35,15 +32,18 @@
     }
   }
 
-  &__name{
+  &__name {
     @include ui-card-title;
     margin-top: 20px;
     @include tr;
+    @include hover {
+      color: var(--color-red);
+    }
   }
 
-  &__txt{
+  &__txt {
     margin-top: 16px;
-    display:grid;
+    display: grid;
     gap: 15px;
   }
 }

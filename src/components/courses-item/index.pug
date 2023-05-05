@@ -1,5 +1,5 @@
-a(href="/courses/course/").courses-item
-    span.courses-item__img
+.courses-item
+    a(href="/courses/course/").courses-item__img
         img(src=i.img alt="img")
-    span.courses-item__name!=i.name
-    span.courses-item__txt!=i.txt
+    a(href="/courses/course/").courses-item__name!=i.name
+    .courses-item__txt!=i.txt

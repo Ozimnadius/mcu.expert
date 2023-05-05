@@ -48,9 +48,10 @@
                 .course-tariff__top
                     .course-tariff__sub ПАКЕТ
                     .course-tariff__title= i.name
-                    ul.course-tariff__list
-                        each li in i.ul
-                            li!=li
+                    .course-tariff__list
+                        ul
+                            each li in i.ul
+                                li!=li
                     .course-tariff__desc Книга «Эффективная бизнес-модель современной клиники» в подарок!
                 .course-tariff__bottom
                     .course-tariff__price= i.price

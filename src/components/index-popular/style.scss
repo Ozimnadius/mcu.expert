@@ -56,16 +56,6 @@
     @include xlg-block {
       width: 285px;
     }
-
-    @include hover {
-      img {
-        transform: scale(1.05);
-      }
-
-      .index-popular__name {
-        color: var(--color-red);
-      }
-    }
   }
 
   &__img {

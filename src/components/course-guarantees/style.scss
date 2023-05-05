@@ -1,6 +1,7 @@
 .course-guarantees {
   &__title {
     @include ui-heading-2;
+    max-width: 20ch;
   }
 
   &__grid {
@@ -22,7 +23,7 @@
     overflow: hidden;
   }
 
-  &__desc {
+  p {
     font-size: 24px;
     @include lg-block {
       font-size: 18px;
@@ -32,7 +33,7 @@
     }
   }
 
-  &__ul {
+  ul {
     @include ui-ul-checkbox;
     margin-top: 65px;
     font-size: 24px;
