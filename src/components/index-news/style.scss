@@ -70,6 +70,15 @@
     padding-top: math.percentage(570/480);
   }
 
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: radial-gradient(66.46% 66.46% at 50% 46.25%, rgba(0, 0, 0, 0) 62.07%, rgba(0, 0, 0, 0.5) 100%);
+  }
+
   &__img {
     position: absolute;
     z-index: 0;
@@ -87,6 +96,7 @@
 
   &__format {
     position: absolute;
+    z-index: 2;
     left: 0;
     top: math.percentage(230/570);
     background-color: var(--color-red);
@@ -110,7 +120,7 @@
 
   &__content {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     inset: 40px;
     display: flex;
     flex-direction: column;

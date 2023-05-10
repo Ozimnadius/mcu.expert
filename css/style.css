@@ -2379,6 +2379,14 @@ body.fancybox-active {
   display: block;
   padding-top: 118.75%;
 }
+.index-new:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: radial-gradient(66.46% 66.46% at 50% 46.25%, rgba(0, 0, 0, 0) 62.07%, rgba(0, 0, 0, 0.5) 100%);
+}
 .index-new__img {
   position: absolute;
   z-index: 0;
@@ -2396,6 +2404,7 @@ body.fancybox-active {
 }
 .index-new__format {
   position: absolute;
+  z-index: 2;
   left: 0;
   top: 40.350877193%;
   background-color: var(--color-red);
@@ -2424,7 +2433,7 @@ body.fancybox-active {
 }
 .index-new__content {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   inset: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
