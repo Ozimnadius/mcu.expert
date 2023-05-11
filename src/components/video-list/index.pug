@@ -3,7 +3,8 @@ div(class=(data.top)?'video-list--top':'').video-list
         .video-list__top
             .video-list__title Видеотека
             .video-list__desc Наши проекты отличаются высоким уровнем визуального дизайна, что отмечает международное и российское экспертное жюри. Мы делаем дизайн, которым мы сами гордимся.
-            a(href="/video/").video-list__link Перейти в раздел
+            .video-list__link
+                a(href="/video/") Перейти в раздел
     .video-list__broadcasts
         include ../video-broadcasts/index
     .video-list__lectures
