@@ -1,6 +1,10 @@
 .chair {
   padding-bottom: 0;
 
+  &__main {
+    @include margin-bottom(15);
+  }
+
   &__grid {
     @include ui-chair-grid;
   }
@@ -13,7 +17,7 @@
     font-size: 24px;
     display: grid;
     gap: 20px;
-    @include sm-block{
+    @include sm-block {
       font-size: 20px;
     }
   }
@@ -23,7 +27,7 @@
     display: grid;
     gap: 10px;
     margin-top: 40px;
-    @include sm-block{
+    @include sm-block {
       font-size: 16px;
       margin-top: 30px;
     }
@@ -33,21 +37,21 @@
     @include ui-chair-img;
   }
 
+
   &__teachers {
-    @include margin-top(15);
+    @include margin-bottom(12);
   }
 
   &__courses {
-    @include margin-top(12);
     padding: 120px 0;
     background-color: var(--color-grey-bg);
-    @include lg-block{
+    @include lg-block {
       padding: 100px 0;
     }
-    @include md-block{
+    @include md-block {
       padding: 70px 0;
     }
-    @include sm-block{
+    @include sm-block {
       padding: 60px 0;
     }
   }

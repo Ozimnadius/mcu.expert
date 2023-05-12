@@ -37,6 +37,7 @@
   }
 
   &__slide{
+    max-width: 480px;
     @include lg-block{
       width: 385px;
     }

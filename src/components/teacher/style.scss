@@ -45,36 +45,6 @@
     }
   }
 
-  &__desc {
-    font-size: 20px;
-    @include sm-block {
-      font-size: 16px;
-    }
-  }
-
-  &__items {
-    margin-top: 40px;
-
-    display: grid;
-    gap: 45px;
-    @include xlg-block {
-      margin-top: 30px;
-      gap: 30px;
-    }
-  }
-
-  &__item {
-    display: grid;
-    gap: 20px;
-  }
-
-  &__name {
-    font-weight: 800;
-    font-size: 18px;
-
-
-  }
-
   &__content {
     @include ui-descriptor-18;
     display: grid;

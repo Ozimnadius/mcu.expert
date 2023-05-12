@@ -32,5 +32,9 @@
     @include sm-block {
       margin-top: 30px;
     }
+
+    &--mb80{
+      @include margin-bottom(8);
+    }
   }
 }

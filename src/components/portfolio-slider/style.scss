@@ -25,6 +25,7 @@
   }
 
   &__slide {
+    max-width: 480px;
     @include md-block {
       width: 293px;
     }

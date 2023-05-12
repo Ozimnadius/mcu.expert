@@ -2,8 +2,8 @@
     .services-list__title Список услуг
     .services-list__txt Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев.
     .services-list__items
-        each i in data
-            .services-list__item
+        each i,x in data
+            div(data-index='0'+(x+1)).services-list__item
                 .services-list__top
                     .services-list__name= i
                     button(type='button' data-event='click.servicesAccordionToggle').services-list__btn

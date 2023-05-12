@@ -116,6 +116,10 @@
       color: var(--color-red);
     }
 
+    &.active{
+      color: var(--color-red);
+    }
+
     &:last-child {
       border-color: transparent;
     }
