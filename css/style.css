@@ -4452,6 +4452,9 @@ body.fancybox-active {
     margin-top: 20px;
   }
 }
+.courses-slider__slide {
+  max-width: 350px;
+}
 @media screen and (max-width: 1023.98px) {
   .courses-slider__slide {
     width: 290px;
@@ -10206,6 +10209,23 @@ body.fancybox-active {
   .article__grid {
     display: block;
   }
+}
+.article__img {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1919.98px) {
+  .article__img {
+    margin-left: 0;
+  }
+}
+.article__img img {
+  width: 100%;
+}
+.article__date {
+  color: var(--color-red);
+}
+.article__content {
+  margin-top: 50px;
 }
 .article__tags {
   margin-top: 60px;

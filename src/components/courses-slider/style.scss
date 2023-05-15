@@ -37,6 +37,7 @@
   }
 
   &__slide{
+    max-width: 350px;
     @include md-block{
       width: 290px;
     }
