@@ -520,6 +520,11 @@
     background-color: var(--color-red);
     color: var(--color-white);
   }
+
+  &.active{
+    background-color: var(--color-red);
+    color: var(--color-white);
+  }
 }
 
 @mixin ui-chair-grid{
