@@ -23,42 +23,43 @@ block content
                 h1.page__title= title
         .page__content
             .catalog
-                //-books
-                section.catalog__books
-                    .container
-                        -
-                            var data = {
-                                title: 'Книги',
-                                list: [
-                                    '/images/content/catalog/book1.webp',
-                                    '/images/content/catalog/book2.webp',
-                                    '/images/content/catalog/book3.webp',
-                                    '/images/content/catalog/book1.webp',
-                                    '/images/content/catalog/book2.webp',
-                                    '/images/content/catalog/book3.webp',
-                                    '/images/content/catalog/book1.webp',
-                                    '/images/content/catalog/book2.webp',
-                                ]
-                            };
-                        include ../src/components/catalog-shop/index
-                //-regulations
-                section.catalog__regulations
-                    .container
-                        -
-                            var data = {
-                                title: 'Новые регламенты',
-                                list: [
-                                    '/images/content/catalog/img.webp',
-                                    '/images/content/catalog/img.webp',
-                                    '/images/content/catalog/img.webp',
-                                    '/images/content/catalog/img.webp',
-                                    '/images/content/catalog/img.webp',
-                                    '/images/content/catalog/img.webp',
-                                    '/images/content/catalog/img.webp',
-                                    '/images/content/catalog/img.webp',
-                                ]
-                            };
-                        include ../src/components/catalog-shop/index
+                .catalog__sections
+                    //-books
+                    section.catalog__section
+                        .container
+                            -
+                                var data = {
+                                    title: 'Книги',
+                                    list: [
+                                        '/images/content/catalog/book1.webp',
+                                        '/images/content/catalog/book2.webp',
+                                        '/images/content/catalog/book3.webp',
+                                        '/images/content/catalog/book1.webp',
+                                        '/images/content/catalog/book2.webp',
+                                        '/images/content/catalog/book3.webp',
+                                        '/images/content/catalog/book1.webp',
+                                        '/images/content/catalog/book2.webp',
+                                    ]
+                                };
+                            include ../src/components/catalog-shop/index
+                    //-regulations
+                    section.catalog__section
+                        .container
+                            -
+                                var data = {
+                                    title: 'Новые регламенты',
+                                    list: [
+                                        '/images/content/catalog/img.webp',
+                                        '/images/content/catalog/img.webp',
+                                        '/images/content/catalog/img.webp',
+                                        '/images/content/catalog/img.webp',
+                                        '/images/content/catalog/img.webp',
+                                        '/images/content/catalog/img.webp',
+                                        '/images/content/catalog/img.webp',
+                                        '/images/content/catalog/img.webp',
+                                    ]
+                                };
+                            include ../src/components/catalog-shop/index
                 //-video
                 section.catalog__video
                     .container

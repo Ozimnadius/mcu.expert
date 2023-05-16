@@ -1,24 +1,18 @@
 .catalog {
   padding-bottom: var(--offset-bottom);
 
-  &__books {
-    background-color: var(--color-grey-bg);
-    padding-top: 60px;
-    padding-bottom: 130px;
+  &__section {
+    padding: 130px 0;
     @include md-block {
       padding: 70px 0;
     }
     @include sm-block {
       padding: 50px 0;
     }
-  }
 
-  &__regulations {
-    @include margin-top(14);
-  }
-
-  &__video {
-    @include margin-top(10);
+    &:nth-child(odd) {
+      background-color: var(--color-grey-bg);
+    }
   }
 
   &__grid {

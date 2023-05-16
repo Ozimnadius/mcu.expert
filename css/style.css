@@ -8295,26 +8295,21 @@ body.fancybox-active {
 .catalog {
   padding-bottom: var(--offset-bottom);
 }
-.catalog__books {
-  background-color: var(--color-grey-bg);
-  padding-top: 60px;
-  padding-bottom: 130px;
+.catalog__section {
+  padding: 130px 0;
 }
 @media screen and (max-width: 1023.98px) {
-  .catalog__books {
+  .catalog__section {
     padding: 70px 0;
   }
 }
 @media screen and (max-width: 767.98px) {
-  .catalog__books {
+  .catalog__section {
     padding: 50px 0;
   }
 }
-.catalog__regulations {
-  margin-top: calc(var(--spacing) * 14);
-}
-.catalog__video {
-  margin-top: calc(var(--spacing) * 10);
+.catalog__section:nth-child(odd) {
+  background-color: var(--color-grey-bg);
 }
 .catalog__grid {
   display: -ms-grid;
