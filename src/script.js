@@ -408,7 +408,7 @@ function initTelMask() {
 
 function initContent() {
     let content = document.querySelector('.content');
-    if (content){
+    if (content) {
         let yotube = content.querySelectorAll('a[data-fancybox="yt"]');
     }
 }
@@ -561,6 +561,29 @@ class Events {
             .catch((err) => {
                 console.log("Fetch Error :-S", err);
             });
+    }
+
+    goTo(e, elem) {
+        e.preventDefault();
+
+        document.querySelector(elem.dataset.to).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+
+    switchTab(e, elem){
+        e.preventDefault();
+
+        let target = elem;
+
+        document.querySelector(target.dataset.to).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+        document.querySelectorAll('.product-tabs__input').forEach((i,x)=>{
+            i.checked = (x==(target.dataset.tab-1));
+        });
     }
 }
 

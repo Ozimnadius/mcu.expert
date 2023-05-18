@@ -54,9 +54,7 @@ block content
                                         .product__char-val
                                             .product__content
                                                 p Перед Вами авторская методика мотивационной консультации и монетизации врачебных знаний как одного из ключевых факторов личного успеха. Методика проверена на опыте нескольких сотен врачей и показала отличные результаты! Реализация программ лечения и операций в клиниках показывает рост в два раза, возвратность пациентов — в три раза, а доходы врачей — в три с половиной раза!
-                                                a(href="/") Читать полное описание
-
-
+                                            button(type="button" data-event='click.switchTab' data-tab='1' data-to='.product__tabs').product__read-detail Читать полное описание
                                 .product__prices
                                     .product__prices-tile Цена:
                                     .product__prices-list
@@ -69,10 +67,11 @@ block content
                 //-tabs
                 section.product__tabs
                     include ../../src/components/product-tabs/index
-                //-reviews
-                section.product__reviews
+                //-courses
+                section.product__courses
                     .container
-                        include ../../src/components/reviews-slider/index
+                        - var nav = true;
+                        include ../../src/components/courses-slider/index
                 //-slider
                 section.product__slider
                     .container

@@ -1,0 +1,16 @@
+extends ../../src/core/main
+
+block variables
+    - var title = 'Оплата'
+
+block content
+    main.page
+        .container
+            section.pay
+                .pay__img
+                    img(src="/images/content/pay/fail.webp" alt="Оплата")
+                .pay__title Оплата не прошла
+                .pay__txt Попробуйте оплатить еще раз или используйте другую карту
+                a(href="/").pay__link На главную
+
+        

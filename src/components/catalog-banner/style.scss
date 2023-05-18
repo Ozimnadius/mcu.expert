@@ -73,6 +73,9 @@
       }
     }
 
+  }
+
+  &__button{
     button {
       @include ui-btn-fill;
       @include lg-block {

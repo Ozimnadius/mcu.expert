@@ -4,6 +4,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "title desc desc link";
     gap: 40px;
+    align-items: center;
     @include xlg-block {
       gap: 20px;
     }

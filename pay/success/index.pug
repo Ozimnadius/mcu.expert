@@ -1,0 +1,16 @@
+extends ../../src/core/main
+
+block variables
+    - var title = 'Оплата'
+
+block content
+    main.page
+        .container
+            section.pay
+                .pay__img
+                    img(src="/images/content/pay/success.webp" alt="Оплата")
+                .pay__title Спасибо за заказ!
+                .pay__txt Ваша оплата прошла успешно
+                a(href="/").pay__link На главную
+
+        
