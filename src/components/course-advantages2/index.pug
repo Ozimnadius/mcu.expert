@@ -1,0 +1,42 @@
+.course-advantages2
+    .container
+        .course-advantages2__info
+            .course-advantages2__info-txt Вы получите не только теоретические знания и применимые на практике инструменты, но и 70 документов для построения архитектуры бизнеса вашей клиники: стандарты, регламенты, инструкции
+            a(href="#").course-advantages2__info-link Посмотреть список
+
+        .course-advantages2__content
+            .course-advantages2__title Преимущества курса
+            .course-advantages2__list
+                -
+                    var data = [
+                        {
+                            img:'/images/content/course-advantages2/1.svg',
+                            name: '250 часов теории и практики'
+                        },
+                        {
+                            img:'/images/content/course-advantages2/2.svg',
+                            name: '6 месяцев обучения'
+                        },
+                        {
+                            img:'/images/content/course-advantages2/3.svg',
+                            name: 'Деловые игры и разбор кейсов'
+                        },
+                        {
+                            img:'/images/content/course-advantages2/4.svg',
+                            name: 'Живое общение с автором курса'
+                        },
+                        {
+                            img:'/images/content/course-advantages2/5.svg',
+                            name: 'Диплом о профессиональной переподготовки установленного образца'
+                        },
+                        {
+                            img:'/images/content/course-advantages2/6.svg',
+                            name: 'Только 12 студентов в группе'
+                        }
+                    ];
+                each i in data
+                    .course-advantages2__item
+                        .course-advantages2__item-img
+                            img(src=i.img alt=i.name)
+                        .course-advantages2__item-name= i.name
+            .course-advantages2__txt Старт 5 потока 1 ноября 2023

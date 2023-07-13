@@ -71,6 +71,7 @@
 
   &__tariffs {
     @include margin-top(14);
+    scroll-margin: 50px;
   }
 
   &__guarantees {
@@ -98,5 +99,9 @@
 
   &__info {
     @include margin-top(10);
+  }
+
+  &__iframe{
+    display: none;
   }
 }

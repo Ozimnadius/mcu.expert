@@ -44,7 +44,7 @@
       padding-bottom: 0;
       padding-top: 40px;
     }
-    @include sm-block{
+    @include sm-block {
       padding-top: 20px;
     }
   }
@@ -60,7 +60,7 @@
   &__content {
     max-width: 740px;
     font-size: 22px;
-    @include sm-block{
+    @include sm-block {
       font-size: 16px;
     }
 
@@ -83,6 +83,34 @@
     ul {
       list-style: disc;
       padding-left: 30px;
+    }
+  }
+
+  &__btn {
+    align-self: flex-start;
+
+    button {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 120%;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      padding: 12px 38px;
+      border-radius: 100vmax;
+      cursor: pointer;
+      max-width: 100%;
+      white-space: nowrap;
+      -webkit-transition: var(--transition);
+      transition: var(--transition);
+      background-color: var(--color-red);
+      color: var(--color-white);
+
+      &:hover {
+        @media (hover: hover) and (pointer: fine) {
+          background-color: var(--color-red2);
+        }
+      }
     }
   }
 

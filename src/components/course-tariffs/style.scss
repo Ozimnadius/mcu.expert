@@ -44,11 +44,20 @@
   padding: 55px 30px;
   display: grid;
   grid-auto-rows: 1fr auto;
+  position: relative;
   @include xlg-block {
     padding: 40px 20px;
   }
   @include sm-block {
     padding: 30px 15px;
+  }
+
+  &__iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
   }
 
   &__top {

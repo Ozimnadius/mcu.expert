@@ -585,6 +585,14 @@ class Events {
             i.checked = (x==(target.dataset.tab-1));
         });
     }
+
+    openPay(e,elem){
+        e.preventDefault();
+        let root = elem.closest('.course-tariff');
+        let form = root.querySelector('.form-popup').cloneNode(true);
+
+        $.fancybox.open(form);
+    }
 }
 
 new Events();

@@ -110,13 +110,13 @@
       <div class="wrapper__content">
         <main class="page">
           <section class="page__banner">
-            <div class="banner">
+            <div class="banner" style="--banner-color: var(--color-black)">
               <div class="banner__img">
                 <picture>
-                  <source srcset="/images/content/banner/course-767.webp" media="(max-width: 767.98px)">
-                  <source srcset="/images/content/banner/course-1023.webp" media="(max-width: 1023.98px)">
-                  <source srcset="/images/content/banner/course-1439.webp" media="(max-width: 1439.98px)">
-                  <source srcset="/images/content/banner/course-1919.webp" media="(max-width: 1919.98px)"><img src="/images/content/banner/course.webp" alt="img">
+                  <source srcset="/images/content/banner/course-1-767.webp" media="(max-width: 767.98px)">
+                  <source srcset="/images/content/banner/course-1-1023.webp" media="(max-width: 1023.98px)">
+                  <source srcset="/images/content/banner/course-1-1439.webp" media="(max-width: 1439.98px)">
+                  <source srcset="/images/content/banner/course-1-1919.webp" media="(max-width: 1919.98px)"><img src="/images/content/banner/course-1.webp" alt="img">
                 </picture>
               </div>
               <div class="container">
@@ -126,19 +126,15 @@
                       <div class="bread"><a class="bread__item" href="/">Главная</a><a class="bread__item" href="/courses/">Курсы</a><span class="bread__item">Пример курса</span>
                       </div>
                     </div>
-                    <div class="banner__content"><h2>Системное управление клиникой</h2>
+                    <div class="banner__content"><h2>Системное управление клиникой 3:0</h2>
                 <br>
-               <p>На основе трёхконтурной бизнес-модели</p>
+               <p>С выдачей диплома установленного образца</p>
+               <p>Курс-практикум для собственников и управленцев</p>
                <ul>
                <li>Онлайн обучение + внедрение</li>
                <li>Старт 3 потока 30 января 2023</li>
                 </ul>
-                <p>*Лучший курс по управлению 2022 года</p>
-                <form action="/php/getForm.php" method="post" data-event="submit.openForm">
-                    <input type="hidden" name="name" value="course">
-                    <button type="submit">Записаться на курс</button>
-                </form>
-
+                <p>*Лучший курс MCU 2022 года</p>
             </div>
                     <div class="banner__btn">
                       <button data-event="click.goTo" data-to=".course__tariffs">Записаться на курс</button>
@@ -147,63 +143,66 @@
                 </div>
               </div>
             </div>
-            <div class="course-schedule">
-              <div class="container">
-                <div class="course-schedule__rows">
-                  <div class="course-schedule__row">
-                    <div class="course-schedule__wrap">
-                      <div class="course-schedule__name">Время обучения по МСК</div>
-                      <div class="course-schedule__list">
-                        <div class="course-schedule__item">09:00 - 11:00 <small>группа 1</small></div>
-                        <div class="course-schedule__item">19:00 - 21:00 <small>группа 2</small></div>
-                      </div>
+          </section>
+          <div class="page__content">
+            <div class="course">
+              <section class="course__basis">
+                <div class="container">
+                  <div class="course-basis">
+                    <div class="course-basis__left">
+                      <div class="course-basis__img"><img src="/images/content/course-basis/img.webp" alt="lorem"></div>
                     </div>
-                  </div>
-                  <div class="course-schedule__row">
-                    <div class="course-schedule__wrap">
-                      <div class="course-schedule__name">Дата начала курса:</div>
-                      <div class="course-schedule__list">
-                        <div class="course-schedule__item">Февраль<br>23 / 2023</div>
+                    <div class="course-basis__right">
+                      <div class="course-basis__svg"><svg width="574" height="674" viewBox="0 0 574 674" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M573.743 0.733398H540.156V386.809C540.156 394.288 539.68 401.649 539.084 409.01C528.007 538.414 419.623 640.038 286.941 640.038C154.259 640.038 44.9217 537.702 34.5597 407.585C33.9642 400.699 33.6068 393.814 33.6068 386.809V34.2123H270.028V202.557H438.798V371.138H270.028V572.843H303.854V404.617H472.505V169.078H303.854V0.733398H0.0195312V386.809C0.0195312 392.983 0.0195312 399.512 0.376843 405.567C9.78606 555.272 134.488 673.754 287.06 673.754C439.632 673.754 564.215 555.272 573.743 405.567C574.101 399.393 573.981 393.101 573.981 386.809V0.733398H573.743Z" fill="#F7F7F7"/>
+</svg>
                       </div>
-                    </div>
-                  </div>
-                  <div class="course-schedule__row">
-                    <div class="course-schedule__wrap">
-                      <div class="course-schedule__name">Количество мест:</div>
-                      <div class="course-schedule__list">
-                        <div class="course-schedule__item">Осталось<br>10 мест</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="course-schedule__row">
-                    <div class="course-schedule__wrap">
-                      <div class="course-schedule__name">Формат курса:</div>
-                      <div class="course-schedule__list">
-                        <div class="course-schedule__item">Онлайн обучение<br>+ внедрение</div>
+                      <div class="course-basis__content">
+                        <div class="content">
+                          <p>Курс основан на изучении и внедрении уникальной трехконтурной бизнес-модели управления клиникой. Ключевые элементы этой системы – финансы, продукты и мотивация персонала.</p>
+                          <p>Все эти вещи взаимосвязаны. Понимание этого позволяет навести порядок в клинике, выстроить работу на результат, увеличить прибыль компании.</p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
-          <div class="page__content">
-            <div class="course">
-              <section class="course__about">
+              </section>
+              <section class="course__advantages2">
                 <div class="container">
-                  <div class="course-about">
-                    <div class="course-about__left">
-                      <div class="course-about__img"><img src="/images/content/course-about/img.webp" alt="Уникальный практический курс по построению системы в клинике"></div>
-                    </div>
-                    <div class="course-about__right">
-                      <div class="course-about__content">
-                        <p>Уникальный практический курс по построению системы в клинике от эксперта-практика с 25-летним опытом в медицинском бизнесе, от частного кабинета до ТОП-117 клиник России.</p>
-                        <h4>Вас ждут:</h4>
-                        <ul>
-                          <li>Интенсивная обучающая программа</li>
-                          <li>Персональные консультации по разбору вашего запроса от ТОП-эксперта</li>
-                          <li>Нетворкинг и профессиональное сообщество</li>
-                        </ul>
+                  <div class="course-advantages2">
+                    <div class="container">
+                      <div class="course-advantages2__info">
+                        <div class="course-advantages2__info-txt">Вы получите не только теоретические знания и применимые на практике инструменты, но и 70 документов для построения архитектуры бизнеса вашей клиники: стандарты, регламенты, инструкции</div><a class="course-advantages2__info-link" href="#">Посмотреть список</a>
+                      </div>
+                      <div class="course-advantages2__content">
+                        <div class="course-advantages2__title">Преимущества курса</div>
+                        <div class="course-advantages2__list">
+                          <div class="course-advantages2__item">
+                            <div class="course-advantages2__item-img"><img src="/images/content/course-advantages2/1.svg" alt="250 часов теории и практики"></div>
+                            <div class="course-advantages2__item-name">250 часов теории и практики</div>
+                          </div>
+                          <div class="course-advantages2__item">
+                            <div class="course-advantages2__item-img"><img src="/images/content/course-advantages2/2.svg" alt="6 месяцев обучения"></div>
+                            <div class="course-advantages2__item-name">6 месяцев обучения</div>
+                          </div>
+                          <div class="course-advantages2__item">
+                            <div class="course-advantages2__item-img"><img src="/images/content/course-advantages2/3.svg" alt="Деловые игры и разбор кейсов"></div>
+                            <div class="course-advantages2__item-name">Деловые игры и разбор кейсов</div>
+                          </div>
+                          <div class="course-advantages2__item">
+                            <div class="course-advantages2__item-img"><img src="/images/content/course-advantages2/4.svg" alt="Живое общение с автором курса"></div>
+                            <div class="course-advantages2__item-name">Живое общение с автором курса</div>
+                          </div>
+                          <div class="course-advantages2__item">
+                            <div class="course-advantages2__item-img"><img src="/images/content/course-advantages2/5.svg" alt="Диплом о профессиональной переподготовки установленного образца"></div>
+                            <div class="course-advantages2__item-name">Диплом о профессиональной переподготовки установленного образца</div>
+                          </div>
+                          <div class="course-advantages2__item">
+                            <div class="course-advantages2__item-img"><img src="/images/content/course-advantages2/6.svg" alt="Только 12 студентов в группе"></div>
+                            <div class="course-advantages2__item-name">Только 12 студентов в группе</div>
+                          </div>
+                        </div>
+                        <div class="course-advantages2__txt">Старт 5 потока 1 ноября 2023</div>
                       </div>
                     </div>
                   </div>

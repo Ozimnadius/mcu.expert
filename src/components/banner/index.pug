@@ -1,4 +1,4 @@
-div(style='--banner-color: #FFFFFF').banner
+div(style=data.color).banner
     .banner__img
         picture
             source(srcset=`/images/content/banner/${data.img}-767.webp` media='(max-width: 767.98px)')
@@ -13,6 +13,8 @@ div(style='--banner-color: #FFFFFF').banner
                     - var bread = data.bread
                     include ../bread/index
                 .banner__content!= data.content
+                .banner__btn
+                    button(data-event='click.goTo' data-to='.course__tariffs') Записаться на курс
             if data.advantages
                 .banner__advantages
                     include ../banner-advantages/index
