@@ -1,0 +1,32 @@
+.course-curators{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+
+  &__title{
+    @include ui-heading-2;
+    text-align: center;
+  }
+
+  &__txt{
+    font-size: 32px;
+    text-align: center;
+    max-width: 43ch;
+  }
+
+  &__teachers{
+    display: flex;
+    gap: 40px;
+  }
+
+  &__teacher{
+    width: 350px;
+  }
+
+  &__btn{
+    button{
+      @include ui-btn-fill;
+    }
+  }
+}

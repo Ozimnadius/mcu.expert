@@ -9,6 +9,10 @@
     @include margin-top(16);
   }
 
+  &__advantages2{
+    @include margin-top(26);
+  }
+
   &__desc {
     @include margin-top(13);
   }
@@ -103,5 +107,31 @@
 
   &__iframe{
     display: none;
+  }
+
+  &__for{
+    @include margin-top(15);
+  }
+
+  &__after{
+    @include margin-top(9);
+  }
+
+  &__teacher{
+    @include margin-top(8);
+  }
+
+  &__curators{
+    @include margin-top(13);
+    padding: 120px 0;
+    background: var(--color-grey-bg) url(/images/content/bg-grey.svg) left 140px top 120px no-repeat;;
+    background-size: 574px 673px;
+  }
+
+  &__choose{
+    padding-top: 140px;
+    padding-bottom: 100px;
+    background: url("../images/content/course-choose/bg.webp") 0 0 no-repeat;
+    background-size: cover;
   }
 }

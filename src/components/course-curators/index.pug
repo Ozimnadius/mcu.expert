@@ -1,0 +1,19 @@
+.course-curators
+    .course-curators__title Кураторы курса
+    .course-curators__txt Действующие исполнительные директора клиник, где внедрена трехконтурная модель управления
+    .course-curators__teachers
+        -
+            var data = [
+                {
+                    img: '/images/content/teachers-item/5.webp'
+                },
+                {
+                    img: '/images/content/teachers-item/6.webp'
+                }
+            ];
+        each i in data
+            .course-curators__teacher
+                include ../../../src/components/teachers-item/index
+    form(action='/php/getForm.php' method='post' data-event='submit.openForm').course-curators__btn
+        input(type="hidden" name="name" value="consultation")
+        button(type="submit") Получить консультацию

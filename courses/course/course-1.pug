@@ -32,6 +32,9 @@ block content
                                <li>Старт 3 потока 30 января 2023</li>
                                 </ul>
                                 <p>*Лучший курс MCU 2022 года</p>
+                                <button type="button" data-event="click.goTo" data-to=".course__tariffs">Записаться
+                                                                на курс
+                                                            </button>
                             `
                 };
             include ../../src/components/banner/index
@@ -43,68 +46,77 @@ block content
                         include ../../src/components/course-basis/index
                 //-advantages2
                 section.course__advantages2
+                    include ../../src/components/course-advantages2/index
+                //-for
+                section.course__for
                     .container
-                        include ../../src/components/course-advantages2/index
-
-                //-advantages
-                section.course__advantages
+                        include ../../src/components/course-for/index
+                //-after
+                section.course__after
+                    include ../../src/components/course-after/index
+                //-for
+                section.course__teacher
+                    include ../../src/components/course-teacher/index
+                //-curators
+                section.course__curators
                     .container
-                        include ../../src/components/course-advantages/index
-                //-desc
-                section.course__desc
+                        include ../../src/components/course-curators/index
+                //-choose
+                section.course__choose
                     .container
-                        include ../../src/components/course-desc/index
-                //-histories
-                section.course__histories
-                    .container
-                        include ../../src/components/course-histories/index
-                //-process
-                section.course__process
-                    .container
-                        include ../../src/components/course-process/index
-                //-program
-                section.course__program
-                    .container
-                        include ../../src/components/course-program/index
-                //-teachers
-                section.course__teachers
-                    .container
-                        -
-                            var data = {
-                                title: 'Преподаватели курса',
-                                link: true,
-                                list: [
-                                    {
-                                        img: '/images/content/teachers-item/1.webp'
-                                    },
-                                    {
-                                        img: '/images/content/teachers-item/2.webp'
-                                    },
-                                    {
-                                        img: '/images/content/teachers-item/3.webp'
-                                    },
-                                    {
-                                        img: '/images/content/teachers-item/4.webp'
-                                    },
-                                    {
-                                        img: '/images/content/teachers-item/1.webp'
-                                    },
-                                    {
-                                        img: '/images/content/teachers-item/2.webp'
-                                    },
-                                    {
-                                        img: '/images/content/teachers-item/3.webp'
-                                    },
-                                    {
-                                        img: '/images/content/teachers-item/4.webp'
-                                    }
-                                ]
-                            };
-                        include ../../src/components/teachers-slider/index
+                        include ../../src/components/course-choose/index
                 //-tariffs
                 section.course__tariffs
                     .container
+                        -
+                            var data = {
+                                title: 'Форма обучения',
+                                list: [
+                                    {
+                                        name: '«Самостоятельный» без выдачи диплома',
+                                        ul: [
+                                            '150 видеоуроков',
+                                            'Перечень заданий для самостоятельной работы',
+                                            'Книга «Эффективная бизнес - модель современной клиники»',
+                                        ],
+                                    },
+                                    {
+                                        name: '«Академический» с выдачей диплома',
+                                        ul: [
+                                            '150 видеоуроков',
+                                            '70 документов',
+                                            'Обучение до трех руководителей',
+                                            'Перечень заданий для самостоятельной работы',
+                                            'Книга «Эффективная бизнес - модель современной клиники»',
+                                            'Живые мастер - классы с автором курса / куратором',
+                                            'Разборы кейсов / деловые игры / решение управленческих задач',
+                                            'Закрытый чат с экспертами и коллегами',
+                                            'Диплом о профессиональной переподготовке(250 ч.)',
+                                        ],
+                                    },
+                                    {
+                                        name: '«Академический» с менторингом',
+                                        ul: [
+                                            '150 видеоуроков',
+                                            '70 документов: стандарты, регламенты, инструкции',
+                                            'Обучение до трех руководителей',
+                                            'Перечень заданий для самостоятельной работы',
+                                            'Книга «Эффективная бизнес - модель современной клиники»',
+                                            'Живые мастер - классы с автором курса / куратором',
+                                            'Разборы кейсов / деловые игры / решение управленческих задач',
+                                            'Закрытый чат с экспертами и коллегами',
+                                            'Диплом о профессиональной переподготовке(250 ч.)',
+                                            'Менторские сессии с руководителем(6 сессий)',
+                                        ],
+                                    }
+                                ],
+                                btn: 'Запросить программу и стоимость'
+                            };
                         include ../../src/components/course-tariffs/index
+                //-reviews
+                section.course__reviews
+                    .container
+                        include ../../src/components/course-reviews/index
                 //-guarantees
                 section.course__guarantees
                     .container

@@ -1,0 +1,29 @@
+.course-after{
+  --container-width: 1500px;
+  padding: 160px 0;
+  background: var(--color-grey-bg) url("/images/content/bg-grey.svg") right 120px top 60px no-repeat;
+  background-size: 574px 673px;
+
+  &__title{
+    @include ui-heading-2;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  &__list{
+    @include ui-ul-checkbox;
+    display:grid;
+    gap: 30px;
+
+    li{
+      font-size: 32px;
+      padding-left: 90px;
+
+      &:before{
+        width: 34px;
+        height: 34px;
+      }
+    }
+
+  }
+}

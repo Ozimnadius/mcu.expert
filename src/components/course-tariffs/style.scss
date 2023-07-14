@@ -1,22 +1,36 @@
+@use "sass:math";
 .course-tariffs {
+  display: flex;
+  flex-direction: column;
+
   &__title {
     @include ui-heading-2;
+    text-align: center;
   }
 
   &__list {
     margin-top: 45px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    //display: grid;
+    //grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -20px;
+    margin-right: -20px;
+
     @include xlg-block {
-      gap: 20px;
+      margin-left: -10px;
+      margin-right: -10px;
     }
     @include md-block {
       display: flex;
+      flex-wrap: nowrap;
+      justify-content: initial;
       overflow: auto;
       margin-left: calc(0px - var(--offset));
       margin-right: calc(0px - var(--offset));
       padding: 0 var(--offset);
+      gap: 20px;
 
       &::-webkit-scrollbar {
         display: none;
@@ -28,13 +42,29 @@
   }
 
   &__item {
+    width: calc(100%/3 - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+    @include xlg-block {
+      margin-left: 10px;
+      margin-right: 10px;
+      width: calc(100%/3 - 20px);
+    }
     @include md-block {
+      margin-left: 0px;
+      margin-right: 0px;
       width: 387px;
       flex-shrink: 0;
     }
     @include sm-block {
       width: 310px;
     }
+  }
+
+  &__btn{
+    @include ui-btn-fill;
+    align-self: center;
+    margin-top: 70px;
   }
 }
 
@@ -52,7 +82,7 @@
     padding: 30px 15px;
   }
 
-  &__iframe{
+  &__iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -93,7 +123,7 @@
       margin-top: 20px;
     }
 
-    ul{
+    ul {
       list-style: disc;
       display: grid;
       line-height: 195%;
@@ -129,12 +159,20 @@
   }
 
   &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    @include xlg-block {
+      gap: 10px;
+    }
   }
 
   &__price {
-    font-size: 48px;
+    text-align: center;
+    font-size: 32px;
     font-weight: 700;
-    color: var(--color-red);
+    //color: var(--color-red);
     @include lg-block {
       font-size: 40px;
     }
@@ -144,10 +182,7 @@
   }
 
   &__btn {
-    margin-top: 30px;
-    @include xlg-block {
-      margin-top: 10px;
-    }
+
 
     button {
       @include ui-btn-border;

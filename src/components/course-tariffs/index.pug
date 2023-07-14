@@ -1,50 +1,10 @@
 .course-tariffs
-    .course-tariffs__title Тарифы
+    .course-tariffs__title= data.title
     .course-tariffs__list
-        -
-            var data=[
-                {
-                    name: 'САМОСТОЯТЕЛЬНЫЙ',
-                    ul: [
-                        'Доступ к 150 видео урокам на 6 месяцев',
-                        'Домашние задания',
-                        'Стартовая и заключительная консультация по разбору бизнеса с ТОП - экспертом',
-                        'Участие в сообществе управленцев',
-                        'Диплом об обучении,'
-                    ],
-                    price: '99 000 ₽'
-                },
-                {
-                    name: 'С КУРАТОРОМ',
-                    ul: [
-                        'Доступ к 150 видео урокам на 6 месяцев',
-                        'Домашние задания',
-                        'Стартовая и заключительная консультация по разбору бизнеса с ТОП - экспертом',
-                        '6 «живых» вебинаров по темам курса',
-                        'Участие в сообществе управленцев',
-                        'Сопровождение куратора бизнес - практика',
-                        'Пакет <a href="/">стандартов и регламентов</a>',
-                        'Диплом об обучении',
-                    ],
-                    price: '150 000 ₽'
-                },
-                {
-                    name: 'С ВНЕДРЕНИЕМ',
-                    ul: [
-                        'Доступ к 150 видео урокам на 6 месяцев',
-                        'Домашние задания',
-                        'Стартовая и заключительная консультация по разбору бизнеса с ТОП - экспертом',
-                        '6 «живых» вебинаров по темам курса',
-                        'Участие в сообществе управленцев',
-                        'Сопровождение куратора бизнес - практика, выезд в клинику – по запросу',
-                        'Пакет <a href="/">стандартов и регламентов</a>, адаптированный к вашей клинике',
-                        'Диплом об обучении'
-                    ],
-                    price: '360 000 ₽'
-                }
-            ];
-        each i in data
+        each i in data.list
             .course-tariffs__item.course-tariff
+                .course-tariff__iframe.
+                    <div class="form-popup form-popup--pay" style="overflow: hidden; height: 589px;"> <iframe src="https://medicalcorporateuniversity.getcourse.ru/pl/lite/widget/widget?&amp;id=524367&amp;ref=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2F&amp;loc=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2Fsistemnoe-upravlenie-klinikoy%2F" allowfullscreen="allowfullscreen" class="28" id="97a41e585b87d698640e3fdef5ce29c9a38e57ae_28" name="28" style="width: 100%; height: 589px; border: none; overflow: hidden;"></iframe></div>
                 .course-tariff__top
                     .course-tariff__sub ПАКЕТ
                     .course-tariff__title= i.name
@@ -52,9 +12,14 @@
                         ul
                             each li in i.ul
                                 li!=li
-                    .course-tariff__desc Книга «Эффективная бизнес-модель современной клиники» в подарок!
+                    //.course-tariff__desc Книга «Эффективная бизнес-модель современной клиники» в подарок!
                 .course-tariff__bottom
-                    .course-tariff__price= i.price
-                    form(action='/php/getForm.php' method='post' data-event='submit.openForm').course-tariff__btn
-                        input(type='hidden' name='name' value='course')
-                        button(type='submit') Записаться на курс
+                    if i.price
+                        .course-tariff__price= i.price
+                    //form(action='/php/getForm.php' method='post' data-event='submit.openForm').course-tariff__btn
+                    //    input(type='hidden' name='name' value='course')
+                    //    button(type='submit') Записаться на курс
+                    .course-tariff__btn
+                        button(type="submit" data-event="click.openPay") Записаться на курс
+    if data.btn
+        button(type="button" data-event="click.goTo" data-to=".course__tariffs").course-tariffs__btn= data.btn
