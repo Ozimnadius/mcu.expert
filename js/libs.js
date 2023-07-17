@@ -1,5 +1,6 @@
 //LIBS
 
+
 /*! jQuery v3.7.0 | (c) OpenJS Foundation and other contributors | jquery.org/license */
 !function(e,t){"use strict";"object"==typeof module&&"object"==typeof module.exports?module.exports=e.document?t(e,!0):function(e){if(!e.document)throw new Error("jQuery requires a window with a document");return t(e)}:t(e)}("undefined"!=typeof window?window:this,function(ie,e){"use strict";var oe=[],r=Object.getPrototypeOf,ae=oe.slice,g=oe.flat?function(e){return oe.flat.call(e)}:function(e){return oe.concat.apply([],e)},s=oe.push,se=oe.indexOf,n={},i=n.toString,ue=n.hasOwnProperty,o=ue.toString,a=o.call(Object),le={},v=function(e){return"function"==typeof e&&"number"!=typeof e.nodeType&&"function"!=typeof e.item},y=function(e){return null!=e&&e===e.window},C=ie.document,u={type:!0,src:!0,nonce:!0,noModule:!0};function m(e,t,n){var r,i,o=(n=n||C).createElement("script");if(o.text=e,t)for(r in u)(i=t[r]||t.getAttribute&&t.getAttribute(r))&&o.setAttribute(r,i);n.head.appendChild(o).parentNode.removeChild(o)}function x(e){return null==e?e+"":"object"==typeof e||"function"==typeof e?n[i.call(e)]||"object":typeof e}var t="3.7.0",l=/HTML$/i,ce=function(e,t){return new ce.fn.init(e,t)};function c(e){var t=!!e&&"length"in e&&e.length,n=x(e);return!v(e)&&!y(e)&&("array"===n||0===t||"number"==typeof t&&0<t&&t-1 in e)}function fe(e,t){return e.nodeName&&e.nodeName.toLowerCase()===t.toLowerCase()}ce.fn=ce.prototype={jquery:t,constructor:ce,length:0,toArray:function(){return ae.call(this)},get:function(e){return null==e?ae.call(this):e<0?this[e+this.length]:this[e]},pushStack:function(e){var t=ce.merge(this.constructor(),e);return t.prevObject=this,t},each:function(e){return ce.each(this,e)},map:function(n){return this.pushStack(ce.map(this,function(e,t){return n.call(e,t,e)}))},slice:function(){return this.pushStack(ae.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},even:function(){return this.pushStack(ce.grep(this,function(e,t){return(t+1)%2}))},odd:function(){return this.pushStack(ce.grep(this,function(e,t){return t%2}))},eq:function(e){var t=this.length,n=+e+(e<0?t:0);return this.pushStack(0<=n&&n<t?[this[n]]:[])},end:function(){return this.prevObject||this.constructor()},push:s,sort:oe.sort,splice:oe.splice},ce.extend=ce.fn.extend=function(){var e,t,n,r,i,o,a=arguments[0]||{},s=1,u=arguments.length,l=!1;for("boolean"==typeof a&&(l=a,a=arguments[s]||{},s++),"object"==typeof a||v(a)||(a={}),s===u&&(a=this,s--);s<u;s++)if(null!=(e=arguments[s]))for(t in e)r=e[t],"__proto__"!==t&&a!==r&&(l&&r&&(ce.isPlainObject(r)||(i=Array.isArray(r)))?(n=a[t],o=i&&!Array.isArray(n)?[]:i||ce.isPlainObject(n)?n:{},i=!1,a[t]=ce.extend(l,o,r)):void 0!==r&&(a[t]=r));return a},ce.extend({expando:"jQuery"+(t+Math.random()).replace(/\D/g,""),isReady:!0,error:function(e){throw new Error(e)},noop:function(){},isPlainObject:function(e){var t,n;return!(!e||"[object Object]"!==i.call(e))&&(!(t=r(e))||"function"==typeof(n=ue.call(t,"constructor")&&t.constructor)&&o.call(n)===a)},isEmptyObject:function(e){var t;for(t in e)return!1;return!0},globalEval:function(e,t,n){m(e,{nonce:t&&t.nonce},n)},each:function(e,t){var n,r=0;if(c(e)){for(n=e.length;r<n;r++)if(!1===t.call(e[r],r,e[r]))break}else for(r in e)if(!1===t.call(e[r],r,e[r]))break;return e},text:function(e){var t,n="",r=0,i=e.nodeType;if(i){if(1===i||9===i||11===i)return e.textContent;if(3===i||4===i)return e.nodeValue}else while(t=e[r++])n+=ce.text(t);return n},makeArray:function(e,t){var n=t||[];return null!=e&&(c(Object(e))?ce.merge(n,"string"==typeof e?[e]:e):s.call(n,e)),n},inArray:function(e,t,n){return null==t?-1:se.call(t,e,n)},isXMLDoc:function(e){var t=e&&e.namespaceURI,n=e&&(e.ownerDocument||e).documentElement;return!l.test(t||n&&n.nodeName||"HTML")},merge:function(e,t){for(var n=+t.length,r=0,i=e.length;r<n;r++)e[i++]=t[r];return e.length=i,e},grep:function(e,t,n){for(var r=[],i=0,o=e.length,a=!n;i<o;i++)!t(e[i],i)!==a&&r.push(e[i]);return r},map:function(e,t,n){var r,i,o=0,a=[];if(c(e))for(r=e.length;o<r;o++)null!=(i=t(e[o],o,n))&&a.push(i);else for(o in e)null!=(i=t(e[o],o,n))&&a.push(i);return g(a)},guid:1,support:le}),"function"==typeof Symbol&&(ce.fn[Symbol.iterator]=oe[Symbol.iterator]),ce.each("Boolean Number String Function Array Date RegExp Object Error Symbol".split(" "),function(e,t){n["[object "+t+"]"]=t.toLowerCase()});var pe=oe.pop,de=oe.sort,he=oe.splice,ge="[\\x20\\t\\r\\n\\f]",ve=new RegExp("^"+ge+"+|((?:^|[^\\\\])(?:\\\\.)*)"+ge+"+$","g");ce.contains=function(e,t){var n=t&&t.parentNode;return e===n||!(!n||1!==n.nodeType||!(e.contains?e.contains(n):e.compareDocumentPosition&&16&e.compareDocumentPosition(n)))};var f=/([\0-\x1f\x7f]|^-?\d)|^-$|[^\x80-\uFFFF\w-]/g;function p(e,t){return t?"\0"===e?"\ufffd":e.slice(0,-1)+"\\"+e.charCodeAt(e.length-1).toString(16)+" ":"\\"+e}ce.escapeSelector=function(e){return(e+"").replace(f,p)};var ye=C,me=s;!function(){var e,b,w,o,a,T,r,C,d,i,k=me,S=ce.expando,E=0,n=0,s=W(),c=W(),u=W(),h=W(),l=function(e,t){return e===t&&(a=!0),0},f="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",t="(?:\\\\[\\da-fA-F]{1,6}"+ge+"?|\\\\[^\\r\\n\\f]|[\\w-]|[^\0-\\x7f])+",p="\\["+ge+"*("+t+")(?:"+ge+"*([*^$|!~]?=)"+ge+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+t+"))|)"+ge+"*\\]",g=":("+t+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+p+")*)|.*)\\)|)",v=new RegExp(ge+"+","g"),y=new RegExp("^"+ge+"*,"+ge+"*"),m=new RegExp("^"+ge+"*([>+~]|"+ge+")"+ge+"*"),x=new RegExp(ge+"|>"),j=new RegExp(g),A=new RegExp("^"+t+"$"),D={ID:new RegExp("^#("+t+")"),CLASS:new RegExp("^\\.("+t+")"),TAG:new RegExp("^("+t+"|[*])"),ATTR:new RegExp("^"+p),PSEUDO:new RegExp("^"+g),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+ge+"*(even|odd|(([+-]|)(\\d*)n|)"+ge+"*(?:([+-]|)"+ge+"*(\\d+)|))"+ge+"*\\)|)","i"),bool:new RegExp("^(?:"+f+")$","i"),needsContext:new RegExp("^"+ge+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+ge+"*((?:-\\d)?\\d*)"+ge+"*\\)|)(?=[^-]|$)","i")},N=/^(?:input|select|textarea|button)$/i,q=/^h\d$/i,L=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,H=/[+~]/,O=new RegExp("\\\\[\\da-fA-F]{1,6}"+ge+"?|\\\\([^\\r\\n\\f])","g"),P=function(e,t){var n="0x"+e.slice(1)-65536;return t||(n<0?String.fromCharCode(n+65536):String.fromCharCode(n>>10|55296,1023&n|56320))},R=function(){V()},M=J(function(e){return!0===e.disabled&&fe(e,"fieldset")},{dir:"parentNode",next:"legend"});try{k.apply(oe=ae.call(ye.childNodes),ye.childNodes),oe[ye.childNodes.length].nodeType}catch(e){k={apply:function(e,t){me.apply(e,ae.call(t))},call:function(e){me.apply(e,ae.call(arguments,1))}}}function I(t,e,n,r){var i,o,a,s,u,l,c,f=e&&e.ownerDocument,p=e?e.nodeType:9;if(n=n||[],"string"!=typeof t||!t||1!==p&&9!==p&&11!==p)return n;if(!r&&(V(e),e=e||T,C)){if(11!==p&&(u=L.exec(t)))if(i=u[1]){if(9===p){if(!(a=e.getElementById(i)))return n;if(a.id===i)return k.call(n,a),n}else if(f&&(a=f.getElementById(i))&&I.contains(e,a)&&a.id===i)return k.call(n,a),n}else{if(u[2])return k.apply(n,e.getElementsByTagName(t)),n;if((i=u[3])&&e.getElementsByClassName)return k.apply(n,e.getElementsByClassName(i)),n}if(!(h[t+" "]||d&&d.test(t))){if(c=t,f=e,1===p&&(x.test(t)||m.test(t))){(f=H.test(t)&&z(e.parentNode)||e)==e&&le.scope||((s=e.getAttribute("id"))?s=ce.escapeSelector(s):e.setAttribute("id",s=S)),o=(l=Y(t)).length;while(o--)l[o]=(s?"#"+s:":scope")+" "+Q(l[o]);c=l.join(",")}try{return k.apply(n,f.querySelectorAll(c)),n}catch(e){h(t,!0)}finally{s===S&&e.removeAttribute("id")}}}return re(t.replace(ve,"$1"),e,n,r)}function W(){var r=[];return function e(t,n){return r.push(t+" ")>b.cacheLength&&delete e[r.shift()],e[t+" "]=n}}function F(e){return e[S]=!0,e}function $(e){var t=T.createElement("fieldset");try{return!!e(t)}catch(e){return!1}finally{t.parentNode&&t.parentNode.removeChild(t),t=null}}function B(t){return function(e){return fe(e,"input")&&e.type===t}}function _(t){return function(e){return(fe(e,"input")||fe(e,"button"))&&e.type===t}}function X(t){return function(e){return"form"in e?e.parentNode&&!1===e.disabled?"label"in e?"label"in e.parentNode?e.parentNode.disabled===t:e.disabled===t:e.isDisabled===t||e.isDisabled!==!t&&M(e)===t:e.disabled===t:"label"in e&&e.disabled===t}}function U(a){return F(function(o){return o=+o,F(function(e,t){var n,r=a([],e.length,o),i=r.length;while(i--)e[n=r[i]]&&(e[n]=!(t[n]=e[n]))})})}function z(e){return e&&"undefined"!=typeof e.getElementsByTagName&&e}function V(e){var t,n=e?e.ownerDocument||e:ye;return n!=T&&9===n.nodeType&&n.documentElement&&(r=(T=n).documentElement,C=!ce.isXMLDoc(T),i=r.matches||r.webkitMatchesSelector||r.msMatchesSelector,ye!=T&&(t=T.defaultView)&&t.top!==t&&t.addEventListener("unload",R),le.getById=$(function(e){return r.appendChild(e).id=ce.expando,!T.getElementsByName||!T.getElementsByName(ce.expando).length}),le.disconnectedMatch=$(function(e){return i.call(e,"*")}),le.scope=$(function(){return T.querySelectorAll(":scope")}),le.cssHas=$(function(){try{return T.querySelector(":has(*,:jqfake)"),!1}catch(e){return!0}}),le.getById?(b.filter.ID=function(e){var t=e.replace(O,P);return function(e){return e.getAttribute("id")===t}},b.find.ID=function(e,t){if("undefined"!=typeof t.getElementById&&C){var n=t.getElementById(e);return n?[n]:[]}}):(b.filter.ID=function(e){var n=e.replace(O,P);return function(e){var t="undefined"!=typeof e.getAttributeNode&&e.getAttributeNode("id");return t&&t.value===n}},b.find.ID=function(e,t){if("undefined"!=typeof t.getElementById&&C){var n,r,i,o=t.getElementById(e);if(o){if((n=o.getAttributeNode("id"))&&n.value===e)return[o];i=t.getElementsByName(e),r=0;while(o=i[r++])if((n=o.getAttributeNode("id"))&&n.value===e)return[o]}return[]}}),b.find.TAG=function(e,t){return"undefined"!=typeof t.getElementsByTagName?t.getElementsByTagName(e):t.querySelectorAll(e)},b.find.CLASS=function(e,t){if("undefined"!=typeof t.getElementsByClassName&&C)return t.getElementsByClassName(e)},d=[],$(function(e){var t;r.appendChild(e).innerHTML="<a id='"+S+"' href='' disabled='disabled'></a><select id='"+S+"-\r\\' disabled='disabled'><option selected=''></option></select>",e.querySelectorAll("[selected]").length||d.push("\\["+ge+"*(?:value|"+f+")"),e.querySelectorAll("[id~="+S+"-]").length||d.push("~="),e.querySelectorAll("a#"+S+"+*").length||d.push(".#.+[+~]"),e.querySelectorAll(":checked").length||d.push(":checked"),(t=T.createElement("input")).setAttribute("type","hidden"),e.appendChild(t).setAttribute("name","D"),r.appendChild(e).disabled=!0,2!==e.querySelectorAll(":disabled").length&&d.push(":enabled",":disabled"),(t=T.createElement("input")).setAttribute("name",""),e.appendChild(t),e.querySelectorAll("[name='']").length||d.push("\\["+ge+"*name"+ge+"*="+ge+"*(?:''|\"\")")}),le.cssHas||d.push(":has"),d=d.length&&new RegExp(d.join("|")),l=function(e,t){if(e===t)return a=!0,0;var n=!e.compareDocumentPosition-!t.compareDocumentPosition;return n||(1&(n=(e.ownerDocument||e)==(t.ownerDocument||t)?e.compareDocumentPosition(t):1)||!le.sortDetached&&t.compareDocumentPosition(e)===n?e===T||e.ownerDocument==ye&&I.contains(ye,e)?-1:t===T||t.ownerDocument==ye&&I.contains(ye,t)?1:o?se.call(o,e)-se.call(o,t):0:4&n?-1:1)}),T}for(e in I.matches=function(e,t){return I(e,null,null,t)},I.matchesSelector=function(e,t){if(V(e),C&&!h[t+" "]&&(!d||!d.test(t)))try{var n=i.call(e,t);if(n||le.disconnectedMatch||e.document&&11!==e.document.nodeType)return n}catch(e){h(t,!0)}return 0<I(t,T,null,[e]).length},I.contains=function(e,t){return(e.ownerDocument||e)!=T&&V(e),ce.contains(e,t)},I.attr=function(e,t){(e.ownerDocument||e)!=T&&V(e);var n=b.attrHandle[t.toLowerCase()],r=n&&ue.call(b.attrHandle,t.toLowerCase())?n(e,t,!C):void 0;return void 0!==r?r:e.getAttribute(t)},I.error=function(e){throw new Error("Syntax error, unrecognized expression: "+e)},ce.uniqueSort=function(e){var t,n=[],r=0,i=0;if(a=!le.sortStable,o=!le.sortStable&&ae.call(e,0),de.call(e,l),a){while(t=e[i++])t===e[i]&&(r=n.push(i));while(r--)he.call(e,n[r],1)}return o=null,e},ce.fn.uniqueSort=function(){return this.pushStack(ce.uniqueSort(ae.apply(this)))},(b=ce.expr={cacheLength:50,createPseudo:F,match:D,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(e){return e[1]=e[1].replace(O,P),e[3]=(e[3]||e[4]||e[5]||"").replace(O,P),"~="===e[2]&&(e[3]=" "+e[3]+" "),e.slice(0,4)},CHILD:function(e){return e[1]=e[1].toLowerCase(),"nth"===e[1].slice(0,3)?(e[3]||I.error(e[0]),e[4]=+(e[4]?e[5]+(e[6]||1):2*("even"===e[3]||"odd"===e[3])),e[5]=+(e[7]+e[8]||"odd"===e[3])):e[3]&&I.error(e[0]),e},PSEUDO:function(e){var t,n=!e[6]&&e[2];return D.CHILD.test(e[0])?null:(e[3]?e[2]=e[4]||e[5]||"":n&&j.test(n)&&(t=Y(n,!0))&&(t=n.indexOf(")",n.length-t)-n.length)&&(e[0]=e[0].slice(0,t),e[2]=n.slice(0,t)),e.slice(0,3))}},filter:{TAG:function(e){var t=e.replace(O,P).toLowerCase();return"*"===e?function(){return!0}:function(e){return fe(e,t)}},CLASS:function(e){var t=s[e+" "];return t||(t=new RegExp("(^|"+ge+")"+e+"("+ge+"|$)"))&&s(e,function(e){return t.test("string"==typeof e.className&&e.className||"undefined"!=typeof e.getAttribute&&e.getAttribute("class")||"")})},ATTR:function(n,r,i){return function(e){var t=I.attr(e,n);return null==t?"!="===r:!r||(t+="","="===r?t===i:"!="===r?t!==i:"^="===r?i&&0===t.indexOf(i):"*="===r?i&&-1<t.indexOf(i):"$="===r?i&&t.slice(-i.length)===i:"~="===r?-1<(" "+t.replace(v," ")+" ").indexOf(i):"|="===r&&(t===i||t.slice(0,i.length+1)===i+"-"))}},CHILD:function(d,e,t,h,g){var v="nth"!==d.slice(0,3),y="last"!==d.slice(-4),m="of-type"===e;return 1===h&&0===g?function(e){return!!e.parentNode}:function(e,t,n){var r,i,o,a,s,u=v!==y?"nextSibling":"previousSibling",l=e.parentNode,c=m&&e.nodeName.toLowerCase(),f=!n&&!m,p=!1;if(l){if(v){while(u){o=e;while(o=o[u])if(m?fe(o,c):1===o.nodeType)return!1;s=u="only"===d&&!s&&"nextSibling"}return!0}if(s=[y?l.firstChild:l.lastChild],y&&f){p=(a=(r=(i=l[S]||(l[S]={}))[d]||[])[0]===E&&r[1])&&r[2],o=a&&l.childNodes[a];while(o=++a&&o&&o[u]||(p=a=0)||s.pop())if(1===o.nodeType&&++p&&o===e){i[d]=[E,a,p];break}}else if(f&&(p=a=(r=(i=e[S]||(e[S]={}))[d]||[])[0]===E&&r[1]),!1===p)while(o=++a&&o&&o[u]||(p=a=0)||s.pop())if((m?fe(o,c):1===o.nodeType)&&++p&&(f&&((i=o[S]||(o[S]={}))[d]=[E,p]),o===e))break;return(p-=g)===h||p%h==0&&0<=p/h}}},PSEUDO:function(e,o){var t,a=b.pseudos[e]||b.setFilters[e.toLowerCase()]||I.error("unsupported pseudo: "+e);return a[S]?a(o):1<a.length?(t=[e,e,"",o],b.setFilters.hasOwnProperty(e.toLowerCase())?F(function(e,t){var n,r=a(e,o),i=r.length;while(i--)e[n=se.call(e,r[i])]=!(t[n]=r[i])}):function(e){return a(e,0,t)}):a}},pseudos:{not:F(function(e){var r=[],i=[],s=ne(e.replace(ve,"$1"));return s[S]?F(function(e,t,n,r){var i,o=s(e,null,r,[]),a=e.length;while(a--)(i=o[a])&&(e[a]=!(t[a]=i))}):function(e,t,n){return r[0]=e,s(r,null,n,i),r[0]=null,!i.pop()}}),has:F(function(t){return function(e){return 0<I(t,e).length}}),contains:F(function(t){return t=t.replace(O,P),function(e){return-1<(e.textContent||ce.text(e)).indexOf(t)}}),lang:F(function(n){return A.test(n||"")||I.error("unsupported lang: "+n),n=n.replace(O,P).toLowerCase(),function(e){var t;do{if(t=C?e.lang:e.getAttribute("xml:lang")||e.getAttribute("lang"))return(t=t.toLowerCase())===n||0===t.indexOf(n+"-")}while((e=e.parentNode)&&1===e.nodeType);return!1}}),target:function(e){var t=ie.location&&ie.location.hash;return t&&t.slice(1)===e.id},root:function(e){return e===r},focus:function(e){return e===function(){try{return T.activeElement}catch(e){}}()&&T.hasFocus()&&!!(e.type||e.href||~e.tabIndex)},enabled:X(!1),disabled:X(!0),checked:function(e){return fe(e,"input")&&!!e.checked||fe(e,"option")&&!!e.selected},selected:function(e){return e.parentNode&&e.parentNode.selectedIndex,!0===e.selected},empty:function(e){for(e=e.firstChild;e;e=e.nextSibling)if(e.nodeType<6)return!1;return!0},parent:function(e){return!b.pseudos.empty(e)},header:function(e){return q.test(e.nodeName)},input:function(e){return N.test(e.nodeName)},button:function(e){return fe(e,"input")&&"button"===e.type||fe(e,"button")},text:function(e){var t;return fe(e,"input")&&"text"===e.type&&(null==(t=e.getAttribute("type"))||"text"===t.toLowerCase())},first:U(function(){return[0]}),last:U(function(e,t){return[t-1]}),eq:U(function(e,t,n){return[n<0?n+t:n]}),even:U(function(e,t){for(var n=0;n<t;n+=2)e.push(n);return e}),odd:U(function(e,t){for(var n=1;n<t;n+=2)e.push(n);return e}),lt:U(function(e,t,n){var r;for(r=n<0?n+t:t<n?t:n;0<=--r;)e.push(r);return e}),gt:U(function(e,t,n){for(var r=n<0?n+t:n;++r<t;)e.push(r);return e})}}).pseudos.nth=b.pseudos.eq,{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})b.pseudos[e]=B(e);for(e in{submit:!0,reset:!0})b.pseudos[e]=_(e);function G(){}function Y(e,t){var n,r,i,o,a,s,u,l=c[e+" "];if(l)return t?0:l.slice(0);a=e,s=[],u=b.preFilter;while(a){for(o in n&&!(r=y.exec(a))||(r&&(a=a.slice(r[0].length)||a),s.push(i=[])),n=!1,(r=m.exec(a))&&(n=r.shift(),i.push({value:n,type:r[0].replace(ve," ")}),a=a.slice(n.length)),b.filter)!(r=D[o].exec(a))||u[o]&&!(r=u[o](r))||(n=r.shift(),i.push({value:n,type:o,matches:r}),a=a.slice(n.length));if(!n)break}return t?a.length:a?I.error(e):c(e,s).slice(0)}function Q(e){for(var t=0,n=e.length,r="";t<n;t++)r+=e[t].value;return r}function J(a,e,t){var s=e.dir,u=e.next,l=u||s,c=t&&"parentNode"===l,f=n++;return e.first?function(e,t,n){while(e=e[s])if(1===e.nodeType||c)return a(e,t,n);return!1}:function(e,t,n){var r,i,o=[E,f];if(n){while(e=e[s])if((1===e.nodeType||c)&&a(e,t,n))return!0}else while(e=e[s])if(1===e.nodeType||c)if(i=e[S]||(e[S]={}),u&&fe(e,u))e=e[s]||e;else{if((r=i[l])&&r[0]===E&&r[1]===f)return o[2]=r[2];if((i[l]=o)[2]=a(e,t,n))return!0}return!1}}function K(i){return 1<i.length?function(e,t,n){var r=i.length;while(r--)if(!i[r](e,t,n))return!1;return!0}:i[0]}function Z(e,t,n,r,i){for(var o,a=[],s=0,u=e.length,l=null!=t;s<u;s++)(o=e[s])&&(n&&!n(o,r,i)||(a.push(o),l&&t.push(s)));return a}function ee(d,h,g,v,y,e){return v&&!v[S]&&(v=ee(v)),y&&!y[S]&&(y=ee(y,e)),F(function(e,t,n,r){var i,o,a,s,u=[],l=[],c=t.length,f=e||function(e,t,n){for(var r=0,i=t.length;r<i;r++)I(e,t[r],n);return n}(h||"*",n.nodeType?[n]:n,[]),p=!d||!e&&h?f:Z(f,u,d,n,r);if(g?g(p,s=y||(e?d:c||v)?[]:t,n,r):s=p,v){i=Z(s,l),v(i,[],n,r),o=i.length;while(o--)(a=i[o])&&(s[l[o]]=!(p[l[o]]=a))}if(e){if(y||d){if(y){i=[],o=s.length;while(o--)(a=s[o])&&i.push(p[o]=a);y(null,s=[],i,r)}o=s.length;while(o--)(a=s[o])&&-1<(i=y?se.call(e,a):u[o])&&(e[i]=!(t[i]=a))}}else s=Z(s===t?s.splice(c,s.length):s),y?y(null,t,s,r):k.apply(t,s)})}function te(e){for(var i,t,n,r=e.length,o=b.relative[e[0].type],a=o||b.relative[" "],s=o?1:0,u=J(function(e){return e===i},a,!0),l=J(function(e){return-1<se.call(i,e)},a,!0),c=[function(e,t,n){var r=!o&&(n||t!=w)||((i=t).nodeType?u(e,t,n):l(e,t,n));return i=null,r}];s<r;s++)if(t=b.relative[e[s].type])c=[J(K(c),t)];else{if((t=b.filter[e[s].type].apply(null,e[s].matches))[S]){for(n=++s;n<r;n++)if(b.relative[e[n].type])break;return ee(1<s&&K(c),1<s&&Q(e.slice(0,s-1).concat({value:" "===e[s-2].type?"*":""})).replace(ve,"$1"),t,s<n&&te(e.slice(s,n)),n<r&&te(e=e.slice(n)),n<r&&Q(e))}c.push(t)}return K(c)}function ne(e,t){var n,v,y,m,x,r,i=[],o=[],a=u[e+" "];if(!a){t||(t=Y(e)),n=t.length;while(n--)(a=te(t[n]))[S]?i.push(a):o.push(a);(a=u(e,(v=o,m=0<(y=i).length,x=0<v.length,r=function(e,t,n,r,i){var o,a,s,u=0,l="0",c=e&&[],f=[],p=w,d=e||x&&b.find.TAG("*",i),h=E+=null==p?1:Math.random()||.1,g=d.length;for(i&&(w=t==T||t||i);l!==g&&null!=(o=d[l]);l++){if(x&&o){a=0,t||o.ownerDocument==T||(V(o),n=!C);while(s=v[a++])if(s(o,t||T,n)){k.call(r,o);break}i&&(E=h)}m&&((o=!s&&o)&&u--,e&&c.push(o))}if(u+=l,m&&l!==u){a=0;while(s=y[a++])s(c,f,t,n);if(e){if(0<u)while(l--)c[l]||f[l]||(f[l]=pe.call(r));f=Z(f)}k.apply(r,f),i&&!e&&0<f.length&&1<u+y.length&&ce.uniqueSort(r)}return i&&(E=h,w=p),c},m?F(r):r))).selector=e}return a}function re(e,t,n,r){var i,o,a,s,u,l="function"==typeof e&&e,c=!r&&Y(e=l.selector||e);if(n=n||[],1===c.length){if(2<(o=c[0]=c[0].slice(0)).length&&"ID"===(a=o[0]).type&&9===t.nodeType&&C&&b.relative[o[1].type]){if(!(t=(b.find.ID(a.matches[0].replace(O,P),t)||[])[0]))return n;l&&(t=t.parentNode),e=e.slice(o.shift().value.length)}i=D.needsContext.test(e)?0:o.length;while(i--){if(a=o[i],b.relative[s=a.type])break;if((u=b.find[s])&&(r=u(a.matches[0].replace(O,P),H.test(o[0].type)&&z(t.parentNode)||t))){if(o.splice(i,1),!(e=r.length&&Q(o)))return k.apply(n,r),n;break}}}return(l||ne(e,c))(r,t,!C,n,!t||H.test(e)&&z(t.parentNode)||t),n}G.prototype=b.filters=b.pseudos,b.setFilters=new G,le.sortStable=S.split("").sort(l).join("")===S,V(),le.sortDetached=$(function(e){return 1&e.compareDocumentPosition(T.createElement("fieldset"))}),ce.find=I,ce.expr[":"]=ce.expr.pseudos,ce.unique=ce.uniqueSort,I.compile=ne,I.select=re,I.setDocument=V,I.escape=ce.escapeSelector,I.getText=ce.text,I.isXML=ce.isXMLDoc,I.selectors=ce.expr,I.support=ce.support,I.uniqueSort=ce.uniqueSort}();var d=function(e,t,n){var r=[],i=void 0!==n;while((e=e[t])&&9!==e.nodeType)if(1===e.nodeType){if(i&&ce(e).is(n))break;r.push(e)}return r},h=function(e,t){for(var n=[];e;e=e.nextSibling)1===e.nodeType&&e!==t&&n.push(e);return n},b=ce.expr.match.needsContext,w=/^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i;function T(e,n,r){return v(n)?ce.grep(e,function(e,t){return!!n.call(e,t,e)!==r}):n.nodeType?ce.grep(e,function(e){return e===n!==r}):"string"!=typeof n?ce.grep(e,function(e){return-1<se.call(n,e)!==r}):ce.filter(n,e,r)}ce.filter=function(e,t,n){var r=t[0];return n&&(e=":not("+e+")"),1===t.length&&1===r.nodeType?ce.find.matchesSelector(r,e)?[r]:[]:ce.find.matches(e,ce.grep(t,function(e){return 1===e.nodeType}))},ce.fn.extend({find:function(e){var t,n,r=this.length,i=this;if("string"!=typeof e)return this.pushStack(ce(e).filter(function(){for(t=0;t<r;t++)if(ce.contains(i[t],this))return!0}));for(n=this.pushStack([]),t=0;t<r;t++)ce.find(e,i[t],n);return 1<r?ce.uniqueSort(n):n},filter:function(e){return this.pushStack(T(this,e||[],!1))},not:function(e){return this.pushStack(T(this,e||[],!0))},is:function(e){return!!T(this,"string"==typeof e&&b.test(e)?ce(e):e||[],!1).length}});var k,S=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/;(ce.fn.init=function(e,t,n){var r,i;if(!e)return this;if(n=n||k,"string"==typeof e){if(!(r="<"===e[0]&&">"===e[e.length-1]&&3<=e.length?[null,e,null]:S.exec(e))||!r[1]&&t)return!t||t.jquery?(t||n).find(e):this.constructor(t).find(e);if(r[1]){if(t=t instanceof ce?t[0]:t,ce.merge(this,ce.parseHTML(r[1],t&&t.nodeType?t.ownerDocument||t:C,!0)),w.test(r[1])&&ce.isPlainObject(t))for(r in t)v(this[r])?this[r](t[r]):this.attr(r,t[r]);return this}return(i=C.getElementById(r[2]))&&(this[0]=i,this.length=1),this}return e.nodeType?(this[0]=e,this.length=1,this):v(e)?void 0!==n.ready?n.ready(e):e(ce):ce.makeArray(e,this)}).prototype=ce.fn,k=ce(C);var E=/^(?:parents|prev(?:Until|All))/,j={children:!0,contents:!0,next:!0,prev:!0};function A(e,t){while((e=e[t])&&1!==e.nodeType);return e}ce.fn.extend({has:function(e){var t=ce(e,this),n=t.length;return this.filter(function(){for(var e=0;e<n;e++)if(ce.contains(this,t[e]))return!0})},closest:function(e,t){var n,r=0,i=this.length,o=[],a="string"!=typeof e&&ce(e);if(!b.test(e))for(;r<i;r++)for(n=this[r];n&&n!==t;n=n.parentNode)if(n.nodeType<11&&(a?-1<a.index(n):1===n.nodeType&&ce.find.matchesSelector(n,e))){o.push(n);break}return this.pushStack(1<o.length?ce.uniqueSort(o):o)},index:function(e){return e?"string"==typeof e?se.call(ce(e),this[0]):se.call(this,e.jquery?e[0]:e):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(e,t){return this.pushStack(ce.uniqueSort(ce.merge(this.get(),ce(e,t))))},addBack:function(e){return this.add(null==e?this.prevObject:this.prevObject.filter(e))}}),ce.each({parent:function(e){var t=e.parentNode;return t&&11!==t.nodeType?t:null},parents:function(e){return d(e,"parentNode")},parentsUntil:function(e,t,n){return d(e,"parentNode",n)},next:function(e){return A(e,"nextSibling")},prev:function(e){return A(e,"previousSibling")},nextAll:function(e){return d(e,"nextSibling")},prevAll:function(e){return d(e,"previousSibling")},nextUntil:function(e,t,n){return d(e,"nextSibling",n)},prevUntil:function(e,t,n){return d(e,"previousSibling",n)},siblings:function(e){return h((e.parentNode||{}).firstChild,e)},children:function(e){return h(e.firstChild)},contents:function(e){return null!=e.contentDocument&&r(e.contentDocument)?e.contentDocument:(fe(e,"template")&&(e=e.content||e),ce.merge([],e.childNodes))}},function(r,i){ce.fn[r]=function(e,t){var n=ce.map(this,i,e);return"Until"!==r.slice(-5)&&(t=e),t&&"string"==typeof t&&(n=ce.filter(t,n)),1<this.length&&(j[r]||ce.uniqueSort(n),E.test(r)&&n.reverse()),this.pushStack(n)}});var D=/[^\x20\t\r\n\f]+/g;function N(e){return e}function q(e){throw e}function L(e,t,n,r){var i;try{e&&v(i=e.promise)?i.call(e).done(t).fail(n):e&&v(i=e.then)?i.call(e,t,n):t.apply(void 0,[e].slice(r))}catch(e){n.apply(void 0,[e])}}ce.Callbacks=function(r){var e,n;r="string"==typeof r?(e=r,n={},ce.each(e.match(D)||[],function(e,t){n[t]=!0}),n):ce.extend({},r);var i,t,o,a,s=[],u=[],l=-1,c=function(){for(a=a||r.once,o=i=!0;u.length;l=-1){t=u.shift();while(++l<s.length)!1===s[l].apply(t[0],t[1])&&r.stopOnFalse&&(l=s.length,t=!1)}r.memory||(t=!1),i=!1,a&&(s=t?[]:"")},f={add:function(){return s&&(t&&!i&&(l=s.length-1,u.push(t)),function n(e){ce.each(e,function(e,t){v(t)?r.unique&&f.has(t)||s.push(t):t&&t.length&&"string"!==x(t)&&n(t)})}(arguments),t&&!i&&c()),this},remove:function(){return ce.each(arguments,function(e,t){var n;while(-1<(n=ce.inArray(t,s,n)))s.splice(n,1),n<=l&&l--}),this},has:function(e){return e?-1<ce.inArray(e,s):0<s.length},empty:function(){return s&&(s=[]),this},disable:function(){return a=u=[],s=t="",this},disabled:function(){return!s},lock:function(){return a=u=[],t||i||(s=t=""),this},locked:function(){return!!a},fireWith:function(e,t){return a||(t=[e,(t=t||[]).slice?t.slice():t],u.push(t),i||c()),this},fire:function(){return f.fireWith(this,arguments),this},fired:function(){return!!o}};return f},ce.extend({Deferred:function(e){var o=[["notify","progress",ce.Callbacks("memory"),ce.Callbacks("memory"),2],["resolve","done",ce.Callbacks("once memory"),ce.Callbacks("once memory"),0,"resolved"],["reject","fail",ce.Callbacks("once memory"),ce.Callbacks("once memory"),1,"rejected"]],i="pending",a={state:function(){return i},always:function(){return s.done(arguments).fail(arguments),this},"catch":function(e){return a.then(null,e)},pipe:function(){var i=arguments;return ce.Deferred(function(r){ce.each(o,function(e,t){var n=v(i[t[4]])&&i[t[4]];s[t[1]](function(){var e=n&&n.apply(this,arguments);e&&v(e.promise)?e.promise().progress(r.notify).done(r.resolve).fail(r.reject):r[t[0]+"With"](this,n?[e]:arguments)})}),i=null}).promise()},then:function(t,n,r){var u=0;function l(i,o,a,s){return function(){var n=this,r=arguments,e=function(){var e,t;if(!(i<u)){if((e=a.apply(n,r))===o.promise())throw new TypeError("Thenable self-resolution");t=e&&("object"==typeof e||"function"==typeof e)&&e.then,v(t)?s?t.call(e,l(u,o,N,s),l(u,o,q,s)):(u++,t.call(e,l(u,o,N,s),l(u,o,q,s),l(u,o,N,o.notifyWith))):(a!==N&&(n=void 0,r=[e]),(s||o.resolveWith)(n,r))}},t=s?e:function(){try{e()}catch(e){ce.Deferred.exceptionHook&&ce.Deferred.exceptionHook(e,t.error),u<=i+1&&(a!==q&&(n=void 0,r=[e]),o.rejectWith(n,r))}};i?t():(ce.Deferred.getErrorHook?t.error=ce.Deferred.getErrorHook():ce.Deferred.getStackHook&&(t.error=ce.Deferred.getStackHook()),ie.setTimeout(t))}}return ce.Deferred(function(e){o[0][3].add(l(0,e,v(r)?r:N,e.notifyWith)),o[1][3].add(l(0,e,v(t)?t:N)),o[2][3].add(l(0,e,v(n)?n:q))}).promise()},promise:function(e){return null!=e?ce.extend(e,a):a}},s={};return ce.each(o,function(e,t){var n=t[2],r=t[5];a[t[1]]=n.add,r&&n.add(function(){i=r},o[3-e][2].disable,o[3-e][3].disable,o[0][2].lock,o[0][3].lock),n.add(t[3].fire),s[t[0]]=function(){return s[t[0]+"With"](this===s?void 0:this,arguments),this},s[t[0]+"With"]=n.fireWith}),a.promise(s),e&&e.call(s,s),s},when:function(e){var n=arguments.length,t=n,r=Array(t),i=ae.call(arguments),o=ce.Deferred(),a=function(t){return function(e){r[t]=this,i[t]=1<arguments.length?ae.call(arguments):e,--n||o.resolveWith(r,i)}};if(n<=1&&(L(e,o.done(a(t)).resolve,o.reject,!n),"pending"===o.state()||v(i[t]&&i[t].then)))return o.then();while(t--)L(i[t],a(t),o.reject);return o.promise()}});var H=/^(Eval|Internal|Range|Reference|Syntax|Type|URI)Error$/;ce.Deferred.exceptionHook=function(e,t){ie.console&&ie.console.warn&&e&&H.test(e.name)&&ie.console.warn("jQuery.Deferred exception: "+e.message,e.stack,t)},ce.readyException=function(e){ie.setTimeout(function(){throw e})};var O=ce.Deferred();function P(){C.removeEventListener("DOMContentLoaded",P),ie.removeEventListener("load",P),ce.ready()}ce.fn.ready=function(e){return O.then(e)["catch"](function(e){ce.readyException(e)}),this},ce.extend({isReady:!1,readyWait:1,ready:function(e){(!0===e?--ce.readyWait:ce.isReady)||(ce.isReady=!0)!==e&&0<--ce.readyWait||O.resolveWith(C,[ce])}}),ce.ready.then=O.then,"complete"===C.readyState||"loading"!==C.readyState&&!C.documentElement.doScroll?ie.setTimeout(ce.ready):(C.addEventListener("DOMContentLoaded",P),ie.addEventListener("load",P));var R=function(e,t,n,r,i,o,a){var s=0,u=e.length,l=null==n;if("object"===x(n))for(s in i=!0,n)R(e,t,s,n[s],!0,o,a);else if(void 0!==r&&(i=!0,v(r)||(a=!0),l&&(a?(t.call(e,r),t=null):(l=t,t=function(e,t,n){return l.call(ce(e),n)})),t))for(;s<u;s++)t(e[s],n,a?r:r.call(e[s],s,t(e[s],n)));return i?e:l?t.call(e):u?t(e[0],n):o},M=/^-ms-/,I=/-([a-z])/g;function W(e,t){return t.toUpperCase()}function F(e){return e.replace(M,"ms-").replace(I,W)}var $=function(e){return 1===e.nodeType||9===e.nodeType||!+e.nodeType};function B(){this.expando=ce.expando+B.uid++}B.uid=1,B.prototype={cache:function(e){var t=e[this.expando];return t||(t={},$(e)&&(e.nodeType?e[this.expando]=t:Object.defineProperty(e,this.expando,{value:t,configurable:!0}))),t},set:function(e,t,n){var r,i=this.cache(e);if("string"==typeof t)i[F(t)]=n;else for(r in t)i[F(r)]=t[r];return i},get:function(e,t){return void 0===t?this.cache(e):e[this.expando]&&e[this.expando][F(t)]},access:function(e,t,n){return void 0===t||t&&"string"==typeof t&&void 0===n?this.get(e,t):(this.set(e,t,n),void 0!==n?n:t)},remove:function(e,t){var n,r=e[this.expando];if(void 0!==r){if(void 0!==t){n=(t=Array.isArray(t)?t.map(F):(t=F(t))in r?[t]:t.match(D)||[]).length;while(n--)delete r[t[n]]}(void 0===t||ce.isEmptyObject(r))&&(e.nodeType?e[this.expando]=void 0:delete e[this.expando])}},hasData:function(e){var t=e[this.expando];return void 0!==t&&!ce.isEmptyObject(t)}};var _=new B,X=new B,U=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,z=/[A-Z]/g;function V(e,t,n){var r,i;if(void 0===n&&1===e.nodeType)if(r="data-"+t.replace(z,"-$&").toLowerCase(),"string"==typeof(n=e.getAttribute(r))){try{n="true"===(i=n)||"false"!==i&&("null"===i?null:i===+i+""?+i:U.test(i)?JSON.parse(i):i)}catch(e){}X.set(e,t,n)}else n=void 0;return n}ce.extend({hasData:function(e){return X.hasData(e)||_.hasData(e)},data:function(e,t,n){return X.access(e,t,n)},removeData:function(e,t){X.remove(e,t)},_data:function(e,t,n){return _.access(e,t,n)},_removeData:function(e,t){_.remove(e,t)}}),ce.fn.extend({data:function(n,e){var t,r,i,o=this[0],a=o&&o.attributes;if(void 0===n){if(this.length&&(i=X.get(o),1===o.nodeType&&!_.get(o,"hasDataAttrs"))){t=a.length;while(t--)a[t]&&0===(r=a[t].name).indexOf("data-")&&(r=F(r.slice(5)),V(o,r,i[r]));_.set(o,"hasDataAttrs",!0)}return i}return"object"==typeof n?this.each(function(){X.set(this,n)}):R(this,function(e){var t;if(o&&void 0===e)return void 0!==(t=X.get(o,n))?t:void 0!==(t=V(o,n))?t:void 0;this.each(function(){X.set(this,n,e)})},null,e,1<arguments.length,null,!0)},removeData:function(e){return this.each(function(){X.remove(this,e)})}}),ce.extend({queue:function(e,t,n){var r;if(e)return t=(t||"fx")+"queue",r=_.get(e,t),n&&(!r||Array.isArray(n)?r=_.access(e,t,ce.makeArray(n)):r.push(n)),r||[]},dequeue:function(e,t){t=t||"fx";var n=ce.queue(e,t),r=n.length,i=n.shift(),o=ce._queueHooks(e,t);"inprogress"===i&&(i=n.shift(),r--),i&&("fx"===t&&n.unshift("inprogress"),delete o.stop,i.call(e,function(){ce.dequeue(e,t)},o)),!r&&o&&o.empty.fire()},_queueHooks:function(e,t){var n=t+"queueHooks";return _.get(e,n)||_.access(e,n,{empty:ce.Callbacks("once memory").add(function(){_.remove(e,[t+"queue",n])})})}}),ce.fn.extend({queue:function(t,n){var e=2;return"string"!=typeof t&&(n=t,t="fx",e--),arguments.length<e?ce.queue(this[0],t):void 0===n?this:this.each(function(){var e=ce.queue(this,t,n);ce._queueHooks(this,t),"fx"===t&&"inprogress"!==e[0]&&ce.dequeue(this,t)})},dequeue:function(e){return this.each(function(){ce.dequeue(this,e)})},clearQueue:function(e){return this.queue(e||"fx",[])},promise:function(e,t){var n,r=1,i=ce.Deferred(),o=this,a=this.length,s=function(){--r||i.resolveWith(o,[o])};"string"!=typeof e&&(t=e,e=void 0),e=e||"fx";while(a--)(n=_.get(o[a],e+"queueHooks"))&&n.empty&&(r++,n.empty.add(s));return s(),i.promise(t)}});var G=/[+-]?(?:\d*\.|)\d+(?:[eE][+-]?\d+|)/.source,Y=new RegExp("^(?:([+-])=|)("+G+")([a-z%]*)$","i"),Q=["Top","Right","Bottom","Left"],J=C.documentElement,K=function(e){return ce.contains(e.ownerDocument,e)},Z={composed:!0};J.getRootNode&&(K=function(e){return ce.contains(e.ownerDocument,e)||e.getRootNode(Z)===e.ownerDocument});var ee=function(e,t){return"none"===(e=t||e).style.display||""===e.style.display&&K(e)&&"none"===ce.css(e,"display")};function te(e,t,n,r){var i,o,a=20,s=r?function(){return r.cur()}:function(){return ce.css(e,t,"")},u=s(),l=n&&n[3]||(ce.cssNumber[t]?"":"px"),c=e.nodeType&&(ce.cssNumber[t]||"px"!==l&&+u)&&Y.exec(ce.css(e,t));if(c&&c[3]!==l){u/=2,l=l||c[3],c=+u||1;while(a--)ce.style(e,t,c+l),(1-o)*(1-(o=s()/u||.5))<=0&&(a=0),c/=o;c*=2,ce.style(e,t,c+l),n=n||[]}return n&&(c=+c||+u||0,i=n[1]?c+(n[1]+1)*n[2]:+n[2],r&&(r.unit=l,r.start=c,r.end=i)),i}var ne={};function re(e,t){for(var n,r,i,o,a,s,u,l=[],c=0,f=e.length;c<f;c++)(r=e[c]).style&&(n=r.style.display,t?("none"===n&&(l[c]=_.get(r,"display")||null,l[c]||(r.style.display="")),""===r.style.display&&ee(r)&&(l[c]=(u=a=o=void 0,a=(i=r).ownerDocument,s=i.nodeName,(u=ne[s])||(o=a.body.appendChild(a.createElement(s)),u=ce.css(o,"display"),o.parentNode.removeChild(o),"none"===u&&(u="block"),ne[s]=u)))):"none"!==n&&(l[c]="none",_.set(r,"display",n)));for(c=0;c<f;c++)null!=l[c]&&(e[c].style.display=l[c]);return e}ce.fn.extend({show:function(){return re(this,!0)},hide:function(){return re(this)},toggle:function(e){return"boolean"==typeof e?e?this.show():this.hide():this.each(function(){ee(this)?ce(this).show():ce(this).hide()})}});var xe,be,we=/^(?:checkbox|radio)$/i,Te=/<([a-z][^\/\0>\x20\t\r\n\f]*)/i,Ce=/^$|^module$|\/(?:java|ecma)script/i;xe=C.createDocumentFragment().appendChild(C.createElement("div")),(be=C.createElement("input")).setAttribute("type","radio"),be.setAttribute("checked","checked"),be.setAttribute("name","t"),xe.appendChild(be),le.checkClone=xe.cloneNode(!0).cloneNode(!0).lastChild.checked,xe.innerHTML="<textarea>x</textarea>",le.noCloneChecked=!!xe.cloneNode(!0).lastChild.defaultValue,xe.innerHTML="<option></option>",le.option=!!xe.lastChild;var ke={thead:[1,"<table>","</table>"],col:[2,"<table><colgroup>","</colgroup></table>"],tr:[2,"<table><tbody>","</tbody></table>"],td:[3,"<table><tbody><tr>","</tr></tbody></table>"],_default:[0,"",""]};function Se(e,t){var n;return n="undefined"!=typeof e.getElementsByTagName?e.getElementsByTagName(t||"*"):"undefined"!=typeof e.querySelectorAll?e.querySelectorAll(t||"*"):[],void 0===t||t&&fe(e,t)?ce.merge([e],n):n}function Ee(e,t){for(var n=0,r=e.length;n<r;n++)_.set(e[n],"globalEval",!t||_.get(t[n],"globalEval"))}ke.tbody=ke.tfoot=ke.colgroup=ke.caption=ke.thead,ke.th=ke.td,le.option||(ke.optgroup=ke.option=[1,"<select multiple='multiple'>","</select>"]);var je=/<|&#?\w+;/;function Ae(e,t,n,r,i){for(var o,a,s,u,l,c,f=t.createDocumentFragment(),p=[],d=0,h=e.length;d<h;d++)if((o=e[d])||0===o)if("object"===x(o))ce.merge(p,o.nodeType?[o]:o);else if(je.test(o)){a=a||f.appendChild(t.createElement("div")),s=(Te.exec(o)||["",""])[1].toLowerCase(),u=ke[s]||ke._default,a.innerHTML=u[1]+ce.htmlPrefilter(o)+u[2],c=u[0];while(c--)a=a.lastChild;ce.merge(p,a.childNodes),(a=f.firstChild).textContent=""}else p.push(t.createTextNode(o));f.textContent="",d=0;while(o=p[d++])if(r&&-1<ce.inArray(o,r))i&&i.push(o);else if(l=K(o),a=Se(f.appendChild(o),"script"),l&&Ee(a),n){c=0;while(o=a[c++])Ce.test(o.type||"")&&n.push(o)}return f}var De=/^([^.]*)(?:\.(.+)|)/;function Ne(){return!0}function qe(){return!1}function Le(e,t,n,r,i,o){var a,s;if("object"==typeof t){for(s in"string"!=typeof n&&(r=r||n,n=void 0),t)Le(e,s,n,r,t[s],o);return e}if(null==r&&null==i?(i=n,r=n=void 0):null==i&&("string"==typeof n?(i=r,r=void 0):(i=r,r=n,n=void 0)),!1===i)i=qe;else if(!i)return e;return 1===o&&(a=i,(i=function(e){return ce().off(e),a.apply(this,arguments)}).guid=a.guid||(a.guid=ce.guid++)),e.each(function(){ce.event.add(this,t,i,r,n)})}function He(e,r,t){t?(_.set(e,r,!1),ce.event.add(e,r,{namespace:!1,handler:function(e){var t,n=_.get(this,r);if(1&e.isTrigger&&this[r]){if(n)(ce.event.special[r]||{}).delegateType&&e.stopPropagation();else if(n=ae.call(arguments),_.set(this,r,n),this[r](),t=_.get(this,r),_.set(this,r,!1),n!==t)return e.stopImmediatePropagation(),e.preventDefault(),t}else n&&(_.set(this,r,ce.event.trigger(n[0],n.slice(1),this)),e.stopPropagation(),e.isImmediatePropagationStopped=Ne)}})):void 0===_.get(e,r)&&ce.event.add(e,r,Ne)}ce.event={global:{},add:function(t,e,n,r,i){var o,a,s,u,l,c,f,p,d,h,g,v=_.get(t);if($(t)){n.handler&&(n=(o=n).handler,i=o.selector),i&&ce.find.matchesSelector(J,i),n.guid||(n.guid=ce.guid++),(u=v.events)||(u=v.events=Object.create(null)),(a=v.handle)||(a=v.handle=function(e){return"undefined"!=typeof ce&&ce.event.triggered!==e.type?ce.event.dispatch.apply(t,arguments):void 0}),l=(e=(e||"").match(D)||[""]).length;while(l--)d=g=(s=De.exec(e[l])||[])[1],h=(s[2]||"").split(".").sort(),d&&(f=ce.event.special[d]||{},d=(i?f.delegateType:f.bindType)||d,f=ce.event.special[d]||{},c=ce.extend({type:d,origType:g,data:r,handler:n,guid:n.guid,selector:i,needsContext:i&&ce.expr.match.needsContext.test(i),namespace:h.join(".")},o),(p=u[d])||((p=u[d]=[]).delegateCount=0,f.setup&&!1!==f.setup.call(t,r,h,a)||t.addEventListener&&t.addEventListener(d,a)),f.add&&(f.add.call(t,c),c.handler.guid||(c.handler.guid=n.guid)),i?p.splice(p.delegateCount++,0,c):p.push(c),ce.event.global[d]=!0)}},remove:function(e,t,n,r,i){var o,a,s,u,l,c,f,p,d,h,g,v=_.hasData(e)&&_.get(e);if(v&&(u=v.events)){l=(t=(t||"").match(D)||[""]).length;while(l--)if(d=g=(s=De.exec(t[l])||[])[1],h=(s[2]||"").split(".").sort(),d){f=ce.event.special[d]||{},p=u[d=(r?f.delegateType:f.bindType)||d]||[],s=s[2]&&new RegExp("(^|\\.)"+h.join("\\.(?:.*\\.|)")+"(\\.|$)"),a=o=p.length;while(o--)c=p[o],!i&&g!==c.origType||n&&n.guid!==c.guid||s&&!s.test(c.namespace)||r&&r!==c.selector&&("**"!==r||!c.selector)||(p.splice(o,1),c.selector&&p.delegateCount--,f.remove&&f.remove.call(e,c));a&&!p.length&&(f.teardown&&!1!==f.teardown.call(e,h,v.handle)||ce.removeEvent(e,d,v.handle),delete u[d])}else for(d in u)ce.event.remove(e,d+t[l],n,r,!0);ce.isEmptyObject(u)&&_.remove(e,"handle events")}},dispatch:function(e){var t,n,r,i,o,a,s=new Array(arguments.length),u=ce.event.fix(e),l=(_.get(this,"events")||Object.create(null))[u.type]||[],c=ce.event.special[u.type]||{};for(s[0]=u,t=1;t<arguments.length;t++)s[t]=arguments[t];if(u.delegateTarget=this,!c.preDispatch||!1!==c.preDispatch.call(this,u)){a=ce.event.handlers.call(this,u,l),t=0;while((i=a[t++])&&!u.isPropagationStopped()){u.currentTarget=i.elem,n=0;while((o=i.handlers[n++])&&!u.isImmediatePropagationStopped())u.rnamespace&&!1!==o.namespace&&!u.rnamespace.test(o.namespace)||(u.handleObj=o,u.data=o.data,void 0!==(r=((ce.event.special[o.origType]||{}).handle||o.handler).apply(i.elem,s))&&!1===(u.result=r)&&(u.preventDefault(),u.stopPropagation()))}return c.postDispatch&&c.postDispatch.call(this,u),u.result}},handlers:function(e,t){var n,r,i,o,a,s=[],u=t.delegateCount,l=e.target;if(u&&l.nodeType&&!("click"===e.type&&1<=e.button))for(;l!==this;l=l.parentNode||this)if(1===l.nodeType&&("click"!==e.type||!0!==l.disabled)){for(o=[],a={},n=0;n<u;n++)void 0===a[i=(r=t[n]).selector+" "]&&(a[i]=r.needsContext?-1<ce(i,this).index(l):ce.find(i,this,null,[l]).length),a[i]&&o.push(r);o.length&&s.push({elem:l,handlers:o})}return l=this,u<t.length&&s.push({elem:l,handlers:t.slice(u)}),s},addProp:function(t,e){Object.defineProperty(ce.Event.prototype,t,{enumerable:!0,configurable:!0,get:v(e)?function(){if(this.originalEvent)return e(this.originalEvent)}:function(){if(this.originalEvent)return this.originalEvent[t]},set:function(e){Object.defineProperty(this,t,{enumerable:!0,configurable:!0,writable:!0,value:e})}})},fix:function(e){return e[ce.expando]?e:new ce.Event(e)},special:{load:{noBubble:!0},click:{setup:function(e){var t=this||e;return we.test(t.type)&&t.click&&fe(t,"input")&&He(t,"click",!0),!1},trigger:function(e){var t=this||e;return we.test(t.type)&&t.click&&fe(t,"input")&&He(t,"click"),!0},_default:function(e){var t=e.target;return we.test(t.type)&&t.click&&fe(t,"input")&&_.get(t,"click")||fe(t,"a")}},beforeunload:{postDispatch:function(e){void 0!==e.result&&e.originalEvent&&(e.originalEvent.returnValue=e.result)}}}},ce.removeEvent=function(e,t,n){e.removeEventListener&&e.removeEventListener(t,n)},ce.Event=function(e,t){if(!(this instanceof ce.Event))return new ce.Event(e,t);e&&e.type?(this.originalEvent=e,this.type=e.type,this.isDefaultPrevented=e.defaultPrevented||void 0===e.defaultPrevented&&!1===e.returnValue?Ne:qe,this.target=e.target&&3===e.target.nodeType?e.target.parentNode:e.target,this.currentTarget=e.currentTarget,this.relatedTarget=e.relatedTarget):this.type=e,t&&ce.extend(this,t),this.timeStamp=e&&e.timeStamp||Date.now(),this[ce.expando]=!0},ce.Event.prototype={constructor:ce.Event,isDefaultPrevented:qe,isPropagationStopped:qe,isImmediatePropagationStopped:qe,isSimulated:!1,preventDefault:function(){var e=this.originalEvent;this.isDefaultPrevented=Ne,e&&!this.isSimulated&&e.preventDefault()},stopPropagation:function(){var e=this.originalEvent;this.isPropagationStopped=Ne,e&&!this.isSimulated&&e.stopPropagation()},stopImmediatePropagation:function(){var e=this.originalEvent;this.isImmediatePropagationStopped=Ne,e&&!this.isSimulated&&e.stopImmediatePropagation(),this.stopPropagation()}},ce.each({altKey:!0,bubbles:!0,cancelable:!0,changedTouches:!0,ctrlKey:!0,detail:!0,eventPhase:!0,metaKey:!0,pageX:!0,pageY:!0,shiftKey:!0,view:!0,"char":!0,code:!0,charCode:!0,key:!0,keyCode:!0,button:!0,buttons:!0,clientX:!0,clientY:!0,offsetX:!0,offsetY:!0,pointerId:!0,pointerType:!0,screenX:!0,screenY:!0,targetTouches:!0,toElement:!0,touches:!0,which:!0},ce.event.addProp),ce.each({focus:"focusin",blur:"focusout"},function(r,i){function o(e){if(C.documentMode){var t=_.get(this,"handle"),n=ce.event.fix(e);n.type="focusin"===e.type?"focus":"blur",n.isSimulated=!0,t(e),n.target===n.currentTarget&&t(n)}else ce.event.simulate(i,e.target,ce.event.fix(e))}ce.event.special[r]={setup:function(){var e;if(He(this,r,!0),!C.documentMode)return!1;(e=_.get(this,i))||this.addEventListener(i,o),_.set(this,i,(e||0)+1)},trigger:function(){return He(this,r),!0},teardown:function(){var e;if(!C.documentMode)return!1;(e=_.get(this,i)-1)?_.set(this,i,e):(this.removeEventListener(i,o),_.remove(this,i))},_default:function(e){return _.get(e.target,r)},delegateType:i},ce.event.special[i]={setup:function(){var e=this.ownerDocument||this.document||this,t=C.documentMode?this:e,n=_.get(t,i);n||(C.documentMode?this.addEventListener(i,o):e.addEventListener(r,o,!0)),_.set(t,i,(n||0)+1)},teardown:function(){var e=this.ownerDocument||this.document||this,t=C.documentMode?this:e,n=_.get(t,i)-1;n?_.set(t,i,n):(C.documentMode?this.removeEventListener(i,o):e.removeEventListener(r,o,!0),_.remove(t,i))}}}),ce.each({mouseenter:"mouseover",mouseleave:"mouseout",pointerenter:"pointerover",pointerleave:"pointerout"},function(e,i){ce.event.special[e]={delegateType:i,bindType:i,handle:function(e){var t,n=e.relatedTarget,r=e.handleObj;return n&&(n===this||ce.contains(this,n))||(e.type=r.origType,t=r.handler.apply(this,arguments),e.type=i),t}}}),ce.fn.extend({on:function(e,t,n,r){return Le(this,e,t,n,r)},one:function(e,t,n,r){return Le(this,e,t,n,r,1)},off:function(e,t,n){var r,i;if(e&&e.preventDefault&&e.handleObj)return r=e.handleObj,ce(e.delegateTarget).off(r.namespace?r.origType+"."+r.namespace:r.origType,r.selector,r.handler),this;if("object"==typeof e){for(i in e)this.off(i,t,e[i]);return this}return!1!==t&&"function"!=typeof t||(n=t,t=void 0),!1===n&&(n=qe),this.each(function(){ce.event.remove(this,e,n,t)})}});var Oe=/<script|<style|<link/i,Pe=/checked\s*(?:[^=]|=\s*.checked.)/i,Re=/^\s*<!\[CDATA\[|\]\]>\s*$/g;function Me(e,t){return fe(e,"table")&&fe(11!==t.nodeType?t:t.firstChild,"tr")&&ce(e).children("tbody")[0]||e}function Ie(e){return e.type=(null!==e.getAttribute("type"))+"/"+e.type,e}function We(e){return"true/"===(e.type||"").slice(0,5)?e.type=e.type.slice(5):e.removeAttribute("type"),e}function Fe(e,t){var n,r,i,o,a,s;if(1===t.nodeType){if(_.hasData(e)&&(s=_.get(e).events))for(i in _.remove(t,"handle events"),s)for(n=0,r=s[i].length;n<r;n++)ce.event.add(t,i,s[i][n]);X.hasData(e)&&(o=X.access(e),a=ce.extend({},o),X.set(t,a))}}function $e(n,r,i,o){r=g(r);var e,t,a,s,u,l,c=0,f=n.length,p=f-1,d=r[0],h=v(d);if(h||1<f&&"string"==typeof d&&!le.checkClone&&Pe.test(d))return n.each(function(e){var t=n.eq(e);h&&(r[0]=d.call(this,e,t.html())),$e(t,r,i,o)});if(f&&(t=(e=Ae(r,n[0].ownerDocument,!1,n,o)).firstChild,1===e.childNodes.length&&(e=t),t||o)){for(s=(a=ce.map(Se(e,"script"),Ie)).length;c<f;c++)u=e,c!==p&&(u=ce.clone(u,!0,!0),s&&ce.merge(a,Se(u,"script"))),i.call(n[c],u,c);if(s)for(l=a[a.length-1].ownerDocument,ce.map(a,We),c=0;c<s;c++)u=a[c],Ce.test(u.type||"")&&!_.access(u,"globalEval")&&ce.contains(l,u)&&(u.src&&"module"!==(u.type||"").toLowerCase()?ce._evalUrl&&!u.noModule&&ce._evalUrl(u.src,{nonce:u.nonce||u.getAttribute("nonce")},l):m(u.textContent.replace(Re,""),u,l))}return n}function Be(e,t,n){for(var r,i=t?ce.filter(t,e):e,o=0;null!=(r=i[o]);o++)n||1!==r.nodeType||ce.cleanData(Se(r)),r.parentNode&&(n&&K(r)&&Ee(Se(r,"script")),r.parentNode.removeChild(r));return e}ce.extend({htmlPrefilter:function(e){return e},clone:function(e,t,n){var r,i,o,a,s,u,l,c=e.cloneNode(!0),f=K(e);if(!(le.noCloneChecked||1!==e.nodeType&&11!==e.nodeType||ce.isXMLDoc(e)))for(a=Se(c),r=0,i=(o=Se(e)).length;r<i;r++)s=o[r],u=a[r],void 0,"input"===(l=u.nodeName.toLowerCase())&&we.test(s.type)?u.checked=s.checked:"input"!==l&&"textarea"!==l||(u.defaultValue=s.defaultValue);if(t)if(n)for(o=o||Se(e),a=a||Se(c),r=0,i=o.length;r<i;r++)Fe(o[r],a[r]);else Fe(e,c);return 0<(a=Se(c,"script")).length&&Ee(a,!f&&Se(e,"script")),c},cleanData:function(e){for(var t,n,r,i=ce.event.special,o=0;void 0!==(n=e[o]);o++)if($(n)){if(t=n[_.expando]){if(t.events)for(r in t.events)i[r]?ce.event.remove(n,r):ce.removeEvent(n,r,t.handle);n[_.expando]=void 0}n[X.expando]&&(n[X.expando]=void 0)}}}),ce.fn.extend({detach:function(e){return Be(this,e,!0)},remove:function(e){return Be(this,e)},text:function(e){return R(this,function(e){return void 0===e?ce.text(this):this.empty().each(function(){1!==this.nodeType&&11!==this.nodeType&&9!==this.nodeType||(this.textContent=e)})},null,e,arguments.length)},append:function(){return $e(this,arguments,function(e){1!==this.nodeType&&11!==this.nodeType&&9!==this.nodeType||Me(this,e).appendChild(e)})},prepend:function(){return $e(this,arguments,function(e){if(1===this.nodeType||11===this.nodeType||9===this.nodeType){var t=Me(this,e);t.insertBefore(e,t.firstChild)}})},before:function(){return $e(this,arguments,function(e){this.parentNode&&this.parentNode.insertBefore(e,this)})},after:function(){return $e(this,arguments,function(e){this.parentNode&&this.parentNode.insertBefore(e,this.nextSibling)})},empty:function(){for(var e,t=0;null!=(e=this[t]);t++)1===e.nodeType&&(ce.cleanData(Se(e,!1)),e.textContent="");return this},clone:function(e,t){return e=null!=e&&e,t=null==t?e:t,this.map(function(){return ce.clone(this,e,t)})},html:function(e){return R(this,function(e){var t=this[0]||{},n=0,r=this.length;if(void 0===e&&1===t.nodeType)return t.innerHTML;if("string"==typeof e&&!Oe.test(e)&&!ke[(Te.exec(e)||["",""])[1].toLowerCase()]){e=ce.htmlPrefilter(e);try{for(;n<r;n++)1===(t=this[n]||{}).nodeType&&(ce.cleanData(Se(t,!1)),t.innerHTML=e);t=0}catch(e){}}t&&this.empty().append(e)},null,e,arguments.length)},replaceWith:function(){var n=[];return $e(this,arguments,function(e){var t=this.parentNode;ce.inArray(this,n)<0&&(ce.cleanData(Se(this)),t&&t.replaceChild(e,this))},n)}}),ce.each({appendTo:"append",prependTo:"prepend",insertBefore:"before",insertAfter:"after",replaceAll:"replaceWith"},function(e,a){ce.fn[e]=function(e){for(var t,n=[],r=ce(e),i=r.length-1,o=0;o<=i;o++)t=o===i?this:this.clone(!0),ce(r[o])[a](t),s.apply(n,t.get());return this.pushStack(n)}});var _e=new RegExp("^("+G+")(?!px)[a-z%]+$","i"),Xe=/^--/,Ue=function(e){var t=e.ownerDocument.defaultView;return t&&t.opener||(t=ie),t.getComputedStyle(e)},ze=function(e,t,n){var r,i,o={};for(i in t)o[i]=e.style[i],e.style[i]=t[i];for(i in r=n.call(e),t)e.style[i]=o[i];return r},Ve=new RegExp(Q.join("|"),"i");function Ge(e,t,n){var r,i,o,a,s=Xe.test(t),u=e.style;return(n=n||Ue(e))&&(a=n.getPropertyValue(t)||n[t],s&&a&&(a=a.replace(ve,"$1")||void 0),""!==a||K(e)||(a=ce.style(e,t)),!le.pixelBoxStyles()&&_e.test(a)&&Ve.test(t)&&(r=u.width,i=u.minWidth,o=u.maxWidth,u.minWidth=u.maxWidth=u.width=a,a=n.width,u.width=r,u.minWidth=i,u.maxWidth=o)),void 0!==a?a+"":a}function Ye(e,t){return{get:function(){if(!e())return(this.get=t).apply(this,arguments);delete this.get}}}!function(){function e(){if(l){u.style.cssText="position:absolute;left:-11111px;width:60px;margin-top:1px;padding:0;border:0",l.style.cssText="position:relative;display:block;box-sizing:border-box;overflow:scroll;margin:auto;border:1px;padding:1px;width:60%;top:1%",J.appendChild(u).appendChild(l);var e=ie.getComputedStyle(l);n="1%"!==e.top,s=12===t(e.marginLeft),l.style.right="60%",o=36===t(e.right),r=36===t(e.width),l.style.position="absolute",i=12===t(l.offsetWidth/3),J.removeChild(u),l=null}}function t(e){return Math.round(parseFloat(e))}var n,r,i,o,a,s,u=C.createElement("div"),l=C.createElement("div");l.style&&(l.style.backgroundClip="content-box",l.cloneNode(!0).style.backgroundClip="",le.clearCloneStyle="content-box"===l.style.backgroundClip,ce.extend(le,{boxSizingReliable:function(){return e(),r},pixelBoxStyles:function(){return e(),o},pixelPosition:function(){return e(),n},reliableMarginLeft:function(){return e(),s},scrollboxSize:function(){return e(),i},reliableTrDimensions:function(){var e,t,n,r;return null==a&&(e=C.createElement("table"),t=C.createElement("tr"),n=C.createElement("div"),e.style.cssText="position:absolute;left:-11111px;border-collapse:separate",t.style.cssText="border:1px solid",t.style.height="1px",n.style.height="9px",n.style.display="block",J.appendChild(e).appendChild(t).appendChild(n),r=ie.getComputedStyle(t),a=parseInt(r.height,10)+parseInt(r.borderTopWidth,10)+parseInt(r.borderBottomWidth,10)===t.offsetHeight,J.removeChild(e)),a}}))}();var Qe=["Webkit","Moz","ms"],Je=C.createElement("div").style,Ke={};function Ze(e){var t=ce.cssProps[e]||Ke[e];return t||(e in Je?e:Ke[e]=function(e){var t=e[0].toUpperCase()+e.slice(1),n=Qe.length;while(n--)if((e=Qe[n]+t)in Je)return e}(e)||e)}var et=/^(none|table(?!-c[ea]).+)/,tt={position:"absolute",visibility:"hidden",display:"block"},nt={letterSpacing:"0",fontWeight:"400"};function rt(e,t,n){var r=Y.exec(t);return r?Math.max(0,r[2]-(n||0))+(r[3]||"px"):t}function it(e,t,n,r,i,o){var a="width"===t?1:0,s=0,u=0,l=0;if(n===(r?"border":"content"))return 0;for(;a<4;a+=2)"margin"===n&&(l+=ce.css(e,n+Q[a],!0,i)),r?("content"===n&&(u-=ce.css(e,"padding"+Q[a],!0,i)),"margin"!==n&&(u-=ce.css(e,"border"+Q[a]+"Width",!0,i))):(u+=ce.css(e,"padding"+Q[a],!0,i),"padding"!==n?u+=ce.css(e,"border"+Q[a]+"Width",!0,i):s+=ce.css(e,"border"+Q[a]+"Width",!0,i));return!r&&0<=o&&(u+=Math.max(0,Math.ceil(e["offset"+t[0].toUpperCase()+t.slice(1)]-o-u-s-.5))||0),u+l}function ot(e,t,n){var r=Ue(e),i=(!le.boxSizingReliable()||n)&&"border-box"===ce.css(e,"boxSizing",!1,r),o=i,a=Ge(e,t,r),s="offset"+t[0].toUpperCase()+t.slice(1);if(_e.test(a)){if(!n)return a;a="auto"}return(!le.boxSizingReliable()&&i||!le.reliableTrDimensions()&&fe(e,"tr")||"auto"===a||!parseFloat(a)&&"inline"===ce.css(e,"display",!1,r))&&e.getClientRects().length&&(i="border-box"===ce.css(e,"boxSizing",!1,r),(o=s in e)&&(a=e[s])),(a=parseFloat(a)||0)+it(e,t,n||(i?"border":"content"),o,r,a)+"px"}function at(e,t,n,r,i){return new at.prototype.init(e,t,n,r,i)}ce.extend({cssHooks:{opacity:{get:function(e,t){if(t){var n=Ge(e,"opacity");return""===n?"1":n}}}},cssNumber:{animationIterationCount:!0,aspectRatio:!0,borderImageSlice:!0,columnCount:!0,flexGrow:!0,flexShrink:!0,fontWeight:!0,gridArea:!0,gridColumn:!0,gridColumnEnd:!0,gridColumnStart:!0,gridRow:!0,gridRowEnd:!0,gridRowStart:!0,lineHeight:!0,opacity:!0,order:!0,orphans:!0,scale:!0,widows:!0,zIndex:!0,zoom:!0,fillOpacity:!0,floodOpacity:!0,stopOpacity:!0,strokeMiterlimit:!0,strokeOpacity:!0},cssProps:{},style:function(e,t,n,r){if(e&&3!==e.nodeType&&8!==e.nodeType&&e.style){var i,o,a,s=F(t),u=Xe.test(t),l=e.style;if(u||(t=Ze(s)),a=ce.cssHooks[t]||ce.cssHooks[s],void 0===n)return a&&"get"in a&&void 0!==(i=a.get(e,!1,r))?i:l[t];"string"===(o=typeof n)&&(i=Y.exec(n))&&i[1]&&(n=te(e,t,i),o="number"),null!=n&&n==n&&("number"!==o||u||(n+=i&&i[3]||(ce.cssNumber[s]?"":"px")),le.clearCloneStyle||""!==n||0!==t.indexOf("background")||(l[t]="inherit"),a&&"set"in a&&void 0===(n=a.set(e,n,r))||(u?l.setProperty(t,n):l[t]=n))}},css:function(e,t,n,r){var i,o,a,s=F(t);return Xe.test(t)||(t=Ze(s)),(a=ce.cssHooks[t]||ce.cssHooks[s])&&"get"in a&&(i=a.get(e,!0,n)),void 0===i&&(i=Ge(e,t,r)),"normal"===i&&t in nt&&(i=nt[t]),""===n||n?(o=parseFloat(i),!0===n||isFinite(o)?o||0:i):i}}),ce.each(["height","width"],function(e,u){ce.cssHooks[u]={get:function(e,t,n){if(t)return!et.test(ce.css(e,"display"))||e.getClientRects().length&&e.getBoundingClientRect().width?ot(e,u,n):ze(e,tt,function(){return ot(e,u,n)})},set:function(e,t,n){var r,i=Ue(e),o=!le.scrollboxSize()&&"absolute"===i.position,a=(o||n)&&"border-box"===ce.css(e,"boxSizing",!1,i),s=n?it(e,u,n,a,i):0;return a&&o&&(s-=Math.ceil(e["offset"+u[0].toUpperCase()+u.slice(1)]-parseFloat(i[u])-it(e,u,"border",!1,i)-.5)),s&&(r=Y.exec(t))&&"px"!==(r[3]||"px")&&(e.style[u]=t,t=ce.css(e,u)),rt(0,t,s)}}}),ce.cssHooks.marginLeft=Ye(le.reliableMarginLeft,function(e,t){if(t)return(parseFloat(Ge(e,"marginLeft"))||e.getBoundingClientRect().left-ze(e,{marginLeft:0},function(){return e.getBoundingClientRect().left}))+"px"}),ce.each({margin:"",padding:"",border:"Width"},function(i,o){ce.cssHooks[i+o]={expand:function(e){for(var t=0,n={},r="string"==typeof e?e.split(" "):[e];t<4;t++)n[i+Q[t]+o]=r[t]||r[t-2]||r[0];return n}},"margin"!==i&&(ce.cssHooks[i+o].set=rt)}),ce.fn.extend({css:function(e,t){return R(this,function(e,t,n){var r,i,o={},a=0;if(Array.isArray(t)){for(r=Ue(e),i=t.length;a<i;a++)o[t[a]]=ce.css(e,t[a],!1,r);return o}return void 0!==n?ce.style(e,t,n):ce.css(e,t)},e,t,1<arguments.length)}}),((ce.Tween=at).prototype={constructor:at,init:function(e,t,n,r,i,o){this.elem=e,this.prop=n,this.easing=i||ce.easing._default,this.options=t,this.start=this.now=this.cur(),this.end=r,this.unit=o||(ce.cssNumber[n]?"":"px")},cur:function(){var e=at.propHooks[this.prop];return e&&e.get?e.get(this):at.propHooks._default.get(this)},run:function(e){var t,n=at.propHooks[this.prop];return this.options.duration?this.pos=t=ce.easing[this.easing](e,this.options.duration*e,0,1,this.options.duration):this.pos=t=e,this.now=(this.end-this.start)*t+this.start,this.options.step&&this.options.step.call(this.elem,this.now,this),n&&n.set?n.set(this):at.propHooks._default.set(this),this}}).init.prototype=at.prototype,(at.propHooks={_default:{get:function(e){var t;return 1!==e.elem.nodeType||null!=e.elem[e.prop]&&null==e.elem.style[e.prop]?e.elem[e.prop]:(t=ce.css(e.elem,e.prop,""))&&"auto"!==t?t:0},set:function(e){ce.fx.step[e.prop]?ce.fx.step[e.prop](e):1!==e.elem.nodeType||!ce.cssHooks[e.prop]&&null==e.elem.style[Ze(e.prop)]?e.elem[e.prop]=e.now:ce.style(e.elem,e.prop,e.now+e.unit)}}}).scrollTop=at.propHooks.scrollLeft={set:function(e){e.elem.nodeType&&e.elem.parentNode&&(e.elem[e.prop]=e.now)}},ce.easing={linear:function(e){return e},swing:function(e){return.5-Math.cos(e*Math.PI)/2},_default:"swing"},ce.fx=at.prototype.init,ce.fx.step={};var st,ut,lt,ct,ft=/^(?:toggle|show|hide)$/,pt=/queueHooks$/;function dt(){ut&&(!1===C.hidden&&ie.requestAnimationFrame?ie.requestAnimationFrame(dt):ie.setTimeout(dt,ce.fx.interval),ce.fx.tick())}function ht(){return ie.setTimeout(function(){st=void 0}),st=Date.now()}function gt(e,t){var n,r=0,i={height:e};for(t=t?1:0;r<4;r+=2-t)i["margin"+(n=Q[r])]=i["padding"+n]=e;return t&&(i.opacity=i.width=e),i}function vt(e,t,n){for(var r,i=(yt.tweeners[t]||[]).concat(yt.tweeners["*"]),o=0,a=i.length;o<a;o++)if(r=i[o].call(n,t,e))return r}function yt(o,e,t){var n,a,r=0,i=yt.prefilters.length,s=ce.Deferred().always(function(){delete u.elem}),u=function(){if(a)return!1;for(var e=st||ht(),t=Math.max(0,l.startTime+l.duration-e),n=1-(t/l.duration||0),r=0,i=l.tweens.length;r<i;r++)l.tweens[r].run(n);return s.notifyWith(o,[l,n,t]),n<1&&i?t:(i||s.notifyWith(o,[l,1,0]),s.resolveWith(o,[l]),!1)},l=s.promise({elem:o,props:ce.extend({},e),opts:ce.extend(!0,{specialEasing:{},easing:ce.easing._default},t),originalProperties:e,originalOptions:t,startTime:st||ht(),duration:t.duration,tweens:[],createTween:function(e,t){var n=ce.Tween(o,l.opts,e,t,l.opts.specialEasing[e]||l.opts.easing);return l.tweens.push(n),n},stop:function(e){var t=0,n=e?l.tweens.length:0;if(a)return this;for(a=!0;t<n;t++)l.tweens[t].run(1);return e?(s.notifyWith(o,[l,1,0]),s.resolveWith(o,[l,e])):s.rejectWith(o,[l,e]),this}}),c=l.props;for(!function(e,t){var n,r,i,o,a;for(n in e)if(i=t[r=F(n)],o=e[n],Array.isArray(o)&&(i=o[1],o=e[n]=o[0]),n!==r&&(e[r]=o,delete e[n]),(a=ce.cssHooks[r])&&"expand"in a)for(n in o=a.expand(o),delete e[r],o)n in e||(e[n]=o[n],t[n]=i);else t[r]=i}(c,l.opts.specialEasing);r<i;r++)if(n=yt.prefilters[r].call(l,o,c,l.opts))return v(n.stop)&&(ce._queueHooks(l.elem,l.opts.queue).stop=n.stop.bind(n)),n;return ce.map(c,vt,l),v(l.opts.start)&&l.opts.start.call(o,l),l.progress(l.opts.progress).done(l.opts.done,l.opts.complete).fail(l.opts.fail).always(l.opts.always),ce.fx.timer(ce.extend(u,{elem:o,anim:l,queue:l.opts.queue})),l}ce.Animation=ce.extend(yt,{tweeners:{"*":[function(e,t){var n=this.createTween(e,t);return te(n.elem,e,Y.exec(t),n),n}]},tweener:function(e,t){v(e)?(t=e,e=["*"]):e=e.match(D);for(var n,r=0,i=e.length;r<i;r++)n=e[r],yt.tweeners[n]=yt.tweeners[n]||[],yt.tweeners[n].unshift(t)},prefilters:[function(e,t,n){var r,i,o,a,s,u,l,c,f="width"in t||"height"in t,p=this,d={},h=e.style,g=e.nodeType&&ee(e),v=_.get(e,"fxshow");for(r in n.queue||(null==(a=ce._queueHooks(e,"fx")).unqueued&&(a.unqueued=0,s=a.empty.fire,a.empty.fire=function(){a.unqueued||s()}),a.unqueued++,p.always(function(){p.always(function(){a.unqueued--,ce.queue(e,"fx").length||a.empty.fire()})})),t)if(i=t[r],ft.test(i)){if(delete t[r],o=o||"toggle"===i,i===(g?"hide":"show")){if("show"!==i||!v||void 0===v[r])continue;g=!0}d[r]=v&&v[r]||ce.style(e,r)}if((u=!ce.isEmptyObject(t))||!ce.isEmptyObject(d))for(r in f&&1===e.nodeType&&(n.overflow=[h.overflow,h.overflowX,h.overflowY],null==(l=v&&v.display)&&(l=_.get(e,"display")),"none"===(c=ce.css(e,"display"))&&(l?c=l:(re([e],!0),l=e.style.display||l,c=ce.css(e,"display"),re([e]))),("inline"===c||"inline-block"===c&&null!=l)&&"none"===ce.css(e,"float")&&(u||(p.done(function(){h.display=l}),null==l&&(c=h.display,l="none"===c?"":c)),h.display="inline-block")),n.overflow&&(h.overflow="hidden",p.always(function(){h.overflow=n.overflow[0],h.overflowX=n.overflow[1],h.overflowY=n.overflow[2]})),u=!1,d)u||(v?"hidden"in v&&(g=v.hidden):v=_.access(e,"fxshow",{display:l}),o&&(v.hidden=!g),g&&re([e],!0),p.done(function(){for(r in g||re([e]),_.remove(e,"fxshow"),d)ce.style(e,r,d[r])})),u=vt(g?v[r]:0,r,p),r in v||(v[r]=u.start,g&&(u.end=u.start,u.start=0))}],prefilter:function(e,t){t?yt.prefilters.unshift(e):yt.prefilters.push(e)}}),ce.speed=function(e,t,n){var r=e&&"object"==typeof e?ce.extend({},e):{complete:n||!n&&t||v(e)&&e,duration:e,easing:n&&t||t&&!v(t)&&t};return ce.fx.off?r.duration=0:"number"!=typeof r.duration&&(r.duration in ce.fx.speeds?r.duration=ce.fx.speeds[r.duration]:r.duration=ce.fx.speeds._default),null!=r.queue&&!0!==r.queue||(r.queue="fx"),r.old=r.complete,r.complete=function(){v(r.old)&&r.old.call(this),r.queue&&ce.dequeue(this,r.queue)},r},ce.fn.extend({fadeTo:function(e,t,n,r){return this.filter(ee).css("opacity",0).show().end().animate({opacity:t},e,n,r)},animate:function(t,e,n,r){var i=ce.isEmptyObject(t),o=ce.speed(e,n,r),a=function(){var e=yt(this,ce.extend({},t),o);(i||_.get(this,"finish"))&&e.stop(!0)};return a.finish=a,i||!1===o.queue?this.each(a):this.queue(o.queue,a)},stop:function(i,e,o){var a=function(e){var t=e.stop;delete e.stop,t(o)};return"string"!=typeof i&&(o=e,e=i,i=void 0),e&&this.queue(i||"fx",[]),this.each(function(){var e=!0,t=null!=i&&i+"queueHooks",n=ce.timers,r=_.get(this);if(t)r[t]&&r[t].stop&&a(r[t]);else for(t in r)r[t]&&r[t].stop&&pt.test(t)&&a(r[t]);for(t=n.length;t--;)n[t].elem!==this||null!=i&&n[t].queue!==i||(n[t].anim.stop(o),e=!1,n.splice(t,1));!e&&o||ce.dequeue(this,i)})},finish:function(a){return!1!==a&&(a=a||"fx"),this.each(function(){var e,t=_.get(this),n=t[a+"queue"],r=t[a+"queueHooks"],i=ce.timers,o=n?n.length:0;for(t.finish=!0,ce.queue(this,a,[]),r&&r.stop&&r.stop.call(this,!0),e=i.length;e--;)i[e].elem===this&&i[e].queue===a&&(i[e].anim.stop(!0),i.splice(e,1));for(e=0;e<o;e++)n[e]&&n[e].finish&&n[e].finish.call(this);delete t.finish})}}),ce.each(["toggle","show","hide"],function(e,r){var i=ce.fn[r];ce.fn[r]=function(e,t,n){return null==e||"boolean"==typeof e?i.apply(this,arguments):this.animate(gt(r,!0),e,t,n)}}),ce.each({slideDown:gt("show"),slideUp:gt("hide"),slideToggle:gt("toggle"),fadeIn:{opacity:"show"},fadeOut:{opacity:"hide"},fadeToggle:{opacity:"toggle"}},function(e,r){ce.fn[e]=function(e,t,n){return this.animate(r,e,t,n)}}),ce.timers=[],ce.fx.tick=function(){var e,t=0,n=ce.timers;for(st=Date.now();t<n.length;t++)(e=n[t])()||n[t]!==e||n.splice(t--,1);n.length||ce.fx.stop(),st=void 0},ce.fx.timer=function(e){ce.timers.push(e),ce.fx.start()},ce.fx.interval=13,ce.fx.start=function(){ut||(ut=!0,dt())},ce.fx.stop=function(){ut=null},ce.fx.speeds={slow:600,fast:200,_default:400},ce.fn.delay=function(r,e){return r=ce.fx&&ce.fx.speeds[r]||r,e=e||"fx",this.queue(e,function(e,t){var n=ie.setTimeout(e,r);t.stop=function(){ie.clearTimeout(n)}})},lt=C.createElement("input"),ct=C.createElement("select").appendChild(C.createElement("option")),lt.type="checkbox",le.checkOn=""!==lt.value,le.optSelected=ct.selected,(lt=C.createElement("input")).value="t",lt.type="radio",le.radioValue="t"===lt.value;var mt,xt=ce.expr.attrHandle;ce.fn.extend({attr:function(e,t){return R(this,ce.attr,e,t,1<arguments.length)},removeAttr:function(e){return this.each(function(){ce.removeAttr(this,e)})}}),ce.extend({attr:function(e,t,n){var r,i,o=e.nodeType;if(3!==o&&8!==o&&2!==o)return"undefined"==typeof e.getAttribute?ce.prop(e,t,n):(1===o&&ce.isXMLDoc(e)||(i=ce.attrHooks[t.toLowerCase()]||(ce.expr.match.bool.test(t)?mt:void 0)),void 0!==n?null===n?void ce.removeAttr(e,t):i&&"set"in i&&void 0!==(r=i.set(e,n,t))?r:(e.setAttribute(t,n+""),n):i&&"get"in i&&null!==(r=i.get(e,t))?r:null==(r=ce.find.attr(e,t))?void 0:r)},attrHooks:{type:{set:function(e,t){if(!le.radioValue&&"radio"===t&&fe(e,"input")){var n=e.value;return e.setAttribute("type",t),n&&(e.value=n),t}}}},removeAttr:function(e,t){var n,r=0,i=t&&t.match(D);if(i&&1===e.nodeType)while(n=i[r++])e.removeAttribute(n)}}),mt={set:function(e,t,n){return!1===t?ce.removeAttr(e,n):e.setAttribute(n,n),n}},ce.each(ce.expr.match.bool.source.match(/\w+/g),function(e,t){var a=xt[t]||ce.find.attr;xt[t]=function(e,t,n){var r,i,o=t.toLowerCase();return n||(i=xt[o],xt[o]=r,r=null!=a(e,t,n)?o:null,xt[o]=i),r}});var bt=/^(?:input|select|textarea|button)$/i,wt=/^(?:a|area)$/i;function Tt(e){return(e.match(D)||[]).join(" ")}function Ct(e){return e.getAttribute&&e.getAttribute("class")||""}function kt(e){return Array.isArray(e)?e:"string"==typeof e&&e.match(D)||[]}ce.fn.extend({prop:function(e,t){return R(this,ce.prop,e,t,1<arguments.length)},removeProp:function(e){return this.each(function(){delete this[ce.propFix[e]||e]})}}),ce.extend({prop:function(e,t,n){var r,i,o=e.nodeType;if(3!==o&&8!==o&&2!==o)return 1===o&&ce.isXMLDoc(e)||(t=ce.propFix[t]||t,i=ce.propHooks[t]),void 0!==n?i&&"set"in i&&void 0!==(r=i.set(e,n,t))?r:e[t]=n:i&&"get"in i&&null!==(r=i.get(e,t))?r:e[t]},propHooks:{tabIndex:{get:function(e){var t=ce.find.attr(e,"tabindex");return t?parseInt(t,10):bt.test(e.nodeName)||wt.test(e.nodeName)&&e.href?0:-1}}},propFix:{"for":"htmlFor","class":"className"}}),le.optSelected||(ce.propHooks.selected={get:function(e){var t=e.parentNode;return t&&t.parentNode&&t.parentNode.selectedIndex,null},set:function(e){var t=e.parentNode;t&&(t.selectedIndex,t.parentNode&&t.parentNode.selectedIndex)}}),ce.each(["tabIndex","readOnly","maxLength","cellSpacing","cellPadding","rowSpan","colSpan","useMap","frameBorder","contentEditable"],function(){ce.propFix[this.toLowerCase()]=this}),ce.fn.extend({addClass:function(t){var e,n,r,i,o,a;return v(t)?this.each(function(e){ce(this).addClass(t.call(this,e,Ct(this)))}):(e=kt(t)).length?this.each(function(){if(r=Ct(this),n=1===this.nodeType&&" "+Tt(r)+" "){for(o=0;o<e.length;o++)i=e[o],n.indexOf(" "+i+" ")<0&&(n+=i+" ");a=Tt(n),r!==a&&this.setAttribute("class",a)}}):this},removeClass:function(t){var e,n,r,i,o,a;return v(t)?this.each(function(e){ce(this).removeClass(t.call(this,e,Ct(this)))}):arguments.length?(e=kt(t)).length?this.each(function(){if(r=Ct(this),n=1===this.nodeType&&" "+Tt(r)+" "){for(o=0;o<e.length;o++){i=e[o];while(-1<n.indexOf(" "+i+" "))n=n.replace(" "+i+" "," ")}a=Tt(n),r!==a&&this.setAttribute("class",a)}}):this:this.attr("class","")},toggleClass:function(t,n){var e,r,i,o,a=typeof t,s="string"===a||Array.isArray(t);return v(t)?this.each(function(e){ce(this).toggleClass(t.call(this,e,Ct(this),n),n)}):"boolean"==typeof n&&s?n?this.addClass(t):this.removeClass(t):(e=kt(t),this.each(function(){if(s)for(o=ce(this),i=0;i<e.length;i++)r=e[i],o.hasClass(r)?o.removeClass(r):o.addClass(r);else void 0!==t&&"boolean"!==a||((r=Ct(this))&&_.set(this,"__className__",r),this.setAttribute&&this.setAttribute("class",r||!1===t?"":_.get(this,"__className__")||""))}))},hasClass:function(e){var t,n,r=0;t=" "+e+" ";while(n=this[r++])if(1===n.nodeType&&-1<(" "+Tt(Ct(n))+" ").indexOf(t))return!0;return!1}});var St=/\r/g;ce.fn.extend({val:function(n){var r,e,i,t=this[0];return arguments.length?(i=v(n),this.each(function(e){var t;1===this.nodeType&&(null==(t=i?n.call(this,e,ce(this).val()):n)?t="":"number"==typeof t?t+="":Array.isArray(t)&&(t=ce.map(t,function(e){return null==e?"":e+""})),(r=ce.valHooks[this.type]||ce.valHooks[this.nodeName.toLowerCase()])&&"set"in r&&void 0!==r.set(this,t,"value")||(this.value=t))})):t?(r=ce.valHooks[t.type]||ce.valHooks[t.nodeName.toLowerCase()])&&"get"in r&&void 0!==(e=r.get(t,"value"))?e:"string"==typeof(e=t.value)?e.replace(St,""):null==e?"":e:void 0}}),ce.extend({valHooks:{option:{get:function(e){var t=ce.find.attr(e,"value");return null!=t?t:Tt(ce.text(e))}},select:{get:function(e){var t,n,r,i=e.options,o=e.selectedIndex,a="select-one"===e.type,s=a?null:[],u=a?o+1:i.length;for(r=o<0?u:a?o:0;r<u;r++)if(((n=i[r]).selected||r===o)&&!n.disabled&&(!n.parentNode.disabled||!fe(n.parentNode,"optgroup"))){if(t=ce(n).val(),a)return t;s.push(t)}return s},set:function(e,t){var n,r,i=e.options,o=ce.makeArray(t),a=i.length;while(a--)((r=i[a]).selected=-1<ce.inArray(ce.valHooks.option.get(r),o))&&(n=!0);return n||(e.selectedIndex=-1),o}}}}),ce.each(["radio","checkbox"],function(){ce.valHooks[this]={set:function(e,t){if(Array.isArray(t))return e.checked=-1<ce.inArray(ce(e).val(),t)}},le.checkOn||(ce.valHooks[this].get=function(e){return null===e.getAttribute("value")?"on":e.value})});var Et=ie.location,jt={guid:Date.now()},At=/\?/;ce.parseXML=function(e){var t,n;if(!e||"string"!=typeof e)return null;try{t=(new ie.DOMParser).parseFromString(e,"text/xml")}catch(e){}return n=t&&t.getElementsByTagName("parsererror")[0],t&&!n||ce.error("Invalid XML: "+(n?ce.map(n.childNodes,function(e){return e.textContent}).join("\n"):e)),t};var Dt=/^(?:focusinfocus|focusoutblur)$/,Nt=function(e){e.stopPropagation()};ce.extend(ce.event,{trigger:function(e,t,n,r){var i,o,a,s,u,l,c,f,p=[n||C],d=ue.call(e,"type")?e.type:e,h=ue.call(e,"namespace")?e.namespace.split("."):[];if(o=f=a=n=n||C,3!==n.nodeType&&8!==n.nodeType&&!Dt.test(d+ce.event.triggered)&&(-1<d.indexOf(".")&&(d=(h=d.split(".")).shift(),h.sort()),u=d.indexOf(":")<0&&"on"+d,(e=e[ce.expando]?e:new ce.Event(d,"object"==typeof e&&e)).isTrigger=r?2:3,e.namespace=h.join("."),e.rnamespace=e.namespace?new RegExp("(^|\\.)"+h.join("\\.(?:.*\\.|)")+"(\\.|$)"):null,e.result=void 0,e.target||(e.target=n),t=null==t?[e]:ce.makeArray(t,[e]),c=ce.event.special[d]||{},r||!c.trigger||!1!==c.trigger.apply(n,t))){if(!r&&!c.noBubble&&!y(n)){for(s=c.delegateType||d,Dt.test(s+d)||(o=o.parentNode);o;o=o.parentNode)p.push(o),a=o;a===(n.ownerDocument||C)&&p.push(a.defaultView||a.parentWindow||ie)}i=0;while((o=p[i++])&&!e.isPropagationStopped())f=o,e.type=1<i?s:c.bindType||d,(l=(_.get(o,"events")||Object.create(null))[e.type]&&_.get(o,"handle"))&&l.apply(o,t),(l=u&&o[u])&&l.apply&&$(o)&&(e.result=l.apply(o,t),!1===e.result&&e.preventDefault());return e.type=d,r||e.isDefaultPrevented()||c._default&&!1!==c._default.apply(p.pop(),t)||!$(n)||u&&v(n[d])&&!y(n)&&((a=n[u])&&(n[u]=null),ce.event.triggered=d,e.isPropagationStopped()&&f.addEventListener(d,Nt),n[d](),e.isPropagationStopped()&&f.removeEventListener(d,Nt),ce.event.triggered=void 0,a&&(n[u]=a)),e.result}},simulate:function(e,t,n){var r=ce.extend(new ce.Event,n,{type:e,isSimulated:!0});ce.event.trigger(r,null,t)}}),ce.fn.extend({trigger:function(e,t){return this.each(function(){ce.event.trigger(e,t,this)})},triggerHandler:function(e,t){var n=this[0];if(n)return ce.event.trigger(e,t,n,!0)}});var qt=/\[\]$/,Lt=/\r?\n/g,Ht=/^(?:submit|button|image|reset|file)$/i,Ot=/^(?:input|select|textarea|keygen)/i;function Pt(n,e,r,i){var t;if(Array.isArray(e))ce.each(e,function(e,t){r||qt.test(n)?i(n,t):Pt(n+"["+("object"==typeof t&&null!=t?e:"")+"]",t,r,i)});else if(r||"object"!==x(e))i(n,e);else for(t in e)Pt(n+"["+t+"]",e[t],r,i)}ce.param=function(e,t){var n,r=[],i=function(e,t){var n=v(t)?t():t;r[r.length]=encodeURIComponent(e)+"="+encodeURIComponent(null==n?"":n)};if(null==e)return"";if(Array.isArray(e)||e.jquery&&!ce.isPlainObject(e))ce.each(e,function(){i(this.name,this.value)});else for(n in e)Pt(n,e[n],t,i);return r.join("&")},ce.fn.extend({serialize:function(){return ce.param(this.serializeArray())},serializeArray:function(){return this.map(function(){var e=ce.prop(this,"elements");return e?ce.makeArray(e):this}).filter(function(){var e=this.type;return this.name&&!ce(this).is(":disabled")&&Ot.test(this.nodeName)&&!Ht.test(e)&&(this.checked||!we.test(e))}).map(function(e,t){var n=ce(this).val();return null==n?null:Array.isArray(n)?ce.map(n,function(e){return{name:t.name,value:e.replace(Lt,"\r\n")}}):{name:t.name,value:n.replace(Lt,"\r\n")}}).get()}});var Rt=/%20/g,Mt=/#.*$/,It=/([?&])_=[^&]*/,Wt=/^(.*?):[ \t]*([^\r\n]*)$/gm,Ft=/^(?:GET|HEAD)$/,$t=/^\/\//,Bt={},_t={},Xt="*/".concat("*"),Ut=C.createElement("a");function zt(o){return function(e,t){"string"!=typeof e&&(t=e,e="*");var n,r=0,i=e.toLowerCase().match(D)||[];if(v(t))while(n=i[r++])"+"===n[0]?(n=n.slice(1)||"*",(o[n]=o[n]||[]).unshift(t)):(o[n]=o[n]||[]).push(t)}}function Vt(t,i,o,a){var s={},u=t===_t;function l(e){var r;return s[e]=!0,ce.each(t[e]||[],function(e,t){var n=t(i,o,a);return"string"!=typeof n||u||s[n]?u?!(r=n):void 0:(i.dataTypes.unshift(n),l(n),!1)}),r}return l(i.dataTypes[0])||!s["*"]&&l("*")}function Gt(e,t){var n,r,i=ce.ajaxSettings.flatOptions||{};for(n in t)void 0!==t[n]&&((i[n]?e:r||(r={}))[n]=t[n]);return r&&ce.extend(!0,e,r),e}Ut.href=Et.href,ce.extend({active:0,lastModified:{},etag:{},ajaxSettings:{url:Et.href,type:"GET",isLocal:/^(?:about|app|app-storage|.+-extension|file|res|widget):$/.test(Et.protocol),global:!0,processData:!0,async:!0,contentType:"application/x-www-form-urlencoded; charset=UTF-8",accepts:{"*":Xt,text:"text/plain",html:"text/html",xml:"application/xml, text/xml",json:"application/json, text/javascript"},contents:{xml:/\bxml\b/,html:/\bhtml/,json:/\bjson\b/},responseFields:{xml:"responseXML",text:"responseText",json:"responseJSON"},converters:{"* text":String,"text html":!0,"text json":JSON.parse,"text xml":ce.parseXML},flatOptions:{url:!0,context:!0}},ajaxSetup:function(e,t){return t?Gt(Gt(e,ce.ajaxSettings),t):Gt(ce.ajaxSettings,e)},ajaxPrefilter:zt(Bt),ajaxTransport:zt(_t),ajax:function(e,t){"object"==typeof e&&(t=e,e=void 0),t=t||{};var c,f,p,n,d,r,h,g,i,o,v=ce.ajaxSetup({},t),y=v.context||v,m=v.context&&(y.nodeType||y.jquery)?ce(y):ce.event,x=ce.Deferred(),b=ce.Callbacks("once memory"),w=v.statusCode||{},a={},s={},u="canceled",T={readyState:0,getResponseHeader:function(e){var t;if(h){if(!n){n={};while(t=Wt.exec(p))n[t[1].toLowerCase()+" "]=(n[t[1].toLowerCase()+" "]||[]).concat(t[2])}t=n[e.toLowerCase()+" "]}return null==t?null:t.join(", ")},getAllResponseHeaders:function(){return h?p:null},setRequestHeader:function(e,t){return null==h&&(e=s[e.toLowerCase()]=s[e.toLowerCase()]||e,a[e]=t),this},overrideMimeType:function(e){return null==h&&(v.mimeType=e),this},statusCode:function(e){var t;if(e)if(h)T.always(e[T.status]);else for(t in e)w[t]=[w[t],e[t]];return this},abort:function(e){var t=e||u;return c&&c.abort(t),l(0,t),this}};if(x.promise(T),v.url=((e||v.url||Et.href)+"").replace($t,Et.protocol+"//"),v.type=t.method||t.type||v.method||v.type,v.dataTypes=(v.dataType||"*").toLowerCase().match(D)||[""],null==v.crossDomain){r=C.createElement("a");try{r.href=v.url,r.href=r.href,v.crossDomain=Ut.protocol+"//"+Ut.host!=r.protocol+"//"+r.host}catch(e){v.crossDomain=!0}}if(v.data&&v.processData&&"string"!=typeof v.data&&(v.data=ce.param(v.data,v.traditional)),Vt(Bt,v,t,T),h)return T;for(i in(g=ce.event&&v.global)&&0==ce.active++&&ce.event.trigger("ajaxStart"),v.type=v.type.toUpperCase(),v.hasContent=!Ft.test(v.type),f=v.url.replace(Mt,""),v.hasContent?v.data&&v.processData&&0===(v.contentType||"").indexOf("application/x-www-form-urlencoded")&&(v.data=v.data.replace(Rt,"+")):(o=v.url.slice(f.length),v.data&&(v.processData||"string"==typeof v.data)&&(f+=(At.test(f)?"&":"?")+v.data,delete v.data),!1===v.cache&&(f=f.replace(It,"$1"),o=(At.test(f)?"&":"?")+"_="+jt.guid+++o),v.url=f+o),v.ifModified&&(ce.lastModified[f]&&T.setRequestHeader("If-Modified-Since",ce.lastModified[f]),ce.etag[f]&&T.setRequestHeader("If-None-Match",ce.etag[f])),(v.data&&v.hasContent&&!1!==v.contentType||t.contentType)&&T.setRequestHeader("Content-Type",v.contentType),T.setRequestHeader("Accept",v.dataTypes[0]&&v.accepts[v.dataTypes[0]]?v.accepts[v.dataTypes[0]]+("*"!==v.dataTypes[0]?", "+Xt+"; q=0.01":""):v.accepts["*"]),v.headers)T.setRequestHeader(i,v.headers[i]);if(v.beforeSend&&(!1===v.beforeSend.call(y,T,v)||h))return T.abort();if(u="abort",b.add(v.complete),T.done(v.success),T.fail(v.error),c=Vt(_t,v,t,T)){if(T.readyState=1,g&&m.trigger("ajaxSend",[T,v]),h)return T;v.async&&0<v.timeout&&(d=ie.setTimeout(function(){T.abort("timeout")},v.timeout));try{h=!1,c.send(a,l)}catch(e){if(h)throw e;l(-1,e)}}else l(-1,"No Transport");function l(e,t,n,r){var i,o,a,s,u,l=t;h||(h=!0,d&&ie.clearTimeout(d),c=void 0,p=r||"",T.readyState=0<e?4:0,i=200<=e&&e<300||304===e,n&&(s=function(e,t,n){var r,i,o,a,s=e.contents,u=e.dataTypes;while("*"===u[0])u.shift(),void 0===r&&(r=e.mimeType||t.getResponseHeader("Content-Type"));if(r)for(i in s)if(s[i]&&s[i].test(r)){u.unshift(i);break}if(u[0]in n)o=u[0];else{for(i in n){if(!u[0]||e.converters[i+" "+u[0]]){o=i;break}a||(a=i)}o=o||a}if(o)return o!==u[0]&&u.unshift(o),n[o]}(v,T,n)),!i&&-1<ce.inArray("script",v.dataTypes)&&ce.inArray("json",v.dataTypes)<0&&(v.converters["text script"]=function(){}),s=function(e,t,n,r){var i,o,a,s,u,l={},c=e.dataTypes.slice();if(c[1])for(a in e.converters)l[a.toLowerCase()]=e.converters[a];o=c.shift();while(o)if(e.responseFields[o]&&(n[e.responseFields[o]]=t),!u&&r&&e.dataFilter&&(t=e.dataFilter(t,e.dataType)),u=o,o=c.shift())if("*"===o)o=u;else if("*"!==u&&u!==o){if(!(a=l[u+" "+o]||l["* "+o]))for(i in l)if((s=i.split(" "))[1]===o&&(a=l[u+" "+s[0]]||l["* "+s[0]])){!0===a?a=l[i]:!0!==l[i]&&(o=s[0],c.unshift(s[1]));break}if(!0!==a)if(a&&e["throws"])t=a(t);else try{t=a(t)}catch(e){return{state:"parsererror",error:a?e:"No conversion from "+u+" to "+o}}}return{state:"success",data:t}}(v,s,T,i),i?(v.ifModified&&((u=T.getResponseHeader("Last-Modified"))&&(ce.lastModified[f]=u),(u=T.getResponseHeader("etag"))&&(ce.etag[f]=u)),204===e||"HEAD"===v.type?l="nocontent":304===e?l="notmodified":(l=s.state,o=s.data,i=!(a=s.error))):(a=l,!e&&l||(l="error",e<0&&(e=0))),T.status=e,T.statusText=(t||l)+"",i?x.resolveWith(y,[o,l,T]):x.rejectWith(y,[T,l,a]),T.statusCode(w),w=void 0,g&&m.trigger(i?"ajaxSuccess":"ajaxError",[T,v,i?o:a]),b.fireWith(y,[T,l]),g&&(m.trigger("ajaxComplete",[T,v]),--ce.active||ce.event.trigger("ajaxStop")))}return T},getJSON:function(e,t,n){return ce.get(e,t,n,"json")},getScript:function(e,t){return ce.get(e,void 0,t,"script")}}),ce.each(["get","post"],function(e,i){ce[i]=function(e,t,n,r){return v(t)&&(r=r||n,n=t,t=void 0),ce.ajax(ce.extend({url:e,type:i,dataType:r,data:t,success:n},ce.isPlainObject(e)&&e))}}),ce.ajaxPrefilter(function(e){var t;for(t in e.headers)"content-type"===t.toLowerCase()&&(e.contentType=e.headers[t]||"")}),ce._evalUrl=function(e,t,n){return ce.ajax({url:e,type:"GET",dataType:"script",cache:!0,async:!1,global:!1,converters:{"text script":function(){}},dataFilter:function(e){ce.globalEval(e,t,n)}})},ce.fn.extend({wrapAll:function(e){var t;return this[0]&&(v(e)&&(e=e.call(this[0])),t=ce(e,this[0].ownerDocument).eq(0).clone(!0),this[0].parentNode&&t.insertBefore(this[0]),t.map(function(){var e=this;while(e.firstElementChild)e=e.firstElementChild;return e}).append(this)),this},wrapInner:function(n){return v(n)?this.each(function(e){ce(this).wrapInner(n.call(this,e))}):this.each(function(){var e=ce(this),t=e.contents();t.length?t.wrapAll(n):e.append(n)})},wrap:function(t){var n=v(t);return this.each(function(e){ce(this).wrapAll(n?t.call(this,e):t)})},unwrap:function(e){return this.parent(e).not("body").each(function(){ce(this).replaceWith(this.childNodes)}),this}}),ce.expr.pseudos.hidden=function(e){return!ce.expr.pseudos.visible(e)},ce.expr.pseudos.visible=function(e){return!!(e.offsetWidth||e.offsetHeight||e.getClientRects().length)},ce.ajaxSettings.xhr=function(){try{return new ie.XMLHttpRequest}catch(e){}};var Yt={0:200,1223:204},Qt=ce.ajaxSettings.xhr();le.cors=!!Qt&&"withCredentials"in Qt,le.ajax=Qt=!!Qt,ce.ajaxTransport(function(i){var o,a;if(le.cors||Qt&&!i.crossDomain)return{send:function(e,t){var n,r=i.xhr();if(r.open(i.type,i.url,i.async,i.username,i.password),i.xhrFields)for(n in i.xhrFields)r[n]=i.xhrFields[n];for(n in i.mimeType&&r.overrideMimeType&&r.overrideMimeType(i.mimeType),i.crossDomain||e["X-Requested-With"]||(e["X-Requested-With"]="XMLHttpRequest"),e)r.setRequestHeader(n,e[n]);o=function(e){return function(){o&&(o=a=r.onload=r.onerror=r.onabort=r.ontimeout=r.onreadystatechange=null,"abort"===e?r.abort():"error"===e?"number"!=typeof r.status?t(0,"error"):t(r.status,r.statusText):t(Yt[r.status]||r.status,r.statusText,"text"!==(r.responseType||"text")||"string"!=typeof r.responseText?{binary:r.response}:{text:r.responseText},r.getAllResponseHeaders()))}},r.onload=o(),a=r.onerror=r.ontimeout=o("error"),void 0!==r.onabort?r.onabort=a:r.onreadystatechange=function(){4===r.readyState&&ie.setTimeout(function(){o&&a()})},o=o("abort");try{r.send(i.hasContent&&i.data||null)}catch(e){if(o)throw e}},abort:function(){o&&o()}}}),ce.ajaxPrefilter(function(e){e.crossDomain&&(e.contents.script=!1)}),ce.ajaxSetup({accepts:{script:"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript"},contents:{script:/\b(?:java|ecma)script\b/},converters:{"text script":function(e){return ce.globalEval(e),e}}}),ce.ajaxPrefilter("script",function(e){void 0===e.cache&&(e.cache=!1),e.crossDomain&&(e.type="GET")}),ce.ajaxTransport("script",function(n){var r,i;if(n.crossDomain||n.scriptAttrs)return{send:function(e,t){r=ce("<script>").attr(n.scriptAttrs||{}).prop({charset:n.scriptCharset,src:n.url}).on("load error",i=function(e){r.remove(),i=null,e&&t("error"===e.type?404:200,e.type)}),C.head.appendChild(r[0])},abort:function(){i&&i()}}});var Jt,Kt=[],Zt=/(=)\?(?=&|$)|\?\?/;ce.ajaxSetup({jsonp:"callback",jsonpCallback:function(){var e=Kt.pop()||ce.expando+"_"+jt.guid++;return this[e]=!0,e}}),ce.ajaxPrefilter("json jsonp",function(e,t,n){var r,i,o,a=!1!==e.jsonp&&(Zt.test(e.url)?"url":"string"==typeof e.data&&0===(e.contentType||"").indexOf("application/x-www-form-urlencoded")&&Zt.test(e.data)&&"data");if(a||"jsonp"===e.dataTypes[0])return r=e.jsonpCallback=v(e.jsonpCallback)?e.jsonpCallback():e.jsonpCallback,a?e[a]=e[a].replace(Zt,"$1"+r):!1!==e.jsonp&&(e.url+=(At.test(e.url)?"&":"?")+e.jsonp+"="+r),e.converters["script json"]=function(){return o||ce.error(r+" was not called"),o[0]},e.dataTypes[0]="json",i=ie[r],ie[r]=function(){o=arguments},n.always(function(){void 0===i?ce(ie).removeProp(r):ie[r]=i,e[r]&&(e.jsonpCallback=t.jsonpCallback,Kt.push(r)),o&&v(i)&&i(o[0]),o=i=void 0}),"script"}),le.createHTMLDocument=((Jt=C.implementation.createHTMLDocument("").body).innerHTML="<form></form><form></form>",2===Jt.childNodes.length),ce.parseHTML=function(e,t,n){return"string"!=typeof e?[]:("boolean"==typeof t&&(n=t,t=!1),t||(le.createHTMLDocument?((r=(t=C.implementation.createHTMLDocument("")).createElement("base")).href=C.location.href,t.head.appendChild(r)):t=C),o=!n&&[],(i=w.exec(e))?[t.createElement(i[1])]:(i=Ae([e],t,o),o&&o.length&&ce(o).remove(),ce.merge([],i.childNodes)));var r,i,o},ce.fn.load=function(e,t,n){var r,i,o,a=this,s=e.indexOf(" ");return-1<s&&(r=Tt(e.slice(s)),e=e.slice(0,s)),v(t)?(n=t,t=void 0):t&&"object"==typeof t&&(i="POST"),0<a.length&&ce.ajax({url:e,type:i||"GET",dataType:"html",data:t}).done(function(e){o=arguments,a.html(r?ce("<div>").append(ce.parseHTML(e)).find(r):e)}).always(n&&function(e,t){a.each(function(){n.apply(this,o||[e.responseText,t,e])})}),this},ce.expr.pseudos.animated=function(t){return ce.grep(ce.timers,function(e){return t===e.elem}).length},ce.offset={setOffset:function(e,t,n){var r,i,o,a,s,u,l=ce.css(e,"position"),c=ce(e),f={};"static"===l&&(e.style.position="relative"),s=c.offset(),o=ce.css(e,"top"),u=ce.css(e,"left"),("absolute"===l||"fixed"===l)&&-1<(o+u).indexOf("auto")?(a=(r=c.position()).top,i=r.left):(a=parseFloat(o)||0,i=parseFloat(u)||0),v(t)&&(t=t.call(e,n,ce.extend({},s))),null!=t.top&&(f.top=t.top-s.top+a),null!=t.left&&(f.left=t.left-s.left+i),"using"in t?t.using.call(e,f):c.css(f)}},ce.fn.extend({offset:function(t){if(arguments.length)return void 0===t?this:this.each(function(e){ce.offset.setOffset(this,t,e)});var e,n,r=this[0];return r?r.getClientRects().length?(e=r.getBoundingClientRect(),n=r.ownerDocument.defaultView,{top:e.top+n.pageYOffset,left:e.left+n.pageXOffset}):{top:0,left:0}:void 0},position:function(){if(this[0]){var e,t,n,r=this[0],i={top:0,left:0};if("fixed"===ce.css(r,"position"))t=r.getBoundingClientRect();else{t=this.offset(),n=r.ownerDocument,e=r.offsetParent||n.documentElement;while(e&&(e===n.body||e===n.documentElement)&&"static"===ce.css(e,"position"))e=e.parentNode;e&&e!==r&&1===e.nodeType&&((i=ce(e).offset()).top+=ce.css(e,"borderTopWidth",!0),i.left+=ce.css(e,"borderLeftWidth",!0))}return{top:t.top-i.top-ce.css(r,"marginTop",!0),left:t.left-i.left-ce.css(r,"marginLeft",!0)}}},offsetParent:function(){return this.map(function(){var e=this.offsetParent;while(e&&"static"===ce.css(e,"position"))e=e.offsetParent;return e||J})}}),ce.each({scrollLeft:"pageXOffset",scrollTop:"pageYOffset"},function(t,i){var o="pageYOffset"===i;ce.fn[t]=function(e){return R(this,function(e,t,n){var r;if(y(e)?r=e:9===e.nodeType&&(r=e.defaultView),void 0===n)return r?r[i]:e[t];r?r.scrollTo(o?r.pageXOffset:n,o?n:r.pageYOffset):e[t]=n},t,e,arguments.length)}}),ce.each(["top","left"],function(e,n){ce.cssHooks[n]=Ye(le.pixelPosition,function(e,t){if(t)return t=Ge(e,n),_e.test(t)?ce(e).position()[n]+"px":t})}),ce.each({Height:"height",Width:"width"},function(a,s){ce.each({padding:"inner"+a,content:s,"":"outer"+a},function(r,o){ce.fn[o]=function(e,t){var n=arguments.length&&(r||"boolean"!=typeof e),i=r||(!0===e||!0===t?"margin":"border");return R(this,function(e,t,n){var r;return y(e)?0===o.indexOf("outer")?e["inner"+a]:e.document.documentElement["client"+a]:9===e.nodeType?(r=e.documentElement,Math.max(e.body["scroll"+a],r["scroll"+a],e.body["offset"+a],r["offset"+a],r["client"+a])):void 0===n?ce.css(e,t,i):ce.style(e,t,n,i)},s,n?e:void 0,n)}})}),ce.each(["ajaxStart","ajaxStop","ajaxComplete","ajaxError","ajaxSuccess","ajaxSend"],function(e,t){ce.fn[t]=function(e){return this.on(t,e)}}),ce.fn.extend({bind:function(e,t,n){return this.on(e,null,t,n)},unbind:function(e,t){return this.off(e,null,t)},delegate:function(e,t,n,r){return this.on(t,e,n,r)},undelegate:function(e,t,n){return 1===arguments.length?this.off(e,"**"):this.off(t,e||"**",n)},hover:function(e,t){return this.mouseenter(e).mouseleave(t||e)}}),ce.each("blur focus focusin focusout resize scroll click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup contextmenu".split(" "),function(e,n){ce.fn[n]=function(e,t){return 0<arguments.length?this.on(n,null,e,t):this.trigger(n)}});var en=/^[\s\uFEFF\xA0]+|([^\s\uFEFF\xA0])[\s\uFEFF\xA0]+$/g;ce.proxy=function(e,t){var n,r,i;if("string"==typeof t&&(n=e[t],t=e,e=n),v(e))return r=ae.call(arguments,2),(i=function(){return e.apply(t||this,r.concat(ae.call(arguments)))}).guid=e.guid=e.guid||ce.guid++,i},ce.holdReady=function(e){e?ce.readyWait++:ce.ready(!0)},ce.isArray=Array.isArray,ce.parseJSON=JSON.parse,ce.nodeName=fe,ce.isFunction=v,ce.isWindow=y,ce.camelCase=F,ce.type=x,ce.now=Date.now,ce.isNumeric=function(e){var t=ce.type(e);return("number"===t||"string"===t)&&!isNaN(e-parseFloat(e))},ce.trim=function(e){return null==e?"":(e+"").replace(en,"$1")},"function"==typeof define&&define.amd&&define("jquery",[],function(){return ce});var tn=ie.jQuery,nn=ie.$;return ce.noConflict=function(e){return ie.$===ce&&(ie.$=nn),e&&ie.jQuery===ce&&(ie.jQuery=tn),ce},"undefined"==typeof e&&(ie.jQuery=ie.$=ce),ce});
 
@@ -10706,4 +10707,4504 @@ if ( $.ajaxPrefilter ) {
 	};
 }
 return $;
+}));
+/**
+ * Selectize (v0.15.2)
+ * https://selectize.dev
+ *
+ * Copyright (c) 2013-2015 Brian Reavis & contributors
+ * Copyright (c) 2020-2022 Selectize Team & contributors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at:
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ *
+ * @author Brian Reavis <brian@thirdroute.com>
+ * @author Ris Adams <selectize@risadams.com>
+ */
+(function (root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(['jquery'], factory);
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory(require('jquery'));
+  } else {
+    root.Selectize = factory(root.jQuery);
+  }
+}(this, function ($) {
+  'use strict';
+/**
+ * highlight v3 | MIT license | Johann Burkard <jb@eaio.com>
+ * Highlights arbitrary terms in a node.
+ *
+ * - Modified by Marshal <beatgates@gmail.com> 2011-6-24 (added regex)
+ * - Modified by Brian Reavis <brian@thirdroute.com> 2012-8-27 (cleanup)
+ */
+
+var highlight = function ($element, pattern) {
+  if (typeof pattern === 'string' && !pattern.length) return;
+  var regex = (typeof pattern === 'string') ? new RegExp(pattern, 'i') : pattern;
+
+  var highlight = function (node) {
+    var skip = 0;
+    // Wrap matching part of text node with highlighting <span>, e.g.
+    // Soccer  ->  <span class="highlight">Soc</span>cer  for regex = /soc/i
+    if (node.nodeType === 3) {
+      var pos = node.data.search(regex);
+      if (pos >= 0 && node.data.length > 0) {
+        var match = node.data.match(regex);
+        var spannode = document.createElement('span');
+        spannode.className = 'highlight';
+        var middlebit = node.splitText(pos);
+        var endbit = middlebit.splitText(match[0].length);
+        var middleclone = middlebit.cloneNode(true);
+        spannode.appendChild(middleclone);
+        middlebit.parentNode.replaceChild(spannode, middlebit);
+        skip = 1;
+      }
+    }
+    // Recurse element node, looking for child text nodes to highlight, unless element
+    // is childless, <script>, <style>, or already highlighted: <span class="highlight">
+    else if (node.nodeType === 1 && node.childNodes && !/(script|style)/i.test(node.tagName) && (node.className !== 'highlight' || node.tagName !== 'SPAN')) {
+      for (var i = 0; i < node.childNodes.length; ++i) {
+        i += highlight(node.childNodes[i]);
+      }
+    }
+    return skip;
+  };
+
+  return $element.each(function () {
+    highlight(this);
+  });
+};
+
+/**
+ * removeHighlight fn copied from highlight v5 and
+ * edited to remove with() and pass js strict mode
+ */
+$.fn.removeHighlight = function () {
+  return this.find("span.highlight").each(function () {
+    this.parentNode.firstChild.nodeName;
+    var parent = this.parentNode;
+    parent.replaceChild(this.firstChild, this);
+    parent.normalize();
+  }).end();
+};
+
+/**
+ * MicroEvent - to make any js object an event emitter
+ *
+ * - pure javascript - server compatible, browser compatible
+ * - don't rely on the browser doms
+ * - super simple - you get it immediately, no mystery, no magic involved
+ *
+ * @author Jerome Etienne (https://github.com/jeromeetienne)
+ */
+
+var MicroEvent = function () { };
+MicroEvent.prototype = {
+  on: function (event, fct) {
+    this._events = this._events || {};
+    this._events[event] = this._events[event] || [];
+    this._events[event].push(fct);
+  },
+  off: function (event, fct) {
+    var n = arguments.length;
+    if (n === 0) return delete this._events;
+    if (n === 1) return delete this._events[event];
+
+    this._events = this._events || {};
+    if (event in this._events === false) return;
+    this._events[event].splice(this._events[event].indexOf(fct), 1);
+  },
+  trigger: function (event /* , args... */) {
+    const events = this._events = this._events || {};
+    if (event in events === false) return;
+    for (var i = 0; i < events[event].length; i++) {
+      events[event][i].apply(this, Array.prototype.slice.call(arguments, 1));
+    }
+  }
+};
+
+/**
+ * Mixin will delegate all MicroEvent.js function in the destination object.
+ *
+ * - MicroEvent.mixin(Foobar) will make Foobar able to use MicroEvent
+ *
+ * @param {object} the object which will support MicroEvent
+ */
+MicroEvent.mixin = function (destObject) {
+  var props = ['on', 'off', 'trigger'];
+  for (var i = 0; i < props.length; i++) {
+    destObject.prototype[props[i]] = MicroEvent.prototype[props[i]];
+  }
+};
+
+/**
+ * microplugin.js
+ * Copyright (c) 2013 Brian Reavis & contributors
+ * Copyright (c) 2022 Selectize Team & contributors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at:
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ *
+ * @author Brian Reavis <brian@thirdroute.com>
+ * @author Ris Adams <selectize@risadams.com>
+ */
+
+var MicroPlugin = {};
+MicroPlugin.mixin = function (Interface) {
+  Interface.plugins = {};
+
+  /**
+   * Initializes the listed plugins (with options).
+   * Acceptable formats:
+   *
+   * List (without options):
+   *   ['a', 'b', 'c']
+   *
+   * List (with options):
+   *   [{'name': 'a', options: {}}, {'name': 'b', options: {}}]
+   *
+   * Hash (with options):
+   *   {'a': { ... }, 'b': { ... }, 'c': { ... }}
+   *
+   * @param {mixed} plugins
+   */
+  Interface.prototype.initializePlugins = function (plugins) {
+    var i, n, key;
+    var self = this;
+    var queue = [];
+
+    self.plugins = {
+      names: [],
+      settings: {},
+      requested: {},
+      loaded: {}
+    };
+
+    if (utils.isArray(plugins)) {
+      for (i = 0, n = plugins.length; i < n; i++) {
+        if (typeof plugins[i] === 'string') {
+          queue.push(plugins[i]);
+        } else {
+          self.plugins.settings[plugins[i].name] = plugins[i].options;
+          queue.push(plugins[i].name);
+        }
+      }
+    } else if (plugins) {
+      for (key in plugins) {
+        if (plugins.hasOwnProperty(key)) {
+          self.plugins.settings[key] = plugins[key];
+          queue.push(key);
+        }
+      }
+    }
+
+    while (queue.length) {
+      self.require(queue.shift());
+    }
+  };
+
+  Interface.prototype.loadPlugin = function (name) {
+    var self = this;
+    var plugins = self.plugins;
+    var plugin = Interface.plugins[name];
+
+    if (!Interface.plugins.hasOwnProperty(name)) {
+      throw new Error('Unable to find "' + name + '" plugin');
+    }
+
+    plugins.requested[name] = true;
+    plugins.loaded[name] = plugin.fn.apply(self, [self.plugins.settings[name] || {}]);
+    plugins.names.push(name);
+  };
+
+  /**
+   * Initializes a plugin.
+   *
+   * @param {string} name
+   */
+  Interface.prototype.require = function (name) {
+    var self = this;
+    var plugins = self.plugins;
+
+    if (!self.plugins.loaded.hasOwnProperty(name)) {
+      if (plugins.requested[name]) {
+        throw new Error('Plugin has circular dependency ("' + name + '")');
+      }
+      self.loadPlugin(name);
+    }
+
+    return plugins.loaded[name];
+  };
+
+  /**
+   * Registers a plugin.
+   *
+   * @param {string} name
+   * @param {function} fn
+   */
+  Interface.define = function (name, fn) {
+    Interface.plugins[name] = {
+      'name': name,
+      'fn': fn
+    };
+  };
+};
+
+var utils = {
+  isArray: Array.isArray || function (vArg) {
+    return Object.prototype.toString.call(vArg) === '[object Array]';
+  }
+};
+
+
+/**
+ * sifter.js
+ * Copyright (c) 2013–2020 Brian Reavis & contributors
+* Copyright (c) 2022 Selectize Team & contributors
+*
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at:
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ *
+ * @author Brian Reavis <brian@thirdroute.com>
+ * @author Ris Adams <selectize@risadams.com>
+ */
+
+/**
+ * Textually searches arrays and hashes of objects
+ * by property (or multiple properties). Designed
+ * specifically for autocomplete.
+ *
+ * @constructor
+ * @param {array|object} items
+ * @param {object} items
+ */
+var Sifter = function (items, settings) {
+  this.items = items;
+  this.settings = settings || { diacritics: true };
+};
+
+/**
+ * Splits a search string into an array of individual
+ * regexps to be used to match results.
+ *
+ * @param {string} query
+ * @returns {array}
+ */
+Sifter.prototype.tokenize = function (query, respect_word_boundaries) {
+  query = trim(String(query || '').toLowerCase());
+  if (!query || !query.length) return [];
+
+  var i, n, regex, letter;
+  var tokens = [];
+  var words = query.split(/ +/);
+
+  for (i = 0, n = words.length; i < n; i++) {
+    regex = escape_regex(words[i]);
+    if (this.settings.diacritics) {
+      for (letter in DIACRITICS) {
+        if (DIACRITICS.hasOwnProperty(letter)) {
+          regex = regex.replace(new RegExp(letter, 'g'), DIACRITICS[letter]);
+        }
+      }
+    }
+    if (respect_word_boundaries) regex = "\\b" + regex
+    tokens.push({
+      string: words[i],
+      regex: new RegExp(regex, 'i')
+    });
+  }
+
+  return tokens;
+};
+
+/**
+ * Iterates over arrays and hashes.
+ *
+ * ```
+ * this.iterator(this.items, function(item, id) {
+ *    // invoked for each item
+ * });
+ * ```
+ *
+ * @param {array|object} object
+ */
+Sifter.prototype.iterator = function (object, callback) {
+  var iterator;
+  if (is_array(object)) {
+    iterator = Array.prototype.forEach || function (callback) {
+      for (var i = 0, n = this.length; i < n; i++) {
+        callback(this[i], i, this);
+      }
+    };
+  } else {
+    iterator = function (callback) {
+      for (var key in this) {
+        if (this.hasOwnProperty(key)) {
+          callback(this[key], key, this);
+        }
+      }
+    };
+  }
+
+  iterator.apply(object, [callback]);
+};
+
+/**
+ * Returns a function to be used to score individual results.
+ *
+ * Good matches will have a higher score than poor matches.
+ * If an item is not a match, 0 will be returned by the function.
+ *
+ * @param {object|string} search
+ * @param {object} options (optional)
+ * @returns {function}
+ */
+Sifter.prototype.getScoreFunction = function (search, options) {
+  var self, fields, tokens, token_count, nesting;
+
+  self = this;
+  search = self.prepareSearch(search, options);
+  tokens = search.tokens;
+  fields = search.options.fields;
+  token_count = tokens.length;
+  nesting = search.options.nesting;
+
+  /**
+   * Calculates how close of a match the
+   * given value is against a search token.
+   *
+   * @param {mixed} value
+   * @param {object} token
+   * @return {number}
+   */
+  var scoreValue = function (value, token) {
+    var score, pos;
+
+    if (!value) return 0;
+    value = String(value || '');
+    pos = value.search(token.regex);
+    if (pos === -1) return 0;
+    score = token.string.length / value.length;
+    if (pos === 0) score += 0.5;
+    return score;
+  };
+
+  /**
+   * Calculates the score of an object
+   * against the search query.
+   *
+   * @param {object} token
+   * @param {object} data
+   * @return {number}
+   */
+  var scoreObject = (function () {
+    var field_count = fields.length;
+    if (!field_count) {
+      return function () { return 0; };
+    }
+    if (field_count === 1) {
+      return function (token, data) {
+        return scoreValue(getattr(data, fields[0], nesting), token);
+      };
+    }
+    return function (token, data) {
+      for (var i = 0, sum = 0; i < field_count; i++) {
+        sum += scoreValue(getattr(data, fields[i], nesting), token);
+      }
+      return sum / field_count;
+    };
+  })();
+
+  if (!token_count) {
+    return function () { return 0; };
+  }
+  if (token_count === 1) {
+    return function (data) {
+      return scoreObject(tokens[0], data);
+    };
+  }
+
+  if (search.options.conjunction === 'and') {
+    return function (data) {
+      var score;
+      for (var i = 0, sum = 0; i < token_count; i++) {
+        score = scoreObject(tokens[i], data);
+        if (score <= 0) return 0;
+        sum += score;
+      }
+      return sum / token_count;
+    };
+  } else {
+    return function (data) {
+      for (var i = 0, sum = 0; i < token_count; i++) {
+        sum += scoreObject(tokens[i], data);
+      }
+      return sum / token_count;
+    };
+  }
+};
+
+/**
+ * Returns a function that can be used to compare two
+ * results, for sorting purposes. If no sorting should
+ * be performed, `null` will be returned.
+ *
+ * @param {string|object} search
+ * @param {object} options
+ * @return function(a,b)
+ */
+Sifter.prototype.getSortFunction = function (search, options) {
+  var i, n, self, field, fields, fields_count, multiplier, multipliers, get_field, implicit_score, sort;
+
+  self = this;
+  search = self.prepareSearch(search, options);
+  sort = (!search.query && options.sort_empty) || options.sort;
+
+  /**
+   * Fetches the specified sort field value
+   * from a search result item.
+   *
+   * @param  {string} name
+   * @param  {object} result
+   * @return {mixed}
+   */
+  get_field = function (name, result) {
+    if (name === '$score') return result.score;
+    return getattr(self.items[result.id], name, options.nesting);
+  };
+
+  // parse options
+  fields = [];
+  if (sort) {
+    for (i = 0, n = sort.length; i < n; i++) {
+      if (search.query || sort[i].field !== '$score') {
+        fields.push(sort[i]);
+      }
+    }
+  }
+
+  // the "$score" field is implied to be the primary
+  // sort field, unless it's manually specified
+  if (search.query) {
+    implicit_score = true;
+    for (i = 0, n = fields.length; i < n; i++) {
+      if (fields[i].field === '$score') {
+        implicit_score = false;
+        break;
+      }
+    }
+    if (implicit_score) {
+      fields.unshift({ field: '$score', direction: 'desc' });
+    }
+  } else {
+    for (i = 0, n = fields.length; i < n; i++) {
+      if (fields[i].field === '$score') {
+        fields.splice(i, 1);
+        break;
+      }
+    }
+  }
+
+  multipliers = [];
+  for (i = 0, n = fields.length; i < n; i++) {
+    multipliers.push(fields[i].direction === 'desc' ? -1 : 1);
+  }
+
+  // build function
+  fields_count = fields.length;
+  if (!fields_count) {
+    return null;
+  } else if (fields_count === 1) {
+    field = fields[0].field;
+    multiplier = multipliers[0];
+    return function (a, b) {
+      return multiplier * cmp(
+        get_field(field, a),
+        get_field(field, b)
+      );
+    };
+  } else {
+    return function (a, b) {
+      var i, result, a_value, b_value, field;
+      for (i = 0; i < fields_count; i++) {
+        field = fields[i].field;
+        result = multipliers[i] * cmp(
+          get_field(field, a),
+          get_field(field, b)
+        );
+        if (result) return result;
+      }
+      return 0;
+    };
+  }
+};
+
+/**
+ * Parses a search query and returns an object
+ * with tokens and fields ready to be populated
+ * with results.
+ *
+ * @param {string} query
+ * @param {object} options
+ * @returns {object}
+ */
+Sifter.prototype.prepareSearch = function (query, options) {
+  if (typeof query === 'object') return query;
+
+  options = extend({}, options);
+
+  var option_fields = options.fields;
+  var option_sort = options.sort;
+  var option_sort_empty = options.sort_empty;
+
+  if (option_fields && !is_array(option_fields)) options.fields = [option_fields];
+  if (option_sort && !is_array(option_sort)) options.sort = [option_sort];
+  if (option_sort_empty && !is_array(option_sort_empty)) options.sort_empty = [option_sort_empty];
+
+  return {
+    options: options,
+    query: String(query || '').toLowerCase(),
+    tokens: this.tokenize(query, options.respect_word_boundaries),
+    total: 0,
+    items: []
+  };
+};
+
+/**
+ * Searches through all items and returns a sorted array of matches.
+ *
+ * The `options` parameter can contain:
+ *
+ *   - fields {string|array}
+ *   - sort {array}
+ *   - score {function}
+ *   - filter {bool}
+ *   - limit {integer}
+ *
+ * Returns an object containing:
+ *
+ *   - options {object}
+ *   - query {string}
+ *   - tokens {array}
+ *   - total {int}
+ *   - items {array}
+ *
+ * @param {string} query
+ * @param {object} options
+ * @returns {object}
+ */
+Sifter.prototype.search = function (query, options) {
+  var self = this, value, score, search, calculateScore;
+  var fn_sort;
+  var fn_score;
+
+  search = this.prepareSearch(query, options);
+  options = search.options;
+  query = search.query;
+
+  // generate result scoring function
+  fn_score = options.score || self.getScoreFunction(search);
+
+  // perform search and sort
+  if (query.length) {
+    self.iterator(self.items, function (item, id) {
+      score = fn_score(item);
+      if (options.filter === false || score > 0) {
+        search.items.push({ 'score': score, 'id': id });
+      }
+    });
+  } else {
+    self.iterator(self.items, function (item, id) {
+      search.items.push({ 'score': 1, 'id': id });
+    });
+  }
+
+  fn_sort = self.getSortFunction(search, options);
+  if (fn_sort) search.items.sort(fn_sort);
+
+  // apply limits
+  search.total = search.items.length;
+  if (typeof options.limit === 'number') {
+    search.items = search.items.slice(0, options.limit);
+  }
+
+  return search;
+};
+
+// utilities
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+var cmp = function (a, b) {
+  if (typeof a === 'number' && typeof b === 'number') {
+    return a > b ? 1 : (a < b ? -1 : 0);
+  }
+  a = asciifold(String(a || ''));
+  b = asciifold(String(b || ''));
+  if (a > b) return 1;
+  if (b > a) return -1;
+  return 0;
+};
+
+var extend = function (a, b) {
+  var i, n, k, object;
+  for (i = 1, n = arguments.length; i < n; i++) {
+    object = arguments[i];
+    if (!object) continue;
+    for (k in object) {
+      if (object.hasOwnProperty(k)) {
+        a[k] = object[k];
+      }
+    }
+  }
+  return a;
+};
+
+/**
+ * A property getter resolving dot-notation
+ * @param  {Object}  obj     The root object to fetch property on
+ * @param  {String}  name    The optionally dotted property name to fetch
+ * @param  {Boolean} nesting Handle nesting or not
+ * @return {Object}          The resolved property value
+ */
+var getattr = function (obj, name, nesting) {
+  if (!obj || !name) return;
+  if (!nesting) return obj[name];
+  var names = name.split(".");
+  while (names.length && (obj = obj[names.shift()]));
+  return obj;
+};
+
+var trim = function (str) {
+  return (str + '').replace(/^\s+|\s+$|/g, '');
+};
+
+var escape_regex = function (str) {
+  return (str + '').replace(/([.?*+^$[\]\\(){}|-])/g, '\\$1');
+};
+
+var is_array = Array.isArray || (typeof $ !== 'undefined' && $.isArray) || function (object) {
+  return Object.prototype.toString.call(object) === '[object Array]';
+};
+
+var DIACRITICS = {
+  'a': '[aḀḁĂăÂâǍǎȺⱥȦȧẠạÄäÀàÁáĀāÃãÅåąĄÃąĄ]',
+  'b': '[b␢βΒB฿𐌁ᛒ]',
+  'c': '[cĆćĈĉČčĊċC̄c̄ÇçḈḉȻȼƇƈɕᴄＣｃ]',
+  'd': '[dĎďḊḋḐḑḌḍḒḓḎḏĐđD̦d̦ƉɖƊɗƋƌᵭᶁᶑȡᴅＤｄð]',
+  'e': '[eÉéÈèÊêḘḙĚěĔĕẼẽḚḛẺẻĖėËëĒēȨȩĘęᶒɆɇȄȅẾếỀềỄễỂểḜḝḖḗḔḕȆȇẸẹỆệⱸᴇＥｅɘǝƏƐε]',
+  'f': '[fƑƒḞḟ]',
+  'g': '[gɢ₲ǤǥĜĝĞğĢģƓɠĠġ]',
+  'h': '[hĤĥĦħḨḩẖẖḤḥḢḣɦʰǶƕ]',
+  'i': '[iÍíÌìĬĭÎîǏǐÏïḮḯĨĩĮįĪīỈỉȈȉȊȋỊịḬḭƗɨɨ̆ᵻᶖİiIıɪＩｉ]',
+  'j': '[jȷĴĵɈɉʝɟʲ]',
+  'k': '[kƘƙꝀꝁḰḱǨǩḲḳḴḵκϰ₭]',
+  'l': '[lŁłĽľĻļĹĺḶḷḸḹḼḽḺḻĿŀȽƚⱠⱡⱢɫɬᶅɭȴʟＬｌ]',
+  'n': '[nŃńǸǹŇňÑñṄṅŅņṆṇṊṋṈṉN̈n̈ƝɲȠƞᵰᶇɳȵɴＮｎŊŋ]',
+  'o': '[oØøÖöÓóÒòÔôǑǒŐőŎŏȮȯỌọƟɵƠơỎỏŌōÕõǪǫȌȍՕօ]',
+  'p': '[pṔṕṖṗⱣᵽƤƥᵱ]',
+  'q': '[qꝖꝗʠɊɋꝘꝙq̃]',
+  'r': '[rŔŕɌɍŘřŖŗṘṙȐȑȒȓṚṛⱤɽ]',
+  's': '[sŚśṠṡṢṣꞨꞩŜŝŠšŞşȘșS̈s̈]',
+  't': '[tŤťṪṫŢţṬṭƮʈȚțṰṱṮṯƬƭ]',
+  'u': '[uŬŭɄʉỤụÜüÚúÙùÛûǓǔŰűŬŭƯưỦủŪūŨũŲųȔȕ∪]',
+  'v': '[vṼṽṾṿƲʋꝞꝟⱱʋ]',
+  'w': '[wẂẃẀẁŴŵẄẅẆẇẈẉ]',
+  'x': '[xẌẍẊẋχ]',
+  'y': '[yÝýỲỳŶŷŸÿỸỹẎẏỴỵɎɏƳƴ]',
+  'z': '[zŹźẐẑŽžŻżẒẓẔẕƵƶ]'
+};
+
+var asciifold = (function () {
+  var i, n, k, chunk;
+  var foreignletters = '';
+  var lookup = {};
+  for (k in DIACRITICS) {
+    if (DIACRITICS.hasOwnProperty(k)) {
+      chunk = DIACRITICS[k].substring(2, DIACRITICS[k].length - 1);
+      foreignletters += chunk;
+      for (i = 0, n = chunk.length; i < n; i++) {
+        lookup[chunk.charAt(i)] = k;
+      }
+    }
+  }
+  var regexp = new RegExp('[' + foreignletters + ']', 'g');
+  return function (str) {
+    return str.replace(regexp, function (foreignletter) {
+      return lookup[foreignletter];
+    }).toLowerCase();
+  };
+})();
+
+
+	// export
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+function uaDetect(platform, re) {
+  if (navigator.userAgentData) {
+    return platform === navigator.userAgentData.platform;
+  }
+
+  return re.test(navigator.userAgent);
+}
+
+var IS_MAC        = uaDetect("macOS", /Mac/);
+
+var KEY_A         = 65;
+var KEY_COMMA     = 188;
+var KEY_RETURN    = 13;
+var KEY_ESC       = 27;
+var KEY_LEFT      = 37;
+var KEY_UP        = 38;
+var KEY_P         = 80;
+var KEY_RIGHT     = 39;
+var KEY_DOWN      = 40;
+var KEY_N         = 78;
+var KEY_BACKSPACE = 8;
+var KEY_DELETE    = 46;
+var KEY_SHIFT     = 16;
+var KEY_CMD       = IS_MAC ? 91 : 17;
+var KEY_CTRL      = IS_MAC ? 18 : 17;
+var KEY_TAB       = 9;
+
+var TAG_SELECT    = 1;
+var TAG_INPUT     = 2;
+
+// for now, android support in general is too spotty to support validity
+var SUPPORTS_VALIDITY_API = !uaDetect("Android", /android/i) && !!document.createElement('input').validity;
+
+/**
+ * Determines if the provided value has been defined.
+ *
+ * @param {mixed} object
+ * @returns {boolean}
+ */
+var isset = function (object) {
+  return typeof object !== 'undefined';
+};
+
+/**
+ * Converts a scalar to its best string representation
+ * for hash keys and HTML attribute values.
+ *
+ * Transformations:
+ *   'str'     -> 'str'
+ *   null      -> ''
+ *   undefined -> ''
+ *   true      -> '1'
+ *   false     -> '0'
+ *   0         -> '0'
+ *   1         -> '1'
+ *
+ * @param {string} value
+ * @returns {string|null}
+ */
+var hash_key = function (value) {
+  if (typeof value === 'undefined' || value === null) return null;
+  if (typeof value === 'boolean') return value ? '1' : '0';
+  return value + '';
+};
+
+/**
+ * Escapes a string for use within HTML.
+ *
+ * @param {string} str
+ * @returns {string}
+ */
+var escape_html = function (str) {
+  return (str + '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+};
+
+/**
+ * Escapes "$" characters in replacement strings.
+ *
+ * @param {string} str
+ * @returns {string}
+ */
+var escape_replace = function (str) {
+  return (str + '').replace(/\$/g, '$$$$');
+};
+
+var hook = {};
+
+/**
+ * Wraps `method` on `self` so that `fn`
+ * is invoked before the original method.
+ *
+ * @param {object} self
+ * @param {string} method
+ * @param {function} fn
+ */
+hook.before = function (self, method, fn) {
+  var original = self[method];
+  self[method] = function () {
+    fn.apply(self, arguments);
+    return original.apply(self, arguments);
+  };
+};
+
+/**
+ * Wraps `method` on `self` so that `fn`
+ * is invoked after the original method.
+ *
+ * @param {object} self
+ * @param {string} method
+ * @param {function} fn
+ */
+hook.after = function (self, method, fn) {
+  var original = self[method];
+  self[method] = function () {
+    var result = original.apply(self, arguments);
+    fn.apply(self, arguments);
+    return result;
+  };
+};
+
+/**
+ * Wraps `fn` so that it can only be invoked once.
+ *
+ * @param {function} fn
+ * @returns {function}
+ */
+var once = function (fn) {
+  var called = false;
+  return function () {
+    if (called) return;
+    called = true;
+    fn.apply(this, arguments);
+  };
+};
+
+/**
+ * Wraps `fn` so that it can only be called once
+ * every `delay` milliseconds (invoked on the falling edge).
+ *
+ * @param {function} fn
+ * @param {int} delay
+ * @returns {function}
+ */
+var debounce = function (fn, delay) {
+  var timeout;
+  return function () {
+    var self = this;
+    var args = arguments;
+    window.clearTimeout(timeout);
+    timeout = window.setTimeout(function () {
+      fn.apply(self, args);
+    }, delay);
+  };
+};
+
+/**
+ * Debounce all fired events types listed in `types`
+ * while executing the provided `fn`.
+ *
+ * @param {object} self
+ * @param {array} types
+ * @param {function} fn
+ */
+var debounce_events = function (self, types, fn) {
+  var type;
+  var trigger = self.trigger;
+  var event_args = {};
+
+  // override trigger method
+  self.trigger = function () {
+    var type = arguments[0];
+    if (types.indexOf(type) !== -1) {
+      event_args[type] = arguments;
+    } else {
+      return trigger.apply(self, arguments);
+    }
+  };
+
+  // invoke provided function
+  fn.apply(self, []);
+  self.trigger = trigger;
+
+  // trigger queued events
+  for (type in event_args) {
+    if (event_args.hasOwnProperty(type)) {
+      trigger.apply(self, event_args[type]);
+    }
+  }
+};
+
+/**
+ * A workaround for http://bugs.jquery.com/ticket/6696
+ *
+ * @param {object} $parent - Parent element to listen on.
+ * @param {string} event - Event name.
+ * @param {string} selector - Descendant selector to filter by.
+ * @param {function} fn - Event handler.
+ */
+var watchChildEvent = function ($parent, event, selector, fn) {
+  $parent.on(event, selector, function (e) {
+    var child = e.target;
+    while (child && child.parentNode !== $parent[0]) {
+      child = child.parentNode;
+    }
+    e.currentTarget = child;
+    return fn.apply(this, [e]);
+  });
+};
+
+/**
+ * Determines the current selection within a text input control.
+ * Returns an object containing:
+ *   - start
+ *   - length
+ *
+ * @param {object} input
+ * @returns {object}
+ */
+var getInputSelection = function (input) {
+  var result = {};
+  if (input === undefined) {
+    console.warn('WARN getInputSelection cannot locate input control');
+    return result;
+  }
+  if ('selectionStart' in input) {
+    result.start = input.selectionStart;
+    result.length = input.selectionEnd - result.start;
+  } else if (document.selection) {
+    input.focus();
+    var sel = document.selection.createRange();
+    var selLen = document.selection.createRange().text.length;
+    sel.moveStart('character', -input.value.length);
+    result.start = sel.text.length - selLen;
+    result.length = selLen;
+  }
+  return result;
+};
+
+/**
+ * Copies CSS properties from one element to another.
+ *
+ * @param {object} $from
+ * @param {object} $to
+ * @param {array} properties
+ */
+var transferStyles = function ($from, $to, properties) {
+  var i, n, styles = {};
+  if (properties) {
+    for (i = 0, n = properties.length; i < n; i++) {
+      styles[properties[i]] = $from.css(properties[i]);
+    }
+  } else {
+    styles = $from.css();
+  }
+  $to.css(styles);
+};
+
+/**
+ * Measures the width of a string within a
+ * parent element (in pixels).
+ *
+ * @param {string} str
+ * @param {object} $parent
+ * @returns {int}
+ */
+var measureString = function (str, $parent) {
+  if (!str) {
+    return 0;
+  }
+
+  if (!Selectize.$testInput) {
+    Selectize.$testInput = $('<span />').css({
+      position: 'absolute',
+      width: 'auto',
+      padding: 0,
+      whiteSpace: 'pre'
+    });
+
+    $('<div />').css({
+      position: 'absolute',
+      width: 0,
+      height: 0,
+      overflow: 'hidden'
+    }).append(Selectize.$testInput).appendTo('body');
+  }
+
+  Selectize.$testInput.text(str);
+
+  transferStyles($parent, Selectize.$testInput, [
+    'letterSpacing',
+    'fontSize',
+    'fontFamily',
+    'fontWeight',
+    'textTransform'
+  ]);
+
+  return Selectize.$testInput.width();
+};
+
+/**
+ * Sets up an input to grow horizontally as the user
+ * types. If the value is changed manually, you can
+ * trigger the "update" handler to resize:
+ *
+ * $input.trigger('update');
+ *
+ * @param {object} $input
+ */
+var autoGrow = function ($input) {
+  var currentWidth = null;
+
+  var update = function (e, options) {
+    var value, keyCode, printable, width;
+    var placeholder, placeholderWidth;
+    var shift, character, selection;
+    e = e || window.event || {};
+    options = options || {};
+
+    if (e.metaKey || e.altKey) return;
+    if (!options.force && $input.data('grow') === false) return;
+
+    value = $input.val();
+    if (e.type && e.type.toLowerCase() === 'keydown') {
+      keyCode = e.keyCode;
+      printable = (
+        (keyCode >= 48 && keyCode <= 57) || // 0-9
+        (keyCode >= 65 && keyCode <= 90) || // a-z
+        (keyCode >= 96 && keyCode <= 111) || // numpad 0-9, numeric operators
+        (keyCode >= 186 && keyCode <= 222) || // semicolon, equal, comma, dash, etc.
+        keyCode === 32 // space
+      );
+
+      if (keyCode === KEY_DELETE || keyCode === KEY_BACKSPACE) {
+        selection = getInputSelection($input[0]);
+        if (selection.length) {
+          value = value.substring(0, selection.start) + value.substring(selection.start + selection.length);
+        } else if (keyCode === KEY_BACKSPACE && selection.start) {
+          value = value.substring(0, selection.start - 1) + value.substring(selection.start + 1);
+        } else if (keyCode === KEY_DELETE && typeof selection.start !== 'undefined') {
+          value = value.substring(0, selection.start) + value.substring(selection.start + 1);
+        }
+      } else if (printable) {
+        shift = e.shiftKey;
+        character = String.fromCharCode(e.keyCode);
+        if (shift) character = character.toUpperCase();
+        else character = character.toLowerCase();
+        value += character;
+      }
+    }
+
+    placeholder = $input.attr('placeholder');
+    if (placeholder) {
+      placeholderWidth = measureString(placeholder, $input) + 4;
+    } else {
+      placeholderWidth = 0;
+    }
+
+    width = Math.max(measureString(value, $input), placeholderWidth) + 4;
+    if (width !== currentWidth) {
+      currentWidth = width;
+      $input.width(width);
+      $input.triggerHandler('resize');
+    }
+  };
+
+  $input.on('keydown keyup update blur', update);
+  update();
+};
+
+var domToString = function (d) {
+  var tmp = document.createElement('div');
+
+  tmp.appendChild(d.cloneNode(true));
+
+  return tmp.innerHTML;
+};
+
+var logError = function (message, options) {
+  if (!options) options = {};
+  var component = "Selectize";
+
+  console.error(component + ": " + message)
+
+  if (options.explanation) {
+    // console.group is undefined in <IE11
+    if (console.group) console.group();
+    console.error(options.explanation);
+    if (console.group) console.groupEnd();
+  }
+};
+
+/**
+ *
+ * @param {any} data Data to testing
+ * @returns {Boolean} true if is an JSON object
+ */
+var isJSON = function (data) {
+  try {
+    JSON.parse(str);
+  } catch (e) {
+    return false;
+  }
+  return true;
+};
+
+var Selectize = function($input, settings) {
+	var key, i, n, dir, input, self = this;
+	input = $input[0];
+	input.selectize = self;
+
+	// detect rtl environment
+	var computedStyle = window.getComputedStyle && window.getComputedStyle(input, null);
+	dir = computedStyle ? computedStyle.getPropertyValue('direction') : input.currentStyle && input.currentStyle.direction;
+	dir = dir || $input.parents('[dir]:first').attr('dir') || '';
+
+	// setup default state
+	$.extend(self, {
+		order            : 0,
+		settings         : settings,
+		$input           : $input,
+		tabIndex         : $input.attr('tabindex') || '',
+		tagType          : input.tagName.toLowerCase() === 'select' ? TAG_SELECT : TAG_INPUT,
+		rtl              : /rtl/i.test(dir),
+
+		eventNS          : '.selectize' + (++Selectize.count),
+		highlightedValue : null,
+		isBlurring       : false,
+		isOpen           : false,
+		isDisabled       : false,
+		isRequired       : $input.is('[required]'),
+		isInvalid        : false,
+		isLocked         : false,
+		isFocused        : false,
+		isInputHidden    : false,
+		isSetup          : false,
+		isShiftDown      : false,
+		isCmdDown        : false,
+		isCtrlDown       : false,
+		ignoreFocus      : false,
+		ignoreBlur       : false,
+		ignoreHover      : false,
+		hasOptions       : false,
+		currentResults   : null,
+		lastValue        : '',
+		lastValidValue   : '',
+		lastOpenTarget   : false,
+		caretPos         : 0,
+		loading          : 0,
+		loadedSearches   : {},
+    isDropdownClosing: false,
+
+		$activeOption    : null,
+		$activeItems     : [],
+
+		optgroups        : {},
+		options          : {},
+		userOptions      : {},
+		items            : [],
+		renderCache      : {},
+		onSearchChange   : settings.loadThrottle === null ? self.onSearchChange : debounce(self.onSearchChange, settings.loadThrottle)
+	});
+
+	// search system
+	self.sifter = new Sifter(this.options, {diacritics: settings.diacritics});
+
+	// build options table
+	if (self.settings.options) {
+		for (i = 0, n = self.settings.options.length; i < n; i++) {
+			self.registerOption(self.settings.options[i]);
+		}
+		delete self.settings.options;
+  }
+
+	// build optgroup table
+	if (self.settings.optgroups) {
+		for (i = 0, n = self.settings.optgroups.length; i < n; i++) {
+			self.registerOptionGroup(self.settings.optgroups[i]);
+		}
+		delete self.settings.optgroups;
+	}
+
+	// option-dependent defaults
+	self.settings.mode = self.settings.mode || (self.settings.maxItems === 1 ? 'single' : 'multi');
+	if (typeof self.settings.hideSelected !== 'boolean') {
+		self.settings.hideSelected = self.settings.mode === 'multi';
+	}
+
+	self.initializePlugins(self.settings.plugins);
+	self.setupCallbacks();
+	self.setupTemplates();
+	self.setup();
+};
+
+// mixins
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+MicroEvent.mixin(Selectize);
+MicroPlugin.mixin(Selectize);
+
+// methods
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$.extend(Selectize.prototype, {
+
+	/**
+	 * Creates all elements and sets up event bindings.
+	 */
+	setup: function() {
+		var self      = this;
+		var settings  = self.settings;
+		var eventNS   = self.eventNS;
+		var $window   = $(window);
+		var $document = $(document);
+		var $input    = self.$input;
+
+		var $wrapper;
+		var $control;
+		var $control_input;
+		var $dropdown;
+		var $dropdown_content;
+		var $dropdown_parent;
+		var inputMode;
+		var timeout_blur;
+		var timeout_focus;
+		var classes;
+		var classes_plugins;
+		var inputId;
+
+		inputMode         = self.settings.mode;
+		classes           = $input.attr('class') || '';
+
+    $wrapper          = $('<div>').addClass(settings.wrapperClass).addClass(classes + ' selectize-control').addClass(inputMode);
+		$control          = $('<div>').addClass(settings.inputClass + ' selectize-input items').appendTo($wrapper);
+		$control_input    = $('<input type="select-one" autocomplete="new-password" autofill="no" />').appendTo($control).attr('tabindex', $input.is(':disabled') ? '-1' : self.tabIndex);
+		$dropdown_parent  = $(settings.dropdownParent || $wrapper);
+		$dropdown         = $('<div>').addClass(settings.dropdownClass).addClass(inputMode + ' selectize-dropdown').hide().appendTo($dropdown_parent);
+		$dropdown_content = $('<div>').addClass(settings.dropdownContentClass + ' selectize-dropdown-content').attr('tabindex', '-1').appendTo($dropdown);
+
+		if(inputId = $input.attr('id')) {
+			$control_input.attr('id', inputId + '-selectized');
+			$("label[for='"+inputId+"']").attr('for', inputId + '-selectized');
+		}
+
+		if(self.settings.copyClassesToDropdown) {
+			$dropdown.addClass(classes);
+		}
+
+		$wrapper.css({
+			width: $input[0].style.width
+		});
+
+		if (self.plugins.names.length) {
+			classes_plugins = 'plugin-' + self.plugins.names.join(' plugin-');
+			$wrapper.addClass(classes_plugins);
+			$dropdown.addClass(classes_plugins);
+		}
+
+		if ((settings.maxItems === null || settings.maxItems > 1) && self.tagType === TAG_SELECT) {
+			$input.attr('multiple', 'multiple');
+		}
+
+		if (self.settings.placeholder) {
+			$control_input.attr('placeholder', settings.placeholder);
+		}
+
+    // to have an identical rendering to a simple select (usefull for mobile device and do not open keyboard)
+    if (!self.settings.search) {
+      $control_input.attr('readonly', true);
+	  $control_input.attr('inputmode', 'none');
+      $control.css('cursor', 'pointer');
+    }
+
+		// if splitOn was not passed in, construct it from the delimiter to allow pasting universally
+		if (!self.settings.splitOn && self.settings.delimiter) {
+			var delimiterEscaped = self.settings.delimiter.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+			self.settings.splitOn = new RegExp('\\s*' + delimiterEscaped + '+\\s*');
+		}
+
+		if ($input.attr('autocorrect')) {
+			$control_input.attr('autocorrect', $input.attr('autocorrect'));
+		}
+
+		if ($input.attr('autocapitalize')) {
+			$control_input.attr('autocapitalize', $input.attr('autocapitalize'));
+		}
+		if ($input.is('input')) {
+			$control_input[0].type = $input[0].type;
+		}
+
+		self.$wrapper          = $wrapper;
+		self.$control          = $control;
+		self.$control_input    = $control_input;
+		self.$dropdown         = $dropdown;
+		self.$dropdown_content = $dropdown_content;
+
+		$dropdown.on('mouseenter mousedown mouseup click', '[data-disabled]>[data-selectable]', function(e) { e.stopImmediatePropagation(); });
+		$dropdown.on('mouseenter', '[data-selectable]', function() { return self.onOptionHover.apply(self, arguments); });
+		$dropdown.on('mouseup click', '[data-selectable]', function() { return self.onOptionSelect.apply(self, arguments); });
+		watchChildEvent($control, 'mouseup', '*:not(input)', function() { return self.onItemSelect.apply(self, arguments); });
+		autoGrow($control_input);
+
+		$control.on({
+			mousedown : function() { return self.onMouseDown.apply(self, arguments); },
+			click     : function() { return self.onClick.apply(self, arguments); }
+		});
+
+		$control_input.on({
+			mousedown : function(e) {
+				if (self.$control_input.val() !== '' || self.settings.openOnFocus) {
+					e.stopPropagation();
+				}
+			},
+			keydown   : function() { return self.onKeyDown.apply(self, arguments); },
+			keypress  : function() { return self.onKeyPress.apply(self, arguments); },
+			input     : function() { return self.onInput.apply(self, arguments); },
+			resize    : function() { self.positionDropdown.apply(self, []); },
+			// blur      : function() { return self.onBlur.apply(self, arguments); },
+			focus     : function() { self.ignoreBlur = false; return self.onFocus.apply(self, arguments); },
+			paste     : function() { return self.onPaste.apply(self, arguments); }
+		});
+
+		$document.on('keydown' + eventNS, function(e) {
+			self.isCmdDown = e[IS_MAC ? 'metaKey' : 'ctrlKey'];
+			self.isCtrlDown = e[IS_MAC ? 'altKey' : 'ctrlKey'];
+			self.isShiftDown = e.shiftKey;
+		});
+
+		$document.on('keyup' + eventNS, function(e) {
+			if (e.keyCode === KEY_CTRL) self.isCtrlDown = false;
+			if (e.keyCode === KEY_SHIFT) self.isShiftDown = false;
+			if (e.keyCode === KEY_CMD) self.isCmdDown = false;
+		});
+
+		$document.on('mousedown' + eventNS, function(e) {
+			if (self.isFocused) {
+				// prevent events on the dropdown scrollbar from causing the control to blur
+				if (e.target === self.$dropdown[0] || e.target.parentNode === self.$dropdown[0]) {
+					return false;
+				}
+				// blur on click outside
+				// do not blur if the dropdown is clicked
+				if (!self.$dropdown.has(e.target).length && e.target !== self.$control[0]) {
+					self.blur(e.target);
+				}
+			}
+		});
+
+		$window.on(['scroll' + eventNS, 'resize' + eventNS].join(' '), function() {
+			if (self.isOpen) {
+				self.positionDropdown.apply(self, arguments);
+			}
+		});
+		$window.on('mousemove' + eventNS, function() {
+      self.ignoreHover = self.settings.ignoreHover;
+		});
+
+		// store original children and tab index so that they can be
+		// restored when the destroy() method is called.
+		// Detach children outside of DOM to prevent slowdown on large selects
+    var inputPlaceholder = $('<div></div>');
+		var inputChildren = $input.children().detach();
+
+    $input.replaceWith(inputPlaceholder);
+    inputPlaceholder.replaceWith($input);
+
+    this.revertSettings = {
+			$children : inputChildren,
+			tabindex  : $input.attr('tabindex')
+		};
+
+		$input.attr('tabindex', -1).hide().after(self.$wrapper);
+
+		if (Array.isArray(settings.items)) {
+			self.lastValidValue = settings.items;
+			self.setValue(settings.items);
+			delete settings.items;
+		}
+
+		// feature detect for the validation API
+		if (SUPPORTS_VALIDITY_API) {
+			$input.on('invalid' + eventNS, function(e) {
+				e.preventDefault();
+				self.isInvalid = true;
+				self.refreshState();
+			});
+		}
+
+		self.updateOriginalInput();
+		self.refreshItems();
+		self.refreshState();
+		self.updatePlaceholder();
+		self.isSetup = true;
+
+		if ($input.is(':disabled')) {
+			self.disable();
+		}
+
+		self.on('change', this.onChange);
+
+		$input.data('selectize', self);
+		$input.addClass('selectized');
+		self.trigger('initialize');
+
+		// preload options
+		if (settings.preload === true) {
+			self.onSearchChange('');
+		}
+
+	},
+
+	/**
+	 * Sets up default rendering functions.
+	 */
+	setupTemplates: function() {
+		var self = this;
+		var field_label = self.settings.labelField;
+		var field_value = self.settings.valueField;
+		var field_optgroup = self.settings.optgroupLabelField;
+
+		var templates = {
+			'optgroup': function(data) {
+				return '<div class="optgroup">' + data.html + '</div>';
+			},
+			'optgroup_header': function(data, escape) {
+				return '<div class="optgroup-header">' + escape(data[field_optgroup]) + '</div>';
+			},
+			'option': function(data, escape) {
+        var classes = data.classes ? ' ' + data.classes : '';
+        classes += data[field_value] === '' ? ' selectize-dropdown-emptyoptionlabel' : '';
+
+        var styles = data.styles ? ' style="' + data.styles +  '"': '';
+				return '<div' + styles + ' class="option' + classes + '">' + escape(data[field_label]) + '</div>';
+			},
+			'item': function(data, escape) {
+				return '<div class="item">' + escape(data[field_label]) + '</div>';
+			},
+			'option_create': function(data, escape) {
+				return '<div class="create">Add <strong>' + escape(data.input) + '</strong>&#x2026;</div>';
+			}
+		};
+
+		self.settings.render = $.extend({}, templates, self.settings.render);
+	},
+
+	/**
+	 * Maps fired events to callbacks provided
+	 * in the settings used when creating the control.
+	 */
+	setupCallbacks: function() {
+		var key, fn, callbacks = {
+			'initialize'      : 'onInitialize',
+			'change'          : 'onChange',
+			'item_add'        : 'onItemAdd',
+			'item_remove'     : 'onItemRemove',
+			'clear'           : 'onClear',
+			'option_add'      : 'onOptionAdd',
+			'option_remove'   : 'onOptionRemove',
+			'option_clear'    : 'onOptionClear',
+			'optgroup_add'    : 'onOptionGroupAdd',
+			'optgroup_remove' : 'onOptionGroupRemove',
+			'optgroup_clear'  : 'onOptionGroupClear',
+			'dropdown_open'   : 'onDropdownOpen',
+			'dropdown_close'  : 'onDropdownClose',
+			'type'            : 'onType',
+			'load'            : 'onLoad',
+			'focus'           : 'onFocus',
+			'blur'            : 'onBlur',
+			'dropdown_item_activate'        : 'onDropdownItemActivate',
+			'dropdown_item_deactivate'      : 'onDropdownItemDeactivate'
+		};
+
+		for (key in callbacks) {
+			if (callbacks.hasOwnProperty(key)) {
+				fn = this.settings[callbacks[key]];
+				if (fn) this.on(key, fn);
+			}
+		}
+	},
+
+	/**
+	 * Triggered when the main control element
+	 * has a click event.
+	 *
+	 * @param {PointerEvent} e
+	 * @return {boolean}
+	 */
+	onClick: function(e) {
+		var self = this;
+
+    // if the dropdown is closing due to a mousedown, we don't want to
+    // refocus the element.
+    if (self.isDropdownClosing) {
+      return;
+    }
+
+		// necessary for mobile webkit devices (manual focus triggering
+		// is ignored unless invoked within a click event)
+    // also necessary to reopen a dropdown that has been closed by
+    // closeAfterSelect
+		if (!self.isFocused || !self.isOpen) {
+			self.focus();
+			e.preventDefault();
+		}
+	},
+
+	/**
+	 * Triggered when the main control element
+	 * has a mouse down event.
+	 *
+	 * @param {object} e
+	 * @return {boolean}
+	 */
+	onMouseDown: function(e) {
+		var self = this;
+		var defaultPrevented = e.isDefaultPrevented();
+		var $target = $(e.target);
+
+		if (!self.isFocused) {
+			// give control focus
+			if (!defaultPrevented) {
+				window.setTimeout(function() {
+					self.focus();
+				}, 0);
+			}
+		}
+		// retain focus by preventing native handling. if the
+		// event target is the input it should not be modified.
+		// otherwise, text selection within the input won't work.
+		if (e.target !== self.$control_input[0] || self.$control_input.val() === '') {
+			if (self.settings.mode === 'single') {
+				// toggle dropdown
+				self.isOpen ? self.close() : self.open();
+			} else {
+				if (!defaultPrevented) {
+						self.setActiveItem(null);
+				}
+				if (!self.settings.openOnFocus) {
+					if (self.isOpen && e.target === self.lastOpenTarget) {
+						self.close();
+						self.lastOpenTarget = false;
+					} else if (!self.isOpen) {
+						self.refreshOptions();
+						self.open();
+						self.lastOpenTarget = e.target;
+					} else {
+						self.lastOpenTarget = e.target;
+					}
+				}
+			}
+			return false;
+		}
+	},
+
+	/**
+	 * Triggered when the value of the control has been changed.
+	 * This should propagate the event to the original DOM
+	 * input / select element.
+	 */
+	onChange: function() {
+		var self = this;
+		if (self.getValue() !== "") {
+			self.lastValidValue = self.getValue();
+		}
+		this.$input.trigger('input');
+		this.$input.trigger('change');
+	},
+
+	/**
+	 * Triggered on <input> paste.
+	 *
+	 * @param {object} e
+	 * @returns {boolean}
+	 */
+	onPaste: function(e) {
+		var self = this;
+
+		if (self.isFull() || self.isInputHidden || self.isLocked) {
+			e.preventDefault();
+			return;
+		}
+
+		// If a regex or string is included, this will split the pasted
+		// input and create Items for each separate value
+		if (self.settings.splitOn) {
+
+			// Wait for pasted text to be recognized in value
+			setTimeout(function() {
+				var pastedText = self.$control_input.val();
+				if(!pastedText.match(self.settings.splitOn)){ return }
+
+				var splitInput = pastedText
+					.trim()
+					.split(self.settings.splitOn);
+				for (var i = 0, n = splitInput.length; i < n; i++) {
+					self.createItem(splitInput[i]);
+				}
+			}, 0);
+		}
+	},
+
+	/**
+	 * Triggered on <input> keypress.
+	 *
+	 * @param {object} e
+	 * @returns {boolean}
+	 */
+	onKeyPress: function(e) {
+		if (this.isLocked) return e && e.preventDefault();
+		var character = String.fromCharCode(e.keyCode || e.which);
+		if (this.settings.create && this.settings.mode === 'multi' && character === this.settings.delimiter) {
+			this.createItem();
+			e.preventDefault();
+			return false;
+		}
+	},
+
+	/**
+	 * Triggered on <input> keydown.
+	 *
+	 * @param {object} e
+	 * @returns {boolean}
+	 */
+	onKeyDown: function(e) {
+		var isInput = e.target === this.$control_input[0];
+		var self = this;
+
+		if (self.isLocked) {
+			if (e.keyCode !== KEY_TAB) {
+				e.preventDefault();
+			}
+			return;
+		}
+
+		switch (e.keyCode) {
+			case KEY_A:
+				if (self.isCmdDown) {
+					self.selectAll();
+					return;
+				}
+				break;
+			case KEY_ESC:
+				if (self.isOpen) {
+					e.preventDefault();
+					e.stopPropagation();
+					self.close();
+				}
+				return;
+			case KEY_N:
+				if (!e.ctrlKey || e.altKey) break;
+			case KEY_DOWN:
+				if (!self.isOpen && self.hasOptions) {
+					self.open();
+				} else if (self.$activeOption) {
+					self.ignoreHover = true;
+					var $next = self.getAdjacentOption(self.$activeOption, 1);
+					if ($next.length) self.setActiveOption($next, true, true);
+				}
+				e.preventDefault();
+				return;
+			case KEY_P:
+				if (!e.ctrlKey || e.altKey) break;
+			case KEY_UP:
+				if (self.$activeOption) {
+					self.ignoreHover = true;
+					var $prev = self.getAdjacentOption(self.$activeOption, -1);
+					if ($prev.length) self.setActiveOption($prev, true, true);
+				}
+				e.preventDefault();
+				return;
+			case KEY_RETURN:
+				if (self.isOpen && self.$activeOption) {
+					self.onOptionSelect({currentTarget: self.$activeOption});
+					e.preventDefault();
+				}
+				return;
+			case KEY_LEFT:
+				self.advanceSelection(-1, e);
+				return;
+			case KEY_RIGHT:
+				self.advanceSelection(1, e);
+				return;
+			case KEY_TAB:
+				if (self.settings.selectOnTab && self.isOpen && self.$activeOption) {
+					self.onOptionSelect({currentTarget: self.$activeOption});
+
+					// Default behaviour is to jump to the next field, we only want this
+					// if the current field doesn't accept any more entries
+					if (!self.isFull()) {
+						e.preventDefault();
+					}
+				}
+				if (self.settings.create && self.createItem() && self.settings.showAddOptionOnCreate) {
+					e.preventDefault();
+				}
+				return;
+			case KEY_BACKSPACE:
+			case KEY_DELETE:
+				self.deleteSelection(e);
+				return;
+		}
+
+		if ((self.isFull() || self.isInputHidden) && !(IS_MAC ? e.metaKey : e.ctrlKey)) {
+			e.preventDefault();
+			return;
+		}
+	},
+
+	/**
+	 * Triggered on <input> input.
+	 *
+	 * @param {object} e
+	 * @returns {boolean}
+	 */
+	onInput: function(e) {
+		var self = this;
+
+		var value = self.$control_input.val() || '';
+		if (self.lastValue !== value) {
+			self.lastValue = value;
+			self.onSearchChange(value);
+			self.refreshOptions();
+			self.trigger('type', value);
+		}
+	},
+
+	/**
+	 * Invokes the user-provide option provider / loader.
+	 *
+	 * Note: this function is debounced in the Selectize
+	 * constructor (by `settings.loadThrottle` milliseconds)
+	 *
+	 * @param {string} value
+	 */
+	onSearchChange: function(value) {
+		var self = this;
+		var fn = self.settings.load;
+		if (!fn) return;
+		if (self.loadedSearches.hasOwnProperty(value)) return;
+		self.loadedSearches[value] = true;
+		self.load(function(callback) {
+			fn.apply(self, [value, callback]);
+		});
+	},
+
+	/**
+	 * Triggered on <input> focus.
+	 *
+	 * @param {FocusEvent} e (optional)
+	 * @returns {boolean}
+	 */
+	onFocus: function(e) {
+		var self = this;
+		var wasFocused = self.isFocused;
+
+		if (self.isDisabled) {
+			self.blur();
+			e && e.preventDefault();
+			return false;
+		}
+
+		if (self.ignoreFocus) return;
+		self.isFocused = true;
+		if (self.settings.preload === 'focus') self.onSearchChange('');
+
+		if (!wasFocused) self.trigger('focus');
+
+		if (!self.$activeItems.length) {
+			self.showInput();
+			self.setActiveItem(null);
+			self.refreshOptions(!!self.settings.openOnFocus);
+		}
+
+		self.refreshState();
+	},
+
+	/**
+	 * Triggered on <input> blur.
+	 *
+	 * @param {object} e
+	 * @param {Element} dest
+	 */
+	onBlur: function(e, dest) {
+		var self = this;
+		if (!self.isFocused) return;
+		self.isFocused = false;
+
+		if (self.ignoreFocus) {
+			return;
+		}
+		// Bug fix do not blur dropdown here
+		// else if (!self.ignoreBlur && document.activeElement === self.$dropdown_content[0]) {
+		// 	// necessary to prevent IE closing the dropdown when the scrollbar is clicked
+		// 	self.ignoreBlur = true;
+		// 	self.onFocus(e);
+		// 	return;
+		// }
+
+		var deactivate = function() {
+			self.close();
+			self.setTextboxValue('');
+			self.setActiveItem(null);
+			self.setActiveOption(null);
+			self.setCaret(self.items.length);
+			self.refreshState();
+
+			// IE11 bug: element still marked as active
+			dest && dest.focus && dest.focus();
+
+			self.isBlurring = false;
+			self.ignoreFocus = false;
+			self.trigger('blur');
+		};
+
+		self.isBlurring = true;
+		self.ignoreFocus = true;
+		if (self.settings.create && self.settings.createOnBlur) {
+			self.createItem(null, false, deactivate);
+		} else {
+			deactivate();
+		}
+	},
+
+	/**
+	 * Triggered when the user rolls over
+	 * an option in the autocomplete dropdown menu.
+	 *
+	 * @param {object} e
+	 * @returns {boolean}
+	 */
+	onOptionHover: function(e) {
+		if (this.ignoreHover) return;
+		this.setActiveOption(e.currentTarget, false);
+	},
+
+	/**
+	 * Triggered when the user clicks on an option
+	 * in the autocomplete dropdown menu.
+	 *
+	 * @param {object} e
+	 * @returns {boolean}
+	 */
+	onOptionSelect: function(e) {
+		var value, $target, $option, self = this;
+
+		if (e.preventDefault) {
+			e.preventDefault();
+			e.stopPropagation();
+		}
+
+		$target = $(e.currentTarget);
+		if ($target.hasClass('create')) {
+			self.createItem(null, function() {
+				if (self.settings.closeAfterSelect) {
+					self.close();
+				}
+			});
+		} else {
+			value = $target.attr('data-value');
+			if (typeof value !== 'undefined') {
+				self.lastQuery = null;
+				self.setTextboxValue('');
+				self.addItem(value);
+				if (self.settings.closeAfterSelect) {
+					self.close();
+				} else if (!self.settings.hideSelected && e.type && /mouse/.test(e.type)) {
+					self.setActiveOption(self.getOption(value));
+				}
+			}
+		}
+	},
+
+	/**
+	 * Triggered when the user clicks on an item
+	 * that has been selected.
+	 *
+	 * @param {object} e
+	 * @returns {boolean}
+	 */
+	onItemSelect: function(e) {
+		var self = this;
+
+		if (self.isLocked) return;
+		if (self.settings.mode === 'multi') {
+			e.preventDefault();
+			self.setActiveItem(e.currentTarget, e);
+		}
+	},
+
+	/**
+	 * Invokes the provided method that provides
+	 * results to a callback---which are then added
+	 * as options to the control.
+	 *
+	 * @param {function} fn
+	 */
+	load: function(fn) {
+		var self = this;
+		var $wrapper = self.$wrapper.addClass(self.settings.loadingClass);
+
+		self.loading++;
+		fn.apply(self, [function(results) {
+			self.loading = Math.max(self.loading - 1, 0);
+			if (results && results.length) {
+				self.addOption(results);
+				self.refreshOptions(self.isFocused && !self.isInputHidden);
+			}
+			if (!self.loading) {
+				$wrapper.removeClass(self.settings.loadingClass);
+			}
+			self.trigger('load', results);
+		}]);
+	},
+
+	/**
+	 * Gets the value of input field of the control.
+	 *
+	 * @returns {string} value
+	 */
+	getTextboxValue: function() {
+		var $input = this.$control_input;
+		return $input.val();
+	},
+
+	/**
+	 * Sets the input field of the control to the specified value.
+	 *
+	 * @param {string} value
+	 */
+	setTextboxValue: function(value) {
+		var $input = this.$control_input;
+		var changed = $input.val() !== value;
+		if (changed) {
+			$input.val(value).triggerHandler('update');
+			this.lastValue = value;
+		}
+	},
+
+	/**
+	 * Returns the value of the control. If multiple items
+	 * can be selected (e.g. <select multiple>), this returns
+	 * an array. If only one item can be selected, this
+	 * returns a string.
+	 *
+	 * @returns {mixed}
+	 */
+	getValue: function() {
+		if (this.tagType === TAG_SELECT && this.$input.attr('multiple')) {
+			return this.items;
+		} else {
+			return this.items.join(this.settings.delimiter);
+		}
+	},
+
+	/**
+	 * Resets the selected items to the given value.
+	 *
+	 * @param {Array<String|Number>} value
+	 */
+	setValue: function(value, silent) {
+		const items = Array.isArray(value) ? value : [value];
+		if (items.join('') === this.items.join('')) {
+			return;
+		}
+
+		var events = silent ? [] : ['change'];
+
+		debounce_events(this, events, function() {
+			this.clear(silent);
+			this.addItems(value, silent);
+		});
+	},
+
+	/**
+	 * Resets the number of max items to the given value
+	 *
+	 * @param {number} value
+	 */
+	setMaxItems: function(value){
+		if(value === 0) value = null; //reset to unlimited items.
+		this.settings.maxItems = value;
+		this.settings.mode = this.settings.mode || (this.settings.maxItems === 1 ? 'single' : 'multi');
+		this.refreshState();
+	},
+
+	/**
+	 * Sets the selected item.
+	 *
+	 * @param {object} $item
+	 * @param {object} e (optional)
+	 */
+	setActiveItem: function($item, e) {
+		var self = this;
+		var eventName;
+		var i, idx, begin, end, item, swap;
+		var $last;
+
+		if (self.settings.mode === 'single') return;
+		$item = $($item);
+
+		// clear the active selection
+		if (!$item.length) {
+			$(self.$activeItems).removeClass('active');
+			self.$activeItems = [];
+			if (self.isFocused) {
+				self.showInput();
+			}
+			return;
+		}
+
+		// modify selection
+		eventName = e && e.type.toLowerCase();
+
+		if (eventName === 'mousedown' && self.isShiftDown && self.$activeItems.length) {
+			$last = self.$control.children('.active:last');
+			begin = Array.prototype.indexOf.apply(self.$control[0].childNodes, [$last[0]]);
+			end   = Array.prototype.indexOf.apply(self.$control[0].childNodes, [$item[0]]);
+			if (begin > end) {
+				swap  = begin;
+				begin = end;
+				end   = swap;
+			}
+			for (i = begin; i <= end; i++) {
+				item = self.$control[0].childNodes[i];
+				if (self.$activeItems.indexOf(item) === -1) {
+					$(item).addClass('active');
+					self.$activeItems.push(item);
+				}
+			}
+			e.preventDefault();
+		} else if ((eventName === 'mousedown' && self.isCtrlDown) || (eventName === 'keydown' && this.isShiftDown)) {
+			if ($item.hasClass('active')) {
+				idx = self.$activeItems.indexOf($item[0]);
+				self.$activeItems.splice(idx, 1);
+				$item.removeClass('active');
+			} else {
+				self.$activeItems.push($item.addClass('active')[0]);
+			}
+		} else {
+			$(self.$activeItems).removeClass('active');
+			self.$activeItems = [$item.addClass('active')[0]];
+		}
+
+		// ensure control has focus
+		self.hideInput();
+		if (!this.isFocused) {
+			self.focus();
+		}
+	},
+
+	/**
+	 * Sets the selected item in the dropdown menu
+	 * of available options.
+	 *
+	 * @param {object} $object
+	 * @param {boolean} scroll
+	 * @param {boolean} animate
+	 */
+	setActiveOption: function($option, scroll, animate) {
+		var height_menu, height_item, y;
+		var scroll_top, scroll_bottom;
+		var self = this;
+
+		if (self.$activeOption) {
+			self.$activeOption.removeClass('active');
+			self.trigger('dropdown_item_deactivate', self.$activeOption.attr('data-value'));
+		}
+		self.$activeOption = null;
+
+		$option = $($option);
+		if (!$option.length) return;
+
+		self.$activeOption = $option.addClass('active');
+		if (self.isOpen) self.trigger('dropdown_item_activate', self.$activeOption.attr('data-value'));
+
+		if (scroll || !isset(scroll)) {
+
+			height_menu   = self.$dropdown_content.height();
+			height_item   = self.$activeOption.outerHeight(true);
+			scroll        = self.$dropdown_content.scrollTop() || 0;
+			y             = self.$activeOption.offset().top - self.$dropdown_content.offset().top + scroll;
+			scroll_top    = y;
+			scroll_bottom = y - height_menu + height_item;
+
+			if (y + height_item > height_menu + scroll) {
+				self.$dropdown_content.stop().animate({scrollTop: scroll_bottom}, animate ? self.settings.scrollDuration : 0);
+			} else if (y < scroll) {
+				self.$dropdown_content.stop().animate({scrollTop: scroll_top}, animate ? self.settings.scrollDuration : 0);
+			}
+
+		}
+	},
+
+	/**
+	 * Selects all items (CTRL + A).
+	 */
+	selectAll: function() {
+		var self = this;
+		if (self.settings.mode === 'single') return;
+
+		self.$activeItems = Array.prototype.slice.apply(self.$control.children(':not(input)').addClass('active'));
+		if (self.$activeItems.length) {
+			self.hideInput();
+			self.close();
+		}
+		self.focus();
+	},
+
+	/**
+	 * Hides the input element out of view, while
+	 * retaining its focus.
+	 */
+	hideInput: function() {
+		var self = this;
+
+		self.setTextboxValue('');
+		self.$control_input.css({opacity: 0, position: 'absolute', left: self.rtl ? 10000 : 0});
+		self.isInputHidden = true;
+	},
+
+	/**
+	 * Restores input visibility.
+	 */
+	showInput: function() {
+		this.$control_input.css({opacity: 1, position: 'relative', left: 0});
+		this.isInputHidden = false;
+	},
+
+	/**
+	 * Gives the control focus.
+	 */
+	focus: function() {
+		var self = this;
+		if (self.isDisabled) return self;
+
+		self.ignoreFocus = true;
+		self.$control_input[0].focus();
+		window.setTimeout(function() {
+			self.ignoreFocus = false;
+			self.onFocus();
+		}, 0);
+		return self;
+	},
+
+	/**
+	 * Forces the control out of focus.
+	 *
+	 * @param {Element} dest
+	 */
+	blur: function(dest) {
+		this.$control_input[0].blur();
+		this.onBlur(null, dest);
+		return this;
+	},
+
+	/**
+	 * Returns a function that scores an object
+	 * to show how good of a match it is to the
+	 * provided query.
+	 *
+	 * @param {string} query
+	 * @param {object} options
+	 * @return {function}
+	 */
+	getScoreFunction: function(query) {
+		return this.sifter.getScoreFunction(query, this.getSearchOptions());
+	},
+
+	/**
+	 * Returns search options for sifter (the system
+	 * for scoring and sorting results).
+	 *
+	 * @see https://github.com/brianreavis/sifter.js
+	 * @return {object}
+	 */
+	getSearchOptions: function() {
+		var settings = this.settings;
+		var sort = settings.sortField;
+		if (typeof sort === 'string') {
+			sort = [{field: sort}];
+		}
+
+		return {
+			fields      : settings.searchField,
+			conjunction : settings.searchConjunction,
+			sort        : sort,
+			nesting     : settings.nesting,
+      filter      : settings.filter,
+      respect_word_boundaries : settings.respect_word_boundaries
+		};
+	},
+
+	/**
+	 * Searches through available options and returns
+	 * a sorted array of matches.
+	 *
+	 * Returns an object containing:
+	 *
+	 *   - query {string}
+	 *   - tokens {array}
+	 *   - total {int}
+	 *   - items {array}
+	 *
+	 * @param {string} query
+	 * @returns {object}
+	 */
+	search: function(query) {
+		var i, value, score, result, calculateScore;
+		var self     = this;
+		var settings = self.settings;
+		var options  = this.getSearchOptions();
+
+		// validate user-provided result scoring function
+		if (settings.score) {
+			calculateScore = self.settings.score.apply(this, [query]);
+			if (typeof calculateScore !== 'function') {
+				throw new Error('Selectize "score" setting must be a function that returns a function');
+			}
+		}
+
+		// perform search
+    if (query !== self.lastQuery) {
+      if (settings.normalize) query = query.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+			self.lastQuery = query;
+			result = self.sifter.search(query, $.extend(options, {score: calculateScore}));
+			self.currentResults = result;
+		} else {
+			result = $.extend(true, {}, self.currentResults);
+		}
+
+		// filter out selected items
+		if (settings.hideSelected) {
+			for (i = result.items.length - 1; i >= 0; i--) {
+				if (self.items.indexOf(hash_key(result.items[i].id)) !== -1) {
+					result.items.splice(i, 1);
+				}
+			}
+		}
+
+		return result;
+	},
+
+	/**
+	 * Refreshes the list of available options shown
+	 * in the autocomplete dropdown menu.
+	 *
+	 * @param {boolean} triggerDropdown
+	 */
+	refreshOptions: function(triggerDropdown) {
+		var i, j, k, n, groups, groups_order, option, option_html, optgroup, optgroups, html, html_children, has_create_option;
+		var $active, $active_before, $create;
+
+		if (typeof triggerDropdown === 'undefined') {
+			triggerDropdown = true;
+		}
+
+		var self              = this;
+		var query             = (self.$control_input.val()).trim();
+		var results           = self.search(query);
+		var $dropdown_content = self.$dropdown_content;
+		var active_before     = self.$activeOption && hash_key(self.$activeOption.attr('data-value'));
+
+		// build markup
+		n = results.items.length;
+		if (typeof self.settings.maxOptions === 'number') {
+			n = Math.min(n, self.settings.maxOptions);
+		}
+
+		// render and group available options individually
+		groups = {};
+		groups_order = [];
+
+		for (i = 0; i < n; i++) {
+			option      = self.options[results.items[i].id];
+			option_html = self.render('option', option);
+			optgroup    = option[self.settings.optgroupField] || '';
+			optgroups   = Array.isArray(optgroup) ? optgroup : [optgroup];
+
+			for (j = 0, k = optgroups && optgroups.length; j < k; j++) {
+				optgroup = optgroups[j];
+				if (!self.optgroups.hasOwnProperty(optgroup) && typeof self.settings.optionGroupRegister === 'function') {
+					var regGroup;
+					if (regGroup = self.settings.optionGroupRegister.apply(self, [optgroup])) {
+						self.registerOptionGroup(regGroup);
+					}
+				}
+        if (!self.optgroups.hasOwnProperty(optgroup)) {
+					optgroup = '';
+				}
+				if (!groups.hasOwnProperty(optgroup)) {
+					groups[optgroup] = document.createDocumentFragment();
+					groups_order.push(optgroup);
+				}
+				groups[optgroup].appendChild(option_html);
+			}
+		}
+
+		// sort optgroups
+		if (this.settings.lockOptgroupOrder) {
+			groups_order.sort(function(a, b) {
+				var a_order = self.optgroups[a] && self.optgroups[a].$order || 0;
+				var b_order = self.optgroups[b] && self.optgroups[b].$order || 0;
+				return a_order - b_order;
+			});
+		}
+
+		// render optgroup headers & join groups
+		html = document.createDocumentFragment();
+		for (i = 0, n = groups_order.length; i < n; i++) {
+			optgroup = groups_order[i];
+			if (self.optgroups.hasOwnProperty(optgroup) && groups[optgroup].childNodes.length) {
+				// render the optgroup header and options within it,
+				// then pass it to the wrapper template
+				html_children = document.createDocumentFragment();
+				html_children.appendChild(self.render('optgroup_header', self.optgroups[optgroup]));
+				html_children.appendChild(groups[optgroup]);
+
+				html.appendChild(self.render('optgroup', $.extend({}, self.optgroups[optgroup], {
+					html: domToString(html_children),
+					dom:  html_children
+				})));
+			} else {
+				html.appendChild(groups[optgroup]);
+			}
+		}
+
+		$dropdown_content.html(html);
+
+		// highlight matching terms inline
+		if (self.settings.highlight) {
+			$dropdown_content.removeHighlight();
+			if (results.query.length && results.tokens.length) {
+				for (i = 0, n = results.tokens.length; i < n; i++) {
+					highlight($dropdown_content, results.tokens[i].regex);
+				}
+			}
+		}
+
+		// add "selected" class to selected options
+		if (!self.settings.hideSelected) {
+			// clear selection on all previously selected elements first
+			self.$dropdown.find('.selected').removeClass('selected');
+
+			for (i = 0, n = self.items.length; i < n; i++) {
+				self.getOption(self.items[i]).addClass('selected');
+			}
+    }
+
+    if (self.settings.dropdownSize.sizeType !== 'auto' && self.isOpen) {
+      self.setupDropdownHeight();
+    }
+
+		// add create option
+		has_create_option = self.canCreate(query);
+		if (has_create_option) {
+			if(self.settings.showAddOptionOnCreate) {
+				$dropdown_content.prepend(self.render('option_create', {input: query}));
+				$create = $($dropdown_content[0].childNodes[0]);
+			}
+		}
+
+		// activate
+		self.hasOptions = results.items.length > 0 || ( has_create_option && self.settings.showAddOptionOnCreate ) || self.settings.setFirstOptionActive;
+		if (self.hasOptions) {
+      if (results.items.length > 0) {
+        $active_before = active_before && self.getOption(active_before);
+        if (results.query !== "" && self.settings.setFirstOptionActive) {
+          $active = $dropdown_content.find('[data-selectable]:first')
+        } else if (results.query !== "" && $active_before && $active_before.length) {
+          $active = $active_before;
+        } else if (self.settings.mode === 'single' && self.items.length) {
+          $active = self.getOption(self.items[0]);
+        }
+        if (!$active || !$active.length) {
+          if ($create && !self.settings.addPrecedence) {
+            $active = self.getAdjacentOption($create, 1);
+          } else {
+            $active = $dropdown_content.find('[data-selectable]:first');
+          }
+        }
+			} else {
+				$active = $create;
+			}
+			self.setActiveOption($active);
+			if (triggerDropdown && !self.isOpen) { self.open(); }
+		} else {
+			self.setActiveOption(null);
+			if (triggerDropdown && self.isOpen) { self.close(); }
+		}
+	},
+
+	/**
+	 * Adds an available option. If it already exists,
+	 * nothing will happen. Note: this does not refresh
+	 * the options list dropdown (use `refreshOptions`
+	 * for that).
+	 *
+	 * Usage:
+	 *
+	 *   this.addOption(data)
+	 *
+	 * @param {object|array} data
+	 */
+	addOption: function(data) {
+		var i, n, value, self = this;
+
+		if (Array.isArray(data)) {
+			for (i = 0, n = data.length; i < n; i++) {
+				self.addOption(data[i]);
+			}
+			return;
+		}
+
+		if (value = self.registerOption(data)) {
+			self.userOptions[value] = true;
+			self.lastQuery = null;
+			self.trigger('option_add', value, data);
+		}
+	},
+
+	/**
+	 * Registers an option to the pool of options.
+	 *
+	 * @param {object} data
+	 * @return {boolean|string}
+	 */
+	registerOption: function(data) {
+		var key = hash_key(data[this.settings.valueField]);
+		if (typeof key === 'undefined' || key === null || this.options.hasOwnProperty(key)) return false;
+		data.$order = data.$order || ++this.order;
+		this.options[key] = data;
+		return key;
+	},
+
+	/**
+	 * Registers an option group to the pool of option groups.
+	 *
+	 * @param {object} data
+	 * @return {boolean|string}
+	 */
+	registerOptionGroup: function(data) {
+		var key = hash_key(data[this.settings.optgroupValueField]);
+		if (!key) return false;
+
+		data.$order = data.$order || ++this.order;
+		this.optgroups[key] = data;
+		return key;
+	},
+
+	/**
+	 * Registers a new optgroup for options
+	 * to be bucketed into.
+	 *
+	 * @param {string} id
+	 * @param {object} data
+	 */
+	addOptionGroup: function(id, data) {
+		data[this.settings.optgroupValueField] = id;
+		if (id = this.registerOptionGroup(data)) {
+			this.trigger('optgroup_add', id, data);
+		}
+	},
+
+	/**
+	 * Removes an existing option group.
+	 *
+	 * @param {string} id
+	 */
+	removeOptionGroup: function(id) {
+		if (this.optgroups.hasOwnProperty(id)) {
+			delete this.optgroups[id];
+			this.renderCache = {};
+			this.trigger('optgroup_remove', id);
+		}
+	},
+
+	/**
+	 * Clears all existing option groups.
+	 */
+	clearOptionGroups: function() {
+		this.optgroups = {};
+		this.renderCache = {};
+		this.trigger('optgroup_clear');
+	},
+
+	/**
+	 * Updates an option available for selection. If
+	 * it is visible in the selected items or options
+	 * dropdown, it will be re-rendered automatically.
+	 *
+	 * @param {string} value
+	 * @param {object} data
+	 */
+	updateOption: function(value, data) {
+		var self = this;
+		var $item, $item_new;
+		var value_new, index_item, cache_items, cache_options, order_old;
+
+		value     = hash_key(value);
+		value_new = hash_key(data[self.settings.valueField]);
+
+		// sanity checks
+		if (value === null) return;
+		if (!self.options.hasOwnProperty(value)) return;
+		if (typeof value_new !== 'string') throw new Error('Value must be set in option data');
+
+		order_old = self.options[value].$order;
+
+		// update references
+		if (value_new !== value) {
+			delete self.options[value];
+			index_item = self.items.indexOf(value);
+			if (index_item !== -1) {
+				self.items.splice(index_item, 1, value_new);
+			}
+		}
+		data.$order = data.$order || order_old;
+		self.options[value_new] = data;
+
+		// invalidate render cache
+		cache_items = self.renderCache['item'];
+		cache_options = self.renderCache['option'];
+
+		if (cache_items) {
+			delete cache_items[value];
+			delete cache_items[value_new];
+		}
+		if (cache_options) {
+			delete cache_options[value];
+			delete cache_options[value_new];
+		}
+
+		// update the item if it's selected
+		if (self.items.indexOf(value_new) !== -1) {
+			$item = self.getItem(value);
+			$item_new = $(self.render('item', data));
+			if ($item.hasClass('active')) $item_new.addClass('active');
+			$item.replaceWith($item_new);
+		}
+
+		// invalidate last query because we might have updated the sortField
+		self.lastQuery = null;
+
+		// update dropdown contents
+		if (self.isOpen) {
+			self.refreshOptions(false);
+		}
+	},
+
+	/**
+	 * Removes a single option.
+	 *
+	 * @param {string} value
+	 * @param {boolean} silent
+	 */
+	removeOption: function(value, silent) {
+		var self = this;
+		value = hash_key(value);
+
+		var cache_items = self.renderCache['item'];
+		var cache_options = self.renderCache['option'];
+		if (cache_items) delete cache_items[value];
+		if (cache_options) delete cache_options[value];
+
+		delete self.userOptions[value];
+		delete self.options[value];
+		self.lastQuery = null;
+		self.trigger('option_remove', value);
+		self.removeItem(value, silent);
+	},
+
+	/**
+	 * Clears all options, including all selected items
+	 *
+	 * @param {boolean} silent
+	 */
+	clearOptions: function(silent) {
+		var self = this;
+
+		self.loadedSearches = {};
+		self.userOptions = {};
+		self.renderCache = {};
+		var options = self.options;
+		$.each(self.options, function(key, value) {
+			if(self.items.indexOf(key) == -1) {
+				delete options[key];
+			}
+		});
+		self.options = self.sifter.items = options;
+		self.lastQuery = null;
+		self.trigger('option_clear');
+		self.clear(silent);
+	},
+
+	/**
+	 * Returns the jQuery element of the option
+	 * matching the given value.
+	 *
+	 * @param {string} value
+	 * @returns {object}
+	 */
+	getOption: function(value) {
+		return this.getElementWithValue(value, this.$dropdown_content.find('[data-selectable]'));
+	},
+
+	/**
+	 * Returns the jQuery element of the first
+	 * selectable option.
+	 *
+	 * @return {object}
+	 */
+	getFirstOption: function() {
+		var $options = this.$dropdown.find('[data-selectable]');
+		return $options.length > 0 ? $options.eq(0) : $();
+	},
+
+	/**
+	 * Returns the jQuery element of the next or
+	 * previous selectable option.
+	 *
+	 * @param {object} $option
+	 * @param {int} direction  can be 1 for next or -1 for previous
+	 * @return {object}
+	 */
+	getAdjacentOption: function($option, direction) {
+		var $options = this.$dropdown.find('[data-selectable]');
+		var index    = $options.index($option) + direction;
+
+		return index >= 0 && index < $options.length ? $options.eq(index) : $();
+	},
+
+	/**
+	 * Finds the first element with a "data-value" attribute
+	 * that matches the given value.
+	 *
+	 * @param {mixed} value
+	 * @param {object} $els
+	 * @return {object}
+	 */
+	getElementWithValue: function(value, $els) {
+		value = hash_key(value);
+
+		if (typeof value !== 'undefined' && value !== null) {
+			for (var i = 0, n = $els.length; i < n; i++) {
+				if ($els[i].getAttribute('data-value') === value) {
+					return $($els[i]);
+				}
+			}
+		}
+
+		return $();
+	},
+
+	/**
+	 * Finds the first element with a "textContent" property
+	 * that matches the given textContent value.
+	 *
+	 * @param {mixed} textContent
+	 * @param {boolean} ignoreCase
+	 * @param {object} $els
+	 * @return {object}
+	 */
+	getElementWithTextContent: function(textContent, ignoreCase ,$els) {
+		textContent = hash_key(textContent);
+
+		if (typeof textContent !== 'undefined' && textContent !== null) {
+			for (var i = 0, n = $els.length; i < n; i++) {
+				var eleTextContent = $els[i].textContent
+				if (ignoreCase == true) {
+					eleTextContent = (eleTextContent !== null) ? eleTextContent.toLowerCase() : null;
+					textContent = textContent.toLowerCase();
+				}
+				if (eleTextContent === textContent) {
+					return $($els[i]);
+				}
+			}
+		}
+
+		return $();
+	},
+
+	/**
+	 * Returns the jQuery element of the item
+	 * matching the given value.
+	 *
+	 * @param {string} value
+	 * @returns {object}
+	 */
+	getItem: function(value) {
+		return this.getElementWithValue(value, this.$control.children());
+	},
+
+	/**
+	 * Returns the jQuery element of the item
+	 * matching the given textContent.
+	 *
+	 * @param {string} value
+	 * @param {boolean} ignoreCase
+	 * @returns {object}
+	 */
+	getFirstItemMatchedByTextContent: function(textContent, ignoreCase) {
+		ignoreCase = (ignoreCase !== null && ignoreCase === true) ? true : false;
+		return this.getElementWithTextContent(textContent, ignoreCase, this.$dropdown_content.find('[data-selectable]'));
+	},
+
+	/**
+	 * "Selects" multiple items at once. Adds them to the list
+	 * at the current caret position.
+	 *
+	 * @param {string} values
+	 * @param {boolean} silent
+	 */
+	addItems: function(values, silent) {
+		this.buffer = document.createDocumentFragment();
+
+		var childNodes = this.$control[0].childNodes;
+		for (var i = 0; i < childNodes.length; i++) {
+			this.buffer.appendChild(childNodes[i]);
+		}
+
+		var items = Array.isArray(values) ? values : [values];
+		for (var i = 0, n = items.length; i < n; i++) {
+			this.isPending = (i < n - 1);
+			this.addItem(items[i], silent);
+		}
+
+		var control = this.$control[0];
+		control.insertBefore(this.buffer, control.firstChild);
+
+		this.buffer = null;
+	},
+
+	/**
+	 * "Selects" an item. Adds it to the list
+	 * at the current caret position.
+	 *
+	 * @param {string} value
+	 * @param {boolean} silent
+	 */
+	addItem: function(value, silent) {
+		var events = silent ? [] : ['change'];
+
+		debounce_events(this, events, function() {
+			var $item, $option, $options;
+			var self = this;
+			var inputMode = self.settings.mode;
+			var i, active, value_next, wasFull;
+			value = hash_key(value);
+
+			if (self.items.indexOf(value) !== -1) {
+				if (inputMode === 'single') self.close();
+				return;
+			}
+
+			if (!self.options.hasOwnProperty(value)) return;
+			if (inputMode === 'single') self.clear(silent);
+			if (inputMode === 'multi' && self.isFull()) return;
+
+      $item = $(self.render('item', self.options[value]));
+			wasFull = self.isFull();
+			self.items.splice(self.caretPos, 0, value);
+      self.insertAtCaret($item);
+			if (!self.isPending || (!wasFull && self.isFull())) {
+				self.refreshState();
+			}
+
+			if (self.isSetup) {
+				$options = self.$dropdown_content.find('[data-selectable]');
+
+				// update menu / remove the option (if this is not one item being added as part of series)
+				if (!self.isPending) {
+					$option = self.getOption(value);
+					value_next = self.getAdjacentOption($option, 1).attr('data-value');
+					self.refreshOptions(self.isFocused && inputMode !== 'single');
+					if (value_next) {
+						self.setActiveOption(self.getOption(value_next));
+					}
+				}
+
+				// hide the menu if the maximum number of items have been selected or no options are left
+				if (!$options.length || self.isFull()) {
+					self.close();
+				} else if (!self.isPending) {
+					self.positionDropdown();
+				}
+
+				self.updatePlaceholder();
+				self.trigger('item_add', value, $item);
+
+				if (!self.isPending) {
+					self.updateOriginalInput({silent: silent});
+				}
+			}
+		});
+	},
+
+	/**
+	 * Removes the selected item matching
+	 * the provided value.
+	 *
+	 * @param {string} value
+	 */
+	removeItem: function(value, silent) {
+		var self = this;
+		var $item, i, idx;
+
+		$item = (value instanceof $) ? value : self.getItem(value);
+		value = hash_key($item.attr('data-value'));
+		i = self.items.indexOf(value);
+
+		if (i !== -1) {
+			self.trigger('item_before_remove', value, $item);
+			$item.remove();
+      if ($item.hasClass('active')) {
+        $item.removeClass('active');
+				idx = self.$activeItems.indexOf($item[0]);
+				self.$activeItems.splice(idx, 1);
+				$item.removeClass('active');
+			}
+
+			self.items.splice(i, 1);
+			self.lastQuery = null;
+			if (!self.settings.persist && self.userOptions.hasOwnProperty(value)) {
+				self.removeOption(value, silent);
+			}
+
+			if (i < self.caretPos) {
+				self.setCaret(self.caretPos - 1);
+			}
+
+			self.refreshState();
+			self.updatePlaceholder();
+			self.updateOriginalInput({silent: silent});
+			self.positionDropdown();
+			self.trigger('item_remove', value, $item);
+		}
+	},
+
+	/**
+	 * Invokes the `create` method provided in the
+	 * selectize options that should provide the data
+	 * for the new item, given the user input.
+	 *
+	 * Once this completes, it will be added
+	 * to the item list.
+	 *
+	 * @param {string} value
+	 * @param {boolean} [triggerDropdown]
+	 * @param {function} [callback]
+	 * @return {boolean}
+	 */
+	createItem: function(input, triggerDropdown) {
+		var self  = this;
+		var caret = self.caretPos;
+		input = input || (self.$control_input.val() || '').trim();
+
+		var callback = arguments[arguments.length - 1];
+		if (typeof callback !== 'function') callback = function() {};
+
+		if (typeof triggerDropdown !== 'boolean') {
+			triggerDropdown = true;
+		}
+
+		if (!self.canCreate(input)) {
+			callback();
+			return false;
+		}
+
+		self.lock();
+
+		var setup = (typeof self.settings.create === 'function') ? this.settings.create : function(input) {
+			var data = {};
+			data[self.settings.labelField] = input;
+			var key = input;
+			if ( self.settings.formatValueToKey && typeof self.settings.formatValueToKey === 'function' ) {
+				key = self.settings.formatValueToKey.apply(this, [key]);
+				if (key === null || typeof key === 'undefined' || typeof key === 'object' || typeof key === 'function') {
+					throw new Error('Selectize "formatValueToKey" setting must be a function that returns a value other than object or function.');
+				}
+			}
+			data[self.settings.valueField] = key;
+			return data;
+		};
+
+		var create = once(function(data) {
+			self.unlock();
+
+			if (!data || typeof data !== 'object') return callback();
+			var value = hash_key(data[self.settings.valueField]);
+			if (typeof value !== 'string') return callback();
+
+			self.setTextboxValue('');
+			self.addOption(data);
+			self.setCaret(caret);
+			self.addItem(value);
+			self.refreshOptions(triggerDropdown && self.settings.mode !== 'single');
+			callback(data);
+		});
+
+		var output = setup.apply(this, [input, create]);
+		if (typeof output !== 'undefined') {
+			create(output);
+		}
+
+		return true;
+	},
+
+	/**
+	 * Re-renders the selected item lists.
+	 */
+	refreshItems: function(silent) {
+		this.lastQuery = null;
+
+		if (this.isSetup) {
+			this.addItem(this.items, silent);
+		}
+
+		this.refreshState();
+		this.updateOriginalInput({silent: silent});
+	},
+
+	/**
+	 * Updates all state-dependent attributes
+	 * and CSS classes.
+	 */
+	refreshState: function() {
+		this.refreshValidityState();
+		this.refreshClasses();
+	},
+
+	/**
+	 * Update the `required` attribute of both input and control input.
+	 *
+	 * The `required` property needs to be activated on the control input
+	 * for the error to be displayed at the right place. `required` also
+	 * needs to be temporarily deactivated on the input since the input is
+	 * hidden and can't show errors.
+	 */
+	refreshValidityState: function() {
+		if (!this.isRequired) return false;
+
+		var invalid = !this.items.length;
+
+		this.isInvalid = invalid;
+		this.$control_input.prop('required', invalid);
+		this.$input.prop('required', !invalid);
+	},
+
+	/**
+	 * Updates all state-dependent CSS classes.
+	 */
+	refreshClasses: function() {
+		var self     = this;
+		var isFull   = self.isFull();
+		var isLocked = self.isLocked;
+
+		self.$wrapper
+			.toggleClass('rtl', self.rtl);
+
+		self.$control
+			.toggleClass('focus', self.isFocused)
+			.toggleClass('disabled', self.isDisabled)
+			.toggleClass('required', self.isRequired)
+			.toggleClass('invalid', self.isInvalid)
+			.toggleClass('locked', isLocked)
+			.toggleClass('full', isFull).toggleClass('not-full', !isFull)
+			.toggleClass('input-active', self.isFocused && !self.isInputHidden)
+			.toggleClass('dropdown-active', self.isOpen)
+			.toggleClass('has-options', !$.isEmptyObject(self.options))
+			.toggleClass('has-items', self.items.length > 0);
+
+		self.$control_input.data('grow', !isFull && !isLocked);
+	},
+
+	/**
+	 * Determines whether or not more items can be added
+	 * to the control without exceeding the user-defined maximum.
+	 *
+	 * @returns {boolean}
+	 */
+	isFull: function() {
+		return this.settings.maxItems !== null && this.items.length >= this.settings.maxItems;
+	},
+
+	/**
+	 * Refreshes the original <select> or <input>
+	 * element to reflect the current state.
+	 */
+	updateOriginalInput: function(opts) {
+		var i, n, existing, fresh, old, $options, label, value, values, self = this;
+		opts = opts || {};
+
+		if (self.tagType === TAG_SELECT) {
+			$options  = self.$input.find('option');
+			existing  = [];
+			fresh     = [];
+			old       = [];
+			values    = [];
+
+			$options.get().forEach(function(option) {
+				existing.push(option.value);
+			});
+
+			self.items.forEach(function(item) {
+				label = self.options[item][self.settings.labelField] || '';
+
+				values.push(item);
+
+				if (existing.indexOf(item) != -1) {
+					return;
+				}
+
+				fresh.push('<option value="' + escape_html(item) + '" selected="selected">' + escape_html(label) + '</option>');
+			});
+
+			old = existing.filter(function(value) {
+				return values.indexOf(value) < 0;
+			}).map(function(value) {
+				return 'option[value="' + value + '"]';
+			});
+
+			if (existing.length - old.length + fresh.length === 0 && !self.$input.attr('multiple')) {
+				fresh.push('<option value="" selected="selected"></option>');
+			}
+
+			self.$input.find(old.join(', ')).remove();
+			self.$input.append(fresh.join(''));
+		} else {
+			self.$input.val(self.getValue());
+			self.$input.attr('value',self.$input.val());
+		}
+
+		if (self.isSetup) {
+			if (!opts.silent) {
+				self.trigger('change', self.$input.val());
+			}
+		}
+	},
+
+	/**
+	 * Shows/hide the input placeholder depending
+	 * on if there items in the list already.
+	 */
+	updatePlaceholder: function() {
+		if (!this.settings.placeholder) return;
+		var $input = this.$control_input;
+
+		if (this.items.length) {
+			$input.removeAttr('placeholder');
+		} else {
+			$input.attr('placeholder', this.settings.placeholder);
+		}
+		$input.triggerHandler('update', {force: true});
+	},
+
+	/**
+	 * Shows the autocomplete dropdown containing
+	 * the available options.
+	 */
+	open: function() {
+		var self = this;
+
+		if (
+      self.isLocked ||
+      self.isOpen ||
+      (self.settings.mode === "multi" && self.isFull())
+    )
+      return;
+		self.focus();
+		self.isOpen = true;
+		self.refreshState();
+    self.$dropdown.css({ visibility: 'hidden', display: 'block' });
+    self.setupDropdownHeight();
+		self.positionDropdown();
+		self.$dropdown.css({visibility: 'visible'});
+		self.trigger('dropdown_open', self.$dropdown);
+	},
+
+	/**
+	 * Closes the autocomplete dropdown menu.
+	 */
+	close: function() {
+		var self = this;
+		var trigger = self.isOpen;
+
+		if (self.settings.mode === 'single' && self.items.length) {
+			self.hideInput();
+
+			// Do not trigger blur while inside a blur event,
+			// this fixes some weird tabbing behavior in FF and IE.
+			// See #1164
+			if (self.isBlurring) {
+				self.$control_input[0].blur(); // close keyboard on iOS
+			}
+		}
+
+		self.isOpen = false;
+		self.$dropdown.hide();
+		self.setActiveOption(null);
+		self.refreshState();
+
+		if (trigger) self.trigger('dropdown_close', self.$dropdown);
+	},
+
+	/**
+	 * Calculates and applies the appropriate
+	 * position of the dropdown.
+	 */
+	positionDropdown: function() {
+		var $control = this.$control;
+		var offset = this.settings.dropdownParent === 'body' ? $control.offset() : $control.position();
+		offset.top += $control.outerHeight(true);
+		var w = $control[0].getBoundingClientRect().width;
+		if (this.settings.minWidth && this.settings.minWidth > w)
+		{
+			w = this.settings.minWidth;
+		}
+		this.$dropdown.css({
+			width : w,
+			top   : offset.top,
+			left  : offset.left
+		});
+	},
+
+  setupDropdownHeight: function () {
+    if (typeof this.settings.dropdownSize === 'object' && this.settings.dropdownSize.sizeType !== 'auto') {
+      var height = this.settings.dropdownSize.sizeValue;
+
+      if (this.settings.dropdownSize.sizeType === 'numberItems') {
+        // retrieve all items (included optgroup but exept the container .optgroup)
+        var $items = this.$dropdown_content.find('*').not('.optgroup, .highlight').not(this.settings.ignoreOnDropwdownHeight);
+        var totalHeight = 0;
+        var marginTop = 0;
+        var marginBottom = 0;
+        var separatorHeight = 0;
+
+
+        for (var i = 0; i < height; i++) {
+          var $item = $($items[i]);
+
+          if ($item.length === 0) {
+            break;
+          }
+
+          totalHeight += $item.outerHeight(true);
+          // If not selectable, it's an optgroup so we "ignore" for count items
+          if (typeof $item.data('selectable') == 'undefined') {
+            if ($item.hasClass('optgroup-header')) {
+              var styles = window.getComputedStyle($item.parent()[0], ':before');
+
+              if (styles) {
+                marginTop = styles.marginTop ? Number(styles.marginTop.replace(/\W*(\w)\w*/g, '$1')) : 0;
+                marginBottom = styles.marginBottom ? Number(styles.marginBottom.replace(/\W*(\w)\w*/g, '$1')) : 0;
+                separatorHeight = styles.borderTopWidth ? Number(styles.borderTopWidth.replace(/\W*(\w)\w*/g, '$1')) : 0;
+              }
+            }
+            height++;
+          }
+
+        }
+
+        // Get padding top for add to global height
+        var paddingTop = this.$dropdown_content.css('padding-top') ? Number(this.$dropdown_content.css('padding-top').replace(/\W*(\w)\w*/g, '$1')) : 0;
+        var paddingBottom = this.$dropdown_content.css('padding-bottom') ? Number(this.$dropdown_content.css('padding-bottom').replace(/\W*(\w)\w*/g, '$1')) : 0;
+
+        height = (totalHeight + paddingTop + paddingBottom + marginTop + marginBottom + separatorHeight) + 'px';
+      } else if (this.settings.dropdownSize.sizeType !== 'fixedHeight') {
+        console.warn('Selectize.js - Value of "sizeType" must be "fixedHeight" or "numberItems');
+        return;
+      }
+
+      this.$dropdown_content.css({ height: height, maxHeight: 'none' });
+    }
+  },
+
+	/**
+	 * Resets / clears all selected items
+	 * from the control.
+	 *
+	 * @param {boolean} silent
+	 */
+	clear: function(silent) {
+		var self = this;
+
+		if (!self.items.length) return;
+		self.$control.children(':not(input)').remove();
+		self.items = [];
+		self.lastQuery = null;
+		self.setCaret(0);
+		self.setActiveItem(null);
+		self.updatePlaceholder();
+		self.updateOriginalInput({silent: silent});
+		self.refreshState();
+		self.showInput();
+		self.trigger('clear');
+	},
+
+	/**
+	 * A helper method for inserting an element
+	 * at the current caret position.
+	 *
+	 * @param {object} $el
+	 */
+	insertAtCaret: function($el) {
+		var caret = Math.min(this.caretPos, this.items.length);
+    var el = $el[0];
+    /**
+     * @type {HTMLElement}
+     **/
+		var target = this.buffer || this.$control[0];
+
+		if (caret === 0) {
+			target.insertBefore(el, target.firstChild);
+		} else {
+			target.insertBefore(el, target.childNodes[caret]);
+		}
+
+		this.setCaret(caret + 1);
+	},
+
+	/**
+	 * Removes the current selected item(s).
+	 *
+	 * @param {object} e (optional)
+	 * @returns {boolean}
+	 */
+	deleteSelection: function(e) {
+		var i, n, direction, selection, values, caret, option_select, $option_select, $tail;
+		var self = this;
+
+		direction = (e && e.keyCode === KEY_BACKSPACE) ? -1 : 1;
+		selection = getInputSelection(self.$control_input[0]);
+
+		if (self.$activeOption && !self.settings.hideSelected) {
+			if (typeof self.settings.deselectBehavior === 'string' && self.settings.deselectBehavior === 'top') {
+				option_select = self.getFirstOption().attr('data-value');
+			} else {
+				option_select = self.getAdjacentOption(self.$activeOption, -1).attr('data-value');
+			}
+		}
+
+		// determine items that will be removed
+		values = [];
+
+		if (self.$activeItems.length) {
+			$tail = self.$control.children('.active:' + (direction > 0 ? 'last' : 'first'));
+			caret = self.$control.children(':not(input)').index($tail);
+			if (direction > 0) { caret++; }
+
+			for (i = 0, n = self.$activeItems.length; i < n; i++) {
+				values.push($(self.$activeItems[i]).attr('data-value'));
+			}
+			if (e) {
+				e.preventDefault();
+				e.stopPropagation();
+			}
+		} else if ((self.isFocused || self.settings.mode === 'single') && self.items.length) {
+			if (direction < 0 && selection.start === 0 && selection.length === 0) {
+				values.push(self.items[self.caretPos - 1]);
+			} else if (direction > 0 && selection.start === self.$control_input.val().length) {
+				values.push(self.items[self.caretPos]);
+			}
+		}
+
+		// allow the callback to abort
+		if (!values.length || (typeof self.settings.onDelete === 'function' && self.settings.onDelete.apply(self, [values]) === false)) {
+			return false;
+		}
+
+		// perform removal
+		if (typeof caret !== 'undefined') {
+			self.setCaret(caret);
+		}
+		while (values.length) {
+			self.removeItem(values.pop());
+		}
+
+		self.showInput();
+		self.positionDropdown();
+		self.refreshOptions(true);
+
+		// select previous option
+		if (option_select) {
+			$option_select = self.getOption(option_select);
+			if ($option_select.length) {
+				self.setActiveOption($option_select);
+			}
+		}
+
+		return true;
+	},
+
+	/**
+	 * Selects the previous / next item (depending
+	 * on the `direction` argument).
+	 *
+	 * > 0 - right
+	 * < 0 - left
+	 *
+	 * @param {int} direction
+	 * @param {object} e (optional)
+	 */
+	advanceSelection: function(direction, e) {
+		var tail, selection, idx, valueLength, cursorAtEdge, $tail;
+		var self = this;
+
+		if (direction === 0) return;
+		if (self.rtl) direction *= -1;
+
+		tail = direction > 0 ? 'last' : 'first';
+		selection = getInputSelection(self.$control_input[0]);
+
+		if (self.isFocused && !self.isInputHidden) {
+			valueLength = self.$control_input.val().length;
+			cursorAtEdge = direction < 0
+				? selection.start === 0 && selection.length === 0
+				: selection.start === valueLength;
+
+			if (cursorAtEdge && !valueLength) {
+				self.advanceCaret(direction, e);
+			}
+		} else {
+			$tail = self.$control.children('.active:' + tail);
+			if ($tail.length) {
+				idx = self.$control.children(':not(input)').index($tail);
+				self.setActiveItem(null);
+				self.setCaret(direction > 0 ? idx + 1 : idx);
+			}
+		}
+	},
+
+	/**
+	 * Moves the caret left / right.
+	 *
+	 * @param {int} direction
+	 * @param {object} e (optional)
+	 */
+	advanceCaret: function(direction, e) {
+		var self = this, fn, $adj;
+
+		if (direction === 0) return;
+
+		fn = direction > 0 ? 'next' : 'prev';
+		if (self.isShiftDown) {
+			$adj = self.$control_input[fn]();
+			if ($adj.length) {
+				self.hideInput();
+				self.setActiveItem($adj);
+				e && e.preventDefault();
+			}
+		} else {
+			self.setCaret(self.caretPos + direction);
+		}
+	},
+
+	/**
+	 * Moves the caret to the specified index.
+	 *
+	 * @param {int} i
+	 */
+	setCaret: function(i) {
+		var self = this;
+
+		if (self.settings.mode === 'single') {
+			i = self.items.length;
+		} else {
+			i = Math.max(0, Math.min(self.items.length, i));
+		}
+
+		if(!self.isPending) {
+			// the input must be moved by leaving it in place and moving the
+			// siblings, due to the fact that focus cannot be restored once lost
+			// on mobile webkit devices
+			var j, n, fn, $children, $child;
+			$children = self.$control.children(':not(input)');
+			for (j = 0, n = $children.length; j < n; j++) {
+				$child = $($children[j]).detach();
+				if (j <  i) {
+					self.$control_input.before($child);
+				} else {
+					self.$control.append($child);
+				}
+			}
+		}
+
+		self.caretPos = i;
+	},
+
+	/**
+	 * Disables user input on the control. Used while
+	 * items are being asynchronously created.
+	 */
+	lock: function() {
+		this.close();
+		this.isLocked = true;
+		this.refreshState();
+	},
+
+	/**
+	 * Re-enables user input on the control.
+	 */
+	unlock: function() {
+		this.isLocked = false;
+		this.refreshState();
+	},
+
+	/**
+	 * Disables user input on the control completely.
+	 * While disabled, it cannot receive focus.
+	 */
+	disable: function() {
+		var self = this;
+		self.$input.prop('disabled', true);
+		self.$control_input.prop('disabled', true).prop('tabindex', -1);
+		self.isDisabled = true;
+		self.lock();
+	},
+
+	/**
+	 * Enables the control so that it can respond
+	 * to focus and user input.
+	 */
+	enable: function() {
+		var self = this;
+		self.$input.prop('disabled', false);
+		self.$control_input.prop('disabled', false).prop('tabindex', self.tabIndex);
+		self.isDisabled = false;
+		self.unlock();
+	},
+
+	/**
+	 * Completely destroys the control and
+	 * unbinds all event listeners so that it can
+	 * be garbage collected.
+	 */
+	destroy: function() {
+		var self = this;
+		var eventNS = self.eventNS;
+		var revertSettings = self.revertSettings;
+
+		self.trigger('destroy');
+		self.off();
+		self.$wrapper.remove();
+		self.$dropdown.remove();
+
+		self.$input
+			.html('')
+			.append(revertSettings.$children)
+			.removeAttr('tabindex')
+			.removeClass('selectized')
+			.attr({tabindex: revertSettings.tabindex})
+			.show();
+
+		self.$control_input.removeData('grow');
+		self.$input.removeData('selectize');
+
+		if (--Selectize.count == 0 && Selectize.$testInput) {
+			Selectize.$testInput.remove();
+			Selectize.$testInput = undefined;
+		}
+
+		$(window).off(eventNS);
+		$(document).off(eventNS);
+		$(document.body).off(eventNS);
+
+		delete self.$input[0].selectize;
+	},
+
+	/**
+	 * A helper method for rendering "item" and
+	 * "option" templates, given the data.
+	 *
+	 * @param {string} templateName
+	 * @param {object} data
+	 * @returns {string}
+	 */
+	render: function(templateName, data) {
+		var value, id, label;
+		var html = '';
+		var cache = false;
+		var self = this;
+		var regex_tag = /^[\t \r\n]*<([a-z][a-z0-9\-_]*(?:\:[a-z][a-z0-9\-_]*)?)/i;
+
+		if (templateName === 'option' || templateName === 'item') {
+			value = hash_key(data[self.settings.valueField]);
+			cache = !!value;
+		}
+
+		// pull markup from cache if it exists
+		if (cache) {
+			if (!isset(self.renderCache[templateName])) {
+				self.renderCache[templateName] = {};
+			}
+			if (self.renderCache[templateName].hasOwnProperty(value)) {
+				return self.renderCache[templateName][value];
+			}
+		}
+
+		// render markup
+		html = $(self.settings.render[templateName].apply(this, [data, escape_html]));
+
+		// add mandatory attributes
+		if (templateName === 'option' || templateName === 'option_create') {
+			if (!data[self.settings.disabledField]) {
+				html.attr('data-selectable', '');
+			}
+		}
+		else if (templateName === 'optgroup') {
+			id = data[self.settings.optgroupValueField] || '';
+			html.attr('data-group', id);
+			if(data[self.settings.disabledField]) {
+				html.attr('data-disabled', '');
+			}
+		}
+		if (templateName === 'option' || templateName === 'item') {
+			html.attr('data-value', value || '');
+		}
+
+		// update cache
+		if (cache) {
+			self.renderCache[templateName][value] = html[0];
+		}
+
+		return html[0];
+	},
+
+	/**
+	 * Clears the render cache for a template. If
+	 * no template is given, clears all render
+	 * caches.
+	 *
+	 * @param {string} templateName
+	 */
+	clearCache: function(templateName) {
+		var self = this;
+		if (typeof templateName === 'undefined') {
+			self.renderCache = {};
+		} else {
+			delete self.renderCache[templateName];
+		}
+	},
+
+	/**
+	 * Determines whether or not to display the
+	 * create item prompt, given a user input.
+	 *
+	 * @param {string} input
+	 * @return {boolean}
+	 */
+	canCreate: function(input) {
+		var self = this;
+		if (!self.settings.create) return false;
+		var filter = self.settings.createFilter;
+		return input.length
+			&& (typeof filter !== 'function' || filter.apply(self, [input]))
+			&& (typeof filter !== 'string' || new RegExp(filter).test(input))
+			&& (!(filter instanceof RegExp) || filter.test(input));
+	}
+});
+
+Selectize.count = 0;
+Selectize.defaults = {
+  options: [],
+  optgroups: [],
+
+  plugins: [],
+  delimiter: ',',
+  splitOn: null, // regexp or string for splitting up values from a paste command
+  persist: true,
+  diacritics: true,
+  create: false,
+  showAddOptionOnCreate: true,
+  createOnBlur: false,
+  createFilter: null,
+  highlight: true,
+  openOnFocus: true,
+  maxOptions: 1000,
+  maxItems: null,
+  hideSelected: null,
+  addPrecedence: false,
+  selectOnTab: true,
+  preload: false,
+  allowEmptyOption: false,
+  showEmptyOptionInDropdown: false,
+  emptyOptionLabel: '--',
+  setFirstOptionActive: false,
+  closeAfterSelect: false,
+  closeDropdownThreshold: 250, // number of ms to prevent reopening of dropdown after mousedown
+
+  scrollDuration: 60,
+  deselectBehavior: 'previous', //top, previous
+  loadThrottle: 300,
+  loadingClass: 'loading',
+
+  dataAttr: 'data-data',
+  optgroupField: 'optgroup',
+  valueField: 'value',
+  labelField: 'text',
+  disabledField: 'disabled',
+  optgroupLabelField: 'label',
+  optgroupValueField: 'value',
+  lockOptgroupOrder: false,
+
+  sortField: '$order',
+  searchField: ['text'],
+  searchConjunction: 'and',
+  respect_word_boundaries: true,
+
+  mode: null,
+  wrapperClass: '',
+  inputClass: '',
+  dropdownClass: '',
+  dropdownContentClass: '',
+
+  dropdownParent: null,
+
+  copyClassesToDropdown: true,
+  dropdownSize: {
+    sizeType: 'auto', // 'numberItems' or 'fixedHeight'
+    sizeValue: 'auto', // number of items or height value (px is default) or CSS height (px, rem, em, vh)
+  },
+  normalize: false,
+  ignoreOnDropwdownHeight: 'img, i',
+  search: true,
+
+  /*
+  load                 : null, // function(query, callback) { ... }
+  score                : null, // function(search) { ... }
+  formatValueToKey     : null, // function(key) { ... }
+  optionGroupRegister  : null, // function(optgroup) to register dynamically created option groups
+  onInitialize         : null, // function() { ... }
+  onChange             : null, // function(value) { ... }
+  onItemAdd            : null, // function(value, $item) { ... }
+  onItemRemove         : null, // function(value, $item) { ... }
+  onClear              : null, // function() { ... }
+  onOptionAdd          : null, // function(value, data) { ... }
+  onOptionRemove       : null, // function(value) { ... }
+  onOptionClear        : null, // function() { ... }
+  onOptionGroupAdd     : null, // function(id, data) { ... }
+  onOptionGroupRemove  : null, // function(id) { ... }
+  onOptionGroupClear   : null, // function() { ... }
+  onDropdownOpen       : null, // function($dropdown) { ... }
+  onDropdownClose      : null, // function($dropdown) { ... }
+  onType               : null, // function(str) { ... }
+  onDelete             : null, // function(values) { ... }
+  */
+
+  render: {
+    /*
+    item: null,
+    optgroup: null,
+    optgroup_header: null,
+    option: null,
+    option_create: null
+    */
+  }
+};
+
+$.fn.selectize = function (settings_user) {
+  var defaults = $.fn.selectize.defaults;
+  var settings = $.extend({}, defaults, settings_user);
+  var attr_data = settings.dataAttr;
+  var field_label = settings.labelField;
+  var field_value = settings.valueField;
+  var field_disabled = settings.disabledField;
+  var field_optgroup = settings.optgroupField;
+  var field_optgroup_label = settings.optgroupLabelField;
+  var field_optgroup_value = settings.optgroupValueField;
+
+  /**
+   * Initializes selectize from a <input type="text"> element.
+   *
+   * @param {JQuery} $input
+   * @param {Object} settings_element
+   */
+  var init_textbox = function ($input, settings_element) {
+    var i, n, values, option;
+
+    var data_raw = $input.attr(attr_data);
+
+    if (!data_raw) {
+      var value = ($input.val() || '').trim();
+      if (!settings.allowEmptyOption && !value.length) return;
+      values = value.split(settings.delimiter);
+      for (i = 0, n = values.length; i < n; i++) {
+        option = {};
+        option[field_label] = values[i];
+        option[field_value] = values[i];
+        settings_element.options.push(option);
+      }
+      settings_element.items = values;
+    } else {
+      settings_element.options = JSON.parse(data_raw);
+      for (i = 0, n = settings_element.options.length; i < n; i++) {
+        settings_element.items.push(settings_element.options[i][field_value]);
+      }
+    }
+  };
+
+  /**
+   * Initializes selectize from a <select> element.
+   *
+   * @param {object} $input
+   * @param {object} settings_element
+   */
+  var init_select = function ($input, settings_element) {
+    var i, n, tagName, $children, order = 0;
+    var options = settings_element.options;
+    var optionsMap = {};
+
+    var readData = function ($el) {
+      var data = attr_data && $el.attr(attr_data);
+      var allData = $el.data();
+      var obj = {};
+
+      if (typeof data === 'string' && data.length) {
+        if (isJSON(data)) {
+          Object.assign(obj, JSON.parse(data))
+        } else {
+          obj[data] = data;
+        }
+      }
+
+
+      Object.assign(obj, allData);
+
+      return obj || null;
+    };
+
+    var addOption = function ($option, group) {
+      $option = $($option);
+
+      var value = hash_key($option.val());
+      if (!value && !settings.allowEmptyOption) return;
+
+      // if the option already exists, it's probably been
+      // duplicated in another optgroup. in this case, push
+      // the current group to the "optgroup" property on the
+      // existing option so that it's rendered in both places.
+      if (optionsMap.hasOwnProperty(value)) {
+        if (group) {
+          var arr = optionsMap[value][field_optgroup];
+          if (!arr) {
+            optionsMap[value][field_optgroup] = group;
+          } else if (!Array.isArray(arr)) {
+            optionsMap[value][field_optgroup] = [arr, group];
+          } else {
+            arr.push(group);
+          }
+        }
+        return;
+      }
+
+      var option = readData($option) || {};
+      option[field_label] = option[field_label] || $option.text();
+      option[field_value] = option[field_value] || value;
+      option[field_disabled] = option[field_disabled] || $option.prop('disabled');
+      option[field_optgroup] = option[field_optgroup] || group;
+      option.styles = $option.attr('style') || '';
+      option.classes = $option.attr('class') || '';
+
+      optionsMap[value] = option;
+      options.push(option);
+
+      if ($option.is(':selected')) {
+        settings_element.items.push(value);
+      }
+    };
+
+    var addGroup = function ($optgroup) {
+      var i, n, id, optgroup, $options;
+
+      $optgroup = $($optgroup);
+      id = $optgroup.attr('label');
+
+      if (id) {
+        optgroup = readData($optgroup) || {};
+        optgroup[field_optgroup_label] = id;
+        optgroup[field_optgroup_value] = id;
+        optgroup[field_disabled] = $optgroup.prop('disabled');
+        settings_element.optgroups.push(optgroup);
+      }
+
+      $options = $('option', $optgroup);
+      for (i = 0, n = $options.length; i < n; i++) {
+        addOption($options[i], id);
+      }
+    };
+
+    settings_element.maxItems = $input.attr('multiple') ? null : 1;
+
+    $children = $input.children();
+    for (i = 0, n = $children.length; i < n; i++) {
+      tagName = $children[i].tagName.toLowerCase();
+      if (tagName === 'optgroup') {
+        addGroup($children[i]);
+      } else if (tagName === 'option') {
+        addOption($children[i]);
+      }
+    }
+  };
+
+  return this.each(function () {
+    if (this.selectize) return;
+
+    var instance;
+    var $input = $(this);
+    var tag_name = this.tagName.toLowerCase();
+    var placeholder = $input.attr('placeholder') || $input.attr('data-placeholder');
+    if (!placeholder && !settings.allowEmptyOption) {
+      placeholder = $input.children('option[value=""]').text();
+    }
+    if (settings.allowEmptyOption && settings.showEmptyOptionInDropdown && !$input.children('option[value=""]').length) {
+      var input_html = $input.html();
+      var label = escape_html(settings.emptyOptionLabel || '--');
+      $input.html('<option value="">' + label + '</option>' + input_html);
+    }
+
+    var settings_element = {
+      'placeholder': placeholder,
+      'options': [],
+      'optgroups': [],
+      'items': []
+    };
+
+    if (tag_name === 'select') {
+      init_select($input, settings_element);
+    } else {
+      init_textbox($input, settings_element);
+    }
+
+    instance = new Selectize($input, $.extend(true, {}, defaults, settings_element, settings_user));
+    instance.settings_user = settings_user;
+  });
+};
+
+$.fn.selectize.defaults = Selectize.defaults;
+$.fn.selectize.support = {
+  validity: SUPPORTS_VALIDITY_API
+};
+
+Selectize.define("auto_position", function () {
+  var self = this;
+
+  const POSITION = {
+    top: 'top',
+    bottom: 'bottom',
+  };
+
+  self.positionDropdown = (function() {
+    return function() {
+      const $control = this.$control;
+      const offset = this.settings.dropdownParent === 'body' ? $control.offset() : $control.position();
+      offset.top += $control.outerHeight(true);
+
+      const dropdownHeight = this.$dropdown.prop('scrollHeight') + 5; // 5 - padding value;
+      const controlPosTop = this.$control.get(0).getBoundingClientRect().top;
+      const wrapperHeight = this.$wrapper.height();
+      const position = controlPosTop + dropdownHeight + wrapperHeight  > window.innerHeight ? POSITION.top : POSITION.bottom;
+      const styles = {
+        width: $control.outerWidth(),
+        left: offset.left
+      };
+
+      if (position === POSITION.top) {
+        const styleToAdd = { bottom: offset.top, top: 'unset' };
+
+        if (this.settings.dropdownParent === 'body') {
+          styleToAdd.top = offset.top - this.$dropdown.outerHeight(true) - $control.outerHeight(true);
+          styleToAdd.bottom = 'unset';
+        }
+        Object.assign(styles, styleToAdd);
+        this.$dropdown.addClass('selectize-position-top');
+        this.$control.addClass('selectize-position-top');
+      } else {
+        Object.assign(styles, { top: offset.top, bottom: 'unset' });
+        this.$dropdown.removeClass('selectize-position-top');
+        this.$control.removeClass('selectize-position-top');
+      }
+
+      this.$dropdown.css(styles);
+    };
+  }());
+});
+
+Selectize.define('auto_select_on_type', function(options) {
+	var self = this;
+
+	self.onBlur = (function() {
+		var originalBlur = self.onBlur;
+		return function(e) {
+			var $matchedItem = self.getFirstItemMatchedByTextContent(self.lastValue, true);
+			if (typeof $matchedItem.attr('data-value') !== 'undefined' && self.getValue() !== $matchedItem.attr('data-value'))
+			{
+				self.setValue($matchedItem.attr('data-value'));
+			}
+			return originalBlur.apply(this, arguments);
+		}
+	}());
+});
+
+/**
+ * Plugin: "autofill_disable" (selectize.js)
+ * Copyright (c) 2013 Brian Reavis & contributors
+ * Copyright (c) 2020-2022 Selectize Team & contributors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at:
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ *
+ * @author Ris Adams <selectize@risadams.com>
+ */
+
+Selectize.define("autofill_disable", function (options) {
+  var self = this;
+
+  self.setup = (function () {
+    var original = self.setup;
+    return function () {
+      original.apply(self, arguments);
+
+      // https://stackoverflow.com/questions/30053167/autocomplete-off-vs-false
+      self.$control_input.attr({ autocomplete: "new-password", autofill: "no" });
+    };
+  })();
+});
+
+/**
+ * Plugin: "clear_button" (selectize.js)
+ * Copyright (c) 2013 Brian Reavis & contributors
+ * Copyright (c) 2020-2022 Selectize Team & contributors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at:
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ *
+ * @author Fabien Winkler <fabien.winkler@outlook.fr>
+ */
+
+Selectize.define("clear_button", function (options) {
+  var self = this;
+
+  options = $.extend(
+    {
+      title: "Clear",
+      className: "clear",
+      label: "×",
+      html: function (data) {
+        return (
+          '<a class="' + data.className + '" title="' + data.title + '"> ' + data.label + '</a>'
+        );
+      },
+    },
+    options
+  );
+
+  self.setup = (function () {
+    var original = self.setup;
+    return function () {
+      original.apply(self, arguments);
+      self.$button_clear = $(options.html(options));
+
+      if (self.settings.mode === "single") self.$wrapper.addClass("single");
+
+      self.$wrapper.append(self.$button_clear);
+
+      if (self.getValue() === "" || self.getValue().length === 0) {
+        self.$wrapper.find("." + options.className).css("display", "none");
+      }
+
+      self.on("change", function () {
+        if (self.getValue() === "" || self.getValue().length === 0) {
+          self.$wrapper.find("." + options.className).css("display", "none");
+        } else {
+          self.$wrapper.find("." + options.className).css("display", "");
+        }
+      });
+
+      self.$wrapper.on("click", "." + options.className, function (e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        e.stopPropagation();
+
+        if (self.isLocked) return;
+
+        self.clear();
+        self.$wrapper.find("." + options.className).css("display", "none");
+      });
+    };
+  })();
+});
+
+/**
+ * Plugin: "drag_drop" (selectize.js)
+ * Copyright (c) 2013 Brian Reavis & contributors
+ * Copyright (c) 2020-2022 Selectize Team & contributors*
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at:
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ *
+ * @author Brian Reavis <brian@thirdroute.com>
+ */
+
+Selectize.define('drag_drop', function(options) {
+	if (!$.fn.sortable) throw new Error('The "drag_drop" plugin requires jQuery UI "sortable".');
+	if (this.settings.mode !== 'multi') return;
+	var self = this;
+
+	self.lock = (function() {
+		var original = self.lock;
+		return function() {
+			var sortable = self.$control.data('sortable');
+			if (sortable) sortable.disable();
+			return original.apply(self, arguments);
+		};
+	})();
+
+	self.unlock = (function() {
+		var original = self.unlock;
+		return function() {
+			var sortable = self.$control.data('sortable');
+			if (sortable) sortable.enable();
+			return original.apply(self, arguments);
+		};
+	})();
+
+	self.setup = (function() {
+		var original = self.setup;
+		return function() {
+			original.apply(this, arguments);
+
+			var $control = self.$control.sortable({
+				items: '[data-value]',
+				forcePlaceholderSize: true,
+				disabled: self.isLocked,
+				start: function(e, ui) {
+					ui.placeholder.css('width', ui.helper.css('width'));
+					// $control.css({overflow: 'visible'});
+					$control.addClass('dragging');
+				},
+				stop: function() {
+					// $control.css({overflow: 'hidden'});
+					$control.removeClass('dragging');
+					var active = self.$activeItems ? self.$activeItems.slice() : null;
+					var values = [];
+					$control.children('[data-value]').each(function() {
+						values.push($(this).attr('data-value'));
+					});
+					self.isFocused = false;
+					self.setValue(values);
+					self.isFocused = true;
+					self.setActiveItem(active);
+					self.positionDropdown();
+				}
+			});
+		};
+	})();
+
+});
+
+/**
+ * Plugin: "dropdown_header" (selectize.js)
+ * Copyright (c) 2013 Brian Reavis & contributors
+ * Copyright (c) 2020-2022 Selectize Team & contributors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at:
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ *
+ * @author Brian Reavis <brian@thirdroute.com>
+ */
+
+Selectize.define('dropdown_header', function(options) {
+	var self = this;
+
+	options = $.extend({
+		title         : 'Untitled',
+		headerClass   : 'selectize-dropdown-header',
+		titleRowClass : 'selectize-dropdown-header-title',
+		labelClass    : 'selectize-dropdown-header-label',
+		closeClass    : 'selectize-dropdown-header-close',
+
+		html: function(data) {
+			return (
+				'<div class="' + data.headerClass + '">' +
+					'<div class="' + data.titleRowClass + '">' +
+						'<span class="' + data.labelClass + '">' + data.title + '</span>' +
+						'<a href="javascript:void(0)" class="' + data.closeClass + '">&#xd7;</a>' +
+					'</div>' +
+				'</div>'
+			);
+		}
+	}, options);
+
+	self.setup = (function() {
+		var original = self.setup;
+		return function() {
+			original.apply(self, arguments);
+			self.$dropdown_header = $(options.html(options));
+      self.$dropdown.prepend(self.$dropdown_header);
+      self.$dropdown_header.find('.' + options.closeClass).on('click', function () {
+        self.close();
+      });
+		};
+	})();
+
+});
+
+/**
+ * Plugin: "optgroup_columns" (selectize.js)
+ * Copyright (c) 2013 Simon Hewitt & contributors
+ * Copyright (c) 2020-2022 Selectize Team & contributors*
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at:
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ *
+ * @author Simon Hewitt <si@sjhewitt.co.uk>
+ */
+
+Selectize.define('optgroup_columns', function(options) {
+	var self = this;
+
+	options = $.extend({
+		equalizeWidth  : true,
+		equalizeHeight : true
+	}, options);
+
+	this.getAdjacentOption = function($option, direction) {
+		var $options = $option.closest('[data-group]').find('[data-selectable]');
+		var index    = $options.index($option) + direction;
+
+		return index >= 0 && index < $options.length ? $options.eq(index) : $();
+	};
+
+	this.onKeyDown = (function() {
+		var original = self.onKeyDown;
+		return function(e) {
+			var index, $option, $options, $optgroup;
+
+			if (this.isOpen && (e.keyCode === KEY_LEFT || e.keyCode === KEY_RIGHT)) {
+				self.ignoreHover = true;
+				$optgroup = this.$activeOption.closest('[data-group]');
+				index = $optgroup.find('[data-selectable]').index(this.$activeOption);
+
+				if(e.keyCode === KEY_LEFT) {
+					$optgroup = $optgroup.prev('[data-group]');
+				} else {
+					$optgroup = $optgroup.next('[data-group]');
+				}
+
+				$options = $optgroup.find('[data-selectable]');
+				$option  = $options.eq(Math.min($options.length - 1, index));
+				if ($option.length) {
+					this.setActiveOption($option);
+				}
+				return;
+			}
+
+			return original.apply(this, arguments);
+		};
+	})();
+
+	var getScrollbarWidth = function() {
+		var div;
+		var width = getScrollbarWidth.width;
+		var doc = document;
+
+		if (typeof width === 'undefined') {
+			div = doc.createElement('div');
+			div.innerHTML = '<div style="width:50px;height:50px;position:absolute;left:-50px;top:-50px;overflow:auto;"><div style="width:1px;height:100px;"></div></div>';
+			div = div.firstChild;
+			doc.body.appendChild(div);
+			width = getScrollbarWidth.width = div.offsetWidth - div.clientWidth;
+			doc.body.removeChild(div);
+		}
+		return width;
+	};
+
+	var equalizeSizes = function() {
+		var i, n, height_max, width, width_last, width_parent, $optgroups;
+
+		$optgroups = $('[data-group]', self.$dropdown_content);
+		n = $optgroups.length;
+		if (!n || !self.$dropdown_content.width()) return;
+
+		if (options.equalizeHeight) {
+			height_max = 0;
+			for (i = 0; i < n; i++) {
+				height_max = Math.max(height_max, $optgroups.eq(i).height());
+			}
+			$optgroups.css({height: height_max});
+		}
+
+		if (options.equalizeWidth) {
+			width_parent = self.$dropdown_content.innerWidth() - getScrollbarWidth();
+			width = Math.round(width_parent / n);
+			$optgroups.css({width: width});
+			if (n > 1) {
+				width_last = width_parent - width * (n - 1);
+				$optgroups.eq(n - 1).css({width: width_last});
+			}
+		}
+	};
+
+	if (options.equalizeHeight || options.equalizeWidth) {
+		hook.after(this, 'positionDropdown', equalizeSizes);
+		hook.after(this, 'refreshOptions', equalizeSizes);
+	}
+
+
+});
+
+/**
+ * Plugin: "remove_button" (selectize.js)
+ * Copyright (c) 2013 Brian Reavis & contributors
+ * Copyright (c) 2020-2022 Selectize Team & contributors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at:
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ *
+ * @author Brian Reavis <brian@thirdroute.com>
+ */
+
+Selectize.define('remove_button', function (options) {
+  if (this.settings.mode === 'single') return;
+
+	options = $.extend({
+			label     : '&#xd7;',
+			title     : 'Remove',
+			className : 'remove',
+			append    : true
+		}, options);
+
+		var multiClose = function(thisRef, options) {
+
+			var self = thisRef;
+			var html = '<a href="javascript:void(0)" class="' + options.className + '" tabindex="-1" title="' + escape_html(options.title) + '">' + options.label + '</a>';
+
+			/**
+			 * Appends an element as a child (with raw HTML).
+			 *
+			 * @param {string} html_container
+			 * @param {string} html_element
+			 * @return {string}
+			 */
+			var append = function(html_container, html_element) {
+				var pos = html_container.search(/(<\/[^>]+>\s*)$/);
+				return html_container.substring(0, pos) + html_element + html_container.substring(pos);
+			};
+
+			thisRef.setup = (function() {
+				var original = self.setup;
+				return function() {
+					// override the item rendering method to add the button to each
+					if (options.append) {
+						var render_item = self.settings.render.item;
+						self.settings.render.item = function(data) {
+							return append(render_item.apply(thisRef, arguments), html);
+						};
+					}
+
+					original.apply(thisRef, arguments);
+
+					// add event listener
+					thisRef.$control.on('click', '.' + options.className, function(e) {
+						e.preventDefault();
+						if (self.isLocked) return;
+
+						var $item = $(e.currentTarget).parent();
+						self.setActiveItem($item);
+						if (self.deleteSelection()) {
+							self.setCaret(self.items.length);
+						}
+						return false;
+					});
+
+				};
+			})();
+		};
+
+    multiClose(this, options);
+});
+
+/**
+ * Plugin: "restore_on_backspace" (selectize.js)
+ * Copyright (c) 2013 Brian Reavis & contributors
+ * Copyright (c) 2020-2022 Selectize Team & contributors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at:
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ *
+ * @author Brian Reavis <brian@thirdroute.com>
+ */
+
+Selectize.define('restore_on_backspace', function(options) {
+	var self = this;
+
+	options.text = options.text || function(option) {
+		return option[this.settings.labelField];
+	};
+
+	this.onKeyDown = (function() {
+		var original = self.onKeyDown;
+		return function(e) {
+			var index, option;
+			if (e.keyCode === KEY_BACKSPACE && this.$control_input.val() === '' && !this.$activeItems.length) {
+				index = this.caretPos - 1;
+				if (index >= 0 && index < this.items.length) {
+					option = this.options[this.items[index]];
+					if (this.deleteSelection(e)) {
+						this.setTextboxValue(options.text.apply(this, [option]));
+						this.refreshOptions(true);
+					}
+					e.preventDefault();
+					return;
+				}
+			}
+			return original.apply(this, arguments);
+		};
+	})();
+});
+
+Selectize.define('select_on_focus', function(options) {
+	var self = this;
+
+	self.on('focus', function() {
+		var originalFocus = self.onFocus;
+		return function(e) {
+			var value = self.getItem(self.getValue()).text();
+			self.clear();
+			self.setTextboxValue(value);
+			self.$control_input.select();
+			setTimeout( function () {
+				if (self.settings.selectOnTab) {
+					self.setActiveOption(self.getFirstItemMatchedByTextContent(value));
+				}
+				self.settings.score = null;
+			},0);
+			return originalFocus.apply(this, arguments);
+		};
+	}());
+
+	self.onBlur = (function() {
+		var originalBlur = self.onBlur;
+		return function(e) {
+			if (self.getValue() === "" && self.lastValidValue !== self.getValue()) {
+				self.setValue(self.lastValidValue);
+			}
+			setTimeout( function () {
+				self.settings.score = function() {
+					return function() {
+						return 1;
+					};
+				};
+			}, 0 );
+			return originalBlur.apply(this, arguments);
+		}
+	}());
+	self.settings.score = function() {
+		return function() { return 1; };
+	};
+
+});
+
+Selectize.define('tag_limit', function (options) {
+    const self = this
+    options.tagLimit = options.tagLimit
+    this.onBlur = (function (e) {
+        const original = self.onBlur
+
+        return function (e) {
+            original.apply(this, e);
+            if (!e)
+                return
+            const $control = this.$control
+            const $items = $control.find('.item')
+            const limit = options.tagLimit
+            if (limit === undefined || $items.length <= limit)
+                return
+
+            $items.toArray().forEach(function(item, index) {
+                if (index < limit)
+                    return
+                $(item).hide()
+            });
+
+            $control.append('<span><b>' + ($items.length - limit) + '</b></span>')
+        };
+    })()
+
+    this.onFocus = (function (e) {
+        const original = self.onFocus
+
+        return function (e) {
+            original.apply(this, e);
+            if (!e)
+                return
+            const $control = this.$control
+            const $items = $control.find('.item')
+            $items.show()
+            $control.find('span').remove()
+
+        };
+    })()
+});
+
+  return Selectize;
 }));

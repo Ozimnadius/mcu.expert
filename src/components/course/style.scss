@@ -11,6 +11,10 @@
 
   &__advantages2{
     @include margin-top(26);
+
+    &--nomargin{
+      margin: 0;
+    }
   }
 
   &__desc {
@@ -32,6 +36,10 @@
     }
     @include sm-block {
       padding: 50px 0;
+    }
+
+    &--nomt{
+      margin-top: 0;
     }
 
     .container {
@@ -111,6 +119,12 @@
 
   &__for{
     @include margin-top(15);
+
+    &--grey{
+      margin: 0;
+      padding: 100px 0;
+      background-color: var(--color-grey-bg);
+    }
   }
 
   &__after{
@@ -118,7 +132,7 @@
   }
 
   &__teacher{
-    @include margin-top(8);
+    @include margin-top(12);
   }
 
   &__curators{
@@ -131,7 +145,45 @@
   &__choose{
     padding-top: 140px;
     padding-bottom: 100px;
-    background: url("../images/content/course-choose/bg.webp") 0 0 no-repeat;
+    background: url("/images/content/course-choose/bg.webp") 0 0 no-repeat;
     background-size: cover;
+
+    &--mt{
+      @include margin-top(11);
+    }
   }
+
+  &__reviews{
+    @include margin-top(15);
+  }
+
+  &__invocation{
+    @include margin-top(15);
+    padding-top: 100px;
+    padding-bottom: 170px;
+    background: var(--color-grey-bg) url("/images/content/bg-grey.svg") right 130px top 30px no-repeat;
+    background-size: 574px 673px;
+  }
+
+  &__businesses{
+    padding-top: 140px;
+    padding-bottom: 110px;
+    background: url("/images/content/favicon.svg") right 200px top 55px no-repeat;
+    background-size: 368px 431px;
+  }
+
+  &__format{
+    @include margin-top(12);
+  }
+
+  &__training{
+    @include margin-top(20);
+  }
+
+  &__cert{
+    @include margin-top(18);
+    background-color: var(--color-grey-bg);
+    padding: 145px 0;
+  }
+
 }

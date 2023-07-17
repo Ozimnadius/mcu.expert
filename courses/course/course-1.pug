@@ -54,7 +54,7 @@ block content
                 //-after
                 section.course__after
                     include ../../src/components/course-after/index
-                //-for
+                //-teacher
                 section.course__teacher
                     include ../../src/components/course-teacher/index
                 //-curators
@@ -117,18 +117,9 @@ block content
                 section.course__reviews
                     .container
                         include ../../src/components/course-reviews/index
-                //-guarantees
-                section.course__guarantees
+                section.course__invocation
                     .container
-                        include ../../src/components/course-guarantees/index
-                //-faq
-                section.course__faq
-                    .container
-                        -
-                            var data = {
-                                title: true
-                            };
-                        include ../../src/components/course-faq/index
+                        include ../../src/components/course-invocation/index
                 //-form
                 section.course__form
                     .container

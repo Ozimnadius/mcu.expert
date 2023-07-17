@@ -13,3 +13,11 @@
 .ui-heading-4 {
   @include ui-heading-4;
 }
+
+.ui-btn-fill{
+  @include ui-btn-fill;
+}
+
+.ui-ul-checkbox{
+  @include ui-ul-checkbox;
+}

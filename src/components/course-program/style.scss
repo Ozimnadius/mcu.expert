@@ -20,7 +20,6 @@
 
   &__title {
     @include ui-heading-2;
-    max-width: 10ch;
     @include lg-block {
       font-size: 46px;
       max-width: 100%;

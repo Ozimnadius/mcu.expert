@@ -1,0 +1,226 @@
+extends ../../src/core/main
+
+block variables
+    - var title = 'Пример курса'
+
+block content
+    main.page
+        section.page__banner
+            -
+                var data = {
+                    color: '--banner-color: var(--color-white)',
+                    img: 'course-2',
+                    bread: [
+                        {
+                            href: '/',
+                            name: 'Главная'
+                        },
+                        {
+                            href: '/courses/',
+                            name: 'Курсы'
+                        },
+                        {
+                            name: title
+                        }
+                    ],
+                    content: `<h2>Изучите все тонкости открытия клиники за 8 недель</h2>
+                                <br>
+                               <p>Курс-практикум для собственников и управленцев</p>
+                            `
+                };
+            include ../../src/components/banner/index
+        .page__content
+            .course
+                //-workshop
+                section.course__workshop
+                    .container
+                        include ../../src/components/course-workshop/index
+                //-for
+                section.course__for.course__for--grey
+                    .container
+                        .course-for
+                            .course-for__title Кому необходим курс-практикум?
+                            .course-for__list
+                                .course-for__item
+                                    .course-for__left
+                                        .course-for__item-title Врачам
+                                        .course-for__item-txt Кто планирует открыть свою клинику и не знает, с чего начать
+                                    .course-for__right
+                                        .course-for__img
+                                            img(src="/images/content/course-for/2-1.webp" alt="lorem")
+                                .course-for__item
+                                    .course-for__left
+                                        .course-for__item-title Инвесторам
+                                        .course-for__item-txt Кто планиурет открытие клиник за пределами России, в том числе в ОАЭ
+                                    .course-for__right
+                                        .course-for__img
+                                            img(src="/images/content/course-for/2-2.webp" alt="lorem")
+                                .course-for__item
+                                    .course-for__left
+                                        .course-for__img
+                                            img(src="/images/content/course-for/2-3.webp" alt="lorem")
+                                    .course-for__right
+                                        .course-for__item-title Главным врачам
+                                        .course-for__item-txt Кто имеет опыт организации работы клиники и хочет большего
+                                .course-for__item
+                                    .course-for__left
+                                        .course-for__img
+                                            img(src="/images/content/course-for/2-4.webp" alt="lorem")
+                                    .course-for__right
+                                        .course-for__item-title Управляющим
+                                        .course-for__item-txt Кто настроен в короткие сроки вывести новую клинику в зону прибыли
+                            form(action='/php/getForm.php' method='post' data-event='submit.openForm').course-for__btn
+                                input(type="hidden" name="name" value="feedback")
+                                button(type="submit") Задать вопрос
+
+                //-businesses
+                section.course__businesses
+                    .container
+                        include ../../src/components/course-businesses/index
+                //-on
+                section.course__on
+                    include ../../src/components/course-on/index
+                //-advantages2
+                section.course__advantages2.course__advantages2--nomargin
+                    .course-advantages2.course-advantages2--nobg
+                        .container
+                            .course-advantages2__content
+                                .course-advantages2__title Преимущества курса
+                                .course-advantages2__list
+                                    -
+                                        var data = [
+                                            {
+                                                img: '/images/content/course-advantages2/1.svg',
+                                                name: 'Проверено практикой',
+                                                txt: 'Автор курса — генеральный директор медицинского холдинга, входящего в топ-200 клиник России. За 20 лет в медицинском бизнесе получила колоссальный опыт и нашла лучшие решения из существующих. А также разработала и запатентовала собственную систему управления.',
+                                            },
+                                            {
+                                                img: '/images/content/course-advantages2/2.svg',
+                                                name: 'Мощная экспертиза',
+                                                txt: 'Первую клинику автор курса самостоятельно открывала более 20 лет назад. Самому молодому проекту в ее бизнес-портфеле всего 2 года. Знает все нюансы открытия клиник, в том числе за рубежом.',
+                                            },
+                                            {
+                                                img: '/images/content/course-advantages2/4.svg',
+                                                name: 'Доступное изложение',
+                                                txt: 'Автор курса — врач акушер-гинеколог, кандидат медицинских наук, обладатель степени Executive MBA. Она умеет говорить на одном языке как с врачами, так и с бизнесменами. Объясняет самые сложные вещи просто и на кейсах из собственной практики.',
+                                            },
+                                        ];
+                                    each i in data
+                                        .course-advantages2__item
+                                            .course-advantages2__item-img
+                                                img(src=i.img alt=i.name)
+                                            .course-advantages2__item-name= i.name
+                                            .course-advantages2__item-txt= i.txt
+                                .course-advantages2__btn
+                                    button(data-event="click.goTo" data-to=".course__tariffs").ui-btn-fill Записаться на курс
+                            .course-advantages2__info.course-advantages2__info--static
+                                .course-advantages2__info-txt.
+                                    Хотите получить чек-лист "Алгоритм открытия клиники"?<br> Заполните форму и скачайте файл
+                                a(href="#").course-advantages2__info-link Получить чек-лист
+                //-format
+                section.course__format
+                    .container
+                        include ../../src/components/course-format/index
+                //-program
+                section.course__program
+                    .container
+                        -
+                            var data = {
+                                title: 'Краткая программа курса',
+                                desc: 'Текст-заполнитель — это текст, который имеет некоторые характеристики реального письменного текста, Курс–практикум для собственников и управленцев.',
+                                faq: {
+                                    title: false,
+                                    list: [
+                                        {
+                                            title: 'Оцениваем собственные компетенции. Разрабатываем бизнес-концепцию клиники',
+                                            desc: 'Вы оцените свои ресурсы, исследуете конкурентное окружение и емкость рынка, определитесь с юридической формой деятельности и способом организации клиники.'
+                                        },
+                                        {
+                                            title: 'Формируем юридическую и финансовую модель клиники',
+                                            desc: 'Разберетесь в бюджетировании, метриках эффективности сотрудников, рассчитаете точку безубыточности для своего проекта.'
+                                        },
+                                        {
+                                            title: 'Организовываем эффективную систему через трехконтурную модель',
+                                            desc: 'Вы изучите систему управления контурами сотрудников, продукта и пациента. Определитесь с системой мотивации персонала.'
+                                        },
+                                        {
+                                            title: 'Готовим документы',
+                                            desc: 'Совместно с экспертом разберете всю документацию, которую необходимо будет готовить к запуску проекта.'
+                                        },
+                                        {
+                                            title: 'Запускаем бренд',
+                                            desc: 'Вы сможете точно определиться с целевой аудиторий своего проекта, разберете нюансы правильного позиционирования и нейминга, а также структуру продающего сайта.'
+                                        },
+                                        {
+                                            title: 'Формируем прайс',
+                                            desc: 'Определите политику ценообразования в зависимости от позиционирования клиники и сформируете прайс с учетом обязательных требований.'
+                                        },
+                                        {
+                                            title: 'Нанимаем и обучаем персонал',
+                                            desc: 'Сформируете организационную структуру, разберете все способы найма, определитесь со стартовым и дальнейшим обучением сотрудников.'
+                                        },
+                                    ]
+                                }
+                            }
+                        include ../../src/components/course-program/index
+                //-tariffs
+                section.course__tariffs
+                    .container
+                        -
+                            var data = {
+                                title: 'Стоимость обучения:',
+                                list: [
+                                    {
+                                        name: 'Открытие клиники за 8 недель',
+                                        ul: [
+                                            'Доступ к видеокурсу(35 уроков)',
+                                            'Пакет документов: обязательные документы, стандарты, регламенты, должностные инструкции(35 документов)',
+                                            'Доступ к записи курса на 3 меся',
+                                            'Мастер - классы с топовыми экспертами',
+                                            'Консультация по запуску вашей клиники(1 час)',
+                                            'Сертификат о прохождении курса',
+                                        ],
+                                        price: '39 000 руб.'
+                                    },
+                                ],
+                            };
+                        include ../../src/components/course-tariffs/index
+                //-training
+                section.course__training
+                    .container
+                        include ../../src/components/course-training/index
+                //-cert
+                section.course__cert
+                    .container
+                        include ../../src/components/course-cert/index
+                //-teacher
+                section.course__teacher
+                    include ../../src/components/course-teacher/index
+                //-choose
+                section.course__choose.course__choose--mt
+                    .container
+                        include ../../src/components/course-choose/index
+                //-histories
+                section.course__histories.course__histories--nomt
+                    .container
+                        include ../../src/components/course-histories/index
+                //-form
+                section.course__form
+                    .container
+                        include ../../src/components/form-call/index
+                //-info
+                section.course__info
+                    .container
+                        include ../../src/components/course-info/index
+
+
+
+
+
+
+
+
+
+
+
+        

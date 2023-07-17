@@ -1,0 +1,26 @@
+.course-businesses{
+
+  &__form {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    border-radius: 18px;
+    background: var(--color-grey-bg);
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 100px 170px;
+  }
+
+  &__title{
+    margin-left: -100px;
+    margin-right: -100px;
+    text-align: center;
+  }
+
+  &__btn{
+    align-self: center;
+  }
+
+}

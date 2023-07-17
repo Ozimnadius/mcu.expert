@@ -1,0 +1,24 @@
+.course-invocation{
+  display:grid;
+  justify-items: center;
+  gap: 40px;
+
+  &__img{
+    padding: 27px;
+    border-radius: 50%;
+    border: 2px solid var(--color-red);
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  &__txt{
+    max-width: 60ch;
+    text-align: center;
+    font-size: 32px;
+  }
+}

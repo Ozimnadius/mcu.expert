@@ -70,6 +70,7 @@
 
   &__name {
     font-size: 24px;
+    max-width: 700px;
   }
 
   &__btn {
@@ -95,5 +96,9 @@
     @include sm-block {
       padding-top: 0;
     }
+  }
+
+  &__content {
+    max-width: 700px;
   }
 }

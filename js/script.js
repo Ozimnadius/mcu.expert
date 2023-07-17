@@ -12,7 +12,7 @@ function init() {
     setOffset();
     indexProfileItems();
     setProductTabsHeight();
-    initTelMask();
+    initUi();
     initContent();
 }
 
@@ -402,8 +402,14 @@ function indexProfileItems() {
     );
 }
 
-function initTelMask() {
+function initTelMask(){
     $('input[type="tel"]').inputmask("+7(999)-999-99-99");
+}
+
+function initUi(){
+    initTelMask();
+
+    $(".form__select").selectize();
 }
 
 function initContent() {

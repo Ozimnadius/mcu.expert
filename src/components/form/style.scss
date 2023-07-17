@@ -1,5 +1,5 @@
 .form {
-  &__content{
+  &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,7 +8,7 @@
   &__title {
     @include ui-heading-2;
     margin-bottom: 20px;
-    @include sm-block{
+    @include sm-block {
       font-size: 28px;
     }
   }
@@ -19,7 +19,7 @@
     flex-direction: column;
   }
 
-  &__field{
+  &__field {
     position: relative;
   }
 
@@ -28,7 +28,7 @@
     padding: 20px 0;
     width: 100%;
     font-size: 20px;
-    @include sm-block{
+    @include sm-block {
       font-size: 18px;
       padding: 12px 0;
     }
@@ -40,7 +40,7 @@
       border: 1px solid var(--color-grey);
       border-radius: 27px;
       resize: none;
-      @include sm-block{
+      @include sm-block {
         height: 235px;
         padding-top: 24px;
         padding-left: 40px;
@@ -48,7 +48,7 @@
     }
   }
 
-  &__sum{
+  &__sum {
     border-bottom: 1px solid var(--color-grey);
     padding: 20px 0;
     width: 100%;
@@ -57,7 +57,7 @@
 
   &__accept {
     margin-top: 30px;
-    @include sm-block{
+    @include sm-block {
       margin-top: 20px;
     }
   }
@@ -65,66 +65,166 @@
   &__submit {
     @include ui-btn-border;
     margin-top: 45px;
-    @include sm-block{
+    @include sm-block {
       margin-top: 30px;
     }
   }
 
-  &__ok{
+  &__ok {
     display: flex;
     flex-direction: column;
     gap: 20px;
     text-align: center;
     font-size: 20px;
-    @include sm-block{
+    @include sm-block {
       font-size: 18px;
     }
 
 
-    h2,h3{
+    h2, h3 {
       @include ui-heading-2;
-      @include sm-block{
+      @include sm-block {
         font-size: 28px;
       }
     }
   }
+
+  &__select {
+
+    &.selectize-control {
+
+      .selectize-input {
+        border: none;
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+
+        display: block;
+        border-bottom: 1px solid var(--color-grey);
+        border-color: var(--color-grey);
+
+        padding: 20px 0;
+        width: 100%;
+        color: var(--color-black);
+        line-height: inherit;
+        font-size: 20px;
+
+        &:before,&:after{
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          position: absolute;
+          right: 10px;
+        }
+
+        &:before{
+          border-width: 0 6px 12px 6px;
+          border-color: transparent transparent var(--color-red) transparent;
+          transform: translateY(calc(-50% + 6px));
+        }
+
+        &:after{
+          border-width: 12px 6px 0 6px;
+          border-color: var(--color-red) transparent transparent transparent;
+          transform: translateY(calc(-50% + 10px));
+        }
+
+        &.dropdown-active{
+          &:before{
+            border-width: 0 6px 12px 6px;
+            border-color: transparent transparent var(--color-red) transparent;
+            transform: translateY(calc(-50% + 6px));
+            left: initial;
+            bottom: initial;
+            background: none;
+          }
+          &:after{
+            margin: 0;
+            border-width: 12px 6px 0 6px;
+            border-color: var(--color-red) transparent transparent transparent;
+            transform: translateY(calc(-50% + 10px));
+          }
+        }
+
+        input{
+          color: inherit;
+          font-size: inherit;
+        }
+      }
+
+      .selectize-dropdown{
+        border: none;
+        box-shadow: none;
+        margin: 0;
+
+        background: var(--color-grey-bg-dark);
+        border-radius: 0px 0px 10px 10px;
+        font-size: 20px;
+        line-height: inherit;
+        color: #8C8C8C;
+        padding: 29px 0;
+
+        .selectize-dropdown-content{
+          max-height: 205px;
+        }
+
+        .option{
+          padding: 6px 40px;
+
+          &.selected{
+            background: none;
+            color: var(--color-red);
+          }
+          &.active{
+            background: none;
+            color: var(--color-black);
+          }
+        }
+      }
+
+    }
+
+
+  }
 }
 
-.form-file{
+.form-file {
   font-size: 20px;
   width: 100%;
   border-bottom: 1px solid var(--color-grey);
   display: block;
   color: #8C8C8C;
   cursor: pointer;
-  @include sm-block{
+  @include sm-block {
     font-size: 18px;
   }
-  
-  &.active{
+
+  &.active {
     color: var(--color-black);
   }
-  
-  &__input{
+
+  &__input {
     display: none;
 
-    &::placeholder{
+    &::placeholder {
       color: #8C8C8C;
     }
   }
 
-  &__fake{
+  &__fake {
     display: block;
     padding: 20px 0;
     position: relative;
   }
 
-  &__placeholder{
+  &__placeholder {
     display: block;
   }
 
 
-  &__btn{
+  &__btn {
     position: absolute;
     z-index: 2;
     top: 0;
@@ -135,3 +235,4 @@
     align-items: center;
   }
 }
+

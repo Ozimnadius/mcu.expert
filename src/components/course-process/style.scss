@@ -1,4 +1,5 @@
 .course-process {
+
   &__title {
     @include ui-heading-2;
     @include lg-block {
@@ -29,6 +30,7 @@
       margin-top: 40px;
     }
   }
+
 
   &__item {
     padding: 40px 0 40px 130px;
@@ -71,4 +73,22 @@
       }
     }
   }
+
+  &__list {
+    display: grid;
+
+    .course-process__item {
+      border-top: 1px solid var(--color-grey);
+
+      &:first-child {
+        border-color: transparent;
+      }
+
+      &:before {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
 }

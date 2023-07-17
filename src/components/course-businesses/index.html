@@ -1,0 +1,36 @@
+
+<div class="course-businesses">
+  <form class="course-businesses__form form" action="/php/ajax.php" method="post">
+    <div class="course-businesses__title form__title">Заполните, пожалуйста, форму и получите главу из книги «Как открыть клинику мечты» в подарок</div>
+    <div class="form__fields">
+      <div class="form__field">
+        <input class="form__input" type="text" name="course" value="“Мотивационная консультация пациента”"/>
+      </div>
+      <div class="form__field">
+        <input class="form__input" type="text" name="name" placeholder="Ваше имя" required="required"/>
+      </div>
+      <div class="form__field">
+        <input class="form__input" type="text" name="sname" placeholder="Ваша фамилия" required="required"/>
+      </div>
+      <div class="form__field">
+        <input class="form__input" type="email" name="email" placeholder="Эл. почта" required="required"/>
+      </div>
+      <div class="form__field">
+        <input class="form__input" type="tel" name="tel" placeholder="Телефон" required="required"/>
+      </div>
+      <div class="form__field">
+        <input class="form__input" type="text" name="city" placeholder="Укажите ваш город" required="required"/>
+      </div>
+      <div class="form__field">
+        <input class="form__input form__input--select" type="text" name="status" list="status" placeholder="Ваш статус" required="required"/>
+        <datalist id="status">
+          <option value="Собственник">Собственник</option>
+          <option value="Директор">Директор</option>
+          <option value="Врач">Врач</option>
+          <option value="Главный врач">Главный врач</option>
+          <option value="Инвестор">Инвестор</option>
+        </datalist>
+      </div>
+    </div>
+  </form>
+</div>

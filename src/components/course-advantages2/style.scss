@@ -4,6 +4,12 @@
   padding-bottom: 160px;
   position: relative;
 
+  &--nobg{
+    background: none;
+    padding-top: 150px;
+    padding-bottom: 0;
+  }
+
   &__info{
     position: absolute;
     top: -170px;
@@ -19,6 +25,12 @@
 
     color: var(--color-white);
     padding: 70px 120px;
+
+    &--static{
+      position: static;
+      transform: none;
+      margin-top: 90px;
+    }
   }
 
   &__info-txt{
@@ -49,7 +61,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 35px;
+    gap: 30px;
   }
 
   &__item-img{
@@ -69,8 +81,20 @@
     max-width: 26ch;
   }
 
+  &__item-txt{
+    font-size: 16px;
+    line-height: 1.36;
+    text-align: center;
+    max-width: 43ch;
+  }
+
   &__txt{
     @include ui-heading-3;
     text-align: center;
+  }
+
+  &__btn{
+    display: flex;
+    justify-content: center;
   }
 }
