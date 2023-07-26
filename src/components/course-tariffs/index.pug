@@ -5,14 +5,20 @@
             .course-tariffs__item.course-tariff
                 .course-tariff__iframe.
                     <div class="form-popup form-popup--pay" style="overflow: hidden; height: 589px;"> <iframe src="https://medicalcorporateuniversity.getcourse.ru/pl/lite/widget/widget?&amp;id=524367&amp;ref=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2F&amp;loc=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2Fsistemnoe-upravlenie-klinikoy%2F" allowfullscreen="allowfullscreen" class="28" id="97a41e585b87d698640e3fdef5ce29c9a38e57ae_28" name="28" style="width: 100%; height: 589px; border: none; overflow: hidden;"></iframe></div>
+                if i.img
+                    .course-tariff__img
+                        img(src=i.img alt=i.name)
                 .course-tariff__top
-                    .course-tariff__sub ПАКЕТ
+                    if !i.img
+                        .course-tariff__sub ПАКЕТ
                     .course-tariff__title= i.name
-                    .course-tariff__list
-                        ul
-                            each li in i.ul
-                                li!=li
-                    //.course-tariff__desc Книга «Эффективная бизнес-модель современной клиники» в подарок!
+                    if i.ul
+                        .course-tariff__list
+                            ul
+                                each li in i.ul
+                                    li!=li
+                    if i.content
+                        .course-tariff__content!=i.content
                 .course-tariff__bottom
                     if i.price
                         .course-tariff__price= i.price

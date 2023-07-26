@@ -1,14 +1,16 @@
-.course-after
+div(class=data.dopClass).course-after
     .container
-        .course-after__title После прохождения курса-практикума вы сможете:
-        ul.course-after__list
-            -
-                var data = [
-                    'Выстроить организационную структуру компании, формализовать ответственность сотрудников, разработать систему мотивации на результат',
-                    'Навести порядок в клинике за счет внедрения стандартов и регламентов, а также перехода на процессное управление',
-                    'Построить эффективную систему продаж и сервиса, что позволит успешно конкурировать и выгодно выделяться на фоне других клиник',
-                    'Ставить задачи маркетологу «на результат», формировать внешний и внутренний трафик пациентов, обеспечивать полную загрузку клиники пациентами',
-                    'Планировать доходы и расходы компании, «программировать» прибыль и управлять показателями развития',
-                ]
-            each i in data
-                li.course-after__li= i
+        .course-after__title= data.title
+        if data.list
+            ul.course-after__list
+                each i in data.list
+                    li(class=itemDopClass).course-after__li= i
+        if data.lists
+            .course-after__lists
+                each list in  data.lists
+                    ul.course-after__list
+                        each i in list
+                            li(class=data.itemDopClass).course-after__li= i
+
+
+

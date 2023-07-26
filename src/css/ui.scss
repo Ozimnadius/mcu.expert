@@ -193,6 +193,7 @@
     border-style: solid;
     border-width: calc(0px + var(--play-size, 94px) * 0.17) 0 calc(0px + var(--play-size, 94px) * 0.17) calc(0px + var(--play-size, 94px) * 0.255);
     border-color: transparent transparent transparent currentColor;
+    transform: translateX(calc(0px + var(--play-size, 94px) * 0.05));
   }
 
   @include hover {

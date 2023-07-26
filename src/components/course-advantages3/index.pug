@@ -1,0 +1,34 @@
+.course-advantages3
+    .course-advantages3__title.ui-heading-2 Преимущества тренинга:
+    .course-advantages3__items
+        -
+            var data = [
+                {
+                    img: '/images/content/course-advantages3/1.webp',
+                    title: 'Сочетание методик – онлайн и офлайн',
+                    desc: 'После заключения договора мы подключаем слушателя к онлайн-курсу, чтобы освоить теоретическую часть. На очном тренинге отрабатываем и закрепляем практические навыки'
+                },
+                {
+                    img: '/images/content/course-advantages3/2.webp',
+                    title: 'Задания для отработки навыков',
+                    desc: 'Для каждого урока предусмотрено выполнение домашних заданий, которые помогут сформировать навык и освоить тонкости выполнения алгоритма работы'
+                },
+                {
+                    img: '/images/content/course-advantages3/3.webp',
+                    title: 'Организация уроков',
+                    desc: 'Уроки сгруппированы в смысловые модули'
+                },
+                {
+                    img: '/images/content/course-advantages3/4.webp',
+                    title: 'Раздаточный материал',
+                    desc: 'К каждому уроку прилагается материал, необходимый в работе врача'
+                }
+            ];
+        each i in data
+            .course-advantages3__item
+                .course-advantages3__item-left
+                    .course-advantages3__item-title= i.title
+                    .course-advantages3__item-desc= i.desc
+                .course-advantages3__item-right
+                    img(src=i.img alt=i.title)
+    button(type='button' data-event="click.goTo" data-to=".course__tariffs").course-advantages3__btn.ui-btn-fill Записаться на курс

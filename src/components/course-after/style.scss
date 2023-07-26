@@ -4,10 +4,22 @@
   background: var(--color-grey-bg) url("/images/content/bg-grey.svg") right 120px top 60px no-repeat;
   background-size: 574px 673px;
 
+
+  &--full{
+    --container-width: 1760px;
+    --container-padding: 0 120px;
+  }
+
   &__title{
     @include ui-heading-2;
     text-align: center;
     margin-bottom: 70px;
+  }
+
+  &__lists{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 90px;
   }
 
   &__list{
@@ -18,6 +30,10 @@
     li{
       font-size: 32px;
       padding-left: 90px;
+
+      &.small{
+        font-size: 24px;
+      }
 
       &:before{
         width: 34px;

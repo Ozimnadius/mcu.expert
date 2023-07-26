@@ -1,0 +1,36 @@
+.course-authors
+    -
+        var data = [
+            {
+                img: '/images/content/course-authors/1.webp',
+                prof: 'Автор',
+                name: 'Ольга Берестова',
+                title: 'В МЕДИЦИНСКОМ БИЗНЕСЕ С 2003 ГОДА',
+                desc: 'Врач акушер-гинеколог, кандидат медицинских наук, обладатель степени excecutive емва, входит в топ-100 генеральных директоров россии. собственник и генеральный директор ведущего медицинского холдинга южно-уральского округа'
+            },
+            {
+                img: '/images/content/course-authors/2.webp',
+                prof: 'Тренер',
+                name: 'Анастасия Удилова',
+                title: 'В МЕДИЦИНСКОМ БИЗНЕСЕ С 2003 ГОДА',
+                desc: 'Кандидат медицинских наук, нейрокоуч, врач ультразвуковой диагностики, оперирующий хирург, онколог',
+            },
+            {
+                img: '/images/content/course-authors/3.webp',
+                prof: 'Тренер',
+                name: 'Ольга Буренкова',
+                title: 'ВЕДУЩИЙ БИЗНЕС-ТРЕНЕР ФЕДЕРАЛЬНОГО МЕДИЦИНСКОГО ХОЛДИНГА',
+                desc: 'Эксперт по повышению прибыльности клиник через повышение квалификации персонала'
+            },
+
+        ];
+    each i in data
+        .course-authors__item.course-author
+            .course-author__left
+                .course-author__prof= i.prof
+                .course-author__name= i.name
+                .course-author__title= i.title
+                .course-author__desc= i.desc
+            .course-author__right
+                .course-author__img
+                    img(src=i.img alt=i.name)

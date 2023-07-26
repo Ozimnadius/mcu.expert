@@ -1,0 +1,58 @@
+@use "sass:math";
+.course-videos{
+
+  &__items{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px 40px;
+  }
+
+  &__item{
+
+    &:hover {
+        @media (hover: hover) and (pointer: fine) {
+            .course-videos__item-play{
+              background-color: var(--color-red);
+              color: var(--color-white);
+            }
+        }
+    }
+  }
+
+  &__item-img{
+    display: block;
+    position: relative;
+    margin-bottom: 45px;
+
+    &:before{
+      content: '';
+      display: block;
+      padding-top: math.percentage(math.div(304,482));
+    }
+
+    img{
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__item-play{
+    --play-size: 60px;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  &__item-title{
+    font-size: 18px;
+  }
+
+
+}

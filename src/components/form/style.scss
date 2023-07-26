@@ -148,6 +148,11 @@
           }
         }
 
+        &.input-active{
+          background: transparent;
+          display: block;
+        }
+
         input{
           color: inherit;
           font-size: inherit;
@@ -222,7 +227,6 @@
   &__placeholder {
     display: block;
   }
-
 
   &__btn {
     position: absolute;

@@ -72,9 +72,10 @@
   background-color: var(--color-grey-bg);
   border-radius: 20px;
   padding: 55px 30px;
-  display: grid;
-  grid-auto-rows: 1fr auto;
+  display: flex;
+  flex-direction: column;
   position: relative;
+  overflow: hidden;
   @include xlg-block {
     padding: 40px 20px;
   }
@@ -90,7 +91,38 @@
     pointer-events: none;
   }
 
+  &__img{
+    margin: -55px -30px 20px;
+    position: relative;
+    @include xlg-block{
+      margin-top: -40px;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+    @include sm-block{
+      margin-top: -30px;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    &:before{
+      content: '';
+      display: block;
+      padding-top: math.percentage(math.div(320,480));
+    }
+
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
   &__top {
+    flex-grow: 1;
     padding-bottom: 40px;
     @include xlg-block {
       padding-bottom: 20px;
@@ -157,6 +189,16 @@
       margin-top: 20px;
     }
   }
+
+  &__content{
+
+    margin-top: 15px;
+    p{
+      font-size: 18px;
+    }
+  }
+
+
 
   &__bottom {
     display: flex;

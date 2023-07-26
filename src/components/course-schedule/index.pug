@@ -1,35 +1,7 @@
 .course-schedule
     .container
         .course-schedule__rows
-            -
-                var data =[
-                    {
-                        name: 'Время обучения по МСК',
-                        list: [
-                            '09:00 - 11:00 <small>группа 1</small>',
-                            '19:00 - 21:00 <small>группа 2</small>',
-                        ]
-                    },
-                    {
-                        name: 'Дата начала курса:',
-                        list: [
-                            'Февраль<br>23 / 2023',
-                        ]
-                    },
-                    {
-                        name: 'Количество мест:',
-                        list: [
-                            'Осталось<br>10 мест',
-                        ]
-                    },
-                    {
-                        name: 'Формат курса:',
-                        list: [
-                            'Онлайн обучение<br>+ внедрение',
-                        ]
-                    }
-                ];
-            each i in data
+            each i in data.items
                 .course-schedule__row
                     .course-schedule__wrap
                         .course-schedule__name= i.name

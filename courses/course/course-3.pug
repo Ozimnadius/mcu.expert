@@ -1,0 +1,328 @@
+extends ../../src/core/main
+
+block variables
+    - var title = 'Пример курса 3'
+
+block content
+    main.page
+        section.page__banner
+            -
+                var data = {
+                    color: '--banner-color: var(--color-white)',
+                    img: 'course-3',
+                    bread: [
+                        {
+                            href: '/',
+                            name: 'Главная'
+                        },
+                        {
+                            href: '/courses/',
+                            name: 'Курсы'
+                        },
+                        {
+                            name: title
+                        }
+                    ],
+                    content: `<h2>Мотивационная консультация пациента»</h2>
+                                <br>
+                               <p>Тренинг, который научит мотивировать пациентов на выздоровление и позволит повысить возвратность пациентов и продажи в клинике</p>
+                            `
+                };
+            include ../../src/components/banner/index
+        .page__content
+            .course
+                //-workshop
+                section.course__workshop
+                    .container
+                        include ../../src/components/course-workshop/index
+                //-for
+                section.course__for.course__for--grey
+                    .container
+                        .course-for
+                            .course-for__title Для кого тренинг?
+                            .course-for__list.course-for__list--3
+                                -
+                                    var data = [
+                                        {
+                                            img: '/images/content/course-for/3-1.webp',
+                                            title: 'Для начинающих специалистов'
+                                        },
+                                        {
+                                            img: '/images/content/course-for/3-2.webp',
+                                            title: 'Для врачей, перешедших из госмедицины'
+                                        },
+                                        {
+                                            img: '/images/content/course-for/3-3.webp',
+                                            title: 'Для опытных специалистов'
+                                        }
+                                    ];
+                                each i in data
+                                    .course-for__item.course-for__item--2
+                                        .course-for__left
+                                            .course-for__img
+                                                img(src=i.img alt=i.title)
+                                        .course-for__right
+                                            .course-for__item-title= i.title
+                            form(action='/php/getForm.php' method='post' data-event='submit.openForm').course-for__btn
+                                input(type="hidden" name="name" value="feedback")
+                                button(type="submit") Задать вопрос
+                //-businesses
+                section.course__businesses
+                    .container
+                        .course-businesses
+                            form(action='/ajax/ajax.php' method='post' data-event='submit.sendForm').course-businesses__form.form
+                                input(type="hidden" name="eventName" value="MAIN_FORM")
+                                input(type="hidden" name="messageFields" value="{'name':'Имя','sname':'Фамилия','tel':'Телефон','email':'Email','city':'Город','clinic':'Клиника'}")
+                                .course-businesses__title.form__title Заполните, пожалуйста, форму и получите главу из книги «Как открыть клинику мечты» в подарок
+                                .form__fields
+                                    .form__field
+                                        input(type='text' name='name' placeholder='Ваше имя' required).form__input
+                                    .form__field
+                                        input(type='tel' name='tel' placeholder='Телефон' required).form__input
+                                    .form__field
+                                        input(type='email' name='email' placeholder='Эл. почта' required).form__input
+                                    .form__field
+                                        input(type='text' name='city' placeholder='Город').form__input
+                                    .form__field
+                                        input(type='text' name='clinic' placeholder='Клиника').form__input
+                                .form__accept
+                                    include ../../src/components/accept/index
+                                .form__accept
+                                    include ../../src/components/accept2/index
+                                button(type='submit').form__submit.course-businesses__btn Отправить
+                                    template
+                                        .form-popup.form
+                                            .form__ok
+                                                h3 Спасибо
+                                                p Ваша заявка принята в обработку. Наши специалисты свяжутся с Вами в ближайшее время.
+                //-authors
+                section.course__authors
+                    .container
+                        include ../../src/components/course-authors/index
+                //-advantages3
+                section.course__advantages3
+                    .container
+                        include ../../src/components/course-advantages3/index
+                //-advantages2
+                section.course__advantages2.course__advantages2--nomargin
+                    .course-advantages2.course-advantages2--nobg
+                        .container
+                            .course-advantages2__content
+                                .course-advantages2__title Формат тренинга
+                                .course-advantages2__list
+                                    -
+                                        var data = [
+                                            {
+                                                img: '/images/content/course-advantages2/2-1.svg',
+                                                name: '250 часов теории и практики'
+                                            },
+                                            {
+                                                img: '/images/content/course-advantages2/2-2.svg',
+                                                name: 'Примеры документов и таблиц'
+                                            },
+                                            {
+                                                img: '/images/content/course-advantages2/2-3.svg',
+                                                name: 'Практическая отработка навыков коммуникации и вовлечения'
+                                            },
+                                            {
+                                                img: '/images/content/course-advantages2/2-4.svg',
+                                                name: 'Кофе-паузы'
+                                            },
+                                            {
+                                                img: '/images/content/course-advantages2/2-5.svg',
+                                                name: 'Раздаточныйматериал'
+                                            },
+                                            {
+                                                img: '/images/content/course-advantages2/2-6.svg',
+                                                name: 'Сертификат'
+                                            }
+                                        ];
+                                    each i in data
+                                        .course-advantages2__item
+                                            .course-advantages2__item-img
+                                                img(src=i.img alt=i.name)
+                                            .course-advantages2__item-name= i.name
+                //-after
+                section.course__after.course__after--mt
+                    -
+                        var data = {
+                            dopClass: 'course-after--full',
+                            title: 'Пакет электронных документов:',
+                            itemDopClass: 'small',
+                            lists: [
+                                [
+                                    'Чек - лист для самодиагностики выгорания',
+                                    'Таблица конверсии',
+                                    'Образец согласия на использование аудиозаписи',
+                                    'Перевод с медицинского на русский',
+                                    'Комфортные слова',
+                                    'Примеры комбинаций из трех вариантов лечения',
+                                    'Пирамида ценностей пациентов',
+                                    'Таблица свойство - польза',
+                                    'Чек - лист для оценки работы врача на приеме',
+                                ],
+                                [
+                                    'Четыре психотипа пациентов',
+                                    'Алгоритм врачебного приема',
+                                    'Образец согласия пациента на передачу информации о своем здоровье',
+                                    'Темы small - talk',
+                                    'Примеры извлекающих и наполняющих вопросов',
+                                    'Иллюстрации по основным специальностям',
+                                    'Волшебные вопросы',
+                                    'Примеры техники убеждения САЛО',
+                                    'Ответы на частые вопросы пациентов',
+                                ],
+
+                            ]
+                        };
+                    include ../../src/components/course-after/index
+                //-desc
+                section.course__desc
+                    .container
+                        .course-desc
+                            .course-desc__rows
+                                .course-desc__row
+                                    .course-desc__col
+                                        .course-desc__title Уже в процессе обучения врачи:
+                                        ul.course-desc__ul
+                                            li Научатся легко устанавливать контакт с пациентами
+                                            li Отработают ошибки в коммуникациях с пациентами
+                                            li Научатся вести прием на основе алгоритма мотивационного консультирования
+                                            li Освоят инструменты убеждающего воздействия
+                                    .course-desc__col.course-desc__col--img
+                                        .course-desc__img
+                                            img(src="/images/content/course-desc/1.webp" alt="Уже в процессе обучения врачи")
+
+
+
+                //-tariffs
+                section.course__tariffs
+                    .container
+                        -
+                            var data = {
+                                title: 'Стоимость обучения:',
+                                list: [
+                                    {
+                                        img: '/images/content/course-tariffs/1.webp',
+                                        name: '«Сборная» группа',
+                                        content: '<p>Врачи разных клиник<br>' +
+                                                'Обучение проходит в Москве</p>',
+                                        price: '18 000 руб. за человека'
+                                    },
+                                    {
+                                        img: '/images/content/course-tariffs/2.webp',
+                                        name: '«Корпоративная» группа',
+                                        content: '<p>Выезд в вашу клинику<br>' +
+                                                'до 10 сотрудников</p>',
+                                        price: '150 000 руб.'
+                                    },
+
+                                ],
+                            };
+                        include ../../src/components/course-tariffs/index
+
+
+
+                //-schedule
+                section.course__schedule
+                    .course__schedule-title.ui-heading-2 Расписание ближайших тренингов:
+                    -
+                        var data = {
+                            items: [
+                                {
+                                    name: '',
+                                    list: [
+                                        '',
+                                    ]
+                                },
+                                {
+                                    name: 'Сборная группа:',
+                                    list: [
+                                        'Декабрь<br>13 / 2023',
+                                    ]
+                                },
+                                {
+                                    name: 'Корпоративная группа:',
+                                    list: [
+                                        'По согласованию',
+                                    ]
+                                },
+                                {
+                                    name: '',
+                                    list: [
+                                        '',
+                                    ]
+                                },
+                            ],
+                        };
+                    include ../../src/components/course-schedule/index
+                //-reviews
+                section.course__reviews
+                    .container
+                        include ../../src/components/reviews-slider/index
+                //-videos
+                section.course__videos
+                    .container
+                        -
+                            var data = {
+                                list: [
+                                    {
+                                        link: 'https://www.youtube.com/watch?v=lyh2kAjcmSY',
+                                        img: '/images/content/course-videos/1.webp',
+                                        title: 'Видеоотзыв главного врача клиники Candela Вершининой Натальи Викторовны'
+                                    },
+                                    {
+                                        link: 'https://www.youtube.com/watch?v=lyh2kAjcmSY',
+                                        img: '/images/content/course-videos/2.webp',
+                                        title: 'Видеоотзыв врача-косметолога клиники Candela Кобылинской Карины Сергеевны'
+                                    },
+                                    {
+                                        link: 'https://www.youtube.com/watch?v=lyh2kAjcmSY',
+                                        img: '/images/content/course-videos/3.webp',
+                                        title: 'Видеоотзыв Аматова Байыша Кубанычбековича, главного врача клиники «Я здоров», г. Новосибирск'
+                                    },
+                                    {
+                                        link: 'https://www.youtube.com/watch?v=lyh2kAjcmSY',
+                                        img: '/images/content/course-videos/4.webp',
+                                        title: 'Видеоотзыв главного врача клиники Candela Вершининой Натальи Викторовны'
+                                    },
+                                    {
+                                        link: 'https://www.youtube.com/watch?v=lyh2kAjcmSY',
+                                        img: '/images/content/course-videos/5.webp',
+                                        title: 'Видеоотзыв врача-косметолога клиники Candela Кобылинской Карины Сергеевны'
+                                    },
+                                ]
+                            };
+                        include ../../src/components/course-videos/index
+                //-imgs
+                section.course__imgs
+                    .container
+                        .course-imgs
+                            .course-imgs__item
+                                img(src="/images/content/course-imgs/1.webp" alt="img")
+                            .course-imgs__item
+                                img(src="/images/content/course-imgs/2.webp" alt="img")
+                            .course-imgs__item
+                                img(src="/images/content/course-imgs/3.webp" alt="img")
+
+
+                //-form
+                section.course__form
+                    .container
+                        include ../../src/components/form-call/index
+                //-info
+                section.course__info
+                    .container
+                        include ../../src/components/course-info/index
+
+
+
+
+
+
+
+
+
+
+
+        

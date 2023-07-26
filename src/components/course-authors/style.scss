@@ -1,0 +1,68 @@
+.course-authors {
+  &__item {
+    &:nth-child(even) {
+      .course-author {
+        &__left {
+          order: 1;
+          padding-right: 0;
+          padding-left: 90px;
+        }
+
+        &__img{
+          margin-right: initial;
+          margin-left: calc(0px - var(--offset));
+        }
+      }
+    }
+  }
+}
+
+.course-author {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+
+  &__left {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 90px;
+  }
+
+  &__prof {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    @include ui-heading-2;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 160px;
+      height: 6px;
+      background: var(--color-red);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__title {
+    font: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    font-size: 24px;
+  }
+
+  &__img {
+    margin-right: calc(0px - var(--offset));
+  }
+}

@@ -1,0 +1,8 @@
+.course-videos
+    .course-videos__items
+        each i in data.list
+            a(href=i.link data-fancybox="course-videos").course-videos__item
+                span.course-videos__item-img
+                    img(src=i.img alt=i.title)
+                    span.course-videos__item-play.ui-play
+                span.course-videos__item-title= i.title
