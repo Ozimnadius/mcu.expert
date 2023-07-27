@@ -1,0 +1,79 @@
+extends ../src/core/main
+
+block variables
+    - var title = 'Поиск'
+
+block content
+    main.page
+        section.page__top
+            .container
+                .page__bread
+                    -
+                        var bread = [
+                            {
+                                href: '/',
+                                name: 'Главная'
+                            },
+                            {
+                                name: title
+                            },
+
+                        ];
+                    include ../src/components/bread/index
+                h1.page__title= title
+        .page__content
+            .container
+                .search
+                    form.search__form(action='' method='get')
+                        input(type='text' name='q' value='точка' size='40')
+                        input(type='submit' value='Искать')
+                        input(type='hidden' name='how' value='r')
+                    .search__pagination
+                        include ../src/components/pagination/index
+                    .search__result
+                        .search__item
+                            a(href='/news/motivatsiya/otkrytaya-lektsiya-lorem/?sphrase_id=35') &Ocy;&tcy;&kcy;&rcy;&ycy;&tcy;&acy;&yacy; &lcy;&iecy;&kcy;&tscy;&icy;&yacy; Lorem
+                            p
+                                | &Icy;&mcy;&iecy;&iecy;&tcy;&scy;&yacy; &scy;&pcy;&ocy;&rcy;&ncy;&acy;&yacy;
+                                b &tcy;&ocy;&chcy;&kcy;&acy;
+                                |  &zcy;&rcy;&iecy;&ncy;&icy;&yacy;, &gcy;&lcy;&acy;&scy;&yacy;&shchcy;&acy;&yacy; &pcy;&rcy;&icy;&mcy;&iecy;&rcy;&ncy;&ocy; &scy;&lcy;&iecy;&dcy;&ucy;&yucy;&shchcy;&iecy;&iecy;: &acy;&kcy;&tcy;&icy;&vcy;&ncy;&ocy; &rcy;&acy;&zcy;&vcy;&icy;&vcy;&acy;&yucy;&shchcy;&icy;&iecy;&scy;&yacy; &scy;&tcy;&rcy;&acy;&ncy;&ycy; &tcy;&rcy;&iecy;&tcy;&softcy;&iecy;&gcy;&ocy; &mcy;&icy;&rcy;&acy; &pcy;&rcy;&icy;&zcy;&ycy;&vcy;&acy;&yucy;&tcy; &ncy;&acy;&scy; &kcy; &ncy;&ocy;&vcy;&ycy;&mcy; &scy;&vcy;&iecy;&rcy;&shcy;&iecy;&ncy;&icy;&yacy;&mcy;, &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&iecy;, &vcy; &scy;&vcy;&ocy;&yucy; &ocy;&chcy;&iecy;&rcy;&iecy;&dcy;&softcy;,...
+                        .search__item
+                            a(href='/news/motivatsiya/otkrytaya-lektsiya-lorem2/?sphrase_id=35') &Ocy;&tcy;&kcy;&rcy;&ycy;&tcy;&acy;&yacy; &lcy;&iecy;&kcy;&tscy;&icy;&yacy; Lorem2
+                            p
+                                | &Icy;&mcy;&iecy;&iecy;&tcy;&scy;&yacy; &scy;&pcy;&ocy;&rcy;&ncy;&acy;&yacy;
+                                b &tcy;&ocy;&chcy;&kcy;&acy;
+                                |  &zcy;&rcy;&iecy;&ncy;&icy;&yacy;, &gcy;&lcy;&acy;&scy;&yacy;&shchcy;&acy;&yacy; &pcy;&rcy;&icy;&mcy;&iecy;&rcy;&ncy;&ocy; &scy;&lcy;&iecy;&dcy;&ucy;&yucy;&shchcy;&iecy;&iecy;: &acy;&kcy;&tcy;&icy;&vcy;&ncy;&ocy; &rcy;&acy;&zcy;&vcy;&icy;&vcy;&acy;&yucy;&shchcy;&icy;&iecy;&scy;&yacy; &scy;&tcy;&rcy;&acy;&ncy;&ycy; &tcy;&rcy;&iecy;&tcy;&softcy;&iecy;&gcy;&ocy; &mcy;&icy;&rcy;&acy; &pcy;&rcy;&icy;&zcy;&ycy;&vcy;&acy;&yucy;&tcy; &ncy;&acy;&scy; &kcy; &ncy;&ocy;&vcy;&ycy;&mcy; &scy;&vcy;&iecy;&rcy;&shcy;&iecy;&ncy;&icy;&yacy;&mcy;, &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&iecy;, &vcy; &scy;&vcy;&ocy;&yucy; &ocy;&chcy;&iecy;&rcy;&iecy;&dcy;&softcy;,...
+                        .search__item
+                            a(href='/news/motivatsiya/otkrytaya-lektsiya-lorem3/?sphrase_id=35') &Ocy;&tcy;&kcy;&rcy;&ycy;&tcy;&acy;&yacy; &lcy;&iecy;&kcy;&tscy;&icy;&yacy; Lorem3
+                            p
+                                | &Icy;&mcy;&iecy;&iecy;&tcy;&scy;&yacy; &scy;&pcy;&ocy;&rcy;&ncy;&acy;&yacy;
+                                b &tcy;&ocy;&chcy;&kcy;&acy;
+                                |  &zcy;&rcy;&iecy;&ncy;&icy;&yacy;, &gcy;&lcy;&acy;&scy;&yacy;&shchcy;&acy;&yacy; &pcy;&rcy;&icy;&mcy;&iecy;&rcy;&ncy;&ocy; &scy;&lcy;&iecy;&dcy;&ucy;&yucy;&shchcy;&iecy;&iecy;: &acy;&kcy;&tcy;&icy;&vcy;&ncy;&ocy; &rcy;&acy;&zcy;&vcy;&icy;&vcy;&acy;&yucy;&shchcy;&icy;&iecy;&scy;&yacy; &scy;&tcy;&rcy;&acy;&ncy;&ycy; &tcy;&rcy;&iecy;&tcy;&softcy;&iecy;&gcy;&ocy; &mcy;&icy;&rcy;&acy; &pcy;&rcy;&icy;&zcy;&ycy;&vcy;&acy;&yucy;&tcy; &ncy;&acy;&scy; &kcy; &ncy;&ocy;&vcy;&ycy;&mcy; &scy;&vcy;&iecy;&rcy;&shcy;&iecy;&ncy;&icy;&yacy;&mcy;, &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&iecy;, &vcy; &scy;&vcy;&ocy;&yucy; &ocy;&chcy;&iecy;&rcy;&iecy;&dcy;&softcy;,...
+                        .search__item
+                            a(href='/news/motivatsiya/otkrytaya-lektsiya-lorem4/?sphrase_id=35') &Ocy;&tcy;&kcy;&rcy;&ycy;&tcy;&acy;&yacy; &lcy;&iecy;&kcy;&tscy;&icy;&yacy; Lorem4
+                            p
+                                | &Icy;&mcy;&iecy;&iecy;&tcy;&scy;&yacy; &scy;&pcy;&ocy;&rcy;&ncy;&acy;&yacy;
+                                b &tcy;&ocy;&chcy;&kcy;&acy;
+                                |  &zcy;&rcy;&iecy;&ncy;&icy;&yacy;, &gcy;&lcy;&acy;&scy;&yacy;&shchcy;&acy;&yacy; &pcy;&rcy;&icy;&mcy;&iecy;&rcy;&ncy;&ocy; &scy;&lcy;&iecy;&dcy;&ucy;&yucy;&shchcy;&iecy;&iecy;: &acy;&kcy;&tcy;&icy;&vcy;&ncy;&ocy; &rcy;&acy;&zcy;&vcy;&icy;&vcy;&acy;&yucy;&shchcy;&icy;&iecy;&scy;&yacy; &scy;&tcy;&rcy;&acy;&ncy;&ycy; &tcy;&rcy;&iecy;&tcy;&softcy;&iecy;&gcy;&ocy; &mcy;&icy;&rcy;&acy; &pcy;&rcy;&icy;&zcy;&ycy;&vcy;&acy;&yucy;&tcy; &ncy;&acy;&scy; &kcy; &ncy;&ocy;&vcy;&ycy;&mcy; &scy;&vcy;&iecy;&rcy;&shcy;&iecy;&ncy;&icy;&yacy;&mcy;, &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&iecy;, &vcy; &scy;&vcy;&ocy;&yucy; &ocy;&chcy;&iecy;&rcy;&iecy;&dcy;&softcy;,...
+                        .search__item
+                            a(href='/news/motivatsiya/otkrytaya-lektsiya-lorem5/?sphrase_id=35') &Ocy;&tcy;&kcy;&rcy;&ycy;&tcy;&acy;&yacy; &lcy;&iecy;&kcy;&tscy;&icy;&yacy; Lorem5
+                            p
+                                | &Icy;&mcy;&iecy;&iecy;&tcy;&scy;&yacy; &scy;&pcy;&ocy;&rcy;&ncy;&acy;&yacy;
+                                b &tcy;&ocy;&chcy;&kcy;&acy;
+                                |  &zcy;&rcy;&iecy;&ncy;&icy;&yacy;, &gcy;&lcy;&acy;&scy;&yacy;&shchcy;&acy;&yacy; &pcy;&rcy;&icy;&mcy;&iecy;&rcy;&ncy;&ocy; &scy;&lcy;&iecy;&dcy;&ucy;&yucy;&shchcy;&iecy;&iecy;: &acy;&kcy;&tcy;&icy;&vcy;&ncy;&ocy; &rcy;&acy;&zcy;&vcy;&icy;&vcy;&acy;&yucy;&shchcy;&icy;&iecy;&scy;&yacy; &scy;&tcy;&rcy;&acy;&ncy;&ycy; &tcy;&rcy;&iecy;&tcy;&softcy;&iecy;&gcy;&ocy; &mcy;&icy;&rcy;&acy; &pcy;&rcy;&icy;&zcy;&ycy;&vcy;&acy;&yucy;&tcy; &ncy;&acy;&scy; &kcy; &ncy;&ocy;&vcy;&ycy;&mcy; &scy;&vcy;&iecy;&rcy;&shcy;&iecy;&ncy;&icy;&yacy;&mcy;, &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&iecy;, &vcy; &scy;&vcy;&ocy;&yucy; &ocy;&chcy;&iecy;&rcy;&iecy;&dcy;&softcy;,...
+                        .search__item
+                            a(href='/news/motivatsiya/otkrytaya-lektsiya-lorem6/?sphrase_id=35') &Ocy;&tcy;&kcy;&rcy;&ycy;&tcy;&acy;&yacy; &lcy;&iecy;&kcy;&tscy;&icy;&yacy; Lorem6
+                            p
+                                | &Icy;&mcy;&iecy;&iecy;&tcy;&scy;&yacy; &scy;&pcy;&ocy;&rcy;&ncy;&acy;&yacy;
+                                b &tcy;&ocy;&chcy;&kcy;&acy;
+                                |  &zcy;&rcy;&iecy;&ncy;&icy;&yacy;, &gcy;&lcy;&acy;&scy;&yacy;&shchcy;&acy;&yacy; &pcy;&rcy;&icy;&mcy;&iecy;&rcy;&ncy;&ocy; &scy;&lcy;&iecy;&dcy;&ucy;&yucy;&shchcy;&iecy;&iecy;: &acy;&kcy;&tcy;&icy;&vcy;&ncy;&ocy; &rcy;&acy;&zcy;&vcy;&icy;&vcy;&acy;&yucy;&shchcy;&icy;&iecy;&scy;&yacy; &scy;&tcy;&rcy;&acy;&ncy;&ycy; &tcy;&rcy;&iecy;&tcy;&softcy;&iecy;&gcy;&ocy; &mcy;&icy;&rcy;&acy; &pcy;&rcy;&icy;&zcy;&ycy;&vcy;&acy;&yucy;&tcy; &ncy;&acy;&scy; &kcy; &ncy;&ocy;&vcy;&ycy;&mcy; &scy;&vcy;&iecy;&rcy;&shcy;&iecy;&ncy;&icy;&yacy;&mcy;, &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&iecy;, &vcy; &scy;&vcy;&ocy;&yucy; &ocy;&chcy;&iecy;&rcy;&iecy;&dcy;&softcy;,...
+                        .search__item
+                            a(href='/news/motivatsiya/otkrytaya-lektsiya-lorem7/?sphrase_id=35') &Ocy;&tcy;&kcy;&rcy;&ycy;&tcy;&acy;&yacy; &lcy;&iecy;&kcy;&tscy;&icy;&yacy; Lorem7
+                            p
+                                | &Icy;&mcy;&iecy;&iecy;&tcy;&scy;&yacy; &scy;&pcy;&ocy;&rcy;&ncy;&acy;&yacy;
+                                b &tcy;&ocy;&chcy;&kcy;&acy;
+                                |  &zcy;&rcy;&iecy;&ncy;&icy;&yacy;, &gcy;&lcy;&acy;&scy;&yacy;&shchcy;&acy;&yacy; &pcy;&rcy;&icy;&mcy;&iecy;&rcy;&ncy;&ocy; &scy;&lcy;&iecy;&dcy;&ucy;&yucy;&shchcy;&iecy;&iecy;: &acy;&kcy;&tcy;&icy;&vcy;&ncy;&ocy; &rcy;&acy;&zcy;&vcy;&icy;&vcy;&acy;&yucy;&shchcy;&icy;&iecy;&scy;&yacy; &scy;&tcy;&rcy;&acy;&ncy;&ycy; &tcy;&rcy;&iecy;&tcy;&softcy;&iecy;&gcy;&ocy; &mcy;&icy;&rcy;&acy; &pcy;&rcy;&icy;&zcy;&ycy;&vcy;&acy;&yucy;&tcy; &ncy;&acy;&scy; &kcy; &ncy;&ocy;&vcy;&ycy;&mcy; &scy;&vcy;&iecy;&rcy;&shcy;&iecy;&ncy;&icy;&yacy;&mcy;, &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&iecy;, &vcy; &scy;&vcy;&ocy;&yucy; &ocy;&chcy;&iecy;&rcy;&iecy;&dcy;&softcy;,...
+
+                    .search__pagination
+                        include ../src/components/pagination/index
+
