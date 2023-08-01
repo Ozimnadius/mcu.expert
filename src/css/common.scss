@@ -25,3 +25,20 @@
 .ui-play{
   @include ui-play;
 }
+
+.mt-0{
+  margin-top: 0;
+}
+.mb-0{
+  margin-bottom: 0;
+}
+
+
+@for $i from 1 through 20{
+  .mt-#{$i}0{
+    @include margin-top($i);
+  }
+  .mb-#{$i}0{
+    @include margin-bottom($i);
+  }
+}

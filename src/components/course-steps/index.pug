@@ -1,0 +1,7 @@
+.course-steps
+    .course-steps__title.ui-heading-2 Как проходит курс?
+    .course-steps__list
+        each i,x in data
+            .course-steps__item
+                .course-steps__step Шаг #{(x+1)}
+                .course-steps__desc= i

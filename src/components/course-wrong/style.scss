@@ -1,0 +1,29 @@
+.course-wrong{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 40px;
+
+  &__content{
+    font-size: 26px;
+    display:grid;
+    gap: 30px;
+
+    h3{
+      @include ui-heading-3;
+    }
+
+    ul{
+      @include ui-ul-checkbox;
+      font-size: inherit;
+
+      li{
+        padding-left: 90px;
+        &:before{
+          width: 34px;
+          height: 34px;
+          top: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.course-result{
+  text-align: center;
+  display:grid;
+  justify-items: center;
+
+  &__title{
+    margin-bottom: 45px;
+    display:grid;
+    justify-items: center;
+    gap: 40px;
+
+    &:after{
+      content: '';
+      display: block;
+      width: 220px;
+      height: 14px;
+      background: var(--color-red);
+    }
+  }
+
+  &__desc{
+    max-width: 1260px;
+    font-size: 34px;
+    line-height: 110%;
+  }
+}

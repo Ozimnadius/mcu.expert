@@ -6,9 +6,9 @@ div(class=data.dopClass).course-after
                 each i in data.list
                     li(class=itemDopClass).course-after__li= i
         if data.lists
-            .course-after__lists
+            div(class=data.listsDopClass).course-after__lists
                 each list in  data.lists
-                    ul.course-after__list
+                    ul(class=data.listDopClass).course-after__list
                         each i in list
                             li(class=data.itemDopClass).course-after__li= i
 

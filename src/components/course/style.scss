@@ -80,6 +80,14 @@
     @include sm-block {
       padding: 40px 0;
     }
+
+    &--nobg{
+      background-color: transparent;
+    }
+
+    &--nomt{
+      margin-top: 0;
+    }
   }
 
   &__teachers {
@@ -211,6 +219,32 @@
 
   &__imgs{
     @include margin-top(7);
+  }
+
+  &__result{
+    @include margin-top(11);
+  }
+
+  &__steps{
+    @include margin-top(11);
+  }
+
+  &__wrong{
+    @include margin-top(7);
+    padding: 100px 0;
+    background: var(--color-grey-bg);
+  }
+
+  &__program2{
+    @include margin-top(9);
+  }
+
+  &__ul{
+    @include margin-top(9);
+  }
+
+  &__nums{
+    @include margin-top(11);
   }
 
 }

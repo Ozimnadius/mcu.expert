@@ -100,5 +100,13 @@
 
   &__content {
     max-width: 700px;
+    margin-left: 15px;
+
+    ol{
+      list-style: decimal;
+      font-weight: 500;
+      display:grid;
+      gap: 15px;
+    }
   }
 }

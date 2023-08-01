@@ -1,0 +1,8 @@
+.course-nums
+    .course-nums__title.ui-heading-2 О нас в цифрах:
+    .course-nums__items
+        each i in data
+            .course-nums__item
+                .course-nums__round
+                    .course-nums__num= i.val
+                .course-nums__name= i.name

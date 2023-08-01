@@ -20,26 +20,61 @@
     display:grid;
     grid-template-columns: repeat(2,1fr);
     gap: 90px;
+
+    &.counter{
+      counter-reset: li;
+    }
   }
 
+
   &__list{
-    @include ui-ul-checkbox;
-    display:grid;
-    gap: 30px;
 
-    li{
-      font-size: 32px;
-      padding-left: 90px;
+    &:not(.decimal){
+      @include ui-ul-checkbox;
+      display:grid;
+      gap: 30px;
 
-      &.small{
-        font-size: 24px;
-      }
+      li{
+        font-size: 32px;
+        padding-left: 90px;
 
-      &:before{
-        width: 34px;
-        height: 34px;
+        &.small{
+          font-size: 24px;
+        }
+
+        &:before{
+          width: 34px;
+          height: 34px;
+        }
       }
     }
+
+    &.decimal{
+      font-size: 24px;
+      display:grid;
+      gap: 15px;
+
+      li{
+        padding-left: 90px;
+        position: relative;
+
+
+        &:before{
+          counter-increment: li;
+          content: counter(li,decimal-leading-zero);
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          color: var(--color-red);
+
+          font-weight: 800;
+
+        }
+      }
+    }
+
+
 
   }
 }

@@ -73,7 +73,7 @@ block content
                             form(action='/ajax/ajax.php' method='post' data-event='submit.sendForm').course-businesses__form.form
                                 input(type="hidden" name="eventName" value="MAIN_FORM")
                                 input(type="hidden" name="messageFields" value="{'name':'Имя','sname':'Фамилия','tel':'Телефон','email':'Email','city':'Город','clinic':'Клиника'}")
-                                .course-businesses__title.form__title Заполните, пожалуйста, форму и получите главу из книги «Как открыть клинику мечты» в подарок
+                                .course-businesses__title.form__title Оставьте заявку
                                 .form__fields
                                     .form__field
                                         input(type='text' name='name' placeholder='Ваше имя' required).form__input
@@ -98,6 +98,31 @@ block content
                 //-authors
                 section.course__authors
                     .container
+                        -
+                            var data = [
+                                {
+                                    img: '/images/content/course-authors/1.webp',
+                                    prof: 'Автор',
+                                    name: 'Ольга Берестова',
+                                    title: 'В МЕДИЦИНСКОМ БИЗНЕСЕ С 2003 ГОДА',
+                                    desc: 'Врач акушер-гинеколог, кандидат медицинских наук, обладатель степени excecutive емва, входит в топ-100 генеральных директоров россии. собственник и генеральный директор ведущего медицинского холдинга южно-уральского округа'
+                                },
+                                {
+                                    img: '/images/content/course-authors/2.webp',
+                                    prof: 'Тренер',
+                                    name: 'Анастасия Удилова',
+                                    title: 'В МЕДИЦИНСКОМ БИЗНЕСЕ С 2003 ГОДА',
+                                    desc: 'Кандидат медицинских наук, нейрокоуч, врач ультразвуковой диагностики, оперирующий хирург, онколог',
+                                },
+                                {
+                                    img: '/images/content/course-authors/3.webp',
+                                    prof: 'Тренер',
+                                    name: 'Ольга Буренкова',
+                                    title: 'ВЕДУЩИЙ БИЗНЕС-ТРЕНЕР ФЕДЕРАЛЬНОГО МЕДИЦИНСКОГО ХОЛДИНГА',
+                                    desc: 'Эксперт по повышению прибыльности клиник через повышение квалификации персонала'
+                                },
+
+                            ];
                         include ../../src/components/course-authors/index
                 //-advantages3
                 section.course__advantages3

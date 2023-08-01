@@ -1,0 +1,21 @@
+.course-ul{
+  &__title{
+    margin-bottom: 80px;
+    text-align: center;
+  }
+
+  ul{
+    @include ui-ul-checkbox;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px 60px;
+    font-size: 32px;
+
+    li{
+      padding-left: 90px;
+      &:before{
+        width: 34px;
+        height: 34px;
+      }
+    }
+  }
+}

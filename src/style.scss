@@ -4,7 +4,7 @@
 @import "css/mixins";
 @import "css/fonts";
 @import "css/adjustment";
-@import "css/common";
+
 
 //COMPONENTS
 @import "components/header/style";
@@ -59,6 +59,7 @@
 @import "components/course-histories/style";
 @import "components/course-process/style";
 @import "components/course-program/style";
+@import "components/course-program2/style";
 @import "components/course-faq/style";
 @import "components/course-tariffs/style";
 @import "components/course-guarantees/style";
@@ -80,6 +81,11 @@
 @import "components/course-authors/style";
 @import "components/course-videos/style";
 @import "components/course-imgs/style";
+@import "components/course-result/style";
+@import "components/course-steps/style";
+@import "components/course-wrong/style";
+@import "components/course-ul/style";
+@import "components/course-nums/style";
 
 
 @import "components/consulting/style";
@@ -144,3 +150,4 @@
 @import "components/footer/style";
 @import "components/footer-form/style";
 @import "components/content/style";
+@import "css/common";
