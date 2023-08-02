@@ -1,16 +1,26 @@
-.course-advantages2{
+.course-advantages2 {
   background-color: var(--color-grey-bg);
   padding-top: 300px;
   padding-bottom: 160px;
   position: relative;
+  @include lg-block {
+    padding-top: 250px;
+    padding-bottom: 80px;
+  }
+  @include md-block {
+    padding-top: 220px;
+  }
+  @include sm-block {
+    padding-top: 300px;
+  }
 
-  &--nobg{
+  &--nobg {
     background: none;
     padding-top: 150px;
     padding-bottom: 0;
   }
 
-  &__info{
+  &__info {
     position: absolute;
     top: -170px;
     left: 50%;
@@ -26,74 +36,148 @@
     color: var(--color-white);
     padding: 70px 120px;
 
-    &--static{
+    @include xlg-block {
+      left: 80px;
+      right: 80px;
+      width: auto;
+      transform: none;
+      padding: 60px 120px;
+    }
+    @include lg-block {
+      top: -150px;
+      left: 40px;
+      right: 40px;
+      padding-left: 60px;
+      background-position: right 60px top 35px;
+    }
+    @include md-block {
+      top: -140px;
+      padding: 50px;
+      left: 20px;
+      right: 20px;
+    }
+    @include sm-block {
+      padding: 45px 25px;
+      left: 10px;
+      right: 10px;
+    }
+
+    &--static {
       position: static;
       transform: none;
       margin-top: 90px;
     }
   }
 
-  &__info-txt{
+  &__info-txt {
     font-size: 34px;
     margin-bottom: 36px;
     max-width: 60ch;
+    line-height: 1.1;
+    @include xlg-block {
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+    @include lg-block {
+      font-size: 28px;
+    }
+    @include md-block {
+      font-size: 24px;
+    }
   }
 
-  &__info-link{
+  &__info-link {
     @include ui-btn-fill-white;
   }
 
-  &__title{
+  &__title {
     @include ui-heading-2;
     text-align: center;
     margin-bottom: 90px;
+    @include lg-block {
+      font-size: 46px;
+      margin-bottom: 70px;
+    }
+    @include md-block {
+      margin-bottom: 60px;
+    }
+    @include sm-block {
+      font-size: 26px;
+      margin-bottom: 35px;
+    }
   }
 
-  &__list{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 80px 20px;
     margin-bottom: 110px;
+    @include lg-block {
+      gap: 50px 20px;
+      margin-bottom: 60px;
+    }
+    @include md-block {
+      gap: 40px 20px;
+    }
+    @include sm-block {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 10px;
+      margin-bottom: 50px;
+    }
   }
 
-  &__item{
+  &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 30px;
+    @include md-block {
+      gap: 15px;
+    }
   }
 
-  &__item-img{
+  &__item-img {
     width: 140px;
     height: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
-    img{
+    @include sm-block {
+      width: 100px;
+      height: 100px;
+    }
+
+    img {
       max-height: 100%;
     }
   }
 
-  &__item-name{
+  &__item-name {
     font-size: 22px;
     font-weight: 700;
     max-width: 26ch;
+    @include md-block {
+      font-size: 20px;
+    }
   }
 
-  &__item-txt{
+  &__item-txt {
     font-size: 16px;
     line-height: 1.36;
     text-align: center;
     max-width: 43ch;
   }
 
-  &__txt{
+  &__txt {
     @include ui-heading-3;
     text-align: center;
+    @include lg-block {
+      font-size: 34px;
+    }
   }
 
-  &__btn{
+  &__btn {
     display: flex;
     justify-content: center;
   }

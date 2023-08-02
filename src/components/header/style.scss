@@ -59,11 +59,11 @@
   &__slogan {
     font-weight: 800;
     line-height: 120%;
-    padding-left: 49px;
+    padding-left: 30px;
     padding-top: 3px;
     padding-bottom: 3px;
     border-left: 2px solid var(--color-red);
-    margin-left: 49px;
+    margin-left: 30px;
     @include xlg-block {
       padding-left: 30px;
       margin-left: 30px;
@@ -81,10 +81,30 @@
     }
   }
 
+  &__search{
+    @include lg-block {
+      display: none;
+    }
+    a{
+      display: inline-flex;
+      height: 50px;
+      padding: 11px 21px;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      gap: 6px;
+
+      border-radius: 100vmax;
+      border: 1px solid var(--color-grey);
+    }
+  }
+
   &__right {
     display: flex;
     align-items: center;
-    gap: 85px;
+    gap: 40px;
 
     @include xlg-block {
       flex-direction: column;

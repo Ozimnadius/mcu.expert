@@ -13,8 +13,15 @@
                 <path d="M26.9167 9.08075L24.9192 7.08325L17 15.0024L9.08084 7.08325L7.08334 9.08075L15.0025 16.9999L7.08334 24.9191L9.08084 26.9166L17 18.9974L24.9192 26.9166L26.9167 24.9191L18.9975 16.9999L26.9167 9.08075Z" fill="#C8C8C8"/>
                 </svg>
         .mmenu__middle
+
             .mmenu__socials
                 include ../socials/index
+            .mmenu__search
+                a(href="/search/")
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.272 16.2697L24 24M18.6449 10.3249C18.6449 14.9227 14.9188 18.6499 10.3225 18.6499C5.72609 18.6499 2 14.9227 2 10.3249C2 5.72721 5.72609 2 10.3225 2C14.9188 2 18.6449 5.72721 18.6449 10.3249Z" stroke="#FF033E" stroke-width="3"/>
+                    </svg>
+                    span Поиск
         .mmenu__bottom
             .mmenu__list
                 each i in GLOBALS.menu

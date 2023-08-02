@@ -154,6 +154,20 @@
     padding: 120px 0;
     background: var(--color-grey-bg) url(/images/content/bg-grey.svg) left 140px top 120px no-repeat;;
     background-size: 574px 673px;
+    @include lg-block{
+      padding: 100px 0px;
+      background-size: 409px 479px;
+      background-position: left 40px top 80px;
+    }
+    @include md-block{
+      padding: 80px 0;
+      background-position: left 20px top 80px;
+    }
+    @include sm-block{
+      padding: 60px 0px;
+      background-size: 246px 288px;
+      background-position: left 30px top 30px;
+    }
   }
 
   &__choose{
@@ -161,6 +175,12 @@
     padding-bottom: 100px;
     background: url("/images/content/course-choose/bg.webp") 0 0 no-repeat;
     background-size: cover;
+    @include lg-block{
+      padding: 80px 0;
+    }
+    @include sm-block{
+      padding: 65px 0;
+    }
 
     &--mt{
       @include margin-top(11);
@@ -177,6 +197,22 @@
     padding-bottom: 170px;
     background: var(--color-grey-bg) url("/images/content/bg-grey.svg") right 130px top 30px no-repeat;
     background-size: 574px 673px;
+    @include xlg-block{
+      padding-bottom: 100px;
+    }
+    @include lg-block{
+      padding: 100px 0;
+      background-size: 409px 479px;
+      background-position: left 40px top 80px;
+    }
+    @include md-block{
+      background-position: left -80px top 80px;
+    }
+    @include lg-block{
+      padding: 75px 0;
+      background-size: 258px 302px;
+      background-position: left 10px top 40px;
+    }
   }
 
   &__businesses{

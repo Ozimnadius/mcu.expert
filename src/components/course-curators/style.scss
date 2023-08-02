@@ -1,31 +1,56 @@
-.course-curators{
+.course-curators {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 45px;
-
-  &__title{
-    @include ui-heading-2;
-    text-align: center;
+  @include lg-block {
+    gap: 30px;
   }
 
-  &__txt{
+  &__title {
+    @include ui-heading-2;
+    text-align: center;
+    @include lg-block {
+      font-size: 46px;
+    }
+    @include md-block {
+      font-size: 36px;
+    }
+    @include sm-block {
+      font-size: 26px;
+    }
+  }
+
+  &__txt {
     font-size: 32px;
     text-align: center;
     max-width: 43ch;
+    @include sm-block {
+      font-size: 20px;
+    }
   }
 
-  &__teachers{
+  &__teachers {
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
+    @include lg-block {
+      gap: 20px;
+    }
+    @include sm-block {
+      gap: 45px;
+    }
   }
 
-  &__teacher{
+  &__teacher {
     width: 350px;
+    @include sm-block{
+      width: 100%;
+    }
   }
 
-  &__btn{
-    button{
+  &__btn {
+    button {
       @include ui-btn-fill;
     }
   }

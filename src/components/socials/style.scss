@@ -6,6 +6,10 @@
 
   display: flex;
   gap: 14px;
+  @include lg-block {
+    gap: 4px;
+    padding: 5px 13px;
+  }
 
   a {
     color: var(--color-grey);

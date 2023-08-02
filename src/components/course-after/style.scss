@@ -1,67 +1,105 @@
-.course-after{
+.course-after {
   --container-width: 1500px;
   padding: 160px 0;
   background: var(--color-grey-bg) url("/images/content/bg-grey.svg") right 120px top 60px no-repeat;
   background-size: 574px 673px;
+  @include lg-block {
+    padding: 100px 0;
+    background-size: 468px 549px;
+    background-position: right 40px top 60px;
+  }
+  @include sm-block {
+    padding: 60px 0;
+    background-size: 274px 322px;
+    background-position: right 10px top 40px;
+  }
 
 
-  &--full{
+  &--full {
     --container-width: 1760px;
     --container-padding: 0 120px;
   }
 
-  &__title{
+  &__title {
     @include ui-heading-2;
     text-align: center;
     margin-bottom: 70px;
+    @include lg-block {
+      font-size: 46px;
+      margin-bottom: 45px;
+    }
+    @include md-block {
+      font-size: 36px;
+    }
+    @include sm-block {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
   }
 
-  &__lists{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
+  &__lists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 90px;
 
-    &.counter{
+    &.counter {
       counter-reset: li;
     }
   }
 
+  &__list {
 
-  &__list{
-
-    &:not(.decimal){
+    &:not(.decimal) {
       @include ui-ul-checkbox;
-      display:grid;
+      display: grid;
       gap: 30px;
+      @include sm-block {
+        gap: 20px;
+      }
 
-      li{
+      li {
         font-size: 32px;
         padding-left: 90px;
+        @include md-block {
+          font-size: 20px;
+          padding-left: 68px;
+        }
+        @include sm-block {
+          padding-left: 45px;
+        }
 
-        &.small{
+        &.small {
           font-size: 24px;
         }
 
-        &:before{
+        &:before {
           width: 34px;
           height: 34px;
+          @include md-block {
+            width: 28px;
+            height: 28px;
+          }
+          @include sm-block {
+            width: 22px;
+            height: 22px;
+          }
         }
       }
     }
 
-    &.decimal{
+    &.decimal {
       font-size: 24px;
-      display:grid;
+      display: grid;
       gap: 15px;
 
-      li{
+      li {
         padding-left: 90px;
         position: relative;
 
 
-        &:before{
+        &:before {
           counter-increment: li;
-          content: counter(li,decimal-leading-zero);
+          content: counter(li, decimal-leading-zero);
           position: absolute;
           top: 0;
           left: 0;
@@ -73,7 +111,6 @@
         }
       }
     }
-
 
 
   }

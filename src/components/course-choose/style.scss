@@ -1,32 +1,66 @@
-.course-choose{
+.course-choose {
 
-  &__title{
+  &__title {
     @include ui-heading-2;
     max-width: 45ch;
     width: 100%;
     text-align: center;
     margin: 0 auto 75px;
+    @include lg-block {
+      font-size: 46px;
+    }
+    @include md-block {
+      font-size: 36px;
+    }
+    @include sm-block{
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
   }
 
-  &__list{
+  &__list {
     @include ui-ul-checkbox;
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     margin-bottom: 130px;
+    @include lg-block {
+      gap: 15px;
+      margin-bottom: 75px;
+    }
+    @include sm-block{
+      grid-template-columns: 100%;
+      margin-bottom: 45px;
+    }
 
-    li{
+    li {
       padding-left: 90px;
       font-size: 24px;
+      @include lg-block {
+        padding-left: 78px;
+      }
+      @include md-block {
+        font-size: 18px;
+        padding-left: 50px;
+      }
 
-      &:before{
+      &:before {
         width: 34px;
         height: 34px;
+        @include lg-block {
+          width: 28px;
+          height: 28px;
+          top: 4px;
+        }
+        @include md-block {
+          width: 26px;
+          height: 26px;
+        }
       }
     }
   }
 
-  &__img{
+  &__img {
     display: flex;
     justify-content: center;
   }

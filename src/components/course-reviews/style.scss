@@ -1,29 +1,67 @@
 @use "sass:math";
-.course-reviews{
+.course-reviews {
 
-  &__title{
+  &__title {
     @include ui-heading-2;
     text-align: center;
     margin-bottom: 60px;
+    @include lg-block {
+      font-size: 46px;
+    }
+    @include md-block {
+      font-size: 36px;
+    }
+    @include sm-block{
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
   }
 
-  &__list{
-    display:grid;
-    grid-template-columns: repeat(4,1fr);
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
+    @include xlg-block {
+      gap: 20px;
+    }
+    @include lg-block {
+      max-width: 590px;
+      width: 100%;
+      margin: 0 auto;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm-block{
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: initial;
+      overflow: auto;
+      margin-left: calc(0px - var(--offset));
+      margin-right: calc(0px - var(--offset));
+      padding: 0 var(--offset);
+      gap: 10px;
+      width: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 
-  &__item{
+  &__item {
     display: block;
     position: relative;
-
-    &:before{
-      content: '';
-      display: block;
-      padding-top: math.percentage(math.div(431,350));
+    @include sm-block{
+      width: 285px;
+      flex-shrink: 0;
     }
 
-    &:after{
+    &:before {
+      content: '';
+      display: block;
+      padding-top: math.percentage(math.div(431, 350));
+    }
+
+    &:after {
       content: '';
       display: block;
       position: absolute;
@@ -34,19 +72,32 @@
     }
   }
 
-  &__img{
+  &__img {
     position: absolute;
     z-index: 0;
     inset: 0;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
 
-  &__content{
+  &__play {
+    --play-size: 80px;
+    @include ui-play;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include xlg-block {
+      --play-size: 65px;
+    }
+  }
+
+  &__content {
     position: absolute;
     z-index: 2;
     bottom: 25px;
@@ -54,20 +105,38 @@
     right: 15px;
 
     display: flex;
-    align-items: center;
     gap: 14px;
+    @include xlg-block {
+      gap: 10px;
+      left: 12px;
+      right: 12px;
+      bottom: 20px;
+    }
   }
 
-  &__svg{
+  &__svg {
     flex-shrink: 0;
     width: 60px;
+    height: 68px;
+
+    @include xlg-block {
+      width: 49px;
+      height: 54.687px;
+    }
+
+    svg {
+      max-height: 100%;
+    }
   }
 
-  &__name{
+  &__name {
     color: var(--color-white);
     font-size: 18px;
     font-weight: 800;
     line-height: 1.2;
+    @include xlg-block {
+      font-size: 14px;
+    }
   }
 
 }

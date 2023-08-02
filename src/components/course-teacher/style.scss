@@ -1,11 +1,11 @@
-.course-teacher{
+.course-teacher {
   --container-width: 1500px;
   display: flex;
   flex-direction: column;
   gap: 40px;
 
 
-  &__img{
+  &__img {
     align-self: center;
     border-radius: 50%;
     border: 2px solid var(--color-red);
@@ -13,8 +13,17 @@
     width: 370px;
     height: 370px;
     margin: 0 auto 40px;
+    @include md-block {
+      margin-bottom: 30px;
+    }
+    @include sm-block{
+      width: 250px;
+      height: 250px;
+      padding: 17px;
+      margin-bottom: 30px;
+    }
 
-    img{
+    img {
       height: 100%;
       width: 100%;
       border-radius: 50%;
@@ -22,23 +31,41 @@
     }
   }
 
-  &__title{
+  &__title {
     @include ui-heading-2;
     text-align: center;
     margin-bottom: 48px;
+    @include lg-block {
+      font-size: 46px;
+    }
+    @include md-block {
+      font-size: 36px;
+    }
+    @include sm-block{
+      font-size: 24px;
+    }
   }
 
-  &__ul{
-    display:grid;
+  &__ul {
+    display: grid;
     gap: 10px;
 
-    li{
+    li {
       padding-left: 56px;
       position: relative;
       font-size: 32px;
       font-weight: 400;
+      @include lg-block {
+        font-size: 24px;
+      }
+      @include md-block {
+        font-size: 20px;
+      }
+      @include sm-block{
+        padding-left: 34px;
+      }
 
-      &:before{
+      &:before {
         content: '';
         display: block;
         width: 16px;
@@ -47,6 +74,11 @@
         position: absolute;
         top: 12px;
         left: 0;
+        @include sm-block{
+          width: 10px;
+          height: 10px;
+          top: 8px;
+        }
       }
     }
   }

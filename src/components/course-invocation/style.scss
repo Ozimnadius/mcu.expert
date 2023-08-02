@@ -1,14 +1,21 @@
-.course-invocation{
-  display:grid;
+.course-invocation {
+  display: grid;
   justify-items: center;
   gap: 40px;
+  @include sm-block {
+    gap: 20px;
+  }
 
-  &__img{
+  &__img {
     padding: 27px;
     border-radius: 50%;
     border: 2px solid var(--color-red);
+    @include sm-block {
+      width: 232px;
+      padding: 17px;
+    }
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -16,9 +23,18 @@
     }
   }
 
-  &__txt{
+  &__txt {
     max-width: 60ch;
     text-align: center;
     font-size: 32px;
+    @include sm-block{
+      font-size: 16px;
+    }
+  }
+
+  &__btn{
+    button{
+      font-size: 16px;
+    }
   }
 }

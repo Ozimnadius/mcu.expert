@@ -36,16 +36,19 @@
     z-index: 1;
     padding-bottom: 20px;
     @include lg-block {
-      height: 500px;
-      padding-bottom: 50px;
+      min-height: 500px;
+      height: auto;
+      padding-bottom: 30px;
+      padding-top: 30px;
     }
     @include md-block {
       height: auto;
-      padding-bottom: 0;
+      padding-bottom: 40px;
       padding-top: 40px;
     }
     @include sm-block {
       padding-top: 20px;
+      padding-bottom: 30px;
     }
   }
 
