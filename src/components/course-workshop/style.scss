@@ -1,33 +1,56 @@
-.course-workshop{
-  display:grid;
-  grid-template-columns: repeat(2,1fr);
+.course-workshop {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
+  @include lg-block {
+    grid-template-columns: 100%;
+    gap: 80px;
+    justify-items: center;
+    background: url("/images/content/logo-grey.svg") right 40px top 80px no-repeat;
+    background-size: 347px 407px;
+  }
 
 
-  &__title{
+  &__title {
     font-size: 36px;
     margin-bottom: 35px;
   }
 
-  &__left,&__right{
+  &__left, &__right {
     padding-top: 70px;
     padding-bottom: 140px;
+    @include lg-block{
+      padding: 0;
+    }
   }
 
-  &__right{
+  &__img{
+    @include lg-block{
+      width: 450px;
+    }
+  }
+
+  &__right {
     background: url("/images/content/logo-grey.svg") center top no-repeat;
+    @include lg-block{
+      background: none;
+    }
   }
 
-  &__ul{
-    display:grid;
+  &__ul {
+    display: grid;
     gap: 25px;
-    li{
+
+    li {
       padding-left: 75px;
       font-size: 24px;
+      @include lg-block{
+        padding-left: 50px;
+      }
 
-      &:before{
-        width: 34px;
-        height: 34px;
+      &:before {
+        width: 28px;
+        height: 28px;
       }
     }
   }
