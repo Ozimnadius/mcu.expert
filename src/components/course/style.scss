@@ -13,7 +13,7 @@
     @include margin-top(26);
 
     &--nomargin{
-      margin: 0;
+      margin: 0!important;
     }
 
   }
@@ -44,7 +44,7 @@
     }
 
     &--nomt{
-      margin-top: 0;
+      margin-top: 0!important;
     }
 
     .container {
@@ -220,6 +220,9 @@
     padding-bottom: 110px;
     background: url("/images/content/favicon.svg") right 200px top 55px no-repeat;
     background-size: 368px 431px;
+    @include xlg-block{
+      background-position: right 35px top 55px;
+    }
   }
 
   &__format{

@@ -18,6 +18,9 @@
     background: none;
     padding-top: 150px;
     padding-bottom: 0;
+    @include xlg-block{
+      padding-top: 110px;
+    }
   }
 
   &__info {
@@ -66,6 +69,7 @@
       position: static;
       transform: none;
       margin-top: 90px;
+
     }
   }
 

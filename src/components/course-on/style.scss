@@ -32,6 +32,10 @@
 
   &__title {
     margin-bottom: 55px;
+    @include xlg-block{
+      font-size: 44px;
+      margin-bottom: 50px;
+    }
   }
 
   &__ul {
@@ -41,14 +45,16 @@
     li {
       padding-left: 73px;
       font-size: 24px;
+      @include xlg-block{
+        padding-left: 64px;
+      }
 
       &:before {
-        width: 34px;
-        height: 34px;
+        width: 28px;
+        height: 28px;
       }
     }
   }
-
 
   &__img {
     margin-right: calc(0px - var(--offset));
@@ -58,6 +64,9 @@
       content: '';
       display: block;
       padding-top: math.percentage(math.div(1068, 960));
+      @include xlg-block{
+        padding-top: math.percentage(math.div(986, 720));
+      }
     }
 
     img {
@@ -70,4 +79,5 @@
       object-fit: cover;
     }
   }
+
 }
