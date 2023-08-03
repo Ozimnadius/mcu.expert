@@ -1339,7 +1339,7 @@ body.fancybox-active {
   }
 }
 .page__content--mb80 {
-  margin-bottom: calc(var(--spacing) * 8) !important;
+  margin-bottom: calc(var(--spacing) * 8);
 }
 
 .index {
@@ -1349,13 +1349,13 @@ body.fancybox-active {
   overflow: hidden;
 }
 .index__courses {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 .index__advantages {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 .index__about {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 @media screen and (max-width: 767.98px) {
   .index__about {
@@ -1364,22 +1364,22 @@ body.fancybox-active {
   }
 }
 .index__popular {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 .index__profile {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 .index__news {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 .index__video {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 .index__reviews {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 .index__partners {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 
 .index-banner__slider {
@@ -3035,7 +3035,7 @@ body.fancybox-active {
   padding-bottom: var(--offset-bottom);
 }
 .about__chairs {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
   background-color: var(--color-grey-bg);
   padding: 120px 0;
 }
@@ -3050,10 +3050,10 @@ body.fancybox-active {
   }
 }
 .about__licenses {
-  margin-top: calc(var(--spacing) * 13) !important;
+  margin-top: calc(var(--spacing) * 13);
 }
 .about__portfolio {
-  margin-top: calc(var(--spacing) * 13) !important;
+  margin-top: calc(var(--spacing) * 13);
   padding: 120px 0;
   background-color: var(--color-grey-bg);
 }
@@ -3068,10 +3068,10 @@ body.fancybox-active {
   }
 }
 .about__reviews {
-  margin-top: calc(var(--spacing) * 13) !important;
+  margin-top: calc(var(--spacing) * 13);
 }
 .about__clients {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 
 .video {
@@ -3793,7 +3793,7 @@ body.fancybox-active {
   }
 }
 .reviews__form {
-  margin-top: calc(var(--spacing) * 16) !important;
+  margin-top: calc(var(--spacing) * 16);
 }
 
 .reviews-slider__top {
@@ -5065,25 +5065,25 @@ body.fancybox-active {
   padding-bottom: var(--offset-bottom);
 }
 .course__about {
-  margin-top: calc(var(--spacing) * 13) !important;
+  margin-top: calc(var(--spacing) * 13);
 }
 .course__advantages {
-  margin-top: calc(var(--spacing) * 16) !important;
+  margin-top: calc(var(--spacing) * 16);
 }
 .course__advantages2 {
-  margin-top: calc(var(--spacing) * 26) !important;
+  margin-top: calc(var(--spacing) * 26);
 }
 .course__advantages2--nomargin {
   margin: 0 !important;
 }
 .course__advantages3 {
-  margin-top: calc(var(--spacing) * 11) !important;
+  margin-top: calc(var(--spacing) * 11);
 }
 .course__desc {
-  margin-top: calc(var(--spacing) * 13) !important;
+  margin-top: calc(var(--spacing) * 13);
 }
 .course__histories {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
   background-color: var(--color-grey-bg);
   padding: 140px 0;
 }
@@ -5116,7 +5116,7 @@ body.fancybox-active {
   }
 }
 .course__process {
-  margin-top: calc(var(--spacing) * 13) !important;
+  margin-top: calc(var(--spacing) * 13);
 }
 @media screen and (max-width: 1439.98px) {
   .course__process .container {
@@ -5126,7 +5126,7 @@ body.fancybox-active {
   }
 }
 .course__program {
-  margin-top: calc(var(--spacing) * 17) !important;
+  margin-top: calc(var(--spacing) * 17);
   background-color: var(--color-grey-bg);
   padding-top: 110px;
   padding-bottom: 160px;
@@ -5153,14 +5153,14 @@ body.fancybox-active {
   margin-top: 0;
 }
 .course__teachers {
-  margin-top: calc(var(--spacing) * 13) !important;
+  margin-top: calc(var(--spacing) * 13);
 }
 .course__tariffs {
-  margin-top: calc(var(--spacing) * 14) !important;
+  margin-top: calc(var(--spacing) * 14);
   scroll-margin: 50px;
 }
 .course__guarantees {
-  margin-top: calc(var(--spacing) * 14) !important;
+  margin-top: calc(var(--spacing) * 14);
   background-color: var(--color-grey-bg);
   padding: 100px 0;
 }
@@ -5180,19 +5180,19 @@ body.fancybox-active {
   }
 }
 .course__faq {
-  margin-top: calc(var(--spacing) * 8) !important;
+  margin-top: calc(var(--spacing) * 8);
 }
 .course__form {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 .course__info {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 .course__iframe {
   display: none;
 }
 .course__for {
-  margin-top: calc(var(--spacing) * 15) !important;
+  margin-top: calc(var(--spacing) * 15);
 }
 .course__for--grey {
   margin: 0 !important;
@@ -5210,13 +5210,13 @@ body.fancybox-active {
   }
 }
 .course__after {
-  margin-top: calc(var(--spacing) * 9) !important;
+  margin-top: calc(var(--spacing) * 9);
 }
 .course__teacher {
-  margin-top: calc(var(--spacing) * 12) !important;
+  margin-top: calc(var(--spacing) * 12);
 }
 .course__curators {
-  margin-top: calc(var(--spacing) * 13) !important;
+  margin-top: calc(var(--spacing) * 13);
   padding: 120px 0;
   background: var(--color-grey-bg) url(/images/content/bg-grey.svg) left 140px top 120px no-repeat;
   background-size: 574px 673px;
@@ -5258,13 +5258,13 @@ body.fancybox-active {
   }
 }
 .course__choose--mt {
-  margin-top: calc(var(--spacing) * 11) !important;
+  margin-top: calc(var(--spacing) * 11);
 }
 .course__reviews {
-  margin-top: calc(var(--spacing) * 15) !important;
+  margin-top: calc(var(--spacing) * 15);
 }
 .course__invocation {
-  margin-top: calc(var(--spacing) * 15) !important;
+  margin-top: calc(var(--spacing) * 15);
   padding-top: 100px;
   padding-bottom: 170px;
   background: var(--color-grey-bg) url("/images/content/bg-grey.svg") right 130px top 30px no-repeat;
@@ -5319,13 +5319,13 @@ body.fancybox-active {
   }
 }
 .course__format {
-  margin-top: calc(var(--spacing) * 12) !important;
+  margin-top: calc(var(--spacing) * 12);
 }
 .course__training {
-  margin-top: calc(var(--spacing) * 20) !important;
+  margin-top: calc(var(--spacing) * 20);
 }
 .course__cert {
-  margin-top: calc(var(--spacing) * 18) !important;
+  margin-top: calc(var(--spacing) * 18);
   background-color: var(--color-grey-bg);
   padding: 145px 0;
 }
@@ -5346,37 +5346,37 @@ body.fancybox-active {
   margin-top: 50px;
 }
 .course__schedule {
-  margin-top: calc(var(--spacing) * 11) !important;
+  margin-top: calc(var(--spacing) * 11);
 }
 .course__schedule-title {
   text-align: center;
   margin-bottom: 40px;
 }
 .course__videos {
-  margin-top: calc(var(--spacing) * 11) !important;
+  margin-top: calc(var(--spacing) * 11);
 }
 .course__imgs {
-  margin-top: calc(var(--spacing) * 7) !important;
+  margin-top: calc(var(--spacing) * 7);
 }
 .course__result {
-  margin-top: calc(var(--spacing) * 11) !important;
+  margin-top: calc(var(--spacing) * 11);
 }
 .course__steps {
-  margin-top: calc(var(--spacing) * 11) !important;
+  margin-top: calc(var(--spacing) * 11);
 }
 .course__wrong {
-  margin-top: calc(var(--spacing) * 7) !important;
+  margin-top: calc(var(--spacing) * 7);
   padding: 100px 0;
   background: var(--color-grey-bg);
 }
 .course__program2 {
-  margin-top: calc(var(--spacing) * 9) !important;
+  margin-top: calc(var(--spacing) * 9);
 }
 .course__ul {
-  margin-top: calc(var(--spacing) * 9) !important;
+  margin-top: calc(var(--spacing) * 9);
 }
 .course__nums {
-  margin-top: calc(var(--spacing) * 11) !important;
+  margin-top: calc(var(--spacing) * 11);
 }
 
 .course-schedule {
@@ -7030,6 +7030,7 @@ body.fancybox-active {
   display: -ms-grid;
   display: grid;
   gap: 15px;
+  margin-left: 17px;
 }
 
 .course-tariffs {
@@ -8111,9 +8112,19 @@ body.fancybox-active {
   display: grid;
   gap: 15px;
 }
+@media screen and (max-width: 1439.98px) {
+  .course-after__list.decimal {
+    font-size: 16px;
+  }
+}
 .course-after__list.decimal li {
   padding-left: 90px;
   position: relative;
+}
+@media screen and (max-width: 1439.98px) {
+  .course-after__list.decimal li {
+    padding-left: 80px;
+  }
 }
 .course-after__list.decimal li:before {
   counter-increment: li;
@@ -9939,10 +9950,10 @@ body.fancybox-active {
   padding-bottom: var(--offset-bottom);
 }
 .consulting__sevices {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 .consulting__advantages {
-  margin-top: calc(var(--spacing) * 13) !important;
+  margin-top: calc(var(--spacing) * 13);
   padding: 120px 0;
   background-color: var(--color-grey-bg);
 }
@@ -9967,13 +9978,13 @@ body.fancybox-active {
   }
 }
 .consulting__portfolio {
-  margin-top: calc(var(--spacing) * 16) !important;
+  margin-top: calc(var(--spacing) * 16);
 }
 .consulting__teachers {
-  margin-top: calc(var(--spacing) * 14) !important;
+  margin-top: calc(var(--spacing) * 14);
 }
 .consulting__form {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 
 .banner {
@@ -10669,10 +10680,10 @@ body.fancybox-active {
   }
 }
 .teacher__licenses {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 .teacher__courses {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 
 .chairs {
@@ -10855,7 +10866,7 @@ body.fancybox-active {
   padding-bottom: 0;
 }
 .chair__main {
-  margin-bottom: calc(var(--spacing) * 15) !important;
+  margin-bottom: calc(var(--spacing) * 15);
 }
 .chair__grid {
   display: -ms-grid;
@@ -10946,7 +10957,7 @@ body.fancybox-active {
   }
 }
 .chair__teachers {
-  margin-bottom: calc(var(--spacing) * 12) !important;
+  margin-bottom: calc(var(--spacing) * 12);
 }
 .chair__courses {
   padding: 120px 0;
@@ -11643,7 +11654,7 @@ body.fancybox-active {
   }
 }
 .outsourcing__desc {
-  margin-top: calc(var(--spacing) * 6) !important;
+  margin-top: calc(var(--spacing) * 6);
 }
 .outsourcing__rows {
   display: -ms-grid;
@@ -11684,10 +11695,10 @@ body.fancybox-active {
   }
 }
 .outsourcing__services-list {
-  margin-top: calc(var(--spacing) * 16) !important;
+  margin-top: calc(var(--spacing) * 16);
 }
 .outsourcing__form {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 
 .services-list {
@@ -12884,10 +12895,10 @@ body.fancybox-active {
   }
 }
 .product__courses {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 .product__slider {
-  margin-top: calc(var(--spacing) * 10) !important;
+  margin-top: calc(var(--spacing) * 10);
 }
 
 .product-tabs {
