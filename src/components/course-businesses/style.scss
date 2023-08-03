@@ -11,12 +11,32 @@
     flex-direction: column;
 
     padding: 100px 170px;
+    @include lg-block{
+      max-width: 764px;
+      padding: 80px 120px;
+    }
+    @include md-block{
+      max-width: 518px;
+      padding: 70px 50px;
+    }
+    @include sm-block{
+      padding: 40px 20px;
+    }
   }
 
   &__title{
     margin-left: -100px;
     margin-right: -100px;
     text-align: center;
+    @include lg-block{
+      margin-left: -40px;
+      margin-right: -40px;
+    }
+    @include md-block{
+      margin-left: 0;
+      margin-right: 0;
+      font-size: 24px;
+    }
   }
 
   &__btn{

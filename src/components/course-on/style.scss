@@ -8,6 +8,9 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     position: relative;
+    @include sm-block {
+      grid-template-columns: 100%;
+    }
 
     &:before {
       content: '';
@@ -20,6 +23,13 @@
       width: 220px;
       height: 16px;
       background: var(--red, #FF033E);
+      @include lg-block {
+        width: 108px;
+        top: 50px;
+      }
+      @include sm-block{
+        display: none;
+      }
 
     }
   }
@@ -28,30 +38,58 @@
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 20px;
+    @include sm-block {
+      order: 1;
+      padding-right: 0;
+      padding-bottom: 65px;
+      padding-top: 45px;
+    }
   }
 
   &__title {
     margin-bottom: 55px;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 44px;
       margin-bottom: 50px;
+    }
+    @include lg-block {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    @include sm-block{
+      text-align: center;
+      margin-bottom: 25px;
     }
   }
 
   &__ul {
     display: grid;
     gap: 20px;
+    @include lg-block {
+      gap: 15px;
+    }
 
     li {
       padding-left: 73px;
       font-size: 24px;
-      @include xlg-block{
+      @include xlg-block {
         padding-left: 64px;
+      }
+      @include lg-block {
+        padding-left: 60px;
+        font-size: 16px;
+      }
+      @include sm-block{
+        padding-left: 40px;
       }
 
       &:before {
         width: 28px;
         height: 28px;
+        @include lg-block {
+          width: 22px;
+          height: 22px;
+        }
       }
     }
   }
@@ -60,13 +98,36 @@
     margin-right: calc(0px - var(--offset));
     position: relative;
 
+    @include sm-block{
+      margin-left: calc(0px - var(--offset));
+    }
+
     &:before {
       content: '';
       display: block;
       padding-top: math.percentage(math.div(1068, 960));
-      @include xlg-block{
+      @include xlg-block {
         padding-top: math.percentage(math.div(986, 720));
       }
+      @include md-block {
+        padding-top: math.percentage(math.div(685, 384));
+      }
+      @include sm-block{
+        padding-top: math.percentage(math.div(334, 375));
+      }
+    }
+
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 2;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 108px;
+      height: 12px;
+      background: var(--red, #FF033E);
     }
 
     img {

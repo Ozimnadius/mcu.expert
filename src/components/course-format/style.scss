@@ -1,10 +1,23 @@
-.course-format{
-  display:grid;
-  grid-template-columns: repeat(2,1fr);
+.course-format {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   align-items: center;
+  @include lg-block {
+    gap: 20px;
+  }
+  @include md-block {
+    grid-template-columns: 100%;
+  }
+  @include sm-block {
+    gap: 5px;
+  }
 
-  &__title{
+  &__title {
     margin-bottom: 40px;
+    @include sm-block {
+      text-align: center;
+      margin-bottom: 10px;
+    }
   }
 }

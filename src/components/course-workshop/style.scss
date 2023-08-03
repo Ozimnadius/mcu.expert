@@ -9,30 +9,38 @@
     background: url("/images/content/logo-grey.svg") right 40px top 80px no-repeat;
     background-size: 347px 407px;
   }
-
+  @include sm-block {
+    gap: 50px;
+    background: url("/images/content/logo-grey.svg") right 0 top 110px no-repeat;
+    background-size: 209px 246px;
+  }
 
   &__title {
     font-size: 36px;
     margin-bottom: 35px;
+    @include sm-block{
+      font-size: 32px;
+    }
   }
 
   &__left, &__right {
     padding-top: 70px;
     padding-bottom: 140px;
-    @include lg-block{
+    @include lg-block {
       padding: 0;
     }
   }
 
-  &__img{
-    @include lg-block{
-      width: 450px;
+  &__img {
+    @include lg-block {
+      max-width: 450px;
     }
+
   }
 
   &__right {
     background: url("/images/content/logo-grey.svg") center top no-repeat;
-    @include lg-block{
+    @include lg-block {
       background: none;
     }
   }
@@ -44,13 +52,22 @@
     li {
       padding-left: 75px;
       font-size: 24px;
-      @include lg-block{
+      @include lg-block {
         padding-left: 50px;
+      }
+      @include sm-block{
+        padding-left: 40px;
+        font-size: 16px;
       }
 
       &:before {
         width: 28px;
         height: 28px;
+        @include sm-block{
+          width: 20px;
+          height: 20px;
+          top: 0;
+        }
       }
     }
   }

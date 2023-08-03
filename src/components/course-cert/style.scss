@@ -2,9 +2,8 @@
   display: flex;
   justify-content: center;
 
+
   img{
-    @include xlg-block{
-      max-width: 810px;
-    }
+    width: 71%;
   }
 }

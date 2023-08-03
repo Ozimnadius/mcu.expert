@@ -35,6 +35,8 @@
     position: relative;
     z-index: 1;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
     @include lg-block {
       min-height: 500px;
       height: auto;
@@ -45,6 +47,7 @@
       height: auto;
       padding-bottom: 40px;
       padding-top: 40px;
+      min-height: initial;
     }
     @include sm-block {
       padding-top: 20px;
@@ -58,6 +61,7 @@
     flex-direction: column;
     gap: 20px;
     justify-content: center;
+    flex-grow: 1;
   }
 
   &__content {

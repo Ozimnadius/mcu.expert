@@ -21,6 +21,9 @@
     @include xlg-block{
       padding-top: 110px;
     }
+    @include md-block{
+      padding-top: 80px;
+    }
   }
 
   &__info {
@@ -69,6 +72,9 @@
       position: static;
       transform: none;
       margin-top: 90px;
+      @include md-block{
+        margin-top: 50px;
+      }
 
     }
   }

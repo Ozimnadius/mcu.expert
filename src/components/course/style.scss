@@ -137,6 +137,9 @@
       margin: 0;
       padding: 100px 0;
       background-color: var(--color-grey-bg);
+      @include sm-block{
+        padding: 70px 0;
+      }
     }
   }
 
@@ -223,6 +226,15 @@
     @include xlg-block{
       background-position: right 35px top 55px;
     }
+    @include md-block{
+      background-size: 293px 343px;
+      background-position: right 20px top 45px;
+    }
+    @include sm-block{
+      padding: 70px 0;
+      background-size: 113px 132px;
+      background-position: right 10px top 30px;
+    }
   }
 
   &__format{
@@ -237,6 +249,9 @@
     @include margin-top(18);
     background-color: var(--color-grey-bg);
     padding: 145px 0;
+    @include lg-block{
+      padding: 60px 0;
+    }
   }
 
   &__authors{

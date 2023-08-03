@@ -3,6 +3,9 @@
 .course-tariffs {
   display: flex;
   flex-direction: column;
+  @include md-block{
+      align-items: center;
+  }
 
   &__title {
     @include ui-heading-2;
