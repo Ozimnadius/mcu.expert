@@ -3,9 +3,6 @@
 .course-tariffs {
   display: flex;
   flex-direction: column;
-  @include md-block{
-      align-items: center;
-  }
 
   &__title {
     @include ui-heading-2;
@@ -16,7 +13,7 @@
     @include md-block {
       font-size: 36px;
     }
-    @include sm-block{
+    @include sm-block {
       font-size: 26px;
     }
   }
@@ -78,7 +75,7 @@
     @include ui-btn-fill;
     align-self: center;
     margin-top: 70px;
-    @include sm-block{
+    @include sm-block {
       display: none;
     }
   }

@@ -14,10 +14,18 @@
     background-position: right 10px top 40px;
   }
 
-
   &--full {
     --container-width: 1760px;
     --container-padding: 0 120px;
+    @media (max-width: 1439.98px) {
+      --container-padding: 0 40px;
+    }
+    @media (max-width: 1023.98px) {
+      --container-padding: 0 20px;
+    }
+    @media (max-width: 767.98px) {
+      --container-padding: 0 10px;
+    }
   }
 
   &__title {
@@ -41,6 +49,12 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 90px;
+    @include xlg-block {
+      gap: 20px;
+    }
+    @include sm-block{
+        grid-template-columns: 100%;
+    }
 
     &.counter {
       counter-reset: li;
@@ -70,6 +84,17 @@
 
         &.small {
           font-size: 24px;
+          @include md-block {
+            font-size: 20px;
+            padding-left: 40px;
+          }
+
+          &:before {
+            @include md-block {
+              width: 22px;
+              height: 22px;
+            }
+          }
         }
 
         &:before {

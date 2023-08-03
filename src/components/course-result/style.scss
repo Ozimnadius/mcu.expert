@@ -8,6 +8,11 @@
     display:grid;
     justify-items: center;
     gap: 40px;
+    @include sm-block{
+      font-size: 36px;
+      margin-bottom: 30px;
+      gap: 30px;
+    }
 
     &:after{
       content: '';
@@ -15,6 +20,10 @@
       width: 220px;
       height: 14px;
       background: var(--color-red);
+      @include sm-block{
+        width: 129px;
+        height: 8px;
+      }
     }
   }
 
@@ -22,5 +31,8 @@
     max-width: 1260px;
     font-size: 34px;
     line-height: 110%;
+    @include md-block{
+      font-size: 24px;
+    }
   }
 }

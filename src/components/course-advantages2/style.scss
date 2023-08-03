@@ -130,7 +130,7 @@
       gap: 40px 20px;
     }
     @include sm-block {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, calc(50% - 5px));
       gap: 30px 10px;
       margin-bottom: 50px;
     }
@@ -169,6 +169,9 @@
     max-width: 26ch;
     @include md-block {
       font-size: 20px;
+    }
+    @include sm-block{
+      font-size: 16px;
     }
   }
 
