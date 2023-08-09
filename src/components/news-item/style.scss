@@ -1,30 +1,29 @@
 @use "sass:math";
-
-.news-item{
+.news-item {
   display: flex;
   flex-direction: column;
 
-  @include hover{
-    img{
+  @include hover {
+    img {
       transform: scale(1.05);
     }
 
-    .news-item__name{
+    .news-item__name {
       color: var(--color-red);
     }
   }
 
-  &__img{
+  &__img {
     position: relative;
     overflow: hidden;
 
-    &:before{
+    &:before {
       content: '';
       display: block;
-      padding-top: math.percentage(math.div(240,350));
+      padding-top: math.percentage(math.div(240, 350));
     }
 
-    img{
+    img {
       position: absolute;
       top: 0;
       left: 0;
@@ -35,28 +34,64 @@
     }
   }
 
-  &__date{
+  &__content{
+    color: var(--color-white);
+    inset: 20px;
+    @media (max-width: 767.98px){
+       inset: 10px;
+    }
+  }
+
+  &__date-start{
+    @media (max-width: 1919.98px){
+      font-size: 24px;
+      padding-bottom: 10px;
+    }
+    @media (max-width: 767.98px){
+      font-size: 16px;
+      &:before,&:after{
+        display: none;
+      }
+    }
+  }
+
+  &__date-time{
+    font-size: 14px;
+
+    @media (max-width: 767.98px){
+      font-size: 10px;
+    }
+    .index-new__time-name,
+    .index-new__time-zone{
+      font-size: inherit;
+    }
+    .index-new__time-val{
+      font-size: 1.7em;
+    }
+  }
+
+  &__date {
     margin-top: 18px;
     font-weight: 700;
     color: var(--color-red);
-    @include md-block{
+    @include md-block {
       margin-top: 10px;
       font-size: 16px;
     }
-    @include sm-block{
+    @include sm-block {
       font-size: 12px;
     }
   }
 
-  &__name{
+  &__name {
     @include ui-card-title;
     margin-top: 16px;
     @include tr;
-    @include md-block{
+    @include md-block {
       margin-top: 10px;
       font-size: 18px;
     }
-    @include sm-block{
+    @include sm-block {
       font-size: 12px;
     }
   }

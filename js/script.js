@@ -599,6 +599,14 @@ class Events {
 
         $.fancybox.open(form);
     }
+
+    openGiftPay(e,elem){
+        e.preventDefault();
+        let root = elem.closest('.gift');
+        let form = root.querySelector('.form-popup').cloneNode(true);
+
+        $.fancybox.open(form);
+    }
 }
 
 new Events();

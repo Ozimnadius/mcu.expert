@@ -1,13 +1,17 @@
 .gift
+    .gift__iframe.
+        <div class="form-popup form-popup--pay" style="overflow: hidden; height: 589px;"> <iframe src="https://medicalcorporateuniversity.getcourse.ru/pl/lite/widget/widget?&amp;id=524367&amp;ref=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2F&amp;loc=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2Fsistemnoe-upravlenie-klinikoy%2F" allowfullscreen="allowfullscreen" class="28" id="97a41e585b87d698640e3fdef5ce29c9a38e57ae_28" name="28" style="width: 100%; height: 589px; border: none; overflow: hidden;"></iframe></div>
+    if i.img
     .gift__grid
         .gift__left
             .gift__stick Подарок
             .gift__title Мотивационные курсы сотрудников клиники “Жить здорово”
             .gift__desc Курс–практикум для собственников и управленцев. Управление клиникой на основе трёхконтурной бизнес-модели
             .gift__links
-                form(action='/php/getForm.php' method='post' data-event='submit.openForm').gift__link.get__form
-                    input(type='hidden' name='name' value='courseGift')
-                    button(type='submit') Получить подарок
+                //form(action='/php/getForm.php' method='post' data-event='submit.openForm').gift__link.get__form
+                //    input(type='hidden' name='name' value='courseGift')
+                //    button(type='submit') Получить подарок
+                button(type='button' data-event="click.openGiftPay").gift__link.get__form Получить подарок
                 a(href="/courses/course/").gift__link.gift__link--black Подробнее о курсе
         .gift__right
             .gift__item

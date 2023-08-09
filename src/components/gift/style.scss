@@ -4,6 +4,7 @@
   background: var(--color-grey-bg) url("/images/content/gift/bg.svg") math.percentage(math.div(255, 1080)) 42px no-repeat;
   border-radius: 15px;
   padding: 15px 20px;
+  position: relative;
   overflow: hidden;
   @include md-block {
     padding: 15px;
@@ -11,6 +12,14 @@
   @include sm-block {
     padding: 0;
     background-image: none;
+  }
+
+  &__iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
   }
 
   &__grid {
