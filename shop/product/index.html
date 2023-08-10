@@ -122,9 +122,10 @@
             </div>
           </section>
           <div class="page__content">
-            <div class="product">
+            <div class="product" data-pay>
               <section class="product__main">
                 <div class="container">
+                  <div class="product__iframe"><div class="form-popup form-popup--pay" style="overflow: hidden; height: 589px;"> <iframe src="https://medicalcorporateuniversity.getcourse.ru/pl/lite/widget/widget?&amp;id=524367&amp;ref=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2F&amp;loc=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2Fsistemnoe-upravlenie-klinikoy%2F" allowfullscreen="allowfullscreen" class="28" id="97a41e585b87d698640e3fdef5ce29c9a38e57ae_28" name="28" style="width: 100%; height: 589px; border: none; overflow: hidden;"></iframe></div></div>
                   <div class="product__grid">
                     <div class="product__left">
                       <div class="product__img"><img src="/images/content/product/img.webp" alt="Пример продукта"></div>
@@ -164,10 +165,12 @@
                           <div class="product__oldprice">4 498 руб.</div>
                         </div>
                       </div>
-                      <form class="product__buy" action="/php/getForm.php" method="post" data-event="submit.openForm">
-                        <input type="hidden" name="name" value="order">
-                        <button type="submit">Сделать заказ</button>
-                      </form>
+                      <!--form(action='/php/getForm.php' method='post' data-event='submit.openForm').product__buy-->
+                      <!--    input(type='hidden' name='name' value='order')-->
+                      <!--    button(type='submit') Сделать заказ-->
+                      <div class="product__buy">
+                        <button type="button" data-event="click.openPay" data-event-root=".product">Сделать заказ</button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -328,15 +331,18 @@
                       <div class="swiper-wrapper">
                         <div class="swiper-slide product-slider__slide">
                           <div class="catalog-item">
+                            <div class="catalog-item__iframe"><div class="form-popup form-popup--pay" style="overflow: hidden; height: 589px;"> <iframe src="https://medicalcorporateuniversity.getcourse.ru/pl/lite/widget/widget?&amp;id=524367&amp;ref=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2F&amp;loc=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2Fsistemnoe-upravlenie-klinikoy%2F" allowfullscreen="allowfullscreen" class="28" id="97a41e585b87d698640e3fdef5ce29c9a38e57ae_28" name="28" style="width: 100%; height: 589px; border: none; overflow: hidden;"></iframe></div></div>
                             <div class="catalog-item__top"><a class="catalog-item__img" href="/shop/product/"><img src="/images/content/catalog/book1.webp" alt="Практическое пособие по внедрению &quot;Трехконтурная система управления клиникой&quot;."></a>
                             </div>
                             <div class="catalog-item__bottom"><a class="catalog-item__name" href="/shop/product/">Практическое пособие по внедрению "Трехконтурная система управления клиникой".</a>
                               <div class="catalog-item__price">2 300 РУБ.</div>
                               <div class="catalog-item__controls">
-                                <form class="catalog-item__control" action="/php/getForm.php" method="post" data-event="submit.openForm">
-                                  <input type="hidden" name="name" value="order">
-                                  <button type="submit">Купить</button>
-                                </form>
+                                <!--form(action='/php/getForm.php' method='post' data-event='submit.openForm').catalog-item__control-->
+                                <!--    input(type='hidden' name='name' value='order')button(type='submit') Купить
+                                -->
+                                <div class="catalog-item__control">
+                                  <button type="button" data-event="click.openPay" data-event-root=".catalog-item">Купить</button>
+                                </div>
                                 <div class="catalog-item__control"><a href="/shop/product/">Подробнее</a></div>
                               </div>
                             </div>
@@ -344,15 +350,18 @@
                         </div>
                         <div class="swiper-slide product-slider__slide">
                           <div class="catalog-item">
+                            <div class="catalog-item__iframe"><div class="form-popup form-popup--pay" style="overflow: hidden; height: 589px;"> <iframe src="https://medicalcorporateuniversity.getcourse.ru/pl/lite/widget/widget?&amp;id=524367&amp;ref=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2F&amp;loc=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2Fsistemnoe-upravlenie-klinikoy%2F" allowfullscreen="allowfullscreen" class="28" id="97a41e585b87d698640e3fdef5ce29c9a38e57ae_28" name="28" style="width: 100%; height: 589px; border: none; overflow: hidden;"></iframe></div></div>
                             <div class="catalog-item__top"><a class="catalog-item__img" href="/shop/product/"><img src="/images/content/catalog/book2.webp" alt="Практическое пособие по внедрению &quot;Трехконтурная система управления клиникой&quot;."></a>
                             </div>
                             <div class="catalog-item__bottom"><a class="catalog-item__name" href="/shop/product/">Практическое пособие по внедрению "Трехконтурная система управления клиникой".</a>
                               <div class="catalog-item__price">2 300 РУБ.</div>
                               <div class="catalog-item__controls">
-                                <form class="catalog-item__control" action="/php/getForm.php" method="post" data-event="submit.openForm">
-                                  <input type="hidden" name="name" value="order">
-                                  <button type="submit">Купить</button>
-                                </form>
+                                <!--form(action='/php/getForm.php' method='post' data-event='submit.openForm').catalog-item__control-->
+                                <!--    input(type='hidden' name='name' value='order')button(type='submit') Купить
+                                -->
+                                <div class="catalog-item__control">
+                                  <button type="button" data-event="click.openPay" data-event-root=".catalog-item">Купить</button>
+                                </div>
                                 <div class="catalog-item__control"><a href="/shop/product/">Подробнее</a></div>
                               </div>
                             </div>
@@ -360,15 +369,18 @@
                         </div>
                         <div class="swiper-slide product-slider__slide">
                           <div class="catalog-item">
+                            <div class="catalog-item__iframe"><div class="form-popup form-popup--pay" style="overflow: hidden; height: 589px;"> <iframe src="https://medicalcorporateuniversity.getcourse.ru/pl/lite/widget/widget?&amp;id=524367&amp;ref=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2F&amp;loc=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2Fsistemnoe-upravlenie-klinikoy%2F" allowfullscreen="allowfullscreen" class="28" id="97a41e585b87d698640e3fdef5ce29c9a38e57ae_28" name="28" style="width: 100%; height: 589px; border: none; overflow: hidden;"></iframe></div></div>
                             <div class="catalog-item__top"><a class="catalog-item__img" href="/shop/product/"><img src="/images/content/catalog/book3.webp" alt="Практическое пособие по внедрению &quot;Трехконтурная система управления клиникой&quot;."></a>
                             </div>
                             <div class="catalog-item__bottom"><a class="catalog-item__name" href="/shop/product/">Практическое пособие по внедрению "Трехконтурная система управления клиникой".</a>
                               <div class="catalog-item__price">2 300 РУБ.</div>
                               <div class="catalog-item__controls">
-                                <form class="catalog-item__control" action="/php/getForm.php" method="post" data-event="submit.openForm">
-                                  <input type="hidden" name="name" value="order">
-                                  <button type="submit">Купить</button>
-                                </form>
+                                <!--form(action='/php/getForm.php' method='post' data-event='submit.openForm').catalog-item__control-->
+                                <!--    input(type='hidden' name='name' value='order')button(type='submit') Купить
+                                -->
+                                <div class="catalog-item__control">
+                                  <button type="button" data-event="click.openPay" data-event-root=".catalog-item">Купить</button>
+                                </div>
                                 <div class="catalog-item__control"><a href="/shop/product/">Подробнее</a></div>
                               </div>
                             </div>
@@ -376,15 +388,18 @@
                         </div>
                         <div class="swiper-slide product-slider__slide">
                           <div class="catalog-item">
+                            <div class="catalog-item__iframe"><div class="form-popup form-popup--pay" style="overflow: hidden; height: 589px;"> <iframe src="https://medicalcorporateuniversity.getcourse.ru/pl/lite/widget/widget?&amp;id=524367&amp;ref=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2F&amp;loc=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2Fsistemnoe-upravlenie-klinikoy%2F" allowfullscreen="allowfullscreen" class="28" id="97a41e585b87d698640e3fdef5ce29c9a38e57ae_28" name="28" style="width: 100%; height: 589px; border: none; overflow: hidden;"></iframe></div></div>
                             <div class="catalog-item__top"><a class="catalog-item__img" href="/shop/product/"><img src="/images/content/catalog/book1.webp" alt="Практическое пособие по внедрению &quot;Трехконтурная система управления клиникой&quot;."></a>
                             </div>
                             <div class="catalog-item__bottom"><a class="catalog-item__name" href="/shop/product/">Практическое пособие по внедрению "Трехконтурная система управления клиникой".</a>
                               <div class="catalog-item__price">2 300 РУБ.</div>
                               <div class="catalog-item__controls">
-                                <form class="catalog-item__control" action="/php/getForm.php" method="post" data-event="submit.openForm">
-                                  <input type="hidden" name="name" value="order">
-                                  <button type="submit">Купить</button>
-                                </form>
+                                <!--form(action='/php/getForm.php' method='post' data-event='submit.openForm').catalog-item__control-->
+                                <!--    input(type='hidden' name='name' value='order')button(type='submit') Купить
+                                -->
+                                <div class="catalog-item__control">
+                                  <button type="button" data-event="click.openPay" data-event-root=".catalog-item">Купить</button>
+                                </div>
                                 <div class="catalog-item__control"><a href="/shop/product/">Подробнее</a></div>
                               </div>
                             </div>
@@ -392,15 +407,18 @@
                         </div>
                         <div class="swiper-slide product-slider__slide">
                           <div class="catalog-item">
+                            <div class="catalog-item__iframe"><div class="form-popup form-popup--pay" style="overflow: hidden; height: 589px;"> <iframe src="https://medicalcorporateuniversity.getcourse.ru/pl/lite/widget/widget?&amp;id=524367&amp;ref=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2F&amp;loc=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2Fsistemnoe-upravlenie-klinikoy%2F" allowfullscreen="allowfullscreen" class="28" id="97a41e585b87d698640e3fdef5ce29c9a38e57ae_28" name="28" style="width: 100%; height: 589px; border: none; overflow: hidden;"></iframe></div></div>
                             <div class="catalog-item__top"><a class="catalog-item__img" href="/shop/product/"><img src="/images/content/catalog/book2.webp" alt="Практическое пособие по внедрению &quot;Трехконтурная система управления клиникой&quot;."></a>
                             </div>
                             <div class="catalog-item__bottom"><a class="catalog-item__name" href="/shop/product/">Практическое пособие по внедрению "Трехконтурная система управления клиникой".</a>
                               <div class="catalog-item__price">2 300 РУБ.</div>
                               <div class="catalog-item__controls">
-                                <form class="catalog-item__control" action="/php/getForm.php" method="post" data-event="submit.openForm">
-                                  <input type="hidden" name="name" value="order">
-                                  <button type="submit">Купить</button>
-                                </form>
+                                <!--form(action='/php/getForm.php' method='post' data-event='submit.openForm').catalog-item__control-->
+                                <!--    input(type='hidden' name='name' value='order')button(type='submit') Купить
+                                -->
+                                <div class="catalog-item__control">
+                                  <button type="button" data-event="click.openPay" data-event-root=".catalog-item">Купить</button>
+                                </div>
                                 <div class="catalog-item__control"><a href="/shop/product/">Подробнее</a></div>
                               </div>
                             </div>
@@ -408,15 +426,18 @@
                         </div>
                         <div class="swiper-slide product-slider__slide">
                           <div class="catalog-item">
+                            <div class="catalog-item__iframe"><div class="form-popup form-popup--pay" style="overflow: hidden; height: 589px;"> <iframe src="https://medicalcorporateuniversity.getcourse.ru/pl/lite/widget/widget?&amp;id=524367&amp;ref=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2F&amp;loc=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2Fsistemnoe-upravlenie-klinikoy%2F" allowfullscreen="allowfullscreen" class="28" id="97a41e585b87d698640e3fdef5ce29c9a38e57ae_28" name="28" style="width: 100%; height: 589px; border: none; overflow: hidden;"></iframe></div></div>
                             <div class="catalog-item__top"><a class="catalog-item__img" href="/shop/product/"><img src="/images/content/catalog/book3.webp" alt="Практическое пособие по внедрению &quot;Трехконтурная система управления клиникой&quot;."></a>
                             </div>
                             <div class="catalog-item__bottom"><a class="catalog-item__name" href="/shop/product/">Практическое пособие по внедрению "Трехконтурная система управления клиникой".</a>
                               <div class="catalog-item__price">2 300 РУБ.</div>
                               <div class="catalog-item__controls">
-                                <form class="catalog-item__control" action="/php/getForm.php" method="post" data-event="submit.openForm">
-                                  <input type="hidden" name="name" value="order">
-                                  <button type="submit">Купить</button>
-                                </form>
+                                <!--form(action='/php/getForm.php' method='post' data-event='submit.openForm').catalog-item__control-->
+                                <!--    input(type='hidden' name='name' value='order')button(type='submit') Купить
+                                -->
+                                <div class="catalog-item__control">
+                                  <button type="button" data-event="click.openPay" data-event-root=".catalog-item">Купить</button>
+                                </div>
                                 <div class="catalog-item__control"><a href="/shop/product/">Подробнее</a></div>
                               </div>
                             </div>

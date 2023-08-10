@@ -26,9 +26,11 @@ block content
                     include ../../src/components/bread/index
                 h1.page__title= title
         .page__content
-            .product
+            div(data-pay).product
                 section.product__main
                     .container
+                        .product__iframe.
+                            <div class="form-popup form-popup--pay" style="overflow: hidden; height: 589px;"> <iframe src="https://medicalcorporateuniversity.getcourse.ru/pl/lite/widget/widget?&amp;id=524367&amp;ref=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2F&amp;loc=http%3A%2F%2Fuser1561.teh-webcomp.ru%2Fcourses%2Fsobstvennikam%2Fsistemnoe-upravlenie-klinikoy%2F" allowfullscreen="allowfullscreen" class="28" id="97a41e585b87d698640e3fdef5ce29c9a38e57ae_28" name="28" style="width: 100%; height: 589px; border: none; overflow: hidden;"></iframe></div>
                         .product__grid
                             .product__left
                                 .product__img
@@ -61,9 +63,11 @@ block content
                                         .product__price 2 400 руб.
                                         .product__oldprice 4 498 руб.
 
-                                form(action='/php/getForm.php' method='post' data-event='submit.openForm').product__buy
-                                    input(type='hidden' name='name' value='order')
-                                    button(type='submit') Сделать заказ
+                                //form(action='/php/getForm.php' method='post' data-event='submit.openForm').product__buy
+                                //    input(type='hidden' name='name' value='order')
+                                //    button(type='submit') Сделать заказ
+                                .product__buy
+                                    button(type='button' data-event="click.openPay" data-event-root='.product') Сделать заказ
                 //-tabs
                 section.product__tabs
                     include ../../src/components/product-tabs/index

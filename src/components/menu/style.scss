@@ -4,7 +4,8 @@
   position: relative;
   padding: 0 20px;
   display: flex;
-  @include xlg-block{
+
+  @include xlg-block {
     border-radius: 0;
     justify-content: space-between;
     padding: 0;
@@ -12,6 +13,7 @@
 
   &__item {
     position: relative;
+    flex-grow: 1;
     @include hover {
       .menu__submenu {
         display: block;
@@ -22,13 +24,13 @@
 
   &__link {
     color: var(--color-white);
-    padding: 25px 40px;
+    padding: 25px 0px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
-    @include xlg-block{
-      padding: 25px 0;
-    }
+    width: 100%;
+
 
     &--arrow {
       &:after {
@@ -59,7 +61,7 @@
     background: #F5F5F5;
     border-radius: 0px 0px 10px 10px;
     padding: 0 20px;
-    @include xlg-block{
+    @include xlg-block {
       left: -20px;
     }
   }

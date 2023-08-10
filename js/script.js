@@ -594,15 +594,7 @@ class Events {
 
     openPay(e,elem){
         e.preventDefault();
-        let root = elem.closest('.course-tariff');
-        let form = root.querySelector('.form-popup').cloneNode(true);
-
-        $.fancybox.open(form);
-    }
-
-    openGiftPay(e,elem){
-        e.preventDefault();
-        let root = elem.closest('.gift');
+        let root = elem.closest(elem.dataset.eventRoot);
         let form = root.querySelector('.form-popup').cloneNode(true);
 
         $.fancybox.open(form);
