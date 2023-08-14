@@ -1,5 +1,4 @@
 @use "sass:math";
-
 .reviews-item {
   display: grid;
   gap: 20px;
@@ -30,6 +29,9 @@
   &__top {
     position: relative;
     display: block;
+    @include sm-block{
+        pointer-events: all;
+    }
   }
 
   &__img {
@@ -37,6 +39,9 @@
     z-index: 2;
     pointer-events: none;
     display: block;
+    @include sm-block{
+        pointer-events: all;
+    }
 
     &:before {
       content: '';
@@ -111,6 +116,7 @@
       height: 100%;
       max-height: calc(100% - 14px);
       border-radius: 25px;
+
       &::-webkit-scrollbar {
         display: none;
       }

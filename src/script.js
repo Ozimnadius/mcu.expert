@@ -402,11 +402,11 @@ function indexProfileItems() {
     );
 }
 
-function initTelMask(){
+function initTelMask() {
     $('input[type="tel"]').inputmask("+7(999)-999-99-99");
 }
 
-function initUi(){
+function initUi() {
     initTelMask();
 
     $(".form__select").selectize();
@@ -578,7 +578,7 @@ class Events {
         });
     }
 
-    switchTab(e, elem){
+    switchTab(e, elem) {
         e.preventDefault();
 
         let target = elem;
@@ -587,12 +587,12 @@ class Events {
             behavior: 'smooth',
             block: 'start'
         });
-        document.querySelectorAll('.product-tabs__input').forEach((i,x)=>{
-            i.checked = (x==(target.dataset.tab-1));
+        document.querySelectorAll('.product-tabs__input').forEach((i, x) => {
+            i.checked = (x == (target.dataset.tab - 1));
         });
     }
 
-    openPay(e,elem){
+    openPay(e, elem) {
         e.preventDefault();
         let root = elem.closest(elem.dataset.eventRoot);
         let form = root.querySelector('.form-popup').cloneNode(true);

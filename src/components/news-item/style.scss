@@ -33,20 +33,35 @@
       object-fit: cover;
       @include tr;
     }
+
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background-color: rgba(#000,.3);
+    }
   }
 
   &__content {
     color: var(--color-white);
     inset: 20px;
+    @media (max-width: 1919.98px){
+       inset: 10px;
+    }
     @media (max-width: 767.98px) {
       inset: 10px;
     }
   }
 
   &__date-start {
+    padding: 0;
+    &:before,&:after{
+      display: none;
+    }
     @media (max-width: 1919.98px) {
-      font-size: 24px;
-      padding-bottom: 10px;
+      font-size: 20px;
     }
     @media (max-width: 767.98px) {
       font-size: 16px;
@@ -58,7 +73,9 @@
 
   &__date-time {
     font-size: 14px;
-
+    @media (max-width: 1919.98px){
+      font-size: 12px;
+    }
     @media (max-width: 767.98px) {
       font-size: 10px;
     }
