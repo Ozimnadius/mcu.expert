@@ -562,6 +562,7 @@ class Events {
                 if (data.status) {
                     $.fancybox.open(data.html);
                     initTelMask();
+                    $.fancybox.getInstance().current.$content[0].insertAdjacentHTML('afterBegin',`<input type="hidden" name="link" value="${window.location.href}">`)
                 }
             })
             .catch((err) => {
