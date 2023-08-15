@@ -482,9 +482,13 @@ class Events {
     sendForm(e, elem) {
         e.preventDefault();
 
+        let data = new FormData(elem);
+        data.append('link', window.location.href);
+
+
         fetch(elem.action, {
             method: "POST",
-            body: new FormData(elem),
+            body: data,
         })
             .then((response) => response.json())
             .then((data) => {
@@ -562,7 +566,7 @@ class Events {
                 if (data.status) {
                     $.fancybox.open(data.html);
                     initTelMask();
-                    $.fancybox.getInstance().current.$content[0].insertAdjacentHTML('afterBegin',`<input type="hidden" name="link" value="${window.location.href}">`)
+                    // $.fancybox.getInstance().current.$content[0].insertAdjacentHTML('afterBegin',`<input type="hidden" name="link" value="${window.location.href}">`)
                 }
             })
             .catch((err) => {
