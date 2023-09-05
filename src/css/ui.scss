@@ -217,6 +217,8 @@
   }
 
   svg {
+    width: math.percentage(math.div(26,72));
+    height: math.percentage(math.div(24,72));
     path {
       fill: currentColor;
     }
